@@ -1,0 +1,37 @@
+{
+	"title": "Privacy Policy",
+	"description": "PipetkaOnline Privacy Policy",
+	"lastUpdated": "Last updated: 2024",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and protect information about you when you use our website."
+		},
+		"data": {
+			"title": "Data Collection",
+			"content": "We may collect the following information:",
+			"items": [
+				"Technical data (IP address, browser type, operating system)",
+				"Usage data (pages viewed, visit duration)",
+				"Information you voluntarily provide (if you contact us)"
+			]
+		},
+		"cookies": {
+			"title": "Use of Cookies",
+			"content": "Our website uses cookies to improve user experience and analyze traffic. Detailed information is available in our Cookie Policy."
+		},
+		"thirdParty": {
+			"title": "Third Parties",
+			"content": "We may use third-party services such as Google Analytics and advertising networks that may collect information about your use of the site."
+		},
+		"rights": {
+			"title": "Your Rights",
+			"content": "You have the right to request access, correction, or deletion of your personal data. To do so, please contact us through the contact page."
+		},
+		"contact": {
+			"title": "Contact",
+			"content": "If you have questions about this privacy policy, please contact us through the contact page."
+		}
+	}
+}
+

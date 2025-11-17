@@ -1,0 +1,35 @@
+{
+	"title": "Cookie Policy",
+	"description": "Information about cookie usage on PipetkaOnline",
+	"lastUpdated": "Last updated: 2024",
+	"sections": {
+		"what": {
+			"title": "What are Cookies",
+			"content": "Cookies are small text files that are stored on your device when you visit a website. They help the site remember your preferences and improve functionality."
+		},
+		"how": {
+			"title": "How We Use Cookies",
+			"content": "We use cookies to ensure website functionality, analyze usage, and display relevant advertising."
+		},
+		"types": {
+			"title": "Types of Cookies",
+			"essential": {
+				"title": "Essential Cookies",
+				"content": "These cookies are necessary for the website to function and cannot be disabled. They provide basic functionality and security."
+			},
+			"analytics": {
+				"title": "Analytics Cookies",
+				"content": "We use Google Analytics to understand how visitors use our site. This data helps us improve the website."
+			},
+			"advertising": {
+				"title": "Advertising Cookies",
+				"content": "We use cookies to display relevant advertising through Google AdSense and Yandex.Direct. These cookies track your interests to personalize ads."
+			}
+		},
+		"manage": {
+			"title": "Managing Cookies",
+			"content": "You can manage cookies through your browser settings. Note that disabling some cookies may affect website functionality."
+		}
+	}
+}
+

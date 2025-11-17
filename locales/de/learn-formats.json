@@ -1,0 +1,28 @@
+{
+	"title": "Digitale Farbformate",
+	"description": "Lernen Sie verschiedene Formate zur Darstellung von Farben im digitalen Design",
+	"back": "Zurück zum Lernen",
+	"sections": {
+		"intro": {
+			"title": "Einführung",
+			"content": "Im digitalen Design können Farben in verschiedenen Formaten dargestellt werden. Jedes Format hat seine Vorteile und wird in verschiedenen Kontexten verwendet."
+		},
+		"hex": {
+			"title": "HEX-Farbcodes",
+			"content": "Das HEX (hexadezimale) Format wird häufig im Webdesign verwendet. Es besteht aus einem #-Symbol und sechs hexadezimalen Ziffern (0-9, A-F), die die Rot-, Grün- und Blaukanäle darstellen. Das Format ist kompakt und leicht lesbar."
+		},
+		"rgb": {
+			"title": "RGB und RGBA",
+			"content": "Das RGB-Format verwendet drei Werte von 0 bis 255 für die Rot-, Grün- und Blaukanäle. RGBA fügt einen Alphakanal (Transparenz) von 0 bis 1 hinzu. Dieses Format ist intuitiv und wird häufig in Grafikeditoren verwendet."
+		},
+		"hsl": {
+			"title": "HSL und HSLA",
+			"content": "Das HSL-Format beschreibt Farbe durch Farbton, Sättigung und Helligkeit. HSLA fügt einen Alphakanal hinzu. Dieses Format ist praktisch für die programmatische Änderung von Farbeigenschaften wie Abdunkeln oder Aufhellen."
+		},
+		"css": {
+			"title": "CSS-Farbstichwörter",
+			"content": "CSS bietet eine Reihe vordefinierter Farbstichwörter wie 'red', 'blue', 'green' und andere. Diese Stichwörter sind praktisch für die schnelle Verwendung, sind aber in der Anzahl der verfügbaren Farben begrenzt."
+		}
+	}
+}
+

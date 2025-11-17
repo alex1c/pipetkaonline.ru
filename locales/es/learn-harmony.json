@@ -1,0 +1,30 @@
+{
+	"title": "Armonía de Color",
+	"description": "Aprende diferentes esquemas de armonía de color para crear combinaciones visuales agradables",
+	"back": "Volver al Aprendizaje",
+	"sections": {
+		"intro": {
+			"title": "Introducción",
+			"content": "La armonía de color es el arte de crear combinaciones de colores agradables. Existen varios esquemas de armonía clásicos que ayudan a crear composiciones visualmente atractivas."
+		},
+		"complementary": {
+			"title": "Colores Complementarios",
+			"content": "Los colores complementarios están ubicados opuestos entre sí en la rueda de colores. Crean máximo contraste y energía visual. Ejemplo: rojo y verde, azul y naranja.",
+			"example": "Rojo ↔ Verde"
+		},
+		"analogous": {
+			"title": "Colores Análogos",
+			"content": "Los colores análogos están ubicados uno al lado del otro en la rueda de colores. Crean combinaciones armónicas y tranquilas. Ejemplo: azul, azul-verde, verde.",
+			"example": "Azul → Azul-verde → Verde"
+		},
+		"triadic": {
+			"title": "Armonía Triádica",
+			"content": "El esquema triádico usa tres colores distribuidos uniformemente alrededor de la rueda de colores. Esto crea combinaciones brillantes y equilibradas. Ejemplo: rojo, amarillo, azul."
+		},
+		"splitComplementary": {
+			"title": "Colores Complementarios Divididos",
+			"content": "Este esquema usa un color base y dos colores adyacentes a su color complementario. Proporciona alto contraste con menos tensión que el esquema complementario."
+		}
+	}
+}
+

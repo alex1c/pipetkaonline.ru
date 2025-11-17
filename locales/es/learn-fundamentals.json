@@ -1,0 +1,49 @@
+{
+	"title": "Fundamentos del Color",
+	"description": "Aprende los fundamentos del color, modelos de color y propiedades del color",
+	"back": "Volver al Aprendizaje",
+	"sections": {
+		"intro": {
+			"title": "Introducción",
+			"content": "Comprender los fundamentos del color es la base para trabajar con diseño. Los colores se pueden clasificar por diversas características: por modelo, temperatura y propiedades."
+		},
+		"models": {
+			"title": "Modelos de Color",
+			"content": "Existen diferentes modelos de color, cada uno usado para diferentes propósitos:",
+			"rgb": {
+				"title": "RGB (Rojo, Verde, Azul)",
+				"desc": "Modelo aditivo para pantallas y dispositivos digitales. Se usa en diseño web y gráficos digitales."
+			},
+			"cmyk": {
+				"title": "CMYK (Cian, Magenta, Amarillo, Clave)",
+				"desc": "Modelo sustractivo para impresión. Se usa en impresión y diseño impreso."
+			}
+		},
+		"wheel": {
+			"title": "Rueda de Colores",
+			"content": "La rueda de colores es una herramienta para entender las relaciones entre colores. Los colores primarios (rojo, azul, amarillo) están espaciados uniformemente alrededor del círculo, con colores secundarios y terciarios entre ellos."
+		},
+		"temperature": {
+			"title": "Temperatura del Color",
+			"content": "Los colores se dividen en cálidos y fríos según su percepción visual:",
+			"warm": {
+				"title": "Colores Cálidos",
+				"desc": "Rojo, naranja, amarillo — crean una sensación de calidez, energía y actividad."
+			},
+			"cool": {
+				"title": "Colores Fríos",
+				"desc": "Azul, verde, púrpura — crean una sensación de frescura, calma y estabilidad."
+			}
+		},
+		"properties": {
+			"title": "Propiedades del Color",
+			"content": "Cada color tiene tres propiedades principales:",
+			"items": {
+				"0": "Tono (Hue) — el color mismo (rojo, azul, etc.)",
+				"1": "Saturación (Saturation) — la intensidad del color",
+				"2": "Brillo (Brightness/Lightness) — la claridad u oscuridad del color"
+			}
+		}
+	}
+}
+

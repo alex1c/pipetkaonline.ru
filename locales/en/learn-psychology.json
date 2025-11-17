@@ -1,0 +1,36 @@
+{
+	"title": "Color Psychology",
+	"description": "Learn how colors affect emotions, behavior, and perception",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Colors have a profound impact on our emotions, mood, and behavior. Understanding color psychology helps create effective designs and marketing strategies."
+		},
+		"cultural": {
+			"title": "Cultural Meanings",
+			"content": "Color meanings can vary greatly across different cultures:",
+			"red": {
+				"title": "Red",
+				"desc": "In Western cultures, associated with passion, energy, and danger. In Asian cultures, symbolizes luck and prosperity."
+			},
+			"blue": {
+				"title": "Blue",
+				"desc": "Universally associated with calm, trust, and stability. Often used in corporate design."
+			}
+		},
+		"emotions": {
+			"title": "Emotional Associations",
+			"content": "Different colors evoke different emotional responses. Warm colors (red, orange) excite and stimulate, while cool colors (blue, green) calm and relax."
+		},
+		"branding": {
+			"title": "Brand Color Strategies",
+			"content": "Companies carefully choose colors for their brands to convey certain values and emotions. For example, blue is often used by technology companies to convey reliability, while green is used by environmental brands."
+		},
+		"marketing": {
+			"title": "Color in Marketing",
+			"content": "In marketing, colors are used to attract attention, create mood, and influence purchase decisions. The right color choice can significantly increase the effectiveness of advertising campaigns."
+		}
+	}
+}
+

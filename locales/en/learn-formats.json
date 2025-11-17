@@ -1,0 +1,28 @@
+{
+	"title": "Digital Color Formats",
+	"description": "Learn different formats for representing colors in digital design",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "In digital design, colors can be represented in various formats. Each format has its advantages and is used in different contexts."
+		},
+		"hex": {
+			"title": "HEX Color Codes",
+			"content": "HEX (hexadecimal) format is widely used in web design. It consists of a # symbol and six hexadecimal digits (0-9, A-F) representing red, green, and blue channels. The format is compact and easy to read."
+		},
+		"rgb": {
+			"title": "RGB and RGBA",
+			"content": "RGB format uses three values from 0 to 255 for red, green, and blue channels. RGBA adds an alpha channel (transparency) from 0 to 1. This format is intuitive and often used in graphics editors."
+		},
+		"hsl": {
+			"title": "HSL and HSLA",
+			"content": "HSL format describes color through hue, saturation, and lightness. HSLA adds an alpha channel. This format is convenient for programmatically changing color properties, such as darkening or lightening."
+		},
+		"css": {
+			"title": "CSS Color Keywords",
+			"content": "CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others. These keywords are convenient for quick use but are limited in the number of available colors."
+		}
+	}
+}
+

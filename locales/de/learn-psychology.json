@@ -1,0 +1,36 @@
+{
+	"title": "Farbpsychologie",
+	"description": "Lernen Sie, wie Farben Emotionen, Verhalten und Wahrnehmung beeinflussen",
+	"back": "Zurück zum Lernen",
+	"sections": {
+		"intro": {
+			"title": "Einführung",
+			"content": "Farben haben einen tiefgreifenden Einfluss auf unsere Emotionen, Stimmung und Verhalten. Das Verständnis der Farbpsychologie hilft, effektive Designs und Marketingstrategien zu erstellen."
+		},
+		"cultural": {
+			"title": "Kulturelle Bedeutungen",
+			"content": "Farbbedeutungen können sich in verschiedenen Kulturen stark unterscheiden:",
+			"red": {
+				"title": "Rot",
+				"desc": "In westlichen Kulturen mit Leidenschaft, Energie und Gefahr assoziiert. In asiatischen Kulturen symbolisiert es Glück und Wohlstand."
+			},
+			"blue": {
+				"title": "Blau",
+				"desc": "Universell mit Ruhe, Vertrauen und Stabilität assoziiert. Oft im Corporate Design verwendet."
+			}
+		},
+		"emotions": {
+			"title": "Emotionale Assoziationen",
+			"content": "Verschiedene Farben rufen verschiedene emotionale Reaktionen hervor. Warme Farben (Rot, Orange) erregen und stimulieren, während kalte Farben (Blau, Grün) beruhigen und entspannen."
+		},
+		"branding": {
+			"title": "Markenfarbstrategien",
+			"content": "Unternehmen wählen sorgfältig Farben für ihre Marken, um bestimmte Werte und Emotionen zu vermitteln. Beispielsweise wird Blau häufig von Technologieunternehmen verwendet, um Zuverlässigkeit zu vermitteln, während Grün von Umweltmarken verwendet wird."
+		},
+		"marketing": {
+			"title": "Farbe im Marketing",
+			"content": "Im Marketing werden Farben verwendet, um Aufmerksamkeit zu erregen, Stimmung zu schaffen und Kaufentscheidungen zu beeinflussen. Die richtige Farbwahl kann die Wirksamkeit von Werbekampagnen erheblich steigern."
+		}
+	}
+}
+

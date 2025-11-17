@@ -1,0 +1,22 @@
+{
+	"title": "PipetkaOnline — Online Color Tools",
+	"subtitle": "Detect colors, create palettes, and explore color theory.",
+	"cta.detect": "Detect Color",
+	"cta.palette": "Create Palette",
+	"cta.learn": "Learn About Color",
+	"cta.detectDesc": "Pick colors from images and get color codes",
+	"cta.paletteDesc": "Generate harmonious color palettes",
+	"cta.learnDesc": "Learn color theory and best practices",
+	"features.title": "Professional Color Tools",
+	"features.detection.title": "Color Detection",
+	"features.detection.desc": "Upload images and extract color codes instantly",
+	"features.contrast.title": "Contrast Checker",
+	"features.contrast.desc": "Ensure accessibility with WCAG contrast validation",
+	"features.conversion.title": "Color Conversion",
+	"features.conversion.desc": "Convert between HEX, RGB, HSL, and other formats",
+	"features.harmony.title": "Color Harmony",
+	"features.harmony.desc": "Discover complementary and analogous colors"
+}
+
+
+

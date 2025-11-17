@@ -1,0 +1,22 @@
+{
+	"title": "PipetkaOnline — Online Farbwerkzeuge",
+	"subtitle": "Farben erkennen, Paletten erstellen und Farbtheorie entdecken.",
+	"cta.detect": "Farbe erkennen",
+	"cta.palette": "Palette erstellen",
+	"cta.learn": "Farbtheorie lernen",
+	"cta.detectDesc": "Farben aus Bildern auswählen und Farbcodes erhalten",
+	"cta.paletteDesc": "Harmonische Farbpaletten erstellen",
+	"cta.learnDesc": "Farbtheorie und bewährte Praktiken lernen",
+	"features.title": "Professionelle Farbwerkzeuge",
+	"features.detection.title": "Farberkennung",
+	"features.detection.desc": "Bilder hochladen und sofort Farbcodes extrahieren",
+	"features.contrast.title": "Kontrastprüfung",
+	"features.contrast.desc": "Barrierefreiheit mit WCAG-Kontrastvalidierung sicherstellen",
+	"features.conversion.title": "Farbkonvertierung",
+	"features.conversion.desc": "Konvertieren zwischen HEX, RGB, HSL und anderen Formaten",
+	"features.harmony.title": "Farbharmonie",
+	"features.harmony.desc": "Komplementär- und Analogfarben entdecken"
+}
+
+
+

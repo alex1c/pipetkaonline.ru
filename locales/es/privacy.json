@@ -1,0 +1,37 @@
+{
+	"title": "Política de Privacidad",
+	"description": "Política de Privacidad de PipetkaOnline",
+	"lastUpdated": "Última actualización: 2024",
+	"sections": {
+		"intro": {
+			"title": "Introducción",
+			"content": "Valoramos su privacidad y nos comprometemos a proteger sus datos personales. Esta política de privacidad explica cómo recopilamos, usamos y protegemos información sobre usted cuando utiliza nuestro sitio web."
+		},
+		"data": {
+			"title": "Recopilación de Datos",
+			"content": "Podemos recopilar la siguiente información:",
+			"items": [
+				"Datos técnicos (dirección IP, tipo de navegador, sistema operativo)",
+				"Datos de uso (páginas vistas, duración de la visita)",
+				"Información que proporcione voluntariamente (si nos contacta)"
+			]
+		},
+		"cookies": {
+			"title": "Uso de Cookies",
+			"content": "Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico. La información detallada está disponible en nuestra Política de Cookies."
+		},
+		"thirdParty": {
+			"title": "Terceros",
+			"content": "Podemos utilizar servicios de terceros como Google Analytics y redes publicitarias que pueden recopilar información sobre su uso del sitio."
+		},
+		"rights": {
+			"title": "Sus Derechos",
+			"content": "Tiene derecho a solicitar acceso, corrección o eliminación de sus datos personales. Para hacerlo, contáctenos a través de la página de contacto."
+		},
+		"contact": {
+			"title": "Contacto",
+			"content": "Si tiene preguntas sobre esta política de privacidad, contáctenos a través de la página de contacto."
+		}
+	}
+}
+

@@ -1,0 +1,20 @@
+{
+	"title": "Farbwerkzeuge",
+	"description": "Farbcodes erkennen, Paletten erstellen und Kontrast und Harmonie prüfen.",
+	"comingSoon": "Demnächst",
+	"tools.picker.title": "Farbauswahl",
+	"tools.picker.desc": "Farben aus Bildern und Screenshots extrahieren",
+	"tools.palette.title": "Palettengenerator",
+	"tools.palette.desc": "Automatisch schöne Farbpaletten erstellen",
+	"tools.contrast.title": "Kontrastprüfung",
+	"tools.contrast.desc": "Farbkontrast für Barrierefreiheit überprüfen",
+	"tools.converter.title": "Farbkonverter",
+	"tools.converter.desc": "Konvertieren zwischen HEX, RGB, HSL und mehr",
+	"tools.harmony.title": "Harmonie-Finder",
+	"tools.harmony.desc": "Komplementär- und Analogfarben entdecken",
+	"tools.gradient.title": "Gradient-Generator",
+	"tools.gradient.desc": "Sanfte CSS-Gradienten erstellen"
+}
+
+
+

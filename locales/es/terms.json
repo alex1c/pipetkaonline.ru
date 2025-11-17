@@ -1,0 +1,33 @@
+{
+	"title": "Términos de Servicio",
+	"description": "Términos de uso de PipetkaOnline",
+	"lastUpdated": "Última actualización: 2024",
+	"sections": {
+		"acceptance": {
+			"title": "Aceptación de Términos",
+			"content": "Al utilizar nuestro sitio web, acepta estos términos de uso. Si no está de acuerdo con estos términos, no utilice nuestro sitio web."
+		},
+		"use": {
+			"title": "Uso del Sitio Web",
+			"content": "Puede utilizar nuestro sitio web para:",
+			"items": [
+				"Detectar colores y crear paletas",
+				"Aprender teoría del color",
+				"Usar herramientas para fines personales y comerciales"
+			]
+		},
+		"intellectual": {
+			"title": "Propiedad Intelectual",
+			"content": "Todo el contenido del sitio web, incluido el diseño, textos y herramientas, está protegido por derechos de autor. Puede usar los materiales del sitio web para fines personales y comerciales, pero no puede copiarlos o distribuirlos sin permiso."
+		},
+		"liability": {
+			"title": "Limitación de Responsabilidad",
+			"content": "No somos responsables de la precisión de los resultados de las herramientas ni de ningún daño derivado del uso del sitio web. Las herramientas se proporcionan \"tal cual\" sin garantías."
+		},
+		"changes": {
+			"title": "Cambios en los Términos",
+			"content": "Nos reservamos el derecho de cambiar estos términos en cualquier momento. Los cambios entran en vigor al publicarse en el sitio web."
+		}
+	}
+}
+

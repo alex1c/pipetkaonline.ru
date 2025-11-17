@@ -1,0 +1,41 @@
+{
+	"title": "Color Accessibility",
+	"description": "Learn principles of accessible design using colors",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Accessible design ensures that your content can be used by all people, including those with visual impairments or color blindness."
+		},
+		"wcag": {
+			"title": "WCAG Contrast Guidelines",
+			"content": "WCAG (Web Content Accessibility Guidelines) sets contrast standards to ensure text readability:",
+			"aa": {
+				"title": "Level AA",
+				"desc": "Minimum contrast of 4.5:1 for normal text and 3:1 for large text. This is the minimum standard for most websites."
+			},
+			"aaa": {
+				"title": "Level AAA",
+				"desc": "High contrast of 7:1 for normal text and 4.5:1 for large text. Recommended for important content."
+			}
+		},
+		"colorBlindness": {
+			"title": "Color Blindness Considerations",
+			"content": "About 8% of men and 0.5% of women have some form of color blindness. It's important not to rely solely on color to convey information:",
+			"items": {
+				"0": "Use icons and text along with color",
+				"1": "Ensure sufficient contrast between elements",
+				"2": "Test designs using color blindness simulation tools"
+			}
+		},
+		"readability": {
+			"title": "Text Readability",
+			"content": "Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background, use large enough fonts, and avoid overly bright or dark combinations."
+		},
+		"alternatives": {
+			"title": "Alternative Color Indicators",
+			"content": "Don't rely solely on color to convey important information. Use additional visual indicators: shapes, icons, text, patterns, or symbols."
+		}
+	}
+}
+

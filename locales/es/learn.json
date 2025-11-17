@@ -1,0 +1,37 @@
+{
+	"title": "Teoría del color y aprendizaje",
+	"description": "Aprende los fundamentos del color, armonía y psicología de los colores en el diseño.",
+	"topics.fundamentals.title": "Fundamentos del Color",
+	"topics.fundamentals.desc": "Comprensión de colores primarios, secundarios y terciarios",
+	"topics.fundamentals.items.0": "Modelos de color RGB vs CMYK",
+	"topics.fundamentals.items.1": "Conceptos básicos de la rueda de colores",
+	"topics.fundamentals.items.2": "Colores cálidos y fríos",
+	"topics.fundamentals.items.3": "Saturación y brillo del color",
+	"topics.harmony.title": "Armonía de Color",
+	"topics.harmony.desc": "Crear combinaciones de colores agradables",
+	"topics.harmony.items.0": "Colores complementarios",
+	"topics.harmony.items.1": "Esquemas de colores análogos",
+	"topics.harmony.items.2": "Armonía triádica",
+	"topics.harmony.items.3": "Combinaciones complementarias divididas",
+	"topics.psychology.title": "Psicología del Color",
+	"topics.psychology.desc": "Cómo los colores afectan las emociones y el comportamiento",
+	"topics.psychology.items.0": "Significados culturales de los colores",
+	"topics.psychology.items.1": "Asociaciones emocionales",
+	"topics.psychology.items.2": "Estrategias de color de marca",
+	"topics.psychology.items.3": "Color en marketing",
+	"topics.accessibility.title": "Accesibilidad",
+	"topics.accessibility.desc": "Diseñar pensando en la accesibilidad del color",
+	"topics.accessibility.items.0": "Pautas de contraste WCAG",
+	"topics.accessibility.items.1": "Consideraciones de daltonismo",
+	"topics.accessibility.items.2": "Legibilidad del texto",
+	"topics.accessibility.items.3": "Indicadores de color alternativos",
+	"topics.formats.title": "Formatos Digitales de Color",
+	"topics.formats.desc": "Comprensión de códigos y formatos de color",
+	"topics.formats.items.0": "Códigos de color HEX",
+	"topics.formats.items.1": "Valores RGB y RGBA",
+	"topics.formats.items.2": "Notación de color HSL",
+	"topics.formats.items.3": "Palabras clave de color CSS"
+}
+
+
+

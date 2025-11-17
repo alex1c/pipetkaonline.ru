@@ -1,0 +1,20 @@
+{
+	"title": "Color Tools",
+	"description": "Detect color codes, build palettes, and check contrast and harmony.",
+	"comingSoon": "Coming Soon",
+	"tools.picker.title": "Color Picker",
+	"tools.picker.desc": "Extract colors from images and screenshots",
+	"tools.palette.title": "Palette Generator",
+	"tools.palette.desc": "Create beautiful color palettes automatically",
+	"tools.contrast.title": "Contrast Checker",
+	"tools.contrast.desc": "Verify color contrast for accessibility",
+	"tools.converter.title": "Color Converter",
+	"tools.converter.desc": "Convert between HEX, RGB, HSL, and more",
+	"tools.harmony.title": "Harmony Finder",
+	"tools.harmony.desc": "Discover complementary and analogous colors",
+	"tools.gradient.title": "Gradient Generator",
+	"tools.gradient.desc": "Create smooth CSS gradients"
+}
+
+
+

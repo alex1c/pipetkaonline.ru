@@ -1,0 +1,35 @@
+{
+	"title": "Política de Cookies",
+	"description": "Información sobre el uso de cookies en PipetkaOnline",
+	"lastUpdated": "Última actualización: 2024",
+	"sections": {
+		"what": {
+			"title": "Qué son las Cookies",
+			"content": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Ayudan al sitio a recordar sus preferencias y mejorar la funcionalidad."
+		},
+		"how": {
+			"title": "Cómo Usamos las Cookies",
+			"content": "Utilizamos cookies para garantizar la funcionalidad del sitio web, analizar el uso y mostrar publicidad relevante."
+		},
+		"types": {
+			"title": "Tipos de Cookies",
+			"essential": {
+				"title": "Cookies Esenciales",
+				"content": "Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar. Proporcionan funcionalidad básica y seguridad."
+			},
+			"analytics": {
+				"title": "Cookies Analíticas",
+				"content": "Utilizamos Google Analytics para entender cómo los visitantes usan nuestro sitio. Estos datos nos ayudan a mejorar el sitio web."
+			},
+			"advertising": {
+				"title": "Cookies Publicitarias",
+				"content": "Utilizamos cookies para mostrar publicidad relevante a través de Google AdSense y Yandex.Direct. Estas cookies rastrean sus intereses para personalizar los anuncios."
+			}
+		},
+		"manage": {
+			"title": "Gestionar Cookies",
+			"content": "Puede gestionar las cookies a través de la configuración de su navegador. Tenga en cuenta que desactivar algunas cookies puede afectar la funcionalidad del sitio web."
+		}
+	}
+}
+

@@ -1,0 +1,33 @@
+{
+	"title": "Nutzungsbedingungen",
+	"description": "Nutzungsbedingungen für PipetkaOnline",
+	"lastUpdated": "Zuletzt aktualisiert: 2024",
+	"sections": {
+		"acceptance": {
+			"title": "Annahme der Bedingungen",
+			"content": "Durch die Nutzung unserer Website stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie bitte unsere Website nicht."
+		},
+		"use": {
+			"title": "Nutzung der Website",
+			"content": "Sie können unsere Website verwenden, um:",
+			"items": [
+				"Farben zu erkennen und Paletten zu erstellen",
+				"Farbtheorie zu lernen",
+				"Werkzeuge für persönliche und kommerzielle Zwecke zu nutzen"
+			]
+		},
+		"intellectual": {
+			"title": "Geistiges Eigentum",
+			"content": "Alle Website-Inhalte, einschließlich Design, Texte und Werkzeuge, sind urheberrechtlich geschützt. Sie können Website-Materialien für persönliche und kommerzielle Zwecke verwenden, dürfen sie jedoch nicht ohne Erlaubnis kopieren oder verteilen."
+		},
+		"liability": {
+			"title": "Haftungsbeschränkung",
+			"content": "Wir sind nicht verantwortlich für die Genauigkeit der Werkzeugeergebnisse oder für Schäden, die durch die Nutzung der Website entstehen. Werkzeuge werden \"wie besehen\" ohne Gewährleistung bereitgestellt."
+		},
+		"changes": {
+			"title": "Änderungen der Bedingungen",
+			"content": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen treten mit der Veröffentlichung auf der Website in Kraft."
+		}
+	}
+}
+

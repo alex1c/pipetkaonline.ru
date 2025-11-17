@@ -1,0 +1,30 @@
+{
+	"title": "Color Harmony",
+	"description": "Learn different color harmony schemes for creating pleasing visual combinations",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Color harmony is the art of creating pleasing color combinations. There are several classic harmony schemes that help create visually appealing compositions."
+		},
+		"complementary": {
+			"title": "Complementary Colors",
+			"content": "Complementary colors are located opposite each other on the color wheel. They create maximum contrast and visual energy. Example: red and green, blue and orange.",
+			"example": "Red ↔ Green"
+		},
+		"analogous": {
+			"title": "Analogous Colors",
+			"content": "Analogous colors are located next to each other on the color wheel. They create harmonious and calm combinations. Example: blue, blue-green, green.",
+			"example": "Blue → Blue-green → Green"
+		},
+		"triadic": {
+			"title": "Triadic Harmony",
+			"content": "The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations. Example: red, yellow, blue."
+		},
+		"splitComplementary": {
+			"title": "Split-Complementary Colors",
+			"content": "This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension than the complementary scheme."
+		}
+	}
+}
+

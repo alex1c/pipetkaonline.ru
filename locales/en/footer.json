@@ -1,0 +1,22 @@
+{
+	"description": "Online color tools. Detect colors, create palettes, and learn color theory.",
+	"legal": {
+		"title": "Legal",
+		"privacy": "Privacy Policy",
+		"cookies": "Cookie Policy",
+		"terms": "Terms of Service"
+	},
+	"info": {
+		"title": "Information",
+		"about": "About Us",
+		"contact": "Contact"
+	},
+	"links": {
+		"title": "Quick Links",
+		"home": "Home",
+		"tools": "Tools",
+		"learn": "Learn"
+	},
+	"copyright": "All rights reserved."
+}
+

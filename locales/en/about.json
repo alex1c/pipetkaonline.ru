@@ -1,0 +1,19 @@
+{
+	"title": "About Us",
+	"description": "Information about PipetkaOnline",
+	"intro": "PipetkaOnline is a modern color platform providing professional tools for designers, developers, and anyone working with color.",
+	"mission": {
+		"title": "Our Mission",
+		"content": "We strive to make working with color simple, intuitive, and accessible to everyone. Our tools help create beautiful color solutions and learn color theory."
+	},
+	"features": {
+		"title": "Key Features",
+		"items": [
+			"Color detection from images",
+			"Creating harmonious palettes",
+			"Contrast checking for accessibility",
+			"Learning color theory"
+		]
+	}
+}
+

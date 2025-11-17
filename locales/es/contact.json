@@ -1,0 +1,21 @@
+{
+	"title": "Contacto",
+	"description": "Póngase en contacto con nosotros",
+	"intro": "Si tiene preguntas, sugerencias o desea contactarnos, utilice la siguiente información.",
+	"info": {
+		"title": "Información de Contacto",
+		"email": {
+			"label": "Correo Electrónico",
+			"value": "contact@pipetkaonline.ru"
+		},
+		"response": {
+			"title": "Tiempo de Respuesta",
+			"content": "Intentamos responder a todas las consultas en un plazo de 24-48 horas."
+		}
+	},
+	"support": {
+		"title": "Soporte",
+		"content": "Si experimenta problemas técnicos o tiene preguntas sobre el uso del sitio, contáctenos en la dirección de correo electrónico proporcionada."
+	}
+}
+

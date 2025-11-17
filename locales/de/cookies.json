@@ -1,0 +1,35 @@
+{
+	"title": "Cookie-Richtlinie",
+	"description": "Informationen zur Cookie-Verwendung auf PipetkaOnline",
+	"lastUpdated": "Zuletzt aktualisiert: 2024",
+	"sections": {
+		"what": {
+			"title": "Was sind Cookies",
+			"content": "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Sie helfen der Website, Ihre Präferenzen zu speichern und die Funktionalität zu verbessern."
+		},
+		"how": {
+			"title": "Wie wir Cookies verwenden",
+			"content": "Wir verwenden Cookies, um die Funktionalität der Website sicherzustellen, die Nutzung zu analysieren und relevante Werbung anzuzeigen."
+		},
+		"types": {
+			"title": "Arten von Cookies",
+			"essential": {
+				"title": "Notwendige Cookies",
+				"content": "Diese Cookies sind für die Funktionsfähigkeit der Website erforderlich und können nicht deaktiviert werden. Sie bieten grundlegende Funktionalität und Sicherheit."
+			},
+			"analytics": {
+				"title": "Analyse-Cookies",
+				"content": "Wir verwenden Google Analytics, um zu verstehen, wie Besucher unsere Website nutzen. Diese Daten helfen uns, die Website zu verbessern."
+			},
+			"advertising": {
+				"title": "Werbe-Cookies",
+				"content": "Wir verwenden Cookies, um relevante Werbung über Google AdSense und Yandex.Direct anzuzeigen. Diese Cookies verfolgen Ihre Interessen, um Werbung zu personalisieren."
+			}
+		},
+		"manage": {
+			"title": "Cookies verwalten",
+			"content": "Sie können Cookies über Ihre Browsereinstellungen verwalten. Beachten Sie, dass das Deaktivieren einiger Cookies die Funktionalität der Website beeinträchtigen kann."
+		}
+	}
+}
+

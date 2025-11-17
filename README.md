@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PipetkaOnline - Online Color Tools
+
+A modern web application for working with colors, built with Next.js 14+, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🌍 **Multi-language support** (Russian, English, German, Spanish)
+- 🎨 **Color tools** - Color picker, palette generator, contrast checker
+- 📚 **Color theory education** - Learn about color harmony and psychology
+- ♿ **Accessibility focused** - WCAG compliant color contrast
+- 📱 **Responsive design** - Works on all devices
+- ⚡ **Fast and modern** - Built with Next.js App Router
+
+## Tech Stack
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Internationalization:** next-intl
+- **Deployment:** Vercel-ready
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+pipetkaonline.ru/
+├── app/
+│   ├── [locale]/
+│   │   ├── layout.tsx       # Root layout with i18n
+│   │   ├── page.tsx         # Home page
+│   │   ├── tools/           # Tools section
+│   │   ├── learn/           # Learning section
+│   │   └── tech/            # Technical pages
+│   └── globals.css          # Global styles
+├── components/
+│   ├── navbar.tsx           # Navigation component
+│   └── language-switcher.tsx # Language selector
+├── locales/
+│   ├── ru/                  # Russian translations
+│   ├── en/                  # English translations
+│   ├── de/                  # German translations
+│   └── es/                  # Spanish translations
+├── i18n.ts                  # i18n configuration
+└── middleware.ts            # Locale routing middleware
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Internationalization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application supports 4 languages:
 
-## Deploy on Vercel
+- 🇷🇺 Russian (default)
+- 🇬🇧 English
+- 🇩🇪 German
+- 🇪🇸 Spanish
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Language is determined by URL path: `/ru/`, `/en/`, `/de/`, `/es/`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding Translations
+
+1. Add translation keys to JSON files in `locales/[locale]/`
+2. Use the `useTranslations` hook in components
+3. Follow the namespace pattern: `common`, `home`, `tools`, `learn`, `tech`
+
+## Development Guidelines
+
+- Follow TypeScript strict mode
+- Use Tailwind CSS for styling
+- Keep components modular and reusable
+- Comment code in English
+- Use kebab-case for file names
+- Use camelCase for functions/variables
+- Use PascalCase for components/types
+
+## License
+
+Private project - All rights reserved

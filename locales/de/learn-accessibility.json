@@ -1,0 +1,41 @@
+{
+	"title": "Farbbarrierefreiheit",
+	"description": "Lernen Sie Prinzipien des barrierefreien Designs mit Farben",
+	"back": "Zurück zum Lernen",
+	"sections": {
+		"intro": {
+			"title": "Einführung",
+			"content": "Barrierefreies Design stellt sicher, dass Ihr Inhalt von allen Menschen genutzt werden kann, einschließlich solcher mit Sehbehinderungen oder Farbenblindheit."
+		},
+		"wcag": {
+			"title": "WCAG-Kontrastrichtlinien",
+			"content": "WCAG (Web Content Accessibility Guidelines) legt Kontraststandards fest, um die Lesbarkeit von Text zu gewährleisten:",
+			"aa": {
+				"title": "Stufe AA",
+				"desc": "Mindestkontrast von 4.5:1 für normalen Text und 3:1 für großen Text. Dies ist der Mindeststandard für die meisten Websites."
+			},
+			"aaa": {
+				"title": "Stufe AAA",
+				"desc": "Hoher Kontrast von 7:1 für normalen Text und 4.5:1 für großen Text. Empfohlen für wichtige Inhalte."
+			}
+		},
+		"colorBlindness": {
+			"title": "Überlegungen zur Farbenblindheit",
+			"content": "Etwa 8% der Männer und 0.5% der Frauen haben eine Form von Farbenblindheit. Es ist wichtig, sich nicht nur auf Farbe zu verlassen, um Informationen zu vermitteln:",
+			"items": {
+				"0": "Verwenden Sie Icons und Text zusammen mit Farbe",
+				"1": "Stellen Sie ausreichenden Kontrast zwischen Elementen sicher",
+				"2": "Testen Sie Designs mit Tools zur Simulation von Farbenblindheit"
+			}
+		},
+		"readability": {
+			"title": "Textlesbarkeit",
+			"content": "Gute Textlesbarkeit ist entscheidend für Barrierefreiheit. Stellen Sie sicher, dass Text ausreichenden Kontrast zum Hintergrund hat, verwenden Sie ausreichend große Schriftarten und vermeiden Sie zu helle oder zu dunkle Kombinationen."
+		},
+		"alternatives": {
+			"title": "Alternative Farbindikatoren",
+			"content": "Verlassen Sie sich nicht nur auf Farbe, um wichtige Informationen zu vermitteln. Verwenden Sie zusätzliche visuelle Indikatoren: Formen, Icons, Text, Muster oder Symbole."
+		}
+	}
+}
+

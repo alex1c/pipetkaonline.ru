@@ -1,0 +1,30 @@
+{
+	"title": "Farbharmonie",
+	"description": "Lernen Sie verschiedene Farbschemata für die Erstellung angenehmer visueller Kombinationen",
+	"back": "Zurück zum Lernen",
+	"sections": {
+		"intro": {
+			"title": "Einführung",
+			"content": "Farbharmonie ist die Kunst, angenehme Farbkombinationen zu schaffen. Es gibt mehrere klassische Harmonieschemata, die helfen, visuell ansprechende Kompositionen zu erstellen."
+		},
+		"complementary": {
+			"title": "Komplementärfarben",
+			"content": "Komplementärfarben liegen sich auf dem Farbkreis gegenüber. Sie schaffen maximalen Kontrast und visuelle Energie. Beispiel: Rot und Grün, Blau und Orange.",
+			"example": "Rot ↔ Grün"
+		},
+		"analogous": {
+			"title": "Analoge Farben",
+			"content": "Analoge Farben liegen nebeneinander auf dem Farbkreis. Sie schaffen harmonische und ruhige Kombinationen. Beispiel: Blau, Blau-Grün, Grün.",
+			"example": "Blau → Blau-Grün → Grün"
+		},
+		"triadic": {
+			"title": "Triadische Harmonie",
+			"content": "Das triadische Schema verwendet drei Farben, die gleichmäßig um den Farbkreis verteilt sind. Dies schafft helle und ausgewogene Kombinationen. Beispiel: Rot, Gelb, Blau."
+		},
+		"splitComplementary": {
+			"title": "Getrennt-komplementäre Farben",
+			"content": "Dieses Schema verwendet eine Grundfarbe und zwei Farben, die benachbart zur Komplementärfarbe sind. Es bietet hohen Kontrast mit weniger Spannung als das komplementäre Schema."
+		}
+	}
+}
+

@@ -1,0 +1,21 @@
+{
+	"title": "Contact",
+	"description": "Get in touch with us",
+	"intro": "If you have questions, suggestions, or would like to contact us, please use the following information.",
+	"info": {
+		"title": "Contact Information",
+		"email": {
+			"label": "Email",
+			"value": "contact@pipetkaonline.ru"
+		},
+		"response": {
+			"title": "Response Time",
+			"content": "We try to respond to all inquiries within 24-48 hours."
+		}
+	},
+	"support": {
+		"title": "Support",
+		"content": "If you experience technical issues or have questions about using the site, please contact us at the email address provided."
+	}
+}
+

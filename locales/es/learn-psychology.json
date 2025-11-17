@@ -1,0 +1,36 @@
+{
+	"title": "Psicología del Color",
+	"description": "Aprende cómo los colores afectan las emociones, el comportamiento y la percepción",
+	"back": "Volver al Aprendizaje",
+	"sections": {
+		"intro": {
+			"title": "Introducción",
+			"content": "Los colores tienen un impacto profundo en nuestras emociones, estado de ánimo y comportamiento. Comprender la psicología del color ayuda a crear diseños y estrategias de marketing efectivos."
+		},
+		"cultural": {
+			"title": "Significados Culturales",
+			"content": "Los significados de los colores pueden variar mucho entre diferentes culturas:",
+			"red": {
+				"title": "Rojo",
+				"desc": "En culturas occidentales, asociado con pasión, energía y peligro. En culturas asiáticas, simboliza suerte y prosperidad."
+			},
+			"blue": {
+				"title": "Azul",
+				"desc": "Universalmente asociado con calma, confianza y estabilidad. A menudo usado en diseño corporativo."
+			}
+		},
+		"emotions": {
+			"title": "Asociaciones Emocionales",
+			"content": "Diferentes colores evocan diferentes respuestas emocionales. Los colores cálidos (rojo, naranja) excitan y estimulan, mientras que los colores fríos (azul, verde) calman y relajan."
+		},
+		"branding": {
+			"title": "Estrategias de Color de Marca",
+			"content": "Las empresas eligen cuidadosamente los colores para sus marcas para transmitir ciertos valores y emociones. Por ejemplo, el azul a menudo es usado por empresas tecnológicas para transmitir confiabilidad, mientras que el verde es usado por marcas ambientales."
+		},
+		"marketing": {
+			"title": "Color en Marketing",
+			"content": "En marketing, los colores se usan para atraer atención, crear estado de ánimo e influir en las decisiones de compra. La elección correcta del color puede aumentar significativamente la efectividad de las campañas publicitarias."
+		}
+	}
+}
+

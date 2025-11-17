@@ -1,0 +1,49 @@
+{
+	"title": "Color Fundamentals",
+	"description": "Learn the basics of color, color models, and color properties",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Understanding color fundamentals is the foundation for working with design. Colors can be classified by various characteristics: by model, temperature, and properties."
+		},
+		"models": {
+			"title": "Color Models",
+			"content": "There are different color models, each used for different purposes:",
+			"rgb": {
+				"title": "RGB (Red, Green, Blue)",
+				"desc": "Additive model for screens and digital devices. Used in web design and digital graphics."
+			},
+			"cmyk": {
+				"title": "CMYK (Cyan, Magenta, Yellow, Key)",
+				"desc": "Subtractive model for printing. Used in printing and print design."
+			}
+		},
+		"wheel": {
+			"title": "Color Wheel",
+			"content": "The color wheel is a tool for understanding relationships between colors. Primary colors (red, blue, yellow) are evenly spaced around the circle, with secondary and tertiary colors between them."
+		},
+		"temperature": {
+			"title": "Color Temperature",
+			"content": "Colors are divided into warm and cool based on their visual perception:",
+			"warm": {
+				"title": "Warm Colors",
+				"desc": "Red, orange, yellow — create a sense of warmth, energy, and activity."
+			},
+			"cool": {
+				"title": "Cool Colors",
+				"desc": "Blue, green, purple — create a sense of coolness, calm, and stability."
+			}
+		},
+		"properties": {
+			"title": "Color Properties",
+			"content": "Each color has three main properties:",
+			"items": {
+				"0": "Hue — the color itself (red, blue, etc.)",
+				"1": "Saturation — the intensity of the color",
+				"2": "Brightness/Lightness — the lightness or darkness of the color"
+			}
+		}
+	}
+}
+

@@ -1,0 +1,22 @@
+{
+	"description": "Online-Farbwerkzeuge. Farben erkennen, Paletten erstellen und Farbtheorie lernen.",
+	"legal": {
+		"title": "Rechtliches",
+		"privacy": "Datenschutzerklärung",
+		"cookies": "Cookie-Richtlinie",
+		"terms": "Nutzungsbedingungen"
+	},
+	"info": {
+		"title": "Informationen",
+		"about": "Über uns",
+		"contact": "Kontakt"
+	},
+	"links": {
+		"title": "Schnelllinks",
+		"home": "Startseite",
+		"tools": "Werkzeuge",
+		"learn": "Lernen"
+	},
+	"copyright": "Alle Rechte vorbehalten."
+}
+

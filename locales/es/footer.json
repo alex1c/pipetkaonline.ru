@@ -1,0 +1,22 @@
+{
+	"description": "Herramientas de color en línea. Detecta colores, crea paletas y aprende teoría del color.",
+	"legal": {
+		"title": "Legal",
+		"privacy": "Política de Privacidad",
+		"cookies": "Política de Cookies",
+		"terms": "Términos de Servicio"
+	},
+	"info": {
+		"title": "Información",
+		"about": "Acerca de",
+		"contact": "Contacto"
+	},
+	"links": {
+		"title": "Enlaces Rápidos",
+		"home": "Inicio",
+		"tools": "Herramientas",
+		"learn": "Aprender"
+	},
+	"copyright": "Todos los derechos reservados."
+}
+

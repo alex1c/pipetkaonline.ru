@@ -1,0 +1,20 @@
+{
+	"title": "Herramientas de color",
+	"description": "Detecta códigos de color, crea paletas y verifica contraste y armonía.",
+	"comingSoon": "Próximamente",
+	"tools.picker.title": "Selector de Color",
+	"tools.picker.desc": "Extrae colores de imágenes y capturas de pantalla",
+	"tools.palette.title": "Generador de Paletas",
+	"tools.palette.desc": "Crea hermosas paletas de colores automáticamente",
+	"tools.contrast.title": "Verificador de Contraste",
+	"tools.contrast.desc": "Verifica el contraste de color para accesibilidad",
+	"tools.converter.title": "Conversor de Color",
+	"tools.converter.desc": "Convierte entre HEX, RGB, HSL y más",
+	"tools.harmony.title": "Buscador de Armonía",
+	"tools.harmony.desc": "Descubre colores complementarios y análogos",
+	"tools.gradient.title": "Generador de Gradientes",
+	"tools.gradient.desc": "Crea gradientes CSS suaves"
+}
+
+
+

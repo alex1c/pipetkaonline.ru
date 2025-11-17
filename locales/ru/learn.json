@@ -1,0 +1,37 @@
+{
+	"title": "Теория цвета и обучение",
+	"description": "Изучи основы цвета, гармонии и психологии восприятия. Узнай, как использовать цвет в дизайне.",
+	"topics.fundamentals.title": "Основы цвета",
+	"topics.fundamentals.desc": "Понимание основных, вторичных и третичных цветов",
+	"topics.fundamentals.items.0": "Модели RGB vs CMYK",
+	"topics.fundamentals.items.1": "Основы цветового круга",
+	"topics.fundamentals.items.2": "Теплые и холодные цвета",
+	"topics.fundamentals.items.3": "Насыщенность и яркость цвета",
+	"topics.harmony.title": "Цветовая гармония",
+	"topics.harmony.desc": "Создание приятных цветовых сочетаний",
+	"topics.harmony.items.0": "Дополнительные цвета",
+	"topics.harmony.items.1": "Аналогичные цветовые схемы",
+	"topics.harmony.items.2": "Триадическая гармония",
+	"topics.harmony.items.3": "Раздельно-дополнительные сочетания",
+	"topics.psychology.title": "Психология цвета",
+	"topics.psychology.desc": "Как цвета влияют на эмоции и поведение",
+	"topics.psychology.items.0": "Культурные значения цветов",
+	"topics.psychology.items.1": "Эмоциональные ассоциации",
+	"topics.psychology.items.2": "Стратегии цветов брендов",
+	"topics.psychology.items.3": "Цвет в маркетинге",
+	"topics.accessibility.title": "Доступность",
+	"topics.accessibility.desc": "Дизайн с учетом доступности цветов",
+	"topics.accessibility.items.0": "Руководство по контрасту WCAG",
+	"topics.accessibility.items.1": "Учет цветовой слепоты",
+	"topics.accessibility.items.2": "Читаемость текста",
+	"topics.accessibility.items.3": "Альтернативные цветовые индикаторы",
+	"topics.formats.title": "Цифровые форматы цветов",
+	"topics.formats.desc": "Понимание цветовых кодов и форматов",
+	"topics.formats.items.0": "HEX цветовые коды",
+	"topics.formats.items.1": "Значения RGB и RGBA",
+	"topics.formats.items.2": "Обозначение HSL",
+	"topics.formats.items.3": "CSS цветовые ключевые слова"
+}
+
+
+

@@ -1,0 +1,37 @@
+{
+	"title": "Datenschutzerklärung",
+	"description": "Datenschutzerklärung von PipetkaOnline",
+	"lastUpdated": "Zuletzt aktualisiert: 2024",
+	"sections": {
+		"intro": {
+			"title": "Einführung",
+			"content": "Wir schätzen Ihre Privatsphäre und verpflichten uns, Ihre persönlichen Daten zu schützen. Diese Datenschutzerklärung erklärt, wie wir Informationen über Sie sammeln, verwenden und schützen, wenn Sie unsere Website nutzen."
+		},
+		"data": {
+			"title": "Datenerfassung",
+			"content": "Wir können folgende Informationen sammeln:",
+			"items": [
+				"Technische Daten (IP-Adresse, Browsertyp, Betriebssystem)",
+				"Nutzungsdaten (besuchte Seiten, Besuchsdauer)",
+				"Von Ihnen freiwillig bereitgestellte Informationen (wenn Sie uns kontaktieren)"
+			]
+		},
+		"cookies": {
+			"title": "Verwendung von Cookies",
+			"content": "Unsere Website verwendet Cookies, um die Benutzererfahrung zu verbessern und den Traffic zu analysieren. Detaillierte Informationen finden Sie in unserer Cookie-Richtlinie."
+		},
+		"thirdParty": {
+			"title": "Dritte Parteien",
+			"content": "Wir können Drittanbieterdienste wie Google Analytics und Werbenetzwerke verwenden, die Informationen über Ihre Nutzung der Website sammeln können."
+		},
+		"rights": {
+			"title": "Ihre Rechte",
+			"content": "Sie haben das Recht, Zugang, Berichtigung oder Löschung Ihrer persönlichen Daten anzufordern. Kontaktieren Sie uns bitte über die Kontaktseite."
+		},
+		"contact": {
+			"title": "Kontakt",
+			"content": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte über die Kontaktseite."
+		}
+	}
+}
+

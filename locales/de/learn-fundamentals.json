@@ -1,0 +1,49 @@
+{
+	"title": "Farbgrundlagen",
+	"description": "Lernen Sie die Grundlagen von Farbe, Farbmodellen und Farbeigenschaften",
+	"back": "Zurück zum Lernen",
+	"sections": {
+		"intro": {
+			"title": "Einführung",
+			"content": "Das Verständnis der Farbgrundlagen ist die Grundlage für die Arbeit mit Design. Farben können nach verschiedenen Merkmalen klassifiziert werden: nach Modell, Temperatur und Eigenschaften."
+		},
+		"models": {
+			"title": "Farbmodelle",
+			"content": "Es gibt verschiedene Farbmodelle, die jeweils für verschiedene Zwecke verwendet werden:",
+			"rgb": {
+				"title": "RGB (Rot, Grün, Blau)",
+				"desc": "Additives Modell für Bildschirme und digitale Geräte. Wird im Webdesign und in der digitalen Grafik verwendet."
+			},
+			"cmyk": {
+				"title": "CMYK (Cyan, Magenta, Gelb, Key)",
+				"desc": "Subtraktives Modell für den Druck. Wird im Druck und im Druckdesign verwendet."
+			}
+		},
+		"wheel": {
+			"title": "Farbkreis",
+			"content": "Der Farbkreis ist ein Werkzeug zum Verständnis der Beziehungen zwischen Farben. Primärfarben (Rot, Blau, Gelb) sind gleichmäßig um den Kreis verteilt, mit Sekundär- und Tertiärfarben dazwischen."
+		},
+		"temperature": {
+			"title": "Farbtemperatur",
+			"content": "Farben werden basierend auf ihrer visuellen Wahrnehmung in warme und kalte unterteilt:",
+			"warm": {
+				"title": "Warme Farben",
+				"desc": "Rot, Orange, Gelb — schaffen ein Gefühl von Wärme, Energie und Aktivität."
+			},
+			"cool": {
+				"title": "Kalte Farben",
+				"desc": "Blau, Grün, Lila — schaffen ein Gefühl von Kühle, Ruhe und Stabilität."
+			}
+		},
+		"properties": {
+			"title": "Farbeigenschaften",
+			"content": "Jede Farbe hat drei Haupteigenschaften:",
+			"items": {
+				"0": "Farbton (Hue) — die Farbe selbst (Rot, Blau usw.)",
+				"1": "Sättigung (Saturation) — die Intensität der Farbe",
+				"2": "Helligkeit (Brightness/Lightness) — die Helligkeit oder Dunkelheit der Farbe"
+			}
+		}
+	}
+}
+

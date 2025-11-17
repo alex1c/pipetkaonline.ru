@@ -1,0 +1,20 @@
+{
+	"title": "Инструменты для работы с цветом",
+	"description": "Определи код цвета, создай палитру, проверь контрастность и гармонию оттенков.",
+	"comingSoon": "Скоро",
+	"tools.picker.title": "Выбор цвета",
+	"tools.picker.desc": "Извлекай цвета из изображений и скриншотов",
+	"tools.palette.title": "Генератор палитр",
+	"tools.palette.desc": "Автоматически создавай красивые цветовые палитры",
+	"tools.contrast.title": "Проверка контраста",
+	"tools.contrast.desc": "Проверяй контрастность цветов для доступности",
+	"tools.converter.title": "Конвертер цветов",
+	"tools.converter.desc": "Конвертируй между HEX, RGB, HSL и другими форматами",
+	"tools.harmony.title": "Поиск гармонии",
+	"tools.harmony.desc": "Открывай дополнительные и аналогичные цвета",
+	"tools.gradient.title": "Генератор градиентов",
+	"tools.gradient.desc": "Создавай плавные CSS градиенты"
+}
+
+
+

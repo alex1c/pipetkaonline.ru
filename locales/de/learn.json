@@ -1,0 +1,37 @@
+{
+	"title": "Farbtheorie und Lernen",
+	"description": "Lernen Sie die Grundlagen von Farbe, Harmonie und Farbpsychologie im Design.",
+	"topics.fundamentals.title": "Farbgrundlagen",
+	"topics.fundamentals.desc": "Verständnis von Primär-, Sekundär- und Tertiärfarben",
+	"topics.fundamentals.items.0": "RGB vs CMYK Farbmodelle",
+	"topics.fundamentals.items.1": "Grundlagen des Farbkreises",
+	"topics.fundamentals.items.2": "Warme und kalte Farben",
+	"topics.fundamentals.items.3": "Farbsättigung und Helligkeit",
+	"topics.harmony.title": "Farbharmonie",
+	"topics.harmony.desc": "Erstellen angenehmer Farbkombinationen",
+	"topics.harmony.items.0": "Komplementärfarben",
+	"topics.harmony.items.1": "Analoge Farbschemata",
+	"topics.harmony.items.2": "Triadische Harmonie",
+	"topics.harmony.items.3": "Getrennt-komplementäre Kombinationen",
+	"topics.psychology.title": "Farbpsychologie",
+	"topics.psychology.desc": "Wie Farben Emotionen und Verhalten beeinflussen",
+	"topics.psychology.items.0": "Kulturelle Farbbedeutungen",
+	"topics.psychology.items.1": "Emotionale Assoziationen",
+	"topics.psychology.items.2": "Markenfarbstrategien",
+	"topics.psychology.items.3": "Farbe im Marketing",
+	"topics.accessibility.title": "Barrierefreiheit",
+	"topics.accessibility.desc": "Design mit Blick auf Farbbarrierefreiheit",
+	"topics.accessibility.items.0": "WCAG-Kontrastrichtlinien",
+	"topics.accessibility.items.1": "Überlegungen zur Farbenblindheit",
+	"topics.accessibility.items.2": "Textlesbarkeit",
+	"topics.accessibility.items.3": "Alternative Farbindikatoren",
+	"topics.formats.title": "Digitale Farbformate",
+	"topics.formats.desc": "Verständnis von Farbcodes und Formaten",
+	"topics.formats.items.0": "HEX-Farbcodes",
+	"topics.formats.items.1": "RGB- und RGBA-Werte",
+	"topics.formats.items.2": "HSL-Farbnotation",
+	"topics.formats.items.3": "CSS-Farbstichwörter"
+}
+
+
+

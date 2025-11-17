@@ -1,0 +1,37 @@
+{
+	"title": "Color Theory and Learning",
+	"description": "Learn color fundamentals, harmony, and the psychology of colors in design.",
+	"topics.fundamentals.title": "Color Fundamentals",
+	"topics.fundamentals.desc": "Understanding primary, secondary, and tertiary colors",
+	"topics.fundamentals.items.0": "RGB vs CMYK color models",
+	"topics.fundamentals.items.1": "Color wheel basics",
+	"topics.fundamentals.items.2": "Warm and cool colors",
+	"topics.fundamentals.items.3": "Color saturation and brightness",
+	"topics.harmony.title": "Color Harmony",
+	"topics.harmony.desc": "Creating pleasing color combinations",
+	"topics.harmony.items.0": "Complementary colors",
+	"topics.harmony.items.1": "Analogous color schemes",
+	"topics.harmony.items.2": "Triadic harmony",
+	"topics.harmony.items.3": "Split-complementary combinations",
+	"topics.psychology.title": "Color Psychology",
+	"topics.psychology.desc": "How colors affect emotions and behavior",
+	"topics.psychology.items.0": "Cultural color meanings",
+	"topics.psychology.items.1": "Emotional associations",
+	"topics.psychology.items.2": "Brand color strategies",
+	"topics.psychology.items.3": "Color in marketing",
+	"topics.accessibility.title": "Accessibility",
+	"topics.accessibility.desc": "Designing with color accessibility in mind",
+	"topics.accessibility.items.0": "WCAG contrast guidelines",
+	"topics.accessibility.items.1": "Color blindness considerations",
+	"topics.accessibility.items.2": "Text readability",
+	"topics.accessibility.items.3": "Alternative color indicators",
+	"topics.formats.title": "Digital Color Formats",
+	"topics.formats.desc": "Understanding color codes and formats",
+	"topics.formats.items.0": "HEX color codes",
+	"topics.formats.items.1": "RGB and RGBA values",
+	"topics.formats.items.2": "HSL color notation",
+	"topics.formats.items.3": "CSS color keywords"
+}
+
+
+

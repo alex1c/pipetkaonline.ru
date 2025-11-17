@@ -1,0 +1,41 @@
+{
+	"title": "Accesibilidad del Color",
+	"description": "Aprende principios de diseño accesible usando colores",
+	"back": "Volver al Aprendizaje",
+	"sections": {
+		"intro": {
+			"title": "Introducción",
+			"content": "El diseño accesible asegura que su contenido pueda ser usado por todas las personas, incluyendo aquellas con discapacidades visuales o daltonismo."
+		},
+		"wcag": {
+			"title": "Pautas de Contraste WCAG",
+			"content": "WCAG (Pautas de Accesibilidad de Contenido Web) establece estándares de contraste para asegurar la legibilidad del texto:",
+			"aa": {
+				"title": "Nivel AA",
+				"desc": "Contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande. Este es el estándar mínimo para la mayoría de los sitios web."
+			},
+			"aaa": {
+				"title": "Nivel AAA",
+				"desc": "Alto contraste de 7:1 para texto normal y 4.5:1 para texto grande. Recomendado para contenido importante."
+			}
+		},
+		"colorBlindness": {
+			"title": "Consideraciones de Daltonismo",
+			"content": "Aproximadamente el 8% de los hombres y el 0.5% de las mujeres tienen alguna forma de daltonismo. Es importante no depender únicamente del color para transmitir información:",
+			"items": {
+				"0": "Use iconos y texto junto con el color",
+				"1": "Asegure suficiente contraste entre elementos",
+				"2": "Pruebe diseños usando herramientas de simulación de daltonismo"
+			}
+		},
+		"readability": {
+			"title": "Legibilidad del Texto",
+			"content": "La buena legibilidad del texto es crítica para la accesibilidad. Asegure que el texto tenga suficiente contraste con el fondo, use fuentes lo suficientemente grandes y evite combinaciones demasiado brillantes u oscuras."
+		},
+		"alternatives": {
+			"title": "Indicadores de Color Alternativos",
+			"content": "No dependa únicamente del color para transmitir información importante. Use indicadores visuales adicionales: formas, iconos, texto, patrones o símbolos."
+		}
+	}
+}
+

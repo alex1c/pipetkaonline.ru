@@ -1,0 +1,33 @@
+{
+	"title": "Terms of Service",
+	"description": "Terms of use for PipetkaOnline",
+	"lastUpdated": "Last updated: 2024",
+	"sections": {
+		"acceptance": {
+			"title": "Acceptance of Terms",
+			"content": "By using our website, you agree to these terms of use. If you do not agree with these terms, please do not use our website."
+		},
+		"use": {
+			"title": "Use of Website",
+			"content": "You may use our website to:",
+			"items": [
+				"Detect colors and create palettes",
+				"Learn color theory",
+				"Use tools for personal and commercial purposes"
+			]
+		},
+		"intellectual": {
+			"title": "Intellectual Property",
+			"content": "All website content, including design, texts, and tools, is protected by copyright. You may use website materials for personal and commercial purposes, but may not copy or distribute them without permission."
+		},
+		"liability": {
+			"title": "Limitation of Liability",
+			"content": "We are not responsible for the accuracy of tool results or for any damage arising from the use of the website. Tools are provided \"as is\" without any warranties."
+		},
+		"changes": {
+			"title": "Changes to Terms",
+			"content": "We reserve the right to change these terms at any time. Changes take effect upon publication on the website."
+		}
+	}
+}
+
