@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Alternative Color Indicators page
@@ -98,6 +99,16 @@ export default function AlternativesPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.accessibility.alternatives'
+				toolLinks={[
+					{ slug: 'color-blindness-simulator', anchorText: 'симулятор цветовой слепоты' },
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+					{ slug: 'text-image-accessibility', anchorText: 'проверка доступности текста' },
+				]}
+			/>
 		</div>
 	)
 }

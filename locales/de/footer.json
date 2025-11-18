@@ -17,6 +17,19 @@
 		"tools": "Werkzeuge",
 		"learn": "Lernen"
 	},
+	"share": {
+		"title": "Teilen",
+		"description": "Teilen Sie die Website mit Freunden und Kollegen",
+		"twitter": "Twitter",
+		"facebook": "Facebook",
+		"linkedin": "LinkedIn",
+		"telegram": "Telegram",
+		"vk": "VKontakte",
+		"whatsapp": "WhatsApp",
+		"copyLink": "Link kopieren",
+		"copied": "Kopiert!",
+		"shareText": "Großartige Farbwerkzeuge: {url}"
+	},
 	"copyright": "Alle Rechte vorbehalten."
 }
 

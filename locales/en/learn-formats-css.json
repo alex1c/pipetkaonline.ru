@@ -1,2 +1,41 @@
-{"title":"CSS Color Keywords","description":"Learn about predefined CSS color keywords","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others."},"basic":{"title":"Basic Colors","content":"CSS includes basic colors: red, blue, green, yellow, black, white, and others."},"extended":{"title":"Extended Colors","content":"CSS also includes many extended colors such as coral, skyblue, tomato, teal, and many others."},"usage":{"title":"Usage","content":"Color keywords are convenient for quick use but are limited in the number of available colors. For precise colors, it's better to use HEX or RGB."}}}
-
+{
+	"title": "CSS Color Keywords",
+	"description": "Learn about predefined CSS color keywords",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others."
+		},
+		"basic": {
+			"title": "Basic Colors",
+			"content": "CSS includes basic colors: red, blue, green, yellow, black, white, and others."
+		},
+		"extended": {
+			"title": "Extended Colors",
+			"content": "CSS also includes many extended colors such as coral, skyblue, tomato, teal, and many others."
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Color keywords are convenient for quick use but are limited in the number of available colors. For precise colors, it's better to use HEX or RGB."
+		}
+	},
+	"seo": {
+		"title": "CSS Color Keywords: Complete Reference for Web Developers",
+		"intro": "CSS provides an extensive set of predefined color keywords, from basic (red, blue, green) to extended (coral, skyblue, tomato, teal). These keywords simplify color work in CSS but have limitations in precision and number of available shades.\n\nIn this detailed guide, we'll cover all CSS color keywords, their applications, advantages, and disadvantages. You'll learn how to use [tool:color-name-finder] to find color names, work with [tool:color-converter] to convert keywords to HEX/RGB, and apply [tool:ui-tokens-generator] to create design systems based on CSS colors.",
+		"section1": {
+			"title": "Basic and Extended CSS Color Keywords",
+			"content": "The CSS standard defines 147 color keywords, including basic colors (red, blue, green, yellow, black, white, gray) and an extended palette (coral, skyblue, tomato, teal, lavender, salmon, turquoise, and many others).\n\nEach keyword corresponds to a specific HEX value, for example, 'red' is equivalent to #FF0000, 'blue' is #0000FF. These keywords are convenient for quick prototyping and learning but are limited in precision.\n\nFor professional projects, it's recommended to use HEX, RGB, or HSL formats for precise color control. The [tool:color-name-finder] tool allows finding the name of any color, including CSS keywords, and getting their exact HEX/RGB values."
+		},
+		"section2": {
+			"title": "Practical Application of CSS Color Keywords",
+			"content": "CSS color keywords are used in properties like color, background-color, border-color, and others. Syntax is simple: color: red; background-color: blue;. They are especially useful for quick prototyping, learning, and creating simple interfaces.\n\nHowever, for precise brand colors, gradients, and complex design systems, it's better to use HEX or RGB values. Modern tools like [tool:color-converter] allow instant conversion of CSS keywords to HEX, RGB, HSL formats, which is critical when working with design mockups.\n\nWhen creating design systems, [tool:ui-tokens-generator] uses precise color values instead of keywords to ensure consistency and control."
+		},
+		"section3": {
+			"title": "Limitations and Best Practices",
+			"content": "The main limitation of CSS color keywords is a fixed set of 147 colors, which is insufficient for modern design projects. Also, there's no control over shades, saturation, and brightness.\n\nFor creating themes, gradients, and accessible interfaces, precise color values are necessary. When working with branding, it's important to use precise brand colors, not approximate keywords.\n\nFor contrast checking, use [tool:contrast-checker], which works with precise color values. When creating color palettes, [tool:palette-generator] generates harmonious combinations based on precise HEX/RGB values, not keywords."
+		},
+		"conclusion": "CSS color keywords are a convenient tool for quick prototyping and learning, but for professional projects, it's recommended to use precise color formats (HEX, RGB, HSL) for full color control and design consistency.",
+		"keywords": "CSS color keywords, CSS color names, predefined colors, CSS colors, web colors, HTML colors, color constants, CSS standard, CSS color palette, CSS color converter, CSS to HEX, CSS to RGB, web design, frontend development, CSS properties, color values"
+	}
+}

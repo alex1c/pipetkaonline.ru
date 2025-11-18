@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * RGB and RGBA page
@@ -78,6 +79,18 @@ export default function RGBPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.formats.rgb'
+				toolLinks={[
+					{ slug: 'color-converter', anchorText: 'конвертер цветов' },
+					{ slug: 'extract-colors-v2', anchorText: 'извлечение цветов' },
+					{ slug: 'color-harmony', anchorText: 'цветовая гармония' },
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+				]}
+			/>
 		</div>
 	)
 }

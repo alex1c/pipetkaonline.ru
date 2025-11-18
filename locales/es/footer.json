@@ -17,6 +17,19 @@
 		"tools": "Herramientas",
 		"learn": "Aprender"
 	},
+	"share": {
+		"title": "Compartir",
+		"description": "Comparte el sitio con amigos y colegas",
+		"twitter": "Twitter",
+		"facebook": "Facebook",
+		"linkedin": "LinkedIn",
+		"telegram": "Telegram",
+		"vk": "VKontakte",
+		"whatsapp": "WhatsApp",
+		"copyLink": "Copiar Enlace",
+		"copied": "¡Copiado!",
+		"shareText": "Excelentes herramientas de color: {url}"
+	},
 	"copyright": "Todos los derechos reservados."
 }
 

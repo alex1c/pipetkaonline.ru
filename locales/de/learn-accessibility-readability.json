@@ -1,2 +1,48 @@
-{"title":"Text Readability","description":"Learn about text readability principles","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background."},"contrast":{"title":"Contrast","good":"Good contrast","goodDesc":"Dark text on light background or light text on dark background","bad":"Bad contrast","badDesc":"Light text on light background or dark text on dark background"},"fontSize":{"title":"Font Size","content":"Use large enough font size (minimum 16px for body text) and ensure sufficient line height for comfortable reading."},"bestPractices":{"title":"Best Practices","items":{"0":"Use contrast of at least 4.5:1 for normal text","1":"Avoid overly bright or dark combinations","2":"Test readability on different devices"}}}}
-
+{
+	"title": "Text Readability",
+	"description": "Learn about text readability principles",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background."
+		},
+		"contrast": {
+			"title": "Contrast",
+			"good": "Good contrast",
+			"goodDesc": "Dark text on light background or light text on dark background",
+			"bad": "Bad contrast",
+			"badDesc": "Light text on light background or dark text on dark background"
+		},
+		"fontSize": {
+			"title": "Font Size",
+			"content": "Use large enough font size (minimum 16px for body text) and ensure sufficient line height for comfortable reading."
+		},
+		"bestPractices": {
+			"title": "Best Practices",
+			"items": {
+				"0": "Use contrast of at least 4.5:1 for normal text",
+				"1": "Avoid overly bright or dark combinations",
+				"2": "Test readability on different devices"
+			}
+		}
+	},
+	"seo": {
+		"title": "Textlesbarkeit: Vollständiger Leitfaden zur Barrierefreiheit und Lesekomfort",
+		"intro": "Textlesbarkeit ist ein grundlegender Aspekt der Barrierefreiheit von Webinhalten und bestimmt, wie leicht Benutzer Informationen wahrnehmen und verstehen können. Schlechte Lesbarkeit verschlechtert nicht nur die Benutzererfahrung, sondern verletzt auch WCAG-Barrierefreiheitsstandards.\n\nIn diesem detaillierten Leitfaden behandeln wir alle Faktoren, die die Lesbarkeit beeinflussen: Kontrast, Schriftgröße, Zeilenhöhe, Schriftwahl und Farbkombinationen. Sie lernen, wie Sie Textinhalte erstellen, die für alle Benutzer zugänglich sind.\n\nSie lernen, wie Sie [tool:contrast-checker] verwenden, um Textkontrast zu überprüfen, [tool:text-image-accessibility] anwenden, um die Lesbarkeit von Text auf Bildern zu analysieren, und mit [tool:color-blindness-simulator] arbeiten, um die Barrierefreiheit von Farbkombinationen zu testen.",
+		"section1": {
+			"title": "Kontrast: Grundlage der Textlesbarkeit",
+			"content": "Der Kontrast zwischen Text und Hintergrund ist der wichtigste Lesbarkeitsfaktor. WCAG-Standards erfordern einen Mindestkontrast von 4.5:1 für normalen Text und 3:1 für großen Text (18pt+ oder 14pt+ fett).\n\nDunkler Text auf hellem Hintergrund oder heller Text auf dunklem Hintergrund schafft guten Kontrast. Heller Text auf hellem Hintergrund oder dunkler auf dunklem — schlechter Kontrast, der Text unlesbar macht.\n\nKontrast wird nach der Formel der relativen Leuchtdichte berechnet. Das Tool [tool:contrast-checker] berechnet automatisch den Kontrast und überprüft die Einhaltung der WCAG AA- und AAA-Standards und bietet Verbesserungsempfehlungen."
+		},
+		"section2": {
+			"title": "Schriftgröße und Zeilenhöhe",
+			"content": "Die Schriftgröße ist kritisch für die Lesbarkeit. Die minimale empfohlene Größe für Fließtext ist 16px (1rem). Kleinere Größen erschweren das Lesen, besonders auf mobilen Geräten.\n\nDie Zeilenhöhe sollte ausreichend für komfortables Lesen sein. Der empfohlene Wert ist 1.5-1.6 der Schriftgröße. Zu kleine Zeilenhöhe macht Text gedrängt, zu große — fragmentiert.\n\nBei der Arbeit mit Text auf Bildern ist es wichtig, nicht nur den Gesamtkontrast, sondern auch den lokalen Kontrast jedes Pixels zu berücksichtigen. Das Tool [tool:text-image-accessibility] analysiert die Lesbarkeit von Text auf beliebigen Bildern, berücksichtigt den lokalen Kontrast und bietet detaillierte Empfehlungen."
+		},
+		"section3": {
+			"title": "Best Practices und Tests",
+			"content": "Um maximale Lesbarkeit zu gewährleisten, verwenden Sie einen Kontrast von mindestens 4.5:1 für normalen Text und 7:1 für AAA-Level. Vermeiden Sie zu helle oder zu dunkle Kombinationen, die Augenermüdung verursachen können.\n\nTesten Sie die Lesbarkeit auf verschiedenen Geräten, Bildschirmgrößen und Lichtverhältnissen. Berücksichtigen Sie verschiedene Arten von Farbenblindheit: Verwenden Sie [tool:color-blindness-simulator], um zu überprüfen, wie Ihre Farbkombinationen von Menschen mit Farbenblindheit wahrgenommen werden.\n\nBei der Erstellung von Design-Systemen ist es wichtig, Farbpaare für Text und Hintergrund vorzudefinieren, die WCAG-Standards entsprechen. Dies gewährleistet Konsistenz und Barrierefreiheit im gesamten Projekt."
+		},
+		"conclusion": "Textlesbarkeit ist nicht nur Ästhetik, sondern eine Notwendigkeit für die Erstellung barrierefreier und inklusiver Webinhalte.\n\nRichtiger Kontrast, Schriftgröße und Zeilenhöhe machen Inhalte für alle Benutzer zugänglich, einschließlich Menschen mit Sehbehinderungen. Verwenden Sie moderne Tools, um die Lesbarkeit in Ihren Projekten zu überprüfen und zu verbessern.",
+		"keywords": "Textlesbarkeit, Lesbarkeit, Textkontrast, Schriftgröße, Zeilenhöhe, Textbarrierefreiheit, WCAG-Lesbarkeit, lesbarer Text, Textlesbarkeit, barrierefreier Text, Textdesign, Typografie, Web-Barrierefreiheit, Text-Sichtbarkeit, Lesekomfort, Textklarheit, barrierefreie Typografie, Text-Best-Practices, Lesbarkeitsstandards"
+	}
+}

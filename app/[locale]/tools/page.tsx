@@ -112,6 +112,48 @@ export default function ToolsPage({
 					t={t}
 				/>
 				<ToolCard
+					icon='🎨'
+					title={t('tools.uiThemeGenerator.title')}
+					description={t('tools.uiThemeGenerator.desc')}
+					href={`/${params.locale}/tools/ui-theme-generator`}
+					t={t}
+				/>
+				<ToolCard
+					icon='📝'
+					title={t('tools.textImageAccessibility.title')}
+					description={t('tools.textImageAccessibility.desc')}
+					href={`/${params.locale}/tools/text-image-accessibility`}
+					t={t}
+				/>
+				<ToolCard
+					icon='🌈'
+					title={t('tools.gradientMapGenerator.title')}
+					description={t('tools.gradientMapGenerator.desc')}
+					href={`/${params.locale}/tools/gradient-map-generator`}
+					t={t}
+				/>
+				<ToolCard
+					icon='💭'
+					title={t('tools.emotionColors.title')}
+					description={t('tools.emotionColors.desc')}
+					href={`/${params.locale}/tools/emotion-colors`}
+					t={t}
+				/>
+				<ToolCard
+					icon='🎨'
+					title={t('tools.solidBackground.title')}
+					description={t('tools.solidBackground.desc')}
+					href={`/${params.locale}/tools/solid-background`}
+					t={t}
+				/>
+				<ToolCard
+					icon='🔷'
+					title={t('tools.patternGenerator.title')}
+					description={t('tools.patternGenerator.desc')}
+					href={`/${params.locale}/tools/pattern-generator`}
+					t={t}
+				/>
+				<ToolCard
 					icon='👁️'
 					title={t('colorBlindnessSimulator.title')}
 					description={t('colorBlindnessSimulator.description')}

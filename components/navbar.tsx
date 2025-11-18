@@ -25,6 +25,7 @@
 
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
@@ -55,6 +56,9 @@ export function Navbar() {
 	// Get current locale from URL parameters
 	const params = useParams()
 	const locale = params.locale as string
+	
+	// State for mobile menu open/close
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	return (
 		<nav className='sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200 transition-all duration-300'>
@@ -90,9 +94,42 @@ export function Navbar() {
 						<NavLink href={`/${locale}/learn`} label={t('nav.learn')} />
 					</div>
 
-					{/* Language switcher - always visible */}
+					{/* Right side: Language switcher and hamburger button */}
 					<div className='flex items-center gap-4 flex-shrink-0'>
+						{/* Language switcher - always visible */}
 						<LanguageSwitcher />
+						
+						{/* 
+							Hamburger button for mobile menu
+							- md:hidden: Only visible on mobile devices
+							- Button with icon that toggles menu state
+						*/}
+						<button
+							type='button'
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
+							className='md:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-300'
+							aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+							aria-expanded={isMenuOpen}
+						>
+							{/* Hamburger icon - transforms to X when open */}
+							<svg
+								className='w-6 h-6 transition-transform duration-200'
+								fill='none'
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								strokeWidth='2'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+							>
+								{isMenuOpen ? (
+									// X icon when menu is open
+									<path d='M6 18L18 6M6 6l12 12' />
+								) : (
+									// Hamburger icon when menu is closed
+									<path d='M4 6h16M4 12h16M4 18h16' />
+								)}
+							</svg>
+						</button>
 					</div>
 				</div>
 
@@ -102,11 +139,34 @@ export function Navbar() {
 					- pb-4: Bottom padding for spacing
 					- flex flex-col: Vertical layout
 					- gap-2: Spacing between links
+					- Conditional rendering based on isMenuOpen state
+					- Smooth slide animation with opacity transition
 				*/}
-				<div className='md:hidden pb-4 flex flex-col gap-2'>
-					<NavLink href={`/${locale}`} label={t('nav.home')} mobile />
-					<NavLink href={`/${locale}/tools`} label={t('nav.tools')} mobile />
-					<NavLink href={`/${locale}/learn`} label={t('nav.learn')} mobile />
+				<div 
+					className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+						isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0 pb-0'
+					}`}
+				>
+					<div className='flex flex-col gap-2'>
+						<NavLink 
+							href={`/${locale}`} 
+							label={t('nav.home')} 
+							mobile 
+							onClick={() => setIsMenuOpen(false)}
+						/>
+						<NavLink 
+							href={`/${locale}/tools`} 
+							label={t('nav.tools')} 
+							mobile 
+							onClick={() => setIsMenuOpen(false)}
+						/>
+						<NavLink 
+							href={`/${locale}/learn`} 
+							label={t('nav.learn')} 
+							mobile 
+							onClick={() => setIsMenuOpen(false)}
+						/>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -136,14 +196,17 @@ function NavLink({
 	href,
 	label,
 	mobile = false,
+	onClick,
 }: {
 	href: string
 	label: string
 	mobile?: boolean
+	onClick?: () => void
 }) {
 	return (
 		<Link
 			href={href}
+			onClick={onClick}
 			className={`
 				${mobile ? 'block py-2 px-4 rounded-md' : 'px-4 py-2 rounded-md'}
 				text-slate-700 hover:bg-slate-100 hover:text-slate-900 

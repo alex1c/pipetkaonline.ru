@@ -25,6 +25,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { ShareBlock } from './share-block'
 
 /**
  * Footer component
@@ -116,6 +117,11 @@ export function Footer() {
 							</li>
 						</ul>
 					</div>
+				</div>
+
+				{/* Share Block */}
+				<div className='mb-8'>
+					<ShareBlock />
 				</div>
 
 				{/* Copyright */}

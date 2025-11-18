@@ -1,2 +1,39 @@
-{"title":"Analogous Color Schemes","description":"Learn about analogous color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Analogous colors are located next to each other on the color wheel. They create harmonious and calm combinations."},"examples":{"title":"Examples","blue":"Blue → Blue-green → Green","green":"Green → Yellow-green → Yellow","orange":"Orange → Red-orange → Red"},"usage":{"title":"Usage","content":"Analogous colors create a sense of unity and harmony. They are often used in natural and calm designs."}}}
-
+{
+	"title": "Analogous Color Schemes",
+	"description": "Learn about analogous color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Analogous colors are located next to each other on the color wheel. They create harmonious and calm combinations."
+		},
+		"examples": {
+			"title": "Examples",
+			"blue": "Blue → Blue-green → Green",
+			"green": "Green → Yellow-green → Yellow",
+			"orange": "Orange → Red-orange → Red"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Analogous colors create a sense of unity and harmony. They are often used in natural and calm designs."
+		}
+	},
+	"seo": {
+		"title": "Analogous Colors: Creating Harmonious and Calm Color Schemes",
+		"intro": "Analogous colors are a group of three to five colors located next to each other on the color wheel. They create smooth transitions and a sense of unity, making them ideal for creating calm, harmonious designs.\n\nIn this detailed guide, we'll cover the theory of analogous colors, their application in various design fields, and practical usage techniques. You'll learn how to use [tool:color-harmony] to automatically find analogous colors, apply [tool:palette-generator] to create palettes based on analogous schemes, and work with [tool:emotion-colors] to generate emotional color combinations.",
+		"section1": {
+			"title": "Theory of Analogous Colors: How They Create Harmony",
+			"content": "Analogous colors occupy adjacent sectors on the color wheel, typically covering a range from 30 to 90 degrees. A classic example is blue, blue-green, and green, which create a smooth transition from cool blue to natural green.\n\nAnalogous schemes create a sense of unity and harmony because all colors share a common base hue. This makes them less contrasting than complementary colors but more visually pleasing and calm.\n\nIn nature, analogous colors are found everywhere: sunsets (red, orange, yellow), oceans (blue, cyan, turquoise), forests (green, yellow-green, brown). The [tool:color-harmony] tool automatically calculates analogous colors for any selected color, using mathematical color wheel principles."
+		},
+		"section2": {
+			"title": "Practical Application of Analogous Colors in Design",
+			"content": "Analogous colors are widely used in web design, graphic design, interior design, and photography. In web design, they create calm, professional interfaces without sharp contrasts.\n\nIn branding, analogous schemes convey a sense of stability, reliability, and harmony. When creating palettes, [tool:palette-generator] can generate harmonious combinations based on analogous colors, adding saturation and brightness variations to create depth.\n\nFor emotional palettes, [tool:emotion-colors] uses analogous colors to generate calm, peaceful combinations corresponding to specific moods."
+		},
+		"section3": {
+			"title": "Best Practices and Advanced Techniques",
+			"content": "When working with analogous colors, it's important to choose one dominant color (about 60% of composition) and use the others as accents. To create contrast, you can add a small amount of complementary color or use neutral colors (white, gray, black).\n\nIn web design, analogous colors work great for backgrounds, gradients, and creating atmosphere. For branding, [tool:brand-color-analyzer] analyzes analogous color palettes and provides usage recommendations.\n\nWhen creating accessible interfaces, it's important to check contrast: use [tool:contrast-checker] to ensure text readability on analogous backgrounds."
+		},
+		"conclusion": "Analogous colors are a powerful tool for creating harmonious, calm, and visually pleasing designs.\n\nProper use of analogous colors can create a sense of unity, professionalism, and emotional connection with the audience. Use modern tools to find and apply analogous colors in your projects.",
+		"keywords": "analogous colors, color harmony, color scheme, color wheel, color theory, web design, graphic design, color combinations, color palette, smooth transitions, harmonious colors, color relationships, visual harmony, color design, color selection, color composition, color balance, visual design, color theory, artistic design, branding, natural colors"
+	}
+}

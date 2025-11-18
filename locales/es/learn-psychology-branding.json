@@ -1,2 +1,52 @@
-{"title":"Brand Color Strategies","description":"Learn how companies use colors in branding","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Companies carefully choose colors for their brands to convey certain values and emotions."},"examples":{"title":"Examples","tech":{"title":"Technology Companies","desc":"Blue - reliability, professionalism, innovation"},"eco":{"title":"Environmental Brands","desc":"Green - nature, sustainability, health"},"food":{"title":"Food Brands","desc":"Red and yellow - appetite, energy, joy"},"luxury":{"title":"Luxury Brands","desc":"Black, gold, purple - elegance, prestige"}},"strategy":{"title":"Color Selection Strategy","content":"When choosing colors for a brand, it's important to consider the target audience, industry, and desired emotions the brand should evoke."}}}
-
+{
+	"title": "Brand Color Strategies",
+	"description": "Learn how companies use colors in branding",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Companies carefully choose colors for their brands to convey certain values and emotions."
+		},
+		"examples": {
+			"title": "Examples",
+			"tech": {
+				"title": "Technology Companies",
+				"desc": "Blue - reliability, professionalism, innovation"
+			},
+			"eco": {
+				"title": "Environmental Brands",
+				"desc": "Green - nature, sustainability, health"
+			},
+			"food": {
+				"title": "Food Brands",
+				"desc": "Red and yellow - appetite, energy, joy"
+			},
+			"luxury": {
+				"title": "Luxury Brands",
+				"desc": "Black, gold, purple - elegance, prestige"
+			}
+		},
+		"strategy": {
+			"title": "Color Selection Strategy",
+			"content": "When choosing colors for a brand, it's important to consider the target audience, industry, and desired emotions the brand should evoke."
+		}
+	},
+	"seo": {
+		"title": "Estrategias de color de marca: Psicología del color en diseño corporativo",
+		"intro": "Los colores de marca son una herramienta poderosa de comunicación que transmite valores, emociones y carácter de la empresa. La elección correcta de la paleta de colores puede afectar significativamente la percepción de la marca, lealtad del cliente y éxito del negocio.\n\nEn esta guía detallada cubrimos cómo varias industrias usan colores en branding, asociaciones psicológicas de color y estrategias para seleccionar paletas de colores para crear identidades de marca efectivas.\n\nAprenderá a usar [tool:brand-color-analyzer] para analizar paletas de colores de marca, aplicar [tool:palette-generator] para crear esquemas de color armónicos, y trabajar con [tool:emotion-colors] para generar paletas emocionales.",
+		"section1": {
+			"title": "Estrategias de color por industria",
+			"content": "Las empresas tecnológicas a menudo usan el color azul, que está asociado con confiabilidad, profesionalismo e innovación. Ejemplos: IBM, Facebook, Twitter. El azul crea sensación de estabilidad y confianza, crítico para marcas tecnológicas.\n\nLas marcas ambientales eligen el color verde, que simboliza naturaleza, sostenibilidad y salud. El verde transmite responsabilidad ambiental y cuidado del medio ambiente.\n\nLas marcas alimentarias usan rojo y amarillo, que estimulan el apetito, crean energía y alegría. Estos colores atraen la atención y están asociados con comida y placer.\n\nLas marcas de lujo prefieren negro, dorado y púrpura, que transmiten elegancia, prestigio y exclusividad. La herramienta [tool:brand-color-analyzer] analiza paletas de colores de marca y ofrece recomendaciones detalladas de uso."
+		},
+		"section2": {
+			"title": "Psicología del color en branding",
+			"content": "Los colores evocan ciertas reacciones emocionales que afectan la percepción de la marca. El rojo crea sensación de urgencia y pasión, el azul — confianza y estabilidad, el verde — armonía y crecimiento.\n\nAl elegir colores para una marca, es importante considerar la audiencia objetivo, industria y emociones deseadas. Marcas jóvenes y energéticas eligen colores brillantes y saturados. Conservadoras, corporativas — apagados, profesionales.\n\nLa herramienta [tool:palette-generator] ayuda a crear esquemas de color armónicos basados en un color primario seleccionado, considerando asociaciones psicológicas y armonías de color."
+		},
+		"section3": {
+			"title": "Estrategia de selección y aplicación",
+			"content": "Al crear identidad de marca, es importante definir una paleta de colores primaria (normalmente 2-4 colores) que se usará consistentemente en todos los materiales. El color primario debe reflejar el carácter de la marca y evocar emociones deseadas.\n\nConsidere significados culturales de colores al trabajar con audiencias internacionales. Lo que funciona en una cultura puede no funcionar en otra. La herramienta [tool:emotion-colors] ayuda a generar paletas emocionales que corresponden a estados de ánimo y valores de marca específicos.\n\nPruebe paletas de colores en varios medios: pantallas digitales, materiales impresos, empaques. La herramienta [tool:brand-color-analyzer] analiza paletas de colores y ofrece recomendaciones para su uso en varios contextos."
+		},
+		"conclusion": "Los colores de marca son una herramienta poderosa de comunicación que puede afectar significativamente la percepción y el éxito de la marca.\n\nLa elección correcta de la paleta de colores, considerando psicología del color, estándares de industria y audiencia objetivo, crea una identidad de marca efectiva. Use herramientas modernas para analizar y crear paletas de colores de marca.",
+		"keywords": "colores de marca, estrategias de color de marca, psicología del color, diseño corporativo, identidad de marca, branding de color, paleta de colores de marca, asociaciones de color, percepción de marca, selección de color, diseño de marca, branding corporativo, estrategia de color, comunicación de marca, marketing de color, valores de marca"
+	}
+}

@@ -1,2 +1,52 @@
-{"title":"RGB vs CMYK Models","description":"Learn the difference between RGB and CMYK color models","back":"Back to Learning","intro":"RGB and CMYK are two main color models used in design. Each has its purpose and characteristics.","rgb":{"title":"RGB (Red, Green, Blue)","description":"Additive model for screens and digital devices","uses":{"title":"Uses","items":{"0":"Web design and digital graphics","1":"Monitors and screens","2":"Photography and video"}}},"cmyk":{"title":"CMYK (Cyan, Magenta, Yellow, Key)","description":"Subtractive model for printing","uses":{"title":"Uses","items":{"0":"Printing and print design","1":"Brochures and booklets","2":"Packaging and labels"}}},"comparison":{"title":"Comparison","content":"RGB uses light to create colors (additive process), while CMYK uses inks to absorb light (subtractive process). When converting from RGB to CMYK, colors may look different due to differences in color gamut."}}
-
+{
+	"title": "RGB vs CMYK Models",
+	"description": "Learn the difference between RGB and CMYK color models",
+	"back": "Back to Learning",
+	"intro": "RGB and CMYK are two main color models used in design. Each has its purpose and characteristics.",
+	"rgb": {
+		"title": "RGB (Red, Green, Blue)",
+		"description": "Additive model for screens and digital devices",
+		"uses": {
+			"title": "Uses",
+			"items": {
+				"0": "Web design and digital graphics",
+				"1": "Monitors and screens",
+				"2": "Photography and video"
+			}
+		}
+	},
+	"cmyk": {
+		"title": "CMYK (Cyan, Magenta, Yellow, Key)",
+		"description": "Subtractive model for printing",
+		"uses": {
+			"title": "Uses",
+			"items": {
+				"0": "Printing and print design",
+				"1": "Brochures and booklets",
+				"2": "Packaging and labels"
+			}
+		}
+	},
+	"comparison": {
+		"title": "Comparison",
+		"content": "RGB uses light to create colors (additive process), while CMYK uses inks to absorb light (subtractive process). When converting from RGB to CMYK, colors may look different due to differences in color gamut."
+	},
+	"seo": {
+		"title": "RGB vs CMYK: Guía completa de modelos de color para diseñadores",
+		"intro": "RGB y CMYK son dos modelos de color fundamentales, cada uno desarrollado para propósitos específicos. RGB (Rojo, Verde, Azul) es un modelo aditivo para pantallas digitales, mientras que CMYK (Cian, Magenta, Amarillo, Key) es un modelo sustractivo para impresión.\n\nComprender las diferencias entre estos modelos es crítico para cualquier diseñador que trabaje tanto con proyectos digitales como de impresión. En esta guía detallada cubrimos los principios de cada modelo, sus aplicaciones, métodos de conversión y mejores prácticas.\n\nAprenderá a usar [tool:color-converter] para convertir entre RGB y CMYK, aplicar [tool:extract-colors-v2] para analizar colores en diferentes modelos, y trabajar con [tool:brand-color-analyzer] para crear paletas de colores universales.",
+		"section1": {
+			"title": "Modelo RGB: Colores aditivos para pantallas digitales",
+			"content": "RGB es un modelo de color aditivo donde los colores se crean mezclando luz roja, verde y azul. Cuando los tres canales están al máximo (255, 255, 255), se produce blanco. Cuando todos están al mínimo (0, 0, 0) — negro.\n\nRGB se usa para todos los dispositivos digitales: monitores, televisores, smartphones, tablets. Es el estándar para diseño web, gráficos digitales, fotografía y video. RGB tiene un espacio de color más amplio (gamut) que CMYK, lo que permite mostrar colores más brillantes y saturados.\n\nAl trabajar con RGB, es importante tener en cuenta que los colores en pantalla pueden variar según la calibración del monitor. Para trabajo preciso, se recomienda usar pantallas calibradas y herramientas como [tool:color-converter] para verificar valores de color."
+		},
+		"section2": {
+			"title": "Modelo CMYK: Colores sustractivos para impresión",
+			"content": "CMYK es un modelo de color sustractivo usado en impresión. Los colores se crean mezclando tintas Cian, Magenta, Amarillo y Negro (Key) para profundidad y contraste.\n\nA diferencia de RGB, CMYK usa tintas que absorben luz. Cuando todas las tintas se mezclan al máximo, se produce marrón oscuro o negro. El blanco es la ausencia de tinta (papel blanco).\n\nCMYK tiene un espacio de color más estrecho que RGB, por lo que algunos colores brillantes en pantalla no pueden reproducirse con precisión en impresión. Al convertir de RGB a CMYK, los colores brillantes pueden volverse más apagados. La herramienta [tool:extract-colors-v2] ayuda a analizar colores de imágenes y determinar cómo se verán en CMYK."
+		},
+		"section3": {
+			"title": "Conversión y mejores prácticas",
+			"content": "La conversión entre RGB y CMYK es un proceso complejo que requiere comprensión de perfiles de color (perfiles ICC). Una conversión matemática simple no tiene en cuenta las diferencias en espacios de color, lo que puede llevar a resultados inesperados.\n\nPara diseño web, use siempre RGB. Para impresión — CMYK. Al crear brand books universales, se recomienda definir colores en ambos modelos. La herramienta [tool:color-converter] permite convertir colores entre modelos teniendo en cuenta perfiles de color.\n\nPara branding, [tool:brand-color-analyzer] analiza paletas de colores y ofrece recomendaciones para uso en diferentes modelos de color, lo cual es crítico para crear brand books universales."
+		},
+		"conclusion": "RGB y CMYK no son solo formatos diferentes, sino enfoques fundamentalmente diferentes para representar color. RGB para el mundo digital, CMYK para impresión.\n\nLa comprensión y el uso correctos de estos modelos es la base del diseño profesional. Use herramientas modernas para conversión y análisis de color para asegurar la consistencia de sus proyectos en diferentes entornos.",
+		"keywords": "RGB vs CMYK, modelos de color, colores aditivos, colores sustractivos, color digital, color de impresión, conversión de color, espacio de color, perfiles de color, perfiles ICC, diseño web, diseño de impresión, gamut de color, comparación de modelos de color, color RGB, color CMYK, gestión de color, precisión de color, flujo de trabajo de diseño, diseño profesional"
+	}
+}

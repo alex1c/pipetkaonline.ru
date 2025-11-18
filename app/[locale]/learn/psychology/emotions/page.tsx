@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Emotional Associations page
@@ -105,6 +106,16 @@ export default function EmotionsPage() {
 					</div>
 				</div>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.psychology.emotions'
+				toolLinks={[
+					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+				]}
+			/>
 		</div>
 	)
 }

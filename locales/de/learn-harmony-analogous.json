@@ -1,2 +1,39 @@
-{"title":"Analogous Color Schemes","description":"Learn about analogous color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Analogous colors are located next to each other on the color wheel. They create harmonious and calm combinations."},"examples":{"title":"Examples","blue":"Blue → Blue-green → Green","green":"Green → Yellow-green → Yellow","orange":"Orange → Red-orange → Red"},"usage":{"title":"Usage","content":"Analogous colors create a sense of unity and harmony. They are often used in natural and calm designs."}}}
-
+{
+	"title": "Analogous Color Schemes",
+	"description": "Learn about analogous color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Analogous colors are located next to each other on the color wheel. They create harmonious and calm combinations."
+		},
+		"examples": {
+			"title": "Examples",
+			"blue": "Blue → Blue-green → Green",
+			"green": "Green → Yellow-green → Yellow",
+			"orange": "Orange → Red-orange → Red"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Analogous colors create a sense of unity and harmony. They are often used in natural and calm designs."
+		}
+	},
+	"seo": {
+		"title": "Analoge Farben: Erstellung harmonischer und ruhiger Farbschemata",
+		"intro": "Analoge Farben sind eine Gruppe von drei bis fünf Farben, die nebeneinander auf dem Farbkreis liegen. Sie schaffen sanfte Übergänge und ein Gefühl der Einheit, was sie ideal für die Erstellung ruhiger, harmonischer Designs macht.\n\nIn diesem detaillierten Leitfaden behandeln wir die Theorie analoger Farben, ihre Anwendung in verschiedenen Designbereichen und praktische Verwendungstechniken. Sie lernen, wie Sie [tool:color-harmony] verwenden, um automatisch analoge Farben zu finden, [tool:palette-generator] anwenden, um Paletten basierend auf analogen Schemata zu erstellen, und mit [tool:emotion-colors] arbeiten, um emotionale Farbkombinationen zu generieren.",
+		"section1": {
+			"title": "Theorie analoger Farben: Wie sie Harmonie schaffen",
+			"content": "Analoge Farben belegen benachbarte Sektoren auf dem Farbkreis und umfassen typischerweise einen Bereich von 30 bis 90 Grad. Ein klassisches Beispiel ist Blau, Blau-Grün und Grün, die einen sanften Übergang von kühlem Blau zu natürlichem Grün schaffen.\n\nAnaloge Schemata schaffen ein Gefühl der Einheit und Harmonie, weil alle Farben einen gemeinsamen Grundfarbton teilen. Dies macht sie weniger kontrastierend als Komplementärfarben, aber visuell ansprechender und ruhiger.\n\nIn der Natur finden sich analoge Farben überall: Sonnenuntergänge (Rot, Orange, Gelb), Ozeane (Blau, Cyan, Türkis), Wälder (Grün, Gelb-Grün, Braun). Das Tool [tool:color-harmony] berechnet automatisch analoge Farben für jede ausgewählte Farbe unter Verwendung mathematischer Farbkreis-Prinzipien."
+		},
+		"section2": {
+			"title": "Praktische Anwendung analoger Farben im Design",
+			"content": "Analoge Farben werden im Webdesign, Grafikdesign, Innenarchitektur und in der Fotografie weit verbreitet verwendet. Im Webdesign schaffen sie ruhige, professionelle Schnittstellen ohne scharfe Kontraste.\n\nIm Branding vermitteln analoge Schemata ein Gefühl von Stabilität, Zuverlässigkeit und Harmonie. Bei der Erstellung von Paletten kann [tool:palette-generator] harmonische Kombinationen basierend auf analogen Farben generieren und Sättigungs- und Helligkeitsvariationen hinzufügen, um Tiefe zu schaffen.\n\nFür emotionale Paletten verwendet [tool:emotion-colors] analoge Farben, um ruhige, friedliche Kombinationen zu generieren, die bestimmten Stimmungen entsprechen."
+		},
+		"section3": {
+			"title": "Best Practices und fortgeschrittene Techniken",
+			"content": "Bei der Arbeit mit analogen Farben ist es wichtig, eine dominante Farbe (etwa 60% der Komposition) zu wählen und die anderen als Akzente zu verwenden. Um Kontrast zu schaffen, können Sie eine kleine Menge Komplementärfarbe hinzufügen oder neutrale Farben (Weiß, Grau, Schwarz) verwenden.\n\nIm Webdesign funktionieren analoge Farben hervorragend für Hintergründe, Gradienten und die Schaffung von Atmosphäre. Für Branding analysiert [tool:brand-color-analyzer] analoge Farbpaletten und bietet Verwendungsempfehlungen.\n\nBei der Erstellung barrierefreier Schnittstellen ist es wichtig, den Kontrast zu überprüfen: Verwenden Sie [tool:contrast-checker], um die Lesbarkeit von Text auf analogen Hintergründen sicherzustellen."
+		},
+		"conclusion": "Analoge Farben sind ein leistungsstarkes Tool zur Erstellung harmonischer, ruhiger und visuell ansprechender Designs.\n\nDie richtige Verwendung analoger Farben kann ein Gefühl der Einheit, Professionalität und emotionalen Verbindung mit dem Publikum schaffen. Verwenden Sie moderne Tools, um analoge Farben in Ihren Projekten zu finden und anzuwenden.",
+		"keywords": "analoge Farben, Farbharmonie, Farbschema, Farbkreis, Farbtheorie, Webdesign, Grafikdesign, Farbkombinationen, Farbpalette, sanfte Übergänge, harmonische Farben, Farbbeziehungen, visuelle Harmonie, Farbdesign, Farbauswahl, Farbkomposition, Farbbalance, visuelles Design, Farbtheorie, künstlerisches Design, Branding, natürliche Farben"
+	}
+}

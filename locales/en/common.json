@@ -3,7 +3,19 @@
 	"nav.tools": "Tools",
 	"nav.learn": "Learn",
 	"nav.tech": "Tech Pages",
-	"nav.language": "Language"
+	"nav.language": "Language",
+	"nav.openMenu": "Open menu",
+	"nav.closeMenu": "Close menu",
+	"notFound.title": "Page Not Found — 404",
+	"notFound.description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+	"notFound.heading": "Page Not Found",
+	"notFound.goHome": "Go Home",
+	"notFound.browseTools": "Browse Tools",
+	"notFound.browseLearn": "Browse Learn",
+	"notFound.suggestions.title": "What you can do:",
+	"notFound.suggestions.checkUrl": "Check if the URL is correct",
+	"notFound.suggestions.useNavigation": "Use the navigation menu to find the page you need",
+	"notFound.suggestions.searchTools": "Browse available tools and learning sections"
 }
 
 

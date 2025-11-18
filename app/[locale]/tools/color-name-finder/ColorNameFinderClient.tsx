@@ -17,6 +17,7 @@ import { SimilarColors } from '@/components/color-name-finder/SimilarColors'
 import { Descriptions } from '@/components/color-name-finder/Descriptions'
 import { TechnicalDataComponent } from '@/components/color-name-finder/TechnicalData'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Color Name Finder Client Component
@@ -111,6 +112,9 @@ export function ColorNameFinderClient() {
 			</section>
 
 			{/* SEO Content */}
+			{/* Similar Tools */}
+			<SimilarTools currentTool='color-name-finder' />
+
 			<ServiceSEO namespace='tools.colorNameFinder.seo' />
 		</div>
 	)

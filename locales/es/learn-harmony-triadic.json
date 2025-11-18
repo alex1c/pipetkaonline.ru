@@ -1,2 +1,38 @@
-{"title":"Triadic Harmony","description":"Learn about triadic color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations."},"examples":{"title":"Examples","primary":"Primary colors: red, yellow, blue","secondary":"Secondary colors: orange, green, purple"},"usage":{"title":"Usage","content":"Triadic harmony provides high contrast while maintaining balance. It's ideal for creating bright and energetic designs."}}}
-
+{
+	"title": "Triadic Harmony",
+	"description": "Learn about triadic color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations."
+		},
+		"examples": {
+			"title": "Examples",
+			"primary": "Primary colors: red, yellow, blue",
+			"secondary": "Secondary colors: orange, green, purple"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Triadic harmony provides high contrast while maintaining balance. It's ideal for creating bright and energetic designs."
+		}
+	},
+	"seo": {
+		"title": "Armonía triádica: Creación de esquemas de color brillantes y equilibrados",
+		"intro": "La armonía triádica es un esquema de color que usa tres colores distribuidos uniformemente alrededor del círculo cromático, cada uno a 120 grados de distancia. Este esquema crea combinaciones brillantes, energéticas y al mismo tiempo equilibradas, lo que lo hace popular en diseño moderno.\n\nEn esta guía detallada cubrimos la teoría de armonía triádica, ejemplos clásicos (Rojo-Amarillo-Azul, Naranja-Verde-Púrpura), aplicaciones prácticas y técnicas de uso. Aprenderá a usar [tool:color-harmony] para encontrar automáticamente colores triádicos, aplicar [tool:palette-generator] para crear paletas, y trabajar con [tool:brand-color-analyzer] para analizar esquemas triádicos en branding.",
+		"section1": {
+			"title": "Teoría de armonía triádica: Equilibrio y energía",
+			"content": "El esquema triádico se basa en un triángulo equilátero en el círculo cromático, donde cada color está a 120 grados de los otros. Un ejemplo clásico son los colores primarios (Rojo, Amarillo, Azul), que forman un triángulo perfecto. Los colores secundarios (Naranja, Verde, Púrpura) también forman un esquema triádico.\n\nLa armonía triádica ofrece alto contraste gracias a la distribución uniforme de colores, pero mantiene el equilibrio gracias a distancias iguales entre ellos. Esto crea composiciones visualmente interesantes pero no sobrecargadas.\n\nLa herramienta [tool:color-harmony] calcula automáticamente colores triádicos para cualquier color seleccionado usando principios matemáticos del círculo cromático."
+		},
+		"section2": {
+			"title": "Aplicación práctica de armonía triádica",
+			"content": "La armonía triádica se usa ampliamente en diseño web, diseño gráfico, ilustración y branding. En diseño web, los esquemas triádicos crean interfaces brillantes y que atraen la atención con jerarquía clara.\n\nEn branding se usan para crear identidades memorables y energéticas. Al crear paletas, [tool:palette-generator] puede generar combinaciones armónicas basadas en colores triádicos y agregar variaciones de saturación y brillo para crear profundidad.\n\nPara branding, [tool:brand-color-analyzer] analiza paletas de colores triádicos y ofrece recomendaciones de uso, incluyendo análisis de armonía y contraste."
+		},
+		"section3": {
+			"title": "Mejores prácticas y técnicas avanzadas",
+			"content": "Al trabajar con armonía triádica, es importante elegir un color dominante (aproximadamente 60% de la composición) y usar los otros dos como acentos (20% cada uno). Esto previene sobrecarga visual y crea jerarquía clara.\n\nPara suavizar el contraste, puede usar versiones menos saturadas de colores triádicos o agregar colores neutros. En diseño web, los colores triádicos funcionan excelentemente para navegación, botones de llamada a la acción e importantes elementos de interfaz.\n\nPara crear interfaces accesibles, es importante verificar el contraste: use [tool:contrast-checker] para asegurar la legibilidad del texto. Al crear paletas emocionales, [tool:emotion-colors] puede usar colores triádicos para generar combinaciones energéticas y dinámicas."
+		},
+		"conclusion": "La armonía triádica es una herramienta poderosa para crear diseños brillantes, equilibrados y visualmente interesantes.\n\nEl uso correcto de colores triádicos puede crear una composición energética pero armónica que atraiga la atención y transmita dinamismo. Use herramientas modernas para encontrar y aplicar colores triádicos en sus proyectos.",
+		"keywords": "armonía triádica, colores triádicos, armonía de color, esquema de color, círculo cromático, teoría del color, diseño web, diseño gráfico, combinaciones de color, paleta de colores, colores equilibrados, relaciones de color, armonía visual, diseño de color, selección de color, composición de color, balance de color, diseño visual, teoría del color, diseño artístico, branding, colores energéticos"
+	}
+}

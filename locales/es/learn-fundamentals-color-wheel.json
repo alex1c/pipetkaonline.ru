@@ -1,2 +1,47 @@
-{"title":"Color Wheel Basics","description":"Learn the structure and use of the color wheel","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"The color wheel is a tool for understanding relationships between colors. It helps visualize how colors interact with each other."},"primary":{"title":"Primary Colors","content":"Primary colors cannot be created by mixing other colors. In the traditional model, these are red, blue, and yellow.","red":"Red","blue":"Blue","yellow":"Yellow"},"secondary":{"title":"Secondary Colors","content":"Secondary colors are created by mixing two primary colors in equal proportions.","orange":"Orange","green":"Green","purple":"Purple"},"usage":{"title":"Usage","content":"The color wheel is used to create harmonious color schemes, find complementary colors, and understand color relationships."}}}
-
+{
+	"title": "Color Wheel Basics",
+	"description": "Learn the structure and use of the color wheel",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "The color wheel is a tool for understanding relationships between colors. It helps visualize how colors interact with each other."
+		},
+		"primary": {
+			"title": "Primary Colors",
+			"content": "Primary colors cannot be created by mixing other colors. In the traditional model, these are red, blue, and yellow.",
+			"red": "Red",
+			"blue": "Blue",
+			"yellow": "Yellow"
+		},
+		"secondary": {
+			"title": "Secondary Colors",
+			"content": "Secondary colors are created by mixing two primary colors in equal proportions.",
+			"orange": "Orange",
+			"green": "Green",
+			"purple": "Purple"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "The color wheel is used to create harmonious color schemes, find complementary colors, and understand color relationships."
+		}
+	},
+	"seo": {
+		"title": "Círculo cromático: Guía completa de teoría del color para diseñadores",
+		"intro": "El círculo cromático es una herramienta fundamental de la teoría del color que visualiza las relaciones entre colores y ayuda a crear esquemas de color armónicos. En esta guía completa cubrimos la estructura del círculo cromático, colores primarios y secundarios, armonías de color y aplicaciones prácticas en diseño.\n\nAprenderá a usar [tool:color-harmony] para encontrar automáticamente combinaciones armónicas basadas en el círculo cromático, aplicar [tool:palette-generator] para crear paletas, y trabajar con [tool:color-lab] para visualizar relaciones de color.",
+		"section1": {
+			"title": "Estructura del círculo cromático: Colores primarios y secundarios",
+			"content": "El círculo cromático consta de 12 sectores principales dispuestos en un círculo. Tres colores primarios (Rojo, Azul, Amarillo) están posicionados a distancias iguales entre sí y forman un triángulo. Estos colores no pueden obtenerse mezclando otros — son fundamentales.\n\nLos colores secundarios (Naranja, Verde, Púrpura) se obtienen mezclando dos colores primarios: Rojo + Amarillo = Naranja, Azul + Amarillo = Verde, Rojo + Azul = Púrpura. Los colores terciarios se crean mezclando colores primarios y secundarios, creando transiciones suaves entre sectores del círculo.\n\nLas herramientas modernas como [tool:color-harmony] usan modelos matemáticos del círculo cromático para calcular automáticamente colores complementarios, análogos y triádicos."
+		},
+		"section2": {
+			"title": "Armonías de color basadas en el círculo cromático",
+			"content": "El círculo cromático permite crear varios tipos de armonías de color. Los colores complementarios están posicionados opuestos en la rueda (por ejemplo, Rojo y Verde) y crean contraste máximo.\n\nLos colores análogos están uno al lado del otro (por ejemplo, Rojo, Naranja, Amarillo) y crean transiciones suaves. Los colores triádicos forman un triángulo equilátero en la rueda (por ejemplo, Rojo, Azul, Amarillo) y garantizan una combinación equilibrada.\n\nEl esquema de complementario dividido usa un color base y dos adyacentes a su complemento. La herramienta [tool:palette-generator] genera automáticamente paletas armónicas basadas en el color seleccionado y el tipo de armonía usando principios matemáticos del círculo cromático."
+		},
+		"section3": {
+			"title": "Aplicación práctica del círculo cromático en diseño",
+			"content": "El círculo cromático es una herramienta indispensable para diseñadores web, diseñadores gráficos y artistas. Ayuda a seleccionar esquemas de color para interfaces, crear acentos contrastantes, desarrollar brand books y paletas de colores.\n\nAl trabajar con diseño web, el círculo cromático se usa para crear interfaces accesibles con contraste suficiente. La herramienta [tool:color-lab] visualiza el círculo cromático y permite selección interactiva de colores, mostrando sus relaciones en la rueda.\n\nPara branding, [tool:brand-color-analyzer] analiza colores seleccionados basándose en sus posiciones en el círculo cromático y ofrece recomendaciones de armonía. Al crear paletas emocionales, [tool:emotion-colors] usa sectores del círculo cromático para generar colores que corresponden a estados de ánimo específicos."
+		},
+		"conclusion": "El círculo cromático es la base para comprender la teoría del color y crear diseños visualmente atractivos. Dominar el trabajo con el círculo cromático es esencial para cualquier diseñador y desarrollador que trabaje con colores.\n\nUse herramientas modernas para visualizar y aplicar principios del círculo cromático en sus proyectos.",
+		"keywords": "círculo cromático, teoría del color, colores primarios, colores secundarios, armonías de color, colores complementarios, colores análogos, colores triádicos, esquema de color, relaciones de color, paleta de colores, diseño web, diseño gráfico, modelo de color, espacio de color, teoría del color, diseño de color, selección de color, combinaciones de color, contraste de color, balance de color, diseño visual, composición de color, diseño artístico"
+	}
+}

@@ -1,2 +1,43 @@
-{"title":"WCAG Contrast Guidelines","description":"Learn about WCAG contrast standards","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"WCAG (Web Content Accessibility Guidelines) sets contrast standards to ensure text readability."},"aa":{"title":"Level AA","description":"Minimum contrast of 4.5:1 for normal text and 3:1 for large text. This is the minimum standard for most websites.","ratio":"4.5:1 for normal text"},"aaa":{"title":"Level AAA","description":"High contrast of 7:1 for normal text and 4.5:1 for large text. Recommended for important content.","ratio":"7:1 for normal text"},"tools":{"title":"Tools","content":"Use online tools to check contrast, such as WebAIM Contrast Checker or browser developer tools."}}}
-
+{
+	"title": "WCAG Contrast Guidelines",
+	"description": "Learn about WCAG contrast standards",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "WCAG (Web Content Accessibility Guidelines) sets contrast standards to ensure text readability."
+		},
+		"aa": {
+			"title": "Level AA",
+			"description": "Minimum contrast of 4.5:1 for normal text and 3:1 for large text. This is the minimum standard for most websites.",
+			"ratio": "4.5:1 for normal text"
+		},
+		"aaa": {
+			"title": "Level AAA",
+			"description": "High contrast of 7:1 for normal text and 4.5:1 for large text. Recommended for important content.",
+			"ratio": "7:1 for normal text"
+		},
+		"tools": {
+			"title": "Tools",
+			"content": "Use online tools to check contrast, such as WebAIM Contrast Checker or browser developer tools."
+		}
+	},
+	"seo": {
+		"title": "Contraste WCAG: Guía completa de accesibilidad de contenido web",
+		"intro": "WCAG (Web Content Accessibility Guidelines) es un estándar internacional de accesibilidad de contenido web que establece requisitos de contraste de color para garantizar la legibilidad del texto. El cumplimiento de los estándares WCAG es crítico para crear sitios web inclusivos accesibles para personas con discapacidades visuales.\n\nEn esta guía detallada cubrimos todos los niveles de contraste WCAG, métodos de cálculo, aplicaciones prácticas y herramientas de verificación. Aprenderá a usar [tool:contrast-checker] para verificar automáticamente el cumplimiento de estándares WCAG, aplicar [tool:text-image-accessibility] para analizar la legibilidad de texto en imágenes, y trabajar con [tool:color-blindness-simulator] para probar la accesibilidad de color.",
+		"section1": {
+			"title": "Niveles de contraste WCAG: AA y AAA",
+			"content": "WCAG define dos niveles de contraste: AA (Mínimo) y AAA (Avanzado). El nivel AA requiere un contraste de 4.5:1 para texto normal (menos de 18pt o 14pt en negrita) y 3:1 para texto grande (18pt+ o 14pt+ en negrita). Este es el estándar mínimo requerido para la mayoría de sitios web.\n\nEl nivel AAA requiere un contraste de 7:1 para texto normal y 4.5:1 para texto grande, lo que garantiza máxima legibilidad. El contraste se calcula usando la fórmula de luminancia relativa entre colores de texto y fondo.\n\nLa herramienta [tool:contrast-checker] calcula automáticamente el contraste y verifica el cumplimiento de estándares WCAG AA y AAA, ofreciendo recomendaciones de mejora."
+		},
+		"section2": {
+			"title": "Aplicación práctica de estándares WCAG",
+			"content": "El cumplimiento de estándares de contraste WCAG es necesario para cumplimiento legal (ADA, Section 508), mejora SEO (los motores de búsqueda consideran la accesibilidad), expansión de audiencia y experiencia de usuario mejorada para todos los usuarios.\n\nEn diseño web, es importante verificar el contraste no solo para texto normal, sino también para texto en imágenes, gradientes y fondos complejos. La herramienta [tool:text-image-accessibility] analiza la legibilidad de texto en cualquier imagen, considerando el contraste local de cada píxel y ofreciendo recomendaciones detalladas.\n\nAl trabajar con paletas de colores, es importante verificar el contraste de todas las combinaciones de colores usadas en la interfaz."
+		},
+		"section3": {
+			"title": "Herramientas y mejores prácticas",
+			"content": "Las herramientas modernas simplifican significativamente la verificación del cumplimiento de estándares WCAG. [tool:contrast-checker] permite verificar instantáneamente cualquier par de colores y ofrece un informe detallado con recomendaciones.\n\n[tool:color-blindness-simulator] ayuda a entender cómo sus colores son percibidos por personas con diferentes tipos de daltonismo, lo cual es crítico para la accesibilidad. Al crear sistemas de diseño, se recomienda predefinir pares de colores que cumplan con estándares WCAG AA o AAA y usarlos como tokens.\n\nPara temas oscuros, el contraste a menudo es mayor, pero es importante verificar todas las combinaciones. Al trabajar con branding, [tool:brand-color-analyzer] analiza paletas de colores para cumplimiento WCAG y ofrece recomendaciones para mejorar la accesibilidad."
+		},
+		"conclusion": "Los estándares de contraste WCAG no son solo recomendaciones, sino una necesidad para crear sitios web accesibles e inclusivos.\n\nEl cumplimiento de estos estándares mejora la experiencia del usuario para todos, expande la audiencia y garantiza cumplimiento legal. Use herramientas modernas para verificar y mejorar el contraste en sus proyectos.",
+		"keywords": "contraste WCAG, accesibilidad de contenido web, estándares de contraste, WCAG AA, WCAG AAA, luminancia relativa, legibilidad de texto, accesibilidad web, diseño inclusivo, accesibilidad de color, contraste de color, estándares web, diseño accesible, experiencia de usuario, accesibilidad de color, verificación de contraste, desarrollo web, desarrollo frontend, diseño UI, diseño UX, inclusividad, daltonismo, deficiencia de visión del color"
+	}
+}

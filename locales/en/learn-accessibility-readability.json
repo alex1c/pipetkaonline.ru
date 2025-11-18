@@ -1,2 +1,48 @@
-{"title":"Text Readability","description":"Learn about text readability principles","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background."},"contrast":{"title":"Contrast","good":"Good contrast","goodDesc":"Dark text on light background or light text on dark background","bad":"Bad contrast","badDesc":"Light text on light background or dark text on dark background"},"fontSize":{"title":"Font Size","content":"Use large enough font size (minimum 16px for body text) and ensure sufficient line height for comfortable reading."},"bestPractices":{"title":"Best Practices","items":{"0":"Use contrast of at least 4.5:1 for normal text","1":"Avoid overly bright or dark combinations","2":"Test readability on different devices"}}}}
-
+{
+	"title": "Text Readability",
+	"description": "Learn about text readability principles",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background."
+		},
+		"contrast": {
+			"title": "Contrast",
+			"good": "Good contrast",
+			"goodDesc": "Dark text on light background or light text on dark background",
+			"bad": "Bad contrast",
+			"badDesc": "Light text on light background or dark text on dark background"
+		},
+		"fontSize": {
+			"title": "Font Size",
+			"content": "Use large enough font size (minimum 16px for body text) and ensure sufficient line height for comfortable reading."
+		},
+		"bestPractices": {
+			"title": "Best Practices",
+			"items": {
+				"0": "Use contrast of at least 4.5:1 for normal text",
+				"1": "Avoid overly bright or dark combinations",
+				"2": "Test readability on different devices"
+			}
+		}
+	},
+	"seo": {
+		"title": "Text Readability: Complete Guide to Accessibility and Reading Comfort",
+		"intro": "Text readability is a fundamental aspect of web content accessibility, determining how easily users can perceive and understand information. Poor readability not only degrades user experience but also violates WCAG accessibility standards.\n\nIn this detailed guide, we'll cover all factors affecting readability: contrast, font size, line height, font choice, and color combinations. You'll learn how to create text content accessible to all users.\n\nYou'll learn how to use [tool:contrast-checker] to verify text contrast, apply [tool:text-image-accessibility] to analyze text readability on images, and work with [tool:color-blindness-simulator] to test color combination accessibility.",
+		"section1": {
+			"title": "Contrast: Foundation of Text Readability",
+			"content": "Contrast between text and background is the most important readability factor. WCAG standards require minimum contrast of 4.5:1 for normal text and 3:1 for large text (18pt+ or 14pt+ bold).\n\nDark text on light background or light text on dark background creates good contrast. Light text on light background or dark on dark — poor contrast, making text unreadable.\n\nContrast is calculated using the relative luminance formula. The [tool:contrast-checker] tool automatically calculates contrast and verifies WCAG AA and AAA standards compliance, providing improvement recommendations."
+		},
+		"section2": {
+			"title": "Font Size and Line Height",
+			"content": "Font size is critical for readability. Minimum recommended size for body text is 16px (1rem). Smaller sizes make reading difficult, especially on mobile devices.\n\nLine height should be sufficient for comfortable reading. Recommended value is 1.5-1.6 of font size. Too small line height makes text cramped, too large — fragmented.\n\nWhen working with text on images, it's important to consider not only overall contrast but also local contrast of each pixel. The [tool:text-image-accessibility] tool analyzes text readability on any images, considering local contrast and providing detailed recommendations."
+		},
+		"section3": {
+			"title": "Best Practices and Testing",
+			"content": "To ensure maximum readability, use contrast of at least 4.5:1 for normal text and 7:1 for AAA level. Avoid overly bright or dark combinations that can cause eye fatigue.\n\nTest readability on different devices, screen sizes, and lighting conditions. Consider various types of color blindness: use [tool:color-blindness-simulator] to check how your color combinations are perceived by people with color blindness.\n\nWhen creating design systems, predefine color pairs for text and background that comply with WCAG standards. This ensures consistency and accessibility throughout the project."
+		},
+		"conclusion": "Text readability is not just aesthetics but a necessity for creating accessible and inclusive web content.\n\nProper contrast, font size, and line height make content accessible to all users, including people with visual impairments. Use modern tools to verify and improve readability in your projects.",
+		"keywords": "text readability, readability, text contrast, font size, line height, text accessibility, WCAG readability, readable text, text legibility, accessible text, text design, typography, web accessibility, text visibility, reading comfort, text clarity, accessible typography, text best practices, readability standards"
+	}
+}

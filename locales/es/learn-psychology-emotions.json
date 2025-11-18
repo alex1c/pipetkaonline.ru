@@ -1,2 +1,59 @@
-{"title":"Emotional Associations","description":"Learn how colors affect emotions","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Different colors evoke different emotional responses. Understanding these associations helps create effective designs."},"warm":{"title":"Warm Colors","red":{"title":"Red","desc":"Passion, energy, excitement, danger"},"orange":{"title":"Orange","desc":"Warmth, friendliness, enthusiasm, activity"},"yellow":{"title":"Yellow","desc":"Joy, optimism, brightness, attention"}},"cool":{"title":"Cool Colors","blue":{"title":"Blue","desc":"Calm, trust, stability, professionalism"},"green":{"title":"Green","desc":"Nature, growth, harmony, balance"},"purple":{"title":"Purple","desc":"Creativity, mystery, luxury, spirituality"}}}}
-
+{
+	"title": "Emotional Associations",
+	"description": "Learn how colors affect emotions",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Different colors evoke different emotional responses. Understanding these associations helps create effective designs."
+		},
+		"warm": {
+			"title": "Warm Colors",
+			"red": {
+				"title": "Red",
+				"desc": "Passion, energy, excitement, danger"
+			},
+			"orange": {
+				"title": "Orange",
+				"desc": "Warmth, friendliness, enthusiasm, activity"
+			},
+			"yellow": {
+				"title": "Yellow",
+				"desc": "Joy, optimism, brightness, attention"
+			}
+		},
+		"cool": {
+			"title": "Cool Colors",
+			"blue": {
+				"title": "Blue",
+				"desc": "Calm, trust, stability, professionalism"
+			},
+			"green": {
+				"title": "Green",
+				"desc": "Nature, growth, harmony, balance"
+			},
+			"purple": {
+				"title": "Purple",
+				"desc": "Creativity, mystery, luxury, spirituality"
+			}
+		}
+	},
+	"seo": {
+		"title": "Asociaciones emocionales de color: Psicología del color en diseño",
+		"intro": "Los colores tienen una capacidad poderosa de evocar reacciones emocionales e influir en el estado de ánimo, comportamiento y percepción. Comprender las asociaciones emocionales de color es crítico para crear diseños efectivos que transmitan emociones deseadas y evoquen reacciones deseadas del usuario.\n\nEn esta guía detallada cubrimos cómo varios colores afectan las emociones, mecanismos psicológicos del impacto del color y aplicaciones prácticas de asociaciones emocionales en diseño, branding y marketing.\n\nAprenderá a usar [tool:emotion-colors] para generar paletas basadas en emociones, aplicar [tool:palette-generator] para crear esquemas de color emocionales, y trabajar con [tool:brand-color-analyzer] para analizar el impacto emocional de paletas de colores.",
+		"section1": {
+			"title": "Colores cálidos: Energía, pasión y actividad",
+			"content": "Los colores cálidos (Rojo, Naranja, Amarillo) están asociados con sol, fuego y energía. Crean sensación de calor, cercanía y actividad.\n\nEl rojo transmite pasión, energía, emoción y peligro. Atrae la atención, crea sensación de urgencia y se usa para elementos importantes y botones de llamada a la acción. El rojo también puede causar agresión y ansiedad cuando se usa en exceso.\n\nEl naranja crea sensación de calor, amabilidad, entusiasmo y actividad. Es menos agresivo que el rojo, pero aún energético y que atrae la atención.\n\nEl amarillo transmite alegría, optimismo, brillo y atención. Es el color más brillante y notable, pero puede ser fatigante cuando se usa en exceso. La herramienta [tool:emotion-colors] usa colores cálidos para generar paletas energéticas y positivas que corresponden a emociones específicas."
+		},
+		"section2": {
+			"title": "Colores fríos: Calma, confianza y estabilidad",
+			"content": "Los colores fríos (Azul, Verde, Púrpura) están asociados con agua, cielo y calma. Crean sensación de profundidad, estabilidad y profesionalismo.\n\nEl azul transmite calma, confianza, estabilidad y profesionalismo. Es el color más popular en diseño corporativo, ya que crea sensación de confiabilidad y competencia.\n\nEl verde está asociado con naturaleza, crecimiento, armonía y balance. Crea sensación de calma y estabilidad, ideal para marcas ambientales y médicas.\n\nEl púrpura transmite creatividad, misterio, lujo y espiritualidad. Combina la estabilidad del azul y la energía del rojo, creando un efecto emocional único. La herramienta [tool:palette-generator] usa colores fríos para crear esquemas de color tranquilos y profesionales."
+		},
+		"section3": {
+			"title": "Aplicación práctica de asociaciones emocionales",
+			"content": "En diseño web, las asociaciones emocionales de color se usan para crear atmósfera deseada y dirigir la atención del usuario. Colores cálidos para elementos importantes y botones de llamada a la acción, fríos — para fondos y atmósfera profesional.\n\nEn branding, los colores transmiten carácter y valores de la marca. Marcas energéticas eligen colores cálidos, estables — fríos. La herramienta [tool:brand-color-analyzer] analiza el impacto emocional de paletas de colores y ofrece recomendaciones de uso.\n\nEn marketing, los colores influyen en decisiones de compra y percepción del producto. La elección correcta de color puede aumentar la conversión y mejorar la experiencia del usuario. La herramienta [tool:emotion-colors] ayuda a generar paletas que corresponden a emociones y objetivos de marketing específicos."
+		},
+		"conclusion": "Las asociaciones emocionales de color son una herramienta poderosa para crear diseños efectivos que transmitan emociones deseadas y evoquen reacciones deseadas.\n\nComprender la psicología del color permite crear diseños que no solo son hermosos, sino también funcionales, emocionalmente efectivos y alineados con objetivos del proyecto. Use herramientas modernas para analizar y aplicar asociaciones emocionales de color en sus proyectos.",
+		"keywords": "asociaciones emocionales de color, psicología del color, emociones de color, percepción del color, impacto del color, estado de ánimo del color, sentimientos de color, psicología del color en diseño, diseño emocional, asociaciones de color, simbolismo del color, significado del color, investigación de psicología del color, influencia del color, comportamiento del color"
+	}
+}

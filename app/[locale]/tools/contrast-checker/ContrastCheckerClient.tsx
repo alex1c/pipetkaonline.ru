@@ -7,6 +7,7 @@ import { ResultCard } from '@/components/contrast-checker/ResultCard'
 import { SamplePreview } from '@/components/contrast-checker/SamplePreview'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
 import { useContrastChecker } from '@/hooks/useContrastChecker'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Contrast Checker client component
@@ -53,6 +54,9 @@ export function ContrastCheckerClient() {
 				{/* Text Preview */}
 				<SamplePreview result={result} />
 			</div>
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='contrast-checker' />
 
 			{/* SEO Content */}
 			<ServiceSEO namespace='tools.contrastChecker.seo' />

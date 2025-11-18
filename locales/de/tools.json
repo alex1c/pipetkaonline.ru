@@ -2,6 +2,9 @@
 	"title": "Farbwerkzeuge",
 	"description": "Farbcodes erkennen, Paletten erstellen und Kontrast und Harmonie prüfen.",
 	"comingSoon": "Demnächst",
+	"similarTools.title": "Ähnliche Werkzeuge",
+	"similarTools.description": "Entdecken Sie andere nützliche Farbwerkzeuge",
+	"similarTools.viewTool": "Werkzeug anzeigen",
 	"tools.picker.title": "Farbauswahl",
 	"tools.picker.desc": "Farben aus Bildern und Screenshots extrahieren",
 	"tools.palette.title": "Palettengenerator",
@@ -22,6 +25,18 @@
 	"tools.colorNameFinder.desc": "Finde den Namen jeder Farbe: Standard-, Algorithmus- und Marketing-Namen",
 	"tools.brandColorAnalyzer.title": "Markenfarben-Analysator",
 	"tools.brandColorAnalyzer.desc": "Analysiere Markenfarben: Clustering, Harmonie, Kontrast und Beschreibungen",
+	"tools.uiThemeGenerator.title": "UI-Theme-Generator",
+	"tools.uiThemeGenerator.desc": "Generiere vollständige Paletten für Interfaces: Akzent-, Hintergrund-, Text- und Hilfsfarben",
+	"tools.textImageAccessibility.title": "Text-auf-Bild-Barrierefreiheits-Prüfer",
+	"tools.textImageAccessibility.desc": "Prüfe Textlesbarkeit auf Bildhintergründen mit Kontrastanalyse und WCAG-Konformität",
+	"tools.gradientMapGenerator.title": "Gradient-Map-Generator",
+	"tools.gradientMapGenerator.desc": "Transformiere Bilder mit Farbverläufen basierend auf Pixelhelligkeit",
+	"tools.emotionColors.title": "Emotionen und Farbe",
+	"tools.emotionColors.desc": "Finde die perfekte Farbpalette für deine Stimmung — Freude, Ruhe, Energie, Inspiration",
+	"tools.solidBackground.title": "Einfarbiger Hintergrund-Generator",
+	"tools.solidBackground.desc": "Erstelle und lade einfarbige Hintergründe in verschiedenen Größen und Formaten herunter",
+	"tools.patternGenerator.title": "Muster-Generator",
+	"tools.patternGenerator.desc": "Erstelle nahtlose sich wiederholende Muster und Designs",
 	"uiTokensGenerator": {
 		"title": "UI-Token-Generator",
 		"description": "Wählen Sie eine Grundfarbe und erhalten Sie automatisch einen vollständigen UI-Token-Satz: Farbskalen, semantische Farben und einsatzbereite CSS-Variablen.",
@@ -405,6 +420,535 @@
 				"q6": {
 					"question": "Wie exportiert man Palette zur Verwendung im Projekt?",
 					"answer": "Verwenden Sie CSS-Variablen-Export für direkte Verwendung in Styles. JSON-Format eignet sich für die Integration in Design-Systeme oder Übertragung an andere Tools."
+				}
+			}
+		}
+	},
+	"uiThemeGenerator": {
+		"title": "UI-Theme-Generator",
+		"subtitle": "Generieren Sie vollständige Paletten für Interfaces: Akzentfarben, Hintergründe, Text, Rahmen und Hilfsfarben",
+		"sections": {
+			"input": {
+				"title": "Grundfarbe eingeben"
+			},
+			"preview": {
+				"title": "Theme-Vorschau"
+			},
+			"tokens": {
+				"title": "Farb-Tokens"
+			},
+			"contrast": {
+				"title": "Kontrast"
+			},
+			"export": {
+				"title": "Export"
+			}
+		},
+		"seo": {
+			"keywords": "UI-Theme-Generator, UI-Palette, Interface-Farb-Tokens, Interface-Theme-Generator, UI-Farbschema, Design-Tokens für UI, Interface-Farbpaletten-Generator, UI-Theme online, UI-Theme erstellen, Interface-Farb-Generator, UI-Farb-Variablen, Interface-Paletten-Generator, Interface-Farbsystem, UI-Farb-Generator, Interface-Theme erstellen, UI-Token-Generator, Web-Interface-Farbpalette, UI-Paletten-Generator, Interface-Farbschema erstellen, UI-Primary-Farb-Generator, UI-Semantic-Farb-Generator, Interface-Design-Token-Generator, kostenloser UI-Theme-Generator, CSS-Theme-Generator, Tailwind-Theme-Generator, Design-System-Theme-Generator, UI-Farbpalette erstellen, Interface-Farb-Variablen-Generator, UI-Design-System-Generator",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung von UI-Theme-Generator",
+				"intro": "UI-Theme-Generator ist ein Tool zur Generierung vollständiger Farbpaletten für Interfaces. Es erstellt Akzentfarben, Hintergründe, Text, Rahmen und Hilfsfarben basierend auf einer einzigen Grundfarbe.",
+				"step1": {
+					"title": "Schritt 1: Grundfarbe auswählen",
+					"description": "Wählen Sie eine Primärfarbe mit dem Farbwähler, geben Sie HEX/RGB/HSL manuell ein, wählen Sie ein fertiges Theme aus der Liste (Light, Dark, Vibrant, Pastel, Minimal, Corporate) oder laden Sie ein Bild hoch, um die dominante Farbe zu extrahieren."
+				},
+				"step2": {
+					"title": "Schritt 2: Modus konfigurieren",
+					"description": "Wählen Sie den Theme-Modus: Light (helles Theme), Dark (dunkles Theme) oder Auto (automatische Erkennung basierend auf Grundfarbe)."
+				},
+				"step3": {
+					"title": "Schritt 3: Vorschau anzeigen",
+					"description": "Zeigen Sie die Theme-Vorschau auf echten UI-Komponenten: Buttons, Textblöcke, Karte, Formular, Navigationsleiste. Dies ermöglicht es, das Theme in Aktion zu sehen."
+				},
+				"step4": {
+					"title": "Schritt 4: Tokens erkunden",
+					"description": "Erkunden Sie alle generierten Farb-Tokens, organisiert nach Kategorien: Primary (Hauptfarben), Secondary (Sekundärfarben), Neutral (neutrale), Status (Statusfarben), Borders (Rahmen), Shadows (Schatten)."
+				},
+				"step5": {
+					"title": "Schritt 5: Kontrast prüfen",
+					"description": "Überprüfen Sie die automatische Kontrastanalyse für wichtige Farbpaare: primary vs primary-foreground, secondary vs secondary-foreground, text vs background, card vs Hintergrund. Stellen Sie WCAG AA/AAA-Konformität sicher."
+				},
+				"step6": {
+					"title": "Schritt 6: Export",
+					"description": "Exportieren Sie das Theme in verschiedenen Formaten: CSS-Variablen (für direkte Verwendung in CSS), Tailwind-Config (für Tailwind-CSS-Integration), JSON-Tokens (für Design-Systeme), Figma-Tokens (für Verwendung in Figma). Verwenden Sie 'Export All', um alle Formate auf einmal zu exportieren."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie UI-Theme-Generator: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man Grundfarbe auswählt",
+					"description": "Verwenden Sie den Farbwähler für visuelle Auswahl, geben Sie Farbe manuell in einem beliebigen Format ein (HEX, RGB, HSL), wählen Sie ein fertiges Theme aus der Dropdown-Liste oder laden Sie ein Bild hoch für automatische Extraktion der dominanten Farbe."
+				},
+				"howTo2": {
+					"title": "Wie man Theme-Modus konfiguriert",
+					"description": "Wählen Sie Light für helles Theme, Dark für dunkles Theme oder Auto für automatische Erkennung basierend auf Grundfarb-Helligkeit. Modus beeinflusst neutrale Farb- und Schattengenerierung."
+				},
+				"howTo3": {
+					"title": "Wie man Theme-Vorschau verwendet",
+					"description": "Vorschau zeigt Theme auf echten UI-Komponenten: Buttons mit Hover/Active-Zuständen, Textblöcke, Karten, Formulare, Navigationsleiste. Dies hilft, das Theme visuell zu bewerten, bevor es verwendet wird."
+				},
+				"howTo4": {
+					"title": "Wie man mit Tokens arbeitet",
+					"description": "Alle Tokens sind nach Kategorien organisiert. Jeder Token zeigt Farbfeld, HEX-Wert und Kopier-Button. Tokens sind bereit zur Verwendung in Ihrem Projekt."
+				},
+				"howTo5": {
+					"title": "Wie man Kontrastanalyse interpretiert",
+					"description": "Kontrasttabelle zeigt Verhältnisse für wichtige Farbpaare. Grüne Labels (✓ AA, ✓ AAA) zeigen Konformität mit Standards. Rote Labels (✗ Below AA) erfordern Kontrastverbesserung."
+				},
+				"howTo6": {
+					"title": "Wie man Theme exportiert",
+					"description": "Wählen Sie gewünschtes Exportformat (CSS-Variablen, Tailwind-Config, JSON-Tokens, Figma-Tokens), kopieren Sie Code oder laden Sie Datei herunter. Verwenden Sie 'Export All', um alle Formate auf einmal zu erhalten."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zu UI-Theme-Generator",
+				"q1": {
+					"question": "Was sind UI-Tokens?",
+					"answer": "UI-Tokens sind benannte Farbwerte, die in Design-Systemen verwendet werden. Sie gewährleisten Farbkonsistenz in Interfaces und vereinfachen Theme-Wartung. Beispiele: primary, secondary, background, foreground."
+				},
+				"q2": {
+					"question": "Wie funktioniert Token-Generierung?",
+					"answer": "Generator verwendet Grundfarbe und erstellt Variationen durch Aufhellen/Abdunkeln (für Hover/Active-Zustände), Mischen mit neutralen Farben (für Secondary) und automatische Kontrastfarbauswahl (für Foreground). Statusfarben werden durch Anpassung des Farbtons generiert."
+				},
+				"q3": {
+					"question": "Was ist Auto-Modus?",
+					"answer": "Auto-Modus bestimmt automatisch, ob Theme hell oder dunkel sein soll, basierend auf Grundfarb-Helligkeit. Wenn Grundfarbe hell ist (Luma >= 0.5), wird helles Theme gewählt, sonst dunkles Theme."
+				},
+				"q4": {
+					"question": "Wie verwendet man exportierte Tokens?",
+					"answer": "CSS-Variablen können direkt in CSS verwendet werden: var(--color-primary). Tailwind-Config sollte zu tailwind.config.js hinzugefügt werden. JSON-Tokens eignen sich für Integration in Design-Systeme. Figma-Tokens können über Plugin in Figma importiert werden."
+				},
+				"q5": {
+					"question": "Warum bestehen einige Farbpaare den Kontrasttest nicht?",
+					"answer": "Wenn Grundfarbe zu hell oder dunkel ist, können automatisch generierte Foreground-Farben möglicherweise nicht ausreichend Kontrast bieten. In diesem Fall wird empfohlen, eine andere Grundfarbe zu wählen oder Foreground-Farben manuell anzupassen."
+				},
+				"q6": {
+					"question": "Kann ich Tokens manuell bearbeiten?",
+					"answer": "In aktueller Version werden Tokens automatisch generiert. Für manuelle Bearbeitung können Sie exportierte Werte kopieren und in Ihrem Projekt ändern. Zukünftige Versionen planen, manuelle Bearbeitungsfunktion hinzuzufügen."
+				}
+			}
+		}
+	},
+	"textImageAccessibility": {
+		"title": "Text-auf-Bild-Barrierefreiheits-Prüfer",
+		"subtitle": "Prüfen Sie Textlesbarkeit auf Bildhintergründen mit Kontrastanalyse und WCAG-Konformität",
+		"upload": "Bild hochladen",
+		"controls": {
+			"text": "Text",
+			"color": "Textfarbe",
+			"size": "Schriftgröße",
+			"weight": "Schriftstärke",
+			"position": "Position",
+			"background": "Hintergrund-Overlay",
+			"shadow": "Textschatten"
+		},
+		"results": {
+			"title": "Barrierefreiheits-Analyse",
+			"contrast": "Kontrastverhältnis",
+			"wcagSmall": "WCAG AA (Kleiner Text)",
+			"wcagLarge": "WCAG AA (Großer Text)",
+			"recommendation": "Empfehlung"
+		},
+		"heatmap": {
+			"toggle": "Heatmap anzeigen"
+		},
+		"seo": {
+			"keywords": "Text-auf-Bild-Barrierefreiheits-Prüfer, Textkontrast auf Hintergrund, WCAG-Textprüfung, Textlesbarkeit auf Bild, Textkontrast-Analyse, Text-Barrierefreiheit auf Bild, Textlesbarkeits-Prüfung, WCAG-Kontrast, Text-auf-Bild-Analyse, Textkontrast-Prüfung, Text-Barrierefreiheit online, Kontrast-Prüfer-Tool, WCAG 2.1-Prüfung, Text- und Hintergrundkontrast, Textlesbarkeits-Prüfung auf Bild, Text-Barrierefreiheits-Analyse, Textkontrast-Prüfer-Tool, WCAG AA AAA-Prüfung, Textkontrast auf Bild, Textlesbarkeits-Analyse, Text-Barrierefreiheits-Prüfung auf Hintergrund, Textlesbarkeits-Prüfer-Tool, WCAG-Konformitäts-Prüfer, Text- und Bildkontrast, Textlesbarkeits-Prüfung, Textkontrast-Analyse auf Bild, Text-Barrierefreiheits-Prüfer-Tool, Textkontrast-Prüfung online, WCAG-Kontrast-Test, Textlesbarkeits-Prüfung auf Bildhintergrund",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung von Text-auf-Bild-Barrierefreiheits-Prüfer",
+				"intro": "Text-auf-Bild-Barrierefreiheits-Prüfer ist ein Tool zur Prüfung der Textlesbarkeit auf Bildhintergründen. Es analysiert Kontrast, prüft WCAG-Konformität und bietet Empfehlungen zur Verbesserung der Barrierefreiheit.",
+				"step1": {
+					"title": "Schritt 1: Bild hochladen",
+					"description": "Laden Sie ein Bild (PNG, JPG, WebP) per Drag & Drop oder Dateiauswahl hoch. Das Bild wird in der Vorschau mit Text-Overlay-Funktion angezeigt."
+				},
+				"step2": {
+					"title": "Schritt 2: Text konfigurieren",
+					"description": "Konfigurieren Sie Text: geben Sie Text ein, wählen Sie Farbe, Größe, Schriftstärke, Position (horizontal und vertikal), aktivieren/deaktivieren Sie Schatten und Hintergrund-Overlay."
+				},
+				"step3": {
+					"title": "Schritt 3: Kontrastanalyse",
+					"description": "Das Tool analysiert automatisch Kontrast zwischen Text und Bildhintergrund, berücksichtigt lokale Farben unter Text. Ergebnisse werden in Echtzeit angezeigt."
+				},
+				"step4": {
+					"title": "Schritt 4: WCAG-Prüfung",
+					"description": "WCAG 2.1-Konformität wird geprüft: AA für kleinen Text (4.5:1), AA für großen Text (3:1), AAA (7:1). Ergebnisse zeigen, ob Text die Prüfung besteht."
+				},
+				"step5": {
+					"title": "Schritt 5: Heatmap",
+					"description": "Aktivieren Sie 'Heatmap anzeigen'-Modus zur Visualisierung der Lesbarkeit: grün — hoher Kontrast, gelb — mittel, rot — niedrig. Dies hilft, optimale Textposition zu finden."
+				},
+				"step6": {
+					"title": "Schritt 6: Empfehlungen",
+					"description": "Das Tool bietet Empfehlungen zur Kontrastverbesserung, z.B. 'Erhöhen Sie Texthelligkeit um 12%' oder 'Verwenden Sie dunkleren Hintergrund'."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie Text-auf-Bild-Barrierefreiheits-Prüfer: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man Bild hochlädt",
+					"description": "Ziehen Sie Bild in Upload-Bereich oder klicken Sie zur Dateiauswahl. Unterstützte Formate: PNG, JPG, WebP. Nach Upload wird Bild in Vorschau angezeigt."
+				},
+				"howTo2": {
+					"title": "Wie man Text konfiguriert",
+					"description": "Geben Sie Text in 'Text'-Feld ein, wählen Sie Farbe über Farbwähler oder geben Sie HEX ein, setzen Sie Schriftgröße (12-120px), Stärke (normal, bold, light, medium), Position (left/center/right, top/middle/bottom)."
+				},
+				"howTo3": {
+					"title": "Wie man Hintergrund-Overlay verwendet",
+					"description": "Aktivieren Sie 'Hintergrund-Overlay' zum Hinzufügen halbtransparenter Overlay unter Text. Wählen Sie Farbe und passen Sie Deckkraft an (0-100%). Dies verbessert Lesbarkeit auf komplexen Hintergründen."
+				},
+				"howTo4": {
+					"title": "Wie man Ergebnisse interpretiert",
+					"description": "Kontrastverhältnis zeigt Kontrastverhältnis (1:1 — kein Kontrast, 21:1 — Maximum). WCAG AA Small erfordert 4.5:1 für normalen Text, AA Large — 3:1 für großen Text, AAA — 7:1."
+				},
+				"howTo5": {
+					"title": "Wie man Heatmap verwendet",
+					"description": "Aktivieren Sie 'Heatmap anzeigen' zur Visualisierung der Lesbarkeit. Grüne Bereiche — hoher Kontrast (≥4.5:1), gelb — mittel (3-4.5:1), rot — niedrig (<3:1). Bewegen Sie Text in grüne Bereiche für bessere Lesbarkeit."
+				},
+				"howTo6": {
+					"title": "Wie man Barrierefreiheit verbessert",
+					"description": "Befolgen Sie Tool-Empfehlungen: erhöhen Sie Texthelligkeit, verwenden Sie dunklere/hellere Farbe, fügen Sie Hintergrund-Overlay hinzu, erhöhen Sie Schriftgröße, bewegen Sie Text in Bereich mit besserem Kontrast."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zu Text-auf-Bild-Barrierefreiheits-Prüfer",
+				"q1": {
+					"question": "Was ist WCAG?",
+					"answer": "WCAG (Web Content Accessibility Guidelines) sind Barrierefreiheitsstandards für Webinhalte. WCAG AA erfordert 4.5:1 Kontrast für normalen Text und 3:1 für großen Text. WCAG AAA erfordert 7:1 für normalen Text."
+				},
+				"q2": {
+					"question": "Wie wird Kontrast berechnet?",
+					"answer": "Kontrast wird mit WCAG 2.1-Formel berechnet: (L1 + 0.05) / (L2 + 0.05), wobei L1 und L2 relative Helligkeit von hellerer und dunklerer Farbe sind. Lokale Hintergrundfarbe unter Text wird berücksichtigt."
+				},
+				"q3": {
+					"question": "Was zeigt Heatmap?",
+					"answer": "Heatmap visualisiert Textlesbarkeit in verschiedenen Bildbereichen. Grün — hoher Kontrast (≥4.5:1), gelb — mittel (3-4.5:1), rot — niedrig (<3:1). Dies hilft, optimale Textposition zu finden."
+				},
+				"q4": {
+					"question": "Wie verbessert man Textkontrast?",
+					"answer": "Verwenden Sie kontrastreichere Textfarbe (weiß auf dunklem Hintergrund oder schwarz auf hellem), fügen Sie Hintergrund-Overlay mit Deckkraft-Anpassung hinzu, erhöhen Sie Schriftgröße, bewegen Sie Text in Bereich mit besserem Kontrast, fügen Sie Textschatten hinzu."
+				},
+				"q5": {
+					"question": "Wird Hintergrund-Overlay bei Kontrastberechnung berücksichtigt?",
+					"answer": "Ja, wenn Hintergrund-Overlay aktiviert ist, wird Kontrast zwischen Textfarbe und Overlay-Farbe berechnet. Wenn Overlay deaktiviert ist, wird Kontrast zwischen Text und lokaler Bildfarbe unter Text berechnet."
+				},
+				"q6": {
+					"question": "Welche Schriftgröße gilt als groß?",
+					"answer": "Laut WCAG ist großer Text Text 18pt (24px) und größer oder Text 14pt (18.67px) und größer in fett. Großer Text erfordert niedrigeren Kontrast (3:1 statt 4.5:1)."
+				}
+			}
+		}
+	},
+	"gradientMapGenerator": {
+		"title": "Gradient-Map-Generator",
+		"subtitle": "Transformieren Sie Bilder mit Farbverläufen basierend auf Pixelhelligkeit",
+		"upload": "Bild hochladen",
+		"gradientEditor": {
+			"title": "Gradient-Editor",
+			"addPoint": "Punkt hinzufügen",
+			"removePoint": "Punkt entfernen",
+			"presets": "Voreinstellungen"
+		},
+		"controls": {
+			"intensity": "Intensität",
+			"blendMode": "Mischmodus"
+		},
+		"preview": {
+			"before": "Vorher",
+			"after": "Nachher",
+			"splitView": "Geteilter Ansicht"
+		},
+		"export": {
+			"downloadImage": "Bild herunterladen",
+			"downloadPreset": "Voreinstellung herunterladen",
+			"copyCss": "CSS-Gradient kopieren"
+		},
+		"seo": {
+			"keywords": "Gradient-Map-Generator, Bild-Gradient-Mapping, Duotone-Effekt, Bild-Farbkarte, Gradient-Filter für Bilder, Bildtransformation mit Gradient, Gradient-Map-Generator, Duotone-Generator, Bild-Farb-Mapping, Gradient-Effekt für Fotos, Cinematic-Gradient, künstlerische Filter für Bilder, Bild-Farbumfärbung, Gradient-Map online, Duotone-Effekt-Generator, Gradient-Mapping online, Gradient-Mapping-Tool, Duotone-Bilder erstellen, Gradient-Filter für Fotos, Farbkarte für Bilder, Farbkarten-Generator, Bildtransformation-Tool, Gradient-Mapping-Fotos, Duotone online, Bild-Farbtransformation, Gradient-Bildeffekt, Gradient-Filter-Generator, Duotone-Tool, Gradient-Farbkarte, Gradient-Mapping-Tool",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung von Gradient-Map-Generator",
+				"intro": "Gradient-Map-Generator ist ein Tool zur Transformation von Bildern mit Farbverläufen basierend auf Pixelhelligkeit. Es ermöglicht die Erstellung von Duotone-Effekten, kinoähnlichen Farbkorrekturen, künstlerischen Filtern und Bild-Farbumfärbung.",
+				"step1": {
+					"title": "Schritt 1: Bild hochladen",
+					"description": "Laden Sie ein Bild (PNG, JPG, WebP) per Drag & Drop oder Dateiauswahl hoch. Das Bild wird in der Vorschau mit Gradient-Mapping-Funktion angezeigt."
+				},
+				"step2": {
+					"title": "Schritt 2: Gradient konfigurieren",
+					"description": "Verwenden Sie den Gradient-Editor, um eine Farbkarte zu erstellen: fügen Sie Gradient-Stops hinzu, wählen Sie Farben, passen Sie Positionen an. Sie können ein fertiges Preset wählen (Duotone, Cinematic, Warm, Cold usw.) oder Ihren eigenen Gradient erstellen."
+				},
+				"step3": {
+					"title": "Schritt 3: Anwenden und exportieren",
+					"description": "Passen Sie Intensität und Mischmodus an (Normal, Multiply, Screen, Overlay usw.). Vorschau des Ergebnisses in Before/After/Split-View-Modi. Exportieren Sie das Ergebnis als PNG, speichern Sie Preset als JSON oder kopieren Sie CSS-Gradient."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie Gradient-Map-Generator: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man Gradient-Mapping erstellt",
+					"description": "Laden Sie ein Bild hoch, wählen Sie oder erstellen Sie einen Gradient im Editor. Der Gradient wird auf das Bild basierend auf der Helligkeit jedes Pixels angewendet: dunkle Bereiche erhalten Farben von der linken Seite des Gradients, helle von der rechten. Passen Sie Intensität und Mischmodus für gewünschten Effekt an."
+				},
+				"howTo2": {
+					"title": "Wie man Presets verwendet",
+					"description": "Wählen Sie ein fertiges Preset aus der Liste (Duotone, Cinematic, Warm, Cold, Gold/Blue, Cyber Neon, Pastel, Black & White, Retro Film). Das Preset wendet automatisch den Gradient auf Ihr Bild an. Sie können es dann anpassen, indem Sie Gradient-Stops hinzufügen oder ändern."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zu Gradient-Map-Generator",
+				"q1": {
+					"question": "Was ist Gradient-Mapping?",
+					"answer": "Gradient-Mapping ist eine Bildtransformationstechnik, bei der Gradient-Farben auf Pixel basierend auf ihrer Helligkeit angewendet werden. Dunkle Pixel erhalten Farben vom Anfang des Gradients, helle vom Ende. Dies erzeugt Duotone-Effekte, kinoähnliche Farbkorrekturen und künstlerische Filter."
+				},
+				"q2": {
+					"question": "Was ist der Unterschied zwischen HSL und LAB für Helligkeitsberechnung?",
+					"answer": "LAB (Lightness, A, B) ist ein wahrnehmungsmäßig gleichmäßigerer Farbraum als HSL. Die Verwendung von LAB gibt glattere und natürlichere Farbübergänge im Gradient-Mapping. HSL ist schneller zu berechnen, kann aber weniger gleichmäßige Ergebnisse liefern."
+				},
+				"q3": {
+					"question": "Wie speichere ich Gradient zur Wiederverwendung?",
+					"answer": "Verwenden Sie die Schaltfläche 'Download Preset (JSON)', um den aktuellen Gradient, Intensität und Mischmodus in einer JSON-Datei zu speichern. Später können Sie diese Datei in das Tool laden, um sie auf anderen Bildern wiederzuverwenden."
+				}
+			}
+		}
+	},
+	"emotionColors": {
+		"title": "Emotionen und Farbe — Farbauswahl nach Stimmung",
+		"subtitle": "Finden Sie die perfekte Farbpalette für Ihre Stimmung — Freude, Ruhe, Energie, Inspiration und andere Emotionen.",
+		"selectEmotion": "Emotion auswählen",
+		"customEmotion": "Andere Emotion",
+		"customEmotionPlaceholder": "Geben Sie Ihre Stimmung ein...",
+		"additionalOptions": "Zusätzliche Optionen",
+		"options": {
+			"warm": "Warme Palette",
+			"bright": "Helle Palette",
+			"natural": "Natürliche Palette"
+		},
+		"generatePalette": "Palette generieren",
+		"generateVariation": "Weitere generieren",
+		"emotions": {
+			"joy": "Freude",
+			"calm": "Ruhe",
+			"energy": "Energie",
+			"nostalgia": "Nostalgie",
+			"confidence": "Selbstvertrauen",
+			"anxiety": "Angst",
+			"romance": "Romantik",
+			"inspiration": "Inspiration"
+		},
+		"palette": {
+			"keyColors": "Hauptfarben",
+			"secondary": "Sekundäre Akzente",
+			"softColors": "Unterstützende Töne",
+			"keyColor": "Hauptfarbe {{number}}",
+			"secondaryColor": "Akzent {{number}}",
+			"softColor": "Ton {{number}}"
+		},
+		"explanation": {
+			"title": "Warum diese Palette zu Ihrer Stimmung passt",
+			"textStyle": "Textstil"
+		},
+		"export": {
+			"title": "Export",
+			"json": "JSON herunterladen",
+			"css": "CSS-Variablen kopieren",
+			"saveToCollection": "Zur Sammlung hinzufügen"
+		},
+		"seo": {
+			"keywords": "Emotionen und Farbe, Farbauswahl nach Stimmung, Farbpalette nach Emotionen, Farbgenerator nach Stimmung, Freude Farben, Ruhe Farben, Energie Farben, Inspiration Farben, Romantik Farben, Nostalgie Farben, Selbstvertrauen Farben, Angst Farben, Farbkombinationen nach Emotionen, Palette für Stimmung, Farbpsychologie, emotionale Farben, Palettenauswahl nach Gefühlen, Palettengenerator nach Emotionen, Farben für Freude, Farben für Ruhe, Farben für Energie, Farben für Inspiration, emotionale Palette, Farbstimmung, Stimmungspalette, emotionaler Farbgenerator, Farbauswahl nach Stimmung, Farbschema nach Emotionen, Emotionspalette, Stimmungsfarben",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung des Tools 'Emotionen und Farbe'",
+				"intro": "Das Tool 'Emotionen und Farbe' hilft Ihnen, die perfekte Farbpalette für Ihre Stimmung zu finden. Es nutzt Prinzipien der Farbpsychologie, um harmonische Farbkombinationen zu erstellen, die verschiedenen emotionalen Zuständen entsprechen.",
+				"step1": {
+					"title": "Schritt 1: Emotion auswählen",
+					"description": "Wählen Sie eine von 8 voreingestellten Emotionen (Freude, Ruhe, Energie, Nostalgie, Selbstvertrauen, Angst, Romantik, Inspiration) oder geben Sie Ihre eigene Emotion in das Textfeld ein. Das Tool identifiziert automatisch ähnliche Emotionen und erstellt eine gemischte Palette."
+				},
+				"step2": {
+					"title": "Schritt 2: Parameter anpassen",
+					"description": "Passen Sie optional zusätzliche Parameter an: wählen Sie warme oder kalte Palette, helle oder gedämpfte, natürliche oder synthetische. Diese Parameter beeinflussen die Farbgenerierung aus HSL-Bereichen, die der ausgewählten Emotion entsprechen."
+				},
+				"step3": {
+					"title": "Schritt 3: Generieren und exportieren",
+					"description": "Klicken Sie auf 'Palette generieren', um eine Farbpalette zu erstellen. Sehen Sie sich Hauptfarben, sekundäre Akzente und unterstützende Töne an. Lesen Sie die Erklärung, warum diese Farben zu Ihrer Stimmung passen. Exportieren Sie die Palette in JSON, kopieren Sie CSS-Variablen oder speichern Sie in der Sammlung zur Wiederverwendung."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie das Tool 'Emotionen und Farbe': Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man Emotion auswählt",
+					"description": "Klicken Sie auf eine der Emotions-Schaltflächen (Freude, Ruhe, Energie usw.) oder geben Sie Ihre eigene Emotion in das Feld 'Andere Emotion' ein. Für benutzerdefinierte Emotionen verwendet das Tool einen Algorithmus, um ähnliche Emotionen zu finden und eine gemischte Palette basierend auf gefundenen Übereinstimmungen zu erstellen."
+				},
+				"howTo2": {
+					"title": "Wie man Palette anpasst",
+					"description": "Verwenden Sie Kontrollkästchen im Abschnitt 'Zusätzliche Optionen': 'Warme Palette' verschiebt Farben zu warmen Tönen, 'Helle Palette' erhöht Sättigung und Helligkeit, 'Natürliche Palette' erstellt natürlichere, gedämpfte Töne. Sie können mehrere Parameter kombinieren."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zum Tool 'Emotionen und Farbe'",
+				"q1": {
+					"question": "Wie funktioniert die Farbgenerierung nach Emotionen?",
+					"answer": "Das Tool verwendet eine Zuordnung von Emotionen zu HSL-Farbbereichen. Jede Emotion hat vordefinierte Bereiche für Farbton, Sättigung und Helligkeit, basierend auf Prinzipien der Farbpsychologie. Bei der Generierung werden zufällige Farben aus diesen Bereichen ausgewählt, was harmonische Kombinationen gewährleistet, die dem emotionalen Zustand entsprechen."
+				},
+				"q2": {
+					"question": "Kann ich meine eigene Emotion verwenden?",
+					"answer": "Ja, Sie können jede Emotion in das Feld 'Andere Emotion' eingeben. Das Tool analysiert den eingegebenen Text, findet 3 ähnlichste voreingestellte Emotionen und erstellt eine gemischte Palette basierend auf ihnen. Dies ermöglicht es, einzigartige Farbkombinationen für beliebige emotionale Zustände zu erhalten."
+				},
+				"q3": {
+					"question": "Wie speichere ich Palette zur Wiederverwendung?",
+					"answer": "Verwenden Sie die Schaltfläche 'Zur Sammlung hinzufügen', um die Palette im lokalen Speicher des Browsers zu speichern. Paletten werden in localStorage gespeichert und sind zwischen Sitzungen verfügbar. Sie können die Palette auch in eine JSON-Datei exportieren oder CSS-Variablen kopieren, um sie in Ihrem Projekt zu verwenden."
+				}
+			}
+		}
+	},
+	"solidBackground": {
+		"title": "Einfarbiger Hintergrund-Generator",
+		"description": "Erstellen und laden Sie einfarbige Hintergründe in verschiedenen Größen und Formaten für Ihre Projekte herunter",
+		"pickColor": "Farbe auswählen",
+		"download": "Herunterladen",
+		"downloadPng": "PNG",
+		"downloadJpg": "JPG",
+		"downloadWebp": "WebP",
+		"copyColor": "Kopieren",
+		"copied": "Kopiert",
+		"presets": {
+			"title": "Voreinstellungen",
+			"neutral": "Neutral",
+			"pastel": "Pastell",
+			"bright": "Hell",
+			"dark": "Dunkel"
+		},
+		"history": {
+			"title": "Verlauf",
+			"empty": "Verlauf ist leer. Wählen Sie Farben aus, um sie hier zu sehen."
+		},
+		"sizes": "Größen",
+		"hex": "HEX",
+		"rgb": "RGB",
+		"hsl": "HSL",
+		"luminance": "Helligkeit",
+		"contrastBlack": "Kontrast mit Schwarz",
+		"contrastWhite": "Kontrast mit Weiß",
+		"technicalInfo": "Technische Informationen",
+		"seo": {
+			"keywords": "einfarbiger Hintergrund-Generator, Generator für einfarbige Hintergründe, einfarbiger Hintergrund, einfarbigen Hintergrund herunterladen, Hintergrund-Generator, Hintergründe erstellen, einfarbiger Hintergrund, Hintergrund PNG herunterladen, Hintergrund JPG herunterladen, Hintergrund WebP herunterladen, Farb-Hintergrund-Generator, einfarbige Hintergründe erstellen, Hintergrund-Erstellungstool, Online-Hintergrund-Generator, einfarbiger Hintergrund für Website, einfarbiger Hintergrund für Banner, einfarbiger Hintergrund für soziale Medien, kostenloser Hintergrund-Generator, einfarbige Hintergründe erstellen, Hintergrund-Generierungstool, einfarbiger Bildgenerator, einfarbigen Hintergrund kostenlos herunterladen, Hintergründe online erstellen, Farbbildgenerator, einfarbiger Hintergrund PNG, einfarbiger Hintergrund JPG, einfarbiger Hintergrund WebP, Hintergrund-Generator nach Farbe, einfarbige Bilder erstellen, Hintergrund-Generierungstool",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung des Einfarbigen Hintergrund-Generators",
+				"intro": "Der Einfarbige Hintergrund-Generator ist ein Tool zum Erstellen und Herunterladen einfarbiger Hintergründe in verschiedenen Größen und Formaten. Ideal für Webdesign, Banner, soziale Medien und andere Projekte.",
+				"step1": {
+					"title": "Schritt 1: Farbe auswählen",
+					"description": "Wählen Sie eine Farbe mit dem Farbwähler oder geben Sie sie manuell im HEX-, RGB- oder HSL-Format ein. Sie können eine Farbe aus Voreinstellungen (Neutral, Pastell, Hell, Dunkel) oder aus dem Verlauf zuvor ausgewählter Farben wählen."
+				},
+				"step2": {
+					"title": "Schritt 2: Vorschau anzeigen",
+					"description": "Zeigen Sie die Vorschau der ausgewählten Farbe in verschiedenen Größen an: Desktop (1920×1080), Quadrat (1080×1080), Hochformat (1080×1920), Social (1200×628). Dies hilft Ihnen, die richtige Größe für Ihr Projekt zu wählen."
+				},
+				"step3": {
+					"title": "Schritt 3: Herunterladen",
+					"description": "Laden Sie den einfarbigen Hintergrund im gewünschten Format (PNG, JPG, WebP) und in der gewünschten Größe herunter. Jede Größe ist in drei Formaten verfügbar. Sie können die Farbe auch im HEX-, RGB- oder HSL-Format kopieren, um sie in CSS zu verwenden."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie den Einfarbigen Hintergrund-Generator: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man Farbe auswählt",
+					"description": "Verwenden Sie den Farbwähler für die visuelle Farbauswahl oder geben Sie die Farbe manuell ein: HEX-Format (#FFFFFF), RGB-Format (255, 255, 255) oder HSL-Format (360, 100%, 50%). Sie können auch eine Farbe aus Voreinstellungen oder dem Verlauf auswählen."
+				},
+				"howTo2": {
+					"title": "Wie man Hintergrund herunterlädt",
+					"description": "Wählen Sie die gewünschte Größe (Desktop, Quadrat, Hochformat, Social) und das Format (PNG, JPG, WebP). Klicken Sie auf die entsprechende Download-Schaltfläche. Die Datei wird automatisch auf Ihr Gerät heruntergeladen."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zum Einfarbigen Hintergrund-Generator",
+				"q1": {
+					"question": "Welche Formate sind zum Herunterladen verfügbar?",
+					"answer": "Drei Formate sind verfügbar: PNG (verlustfrei, mit Transparenz), JPG (verlustbehaftete Komprimierung, ohne Transparenz), WebP (modernes Format mit guter Komprimierung). Jede Größe kann in jedem dieser Formate heruntergeladen werden."
+				},
+				"q2": {
+					"question": "Wie speichere ich Farbe zur Wiederverwendung?",
+					"answer": "Ausgewählte Farben werden automatisch im Verlauf (bis zu 8 zuletzt verwendete Farben) im localStorage des Browsers gespeichert. Sie können jederzeit eine Farbe aus dem Verlauf auswählen. Sie können die Farbe auch im HEX-, RGB- oder HSL-Format kopieren, um sie in Ihrem Projekt zu verwenden."
+				},
+				"q3": {
+					"question": "Wofür sind verschiedene Größen?",
+					"answer": "Verschiedene Größen sind für verschiedene Zwecke gedacht: Desktop (1920×1080) — für Website-Hintergründe und Desktop-Anwendungen, Quadrat (1080×1080) — für Instagram und andere quadratische Formate, Hochformat (1080×1920) — für mobile Geräte und Stories, Social (1200×628) — für Open Graph-Bilder und soziale Medien."
+				}
+			}
+		}
+	},
+	"patternGenerator": {
+		"title": "Muster-Generator",
+		"description": "Erstellen Sie nahtlose sich wiederholende Muster und Designs für Ihre Projekte",
+		"patternType": "Mustertyp",
+		"tileSize": "Kachelgröße",
+		"backgroundColor": "Hintergrundfarbe",
+		"elementColor": "Elementfarbe",
+		"density": "Dichte",
+		"elementSize": "Elementgröße",
+		"rotation": "Rotation",
+		"randomness": "Zufälligkeit",
+		"download": "Herunterladen",
+		"downloadPng": "PNG",
+		"downloadJpg": "JPG",
+		"downloadWebp": "WebP",
+		"presets": "Voreinstellungen",
+		"history": "Verlauf",
+		"history.empty": "Verlauf ist leer. Erstellen Sie Muster, um sie hier zu sehen.",
+		"save": "Speichern",
+		"apply": "Anwenden",
+		"reset": "Zurücksetzen",
+		"direction": "Richtung",
+		"directionVertical": "Vertikal",
+		"directionHorizontal": "Horizontal",
+		"directionDiagonal": "Diagonal",
+		"amplitude": "Amplitude",
+		"frequency": "Frequenz",
+		"lineWidth": "Linienbreite",
+		"shape": "Form",
+		"shapeCircle": "Kreis",
+		"shapeSquare": "Quadrat",
+		"preview": "Vorschau",
+		"settings": "Einstellungen",
+		"fileSize": "Dateigröße",
+		"technicalInfo": "Technische Informationen",
+		"seo": {
+			"keywords": "Muster-Generator, nahtlose Muster, sich wiederholende Muster, Muster-Ersteller, Kachel-Generator, Design-Muster, nahtloser Kachel-Generator, Muster-Ersteller, Online-Muster-Generator, kostenloser Muster-Generator, Muster online erstellen, Muster-Design-Tool, Muster herunterladen, Hintergrund-Muster, Muster-Generator PNG, nahtloser Kachel-Ersteller, sich wiederholender Muster-Generator, Muster-Erstellungstool, Design-Muster-Generator, Kachel-Muster-Ersteller",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung des Muster-Generators",
+				"intro": "Der Muster-Generator ist ein Tool zum Erstellen nahtloser sich wiederholender Muster und Designs für Ihre Projekte. Unterstützt 9 Mustertypen: Punkte, Streifen, Raster, Dreiecke, Zickzack, Wellen, Kreuze, Rauschen und minimalistische Formen.",
+				"step1": {
+					"title": "Schritt 1: Mustertyp auswählen",
+					"description": "Wählen Sie einen Mustertyp aus den verfügbaren Optionen: Polka Dots, Streifen, Raster, Dreiecke, Zickzack, Wellen, Kreuze, Rauschen oder Minimalistische Formen. Jeder Typ hat seine eigenen Funktionen und Einstellungen."
+				},
+				"step2": {
+					"title": "Schritt 2: Parameter konfigurieren",
+					"description": "Konfigurieren Sie Musterparameter: Kachelgröße (128, 256, 512, 1024px), Hintergrund- und Elementfarben, Dichte, Elementgröße, Rotation und Zufälligkeit. Einige Typen haben zusätzliche Einstellungen: Richtung für Streifen, Amplitude und Frequenz für Wellen, Form für Punkte, Linienbreite für Raster."
+				},
+				"step3": {
+					"title": "Schritt 3: Vorschau und Export",
+					"description": "Zeigen Sie die Vorschau des Musters auf einem großen Feld (1000×800px) mit automatischem Tiling an. Stellen Sie sicher, dass das Muster nahtlos ist und gut aussieht, wenn es wiederholt wird. Laden Sie dann das Muster im gewünschten Format herunter: PNG (verlustfrei), JPG (komprimiert) oder WebP (modernes Format)."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie den Muster-Generator: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man ein nahtloses Muster erstellt",
+					"description": "Wählen Sie einen Mustertyp und konfigurieren Sie Parameter. Stellen Sie sicher, dass Musterelemente die Kachelgrenzen nicht überschreiten, sonst sind Nähte beim Wiederholen sichtbar. Verwenden Sie die Einstellung 'Zufälligkeit', um natürlichere Muster zu erstellen. Zeigen Sie die Vorschau an, um die Nahtlosigkeit sicherzustellen."
+				},
+				"howTo2": {
+					"title": "Wie man Voreinstellungen und Verlauf verwendet",
+					"description": "Verwenden Sie fertige Voreinstellungen für einen schnellen Start: minimalistisch, pastell, hell, monochrom, skandinavisch, retro, memphis, geometrie, Business-UI, dunkles Theme, Kinder, Tech. Speichern Sie bevorzugte Muster im Verlauf (bis zu 10 zuletzt verwendete) für schnellen Zugriff. Der Verlauf wird im localStorage des Browsers gespeichert."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zum Muster-Generator",
+				"q1": {
+					"question": "Welche Formate sind zum Export verfügbar?",
+					"answer": "Drei Formate sind verfügbar: PNG (verlustfrei, mit Transparenz, ideal für Webdesign), JPG (verlustbehaftete Komprimierung, kleinere Dateigröße, ohne Transparenz), WebP (modernes Format mit guter Komprimierung und Transparenzunterstützung). Wählen Sie das Format basierend auf Ihren Bedürfnissen."
+				},
+				"q2": {
+					"question": "Wie speichere ich Muster zur Wiederverwendung?",
+					"answer": "Verwenden Sie die Schaltfläche 'Speichern', um Muster zum Verlauf hinzuzufügen. Der Verlauf speichert bis zu 10 zuletzt verwendete Muster im localStorage des Browsers. Sie können jedes Muster aus dem Verlauf auswählen und seine Einstellungen anwenden. Sie können auch fertige Voreinstellungen für schnellen Zugriff auf beliebte Stile verwenden."
+				},
+				"q3": {
+					"question": "Welche Kachelgröße soll ich wählen?",
+					"answer": "Die Kachelgröße beeinflusst Detail und Dateigröße: 128px — für einfache Muster und Platzersparnis, 256px — optimales Gleichgewicht für die meisten Fälle, 512px — für detaillierte Muster, 1024px — für maximale Details (große Dateigröße). Es wird empfohlen, 256px oder 512px für die meisten Projekte zu verwenden."
 				}
 			}
 		}

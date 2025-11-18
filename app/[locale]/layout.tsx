@@ -147,7 +147,7 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale} className={inter.variable}>
-			<body className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex flex-col font-sans'>
+			<body className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex flex-col font-sans'>
 				{/* 
 					NextIntlClientProvider makes translations available to client components.
 					This is required for any component using useTranslations hook.

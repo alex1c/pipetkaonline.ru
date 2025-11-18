@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * HEX Color Codes page
@@ -85,6 +86,16 @@ export default function HEXPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.formats.hex'
+				toolLinks={[
+					{ slug: 'color-converter', anchorText: 'конвертер цветов' },
+					{ slug: 'color-lab', anchorText: 'выбор цвета' },
+					{ slug: 'ui-tokens-generator', anchorText: 'генератор UI токенов' },
+				]}
+			/>
 		</div>
 	)
 }

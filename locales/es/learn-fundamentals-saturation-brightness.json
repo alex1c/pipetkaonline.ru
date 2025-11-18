@@ -1,2 +1,43 @@
-{"title":"Color Saturation and Brightness","description":"Learn about color saturation and brightness properties","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Saturation and brightness are two important color properties that determine its appearance and perception."},"saturation":{"title":"Saturation","description":"Saturation determines the intensity or purity of a color. High saturation means bright, pure color, while low means muted, grayish.","example":"From high saturation (left) to low (right)"},"brightness":{"title":"Brightness","description":"Brightness determines how light or dark a color is. High brightness means light color, while low means dark.","example":"From dark (left) to light (right)"},"combination":{"title":"Combining Properties","content":"By combining different levels of saturation and brightness, you can create a wide range of color variations and moods. This allows creating complex and expressive color palettes."}}}
-
+{
+	"title": "Color Saturation and Brightness",
+	"description": "Learn about color saturation and brightness properties",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Saturation and brightness are two important color properties that determine its appearance and perception."
+		},
+		"saturation": {
+			"title": "Saturation",
+			"description": "Saturation determines the intensity or purity of a color. High saturation means bright, pure color, while low means muted, grayish.",
+			"example": "From high saturation (left) to low (right)"
+		},
+		"brightness": {
+			"title": "Brightness",
+			"description": "Brightness determines how light or dark a color is. High brightness means light color, while low means dark.",
+			"example": "From dark (left) to light (right)"
+		},
+		"combination": {
+			"title": "Combining Properties",
+			"content": "By combining different levels of saturation and brightness, you can create a wide range of color variations and moods. This allows creating complex and expressive color palettes."
+		}
+	},
+	"seo": {
+		"title": "Saturación y brillo del color: Guía completa de propiedades del color",
+		"intro": "La saturación y el brillo son dos propiedades fundamentales del color que determinan la percepción visual y el impacto emocional. Comprender estas propiedades es crítico para crear esquemas de color efectivos, sistemas de diseño y composiciones visuales.\n\nEn esta guía detallada cubrimos cómo la saturación y el brillo afectan la percepción del color, sus aplicaciones en diferentes áreas de diseño y técnicas prácticas para trabajar con estas propiedades.\n\nAprenderá a usar [tool:ui-theme-generator] para crear temas con diferentes niveles de saturación y brillo, aplicar [tool:color-harmony] para generar combinaciones armónicas, y trabajar con [tool:palette-generator] para crear paletas expresivas.",
+		"section1": {
+			"title": "Saturación: Intensidad y pureza del color",
+			"content": "La saturación determina la intensidad o pureza de un color. Alta saturación significa color brillante y puro sin impurezas grises. Baja saturación produce tonos apagados, pasteles o grisáceos.\n\nEn el modelo HSL, la saturación se mide de 0% (completamente insaturado, gris) a 100% (máximamente saturado, color puro). Los colores saturados atraen la atención, crean energía e interés visual. Los colores insaturados son más tranquilos, profesionales y universales.\n\nEn diseño web, la alta saturación se usa para acentos, botones de llamada a la acción y elementos importantes. Baja saturación — para fondos, texto y elementos neutros. La herramienta [tool:ui-theme-generator] permite crear automáticamente esquemas de color con diferentes niveles de saturación para crear la atmósfera deseada."
+		},
+		"section2": {
+			"title": "Brillo: Claridad y oscuridad del color",
+			"content": "El brillo (o luminosidad) determina qué tan claro u oscuro es un color. Alta luminosidad produce colores claros y pasteles. Baja luminosidad — tonos oscuros y profundos.\n\nEn el modelo HSL, el brillo se mide de 0% (negro) a 100% (blanco), donde 50% produce un color puro. El brillo es crítico para el contraste y la legibilidad del texto. Colores oscuros sobre fondo claro y claros sobre oscuro crean buen contraste.\n\nAl crear temas oscuros y claros, el brillo es un parámetro clave. Los temas oscuros usan baja luminosidad para fondos y alta para texto. Los temas claros — viceversa. La herramienta [tool:color-harmony] tiene en cuenta el brillo al generar combinaciones de colores armónicas y garantiza contraste y balance visual correctos."
+		},
+		"section3": {
+			"title": "Combinación de saturación y brillo en diseño",
+			"content": "Al combinar diferentes niveles de saturación y brillo, puede crear una amplia gama de variaciones de color y estados de ánimo. Alta saturación + alta luminosidad produce colores brillantes y energéticos. Baja saturación + baja luminosidad — tonos tranquilos y profesionales.\n\nEn branding, la saturación y el brillo determinan el carácter de la marca. Colores brillantes y saturados transmiten energía e innovación. Apagados e insaturados — estabilidad y profesionalidad.\n\nAl crear paletas, [tool:palette-generator] usa diferentes combinaciones de saturación y brillo para crear esquemas de color expresivos y armónicos. Para accesibilidad, es importante controlar el brillo para asegurar contraste suficiente entre elementos."
+		},
+		"conclusion": "La saturación y el brillo son herramientas poderosas para crear diseños visualmente atractivos y emocionalmente efectivos.\n\nEl uso correcto de estas propiedades permite crear esquemas de color que no solo son hermosos, sino también funcionales, accesibles y alineados con los objetivos del proyecto. Use herramientas modernas para experimentar con diferentes combinaciones de saturación y brillo.",
+		"keywords": "saturación de color, brillo de color, luminosidad de color, modelo HSL, intensidad de color, pureza de color, propiedades del color, percepción del color, diseño de color, esquema de color, paleta de colores, diseño web, diseño UI, teoría del color, psicología del color, accesibilidad de color, contraste de color, sistema de diseño, variaciones de color, estado de ánimo del color"
+	}
+}

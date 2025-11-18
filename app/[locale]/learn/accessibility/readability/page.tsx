@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Text Readability page
@@ -77,6 +78,16 @@ export default function ReadabilityPage() {
 					</ul>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.accessibility.readability'
+				toolLinks={[
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+					{ slug: 'text-image-accessibility', anchorText: 'проверка доступности текста' },
+					{ slug: 'color-blindness-simulator', anchorText: 'симулятор цветовой слепоты' },
+				]}
+			/>
 		</div>
 	)
 }

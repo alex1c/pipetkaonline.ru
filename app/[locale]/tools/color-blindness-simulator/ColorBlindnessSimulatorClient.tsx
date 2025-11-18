@@ -6,6 +6,7 @@ import { SimulatorControls } from '@/components/color-blindness/SimulatorControl
 import { CanvasRenderer } from '@/components/color-blindness/CanvasRenderer'
 import { useColorBlindness } from '@/hooks/useColorBlindness'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Client component for Color Blindness Simulator tool
@@ -87,6 +88,9 @@ export function ColorBlindnessSimulatorClient() {
 					</button>
 				</div>
 			)}
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='color-blindness-simulator' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ServiceSEO namespace='tools.colorBlindnessSimulator.seo' />

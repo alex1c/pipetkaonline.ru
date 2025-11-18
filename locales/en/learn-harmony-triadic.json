@@ -1,2 +1,38 @@
-{"title":"Triadic Harmony","description":"Learn about triadic color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations."},"examples":{"title":"Examples","primary":"Primary colors: red, yellow, blue","secondary":"Secondary colors: orange, green, purple"},"usage":{"title":"Usage","content":"Triadic harmony provides high contrast while maintaining balance. It's ideal for creating bright and energetic designs."}}}
-
+{
+	"title": "Triadic Harmony",
+	"description": "Learn about triadic color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations."
+		},
+		"examples": {
+			"title": "Examples",
+			"primary": "Primary colors: red, yellow, blue",
+			"secondary": "Secondary colors: orange, green, purple"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Triadic harmony provides high contrast while maintaining balance. It's ideal for creating bright and energetic designs."
+		}
+	},
+	"seo": {
+		"title": "Triadic Harmony: Creating Bright and Balanced Color Schemes",
+		"intro": "Triadic harmony is a color scheme using three colors evenly distributed around the color wheel at 120 degrees from each other. This scheme creates bright, energetic, and simultaneously balanced combinations, making it popular in modern design.\n\nIn this detailed guide, we'll cover the theory of triadic harmony, classic examples (red-yellow-blue, orange-green-purple), practical applications, and usage techniques. You'll learn how to use [tool:color-harmony] to automatically find triadic colors, apply [tool:palette-generator] to create palettes, and work with [tool:brand-color-analyzer] to analyze triadic schemes in branding.",
+		"section1": {
+			"title": "Theory of Triadic Harmony: Balance and Energy",
+			"content": "The triadic scheme is based on an equilateral triangle on the color wheel, where each color is 120 degrees from the others. A classic example is primary colors (red, yellow, blue), which form a perfect triangle. Secondary colors (orange, green, purple) also form a triadic scheme.\n\nTriadic harmony provides high contrast thanks to even color distribution but maintains balance thanks to equal distances between them. This creates visually interesting but not overloaded compositions.\n\nThe [tool:color-harmony] tool automatically calculates triadic colors for any selected color, using mathematical color wheel principles."
+		},
+		"section2": {
+			"title": "Practical Application of Triadic Harmony",
+			"content": "Triadic harmony is widely used in web design, graphic design, illustration, and branding. In web design, triadic schemes create bright, attention-grabbing interfaces with clear hierarchy.\n\nIn branding, they are used to create memorable, energetic identities. When creating palettes, [tool:palette-generator] can generate harmonious combinations based on triadic colors, adding saturation and brightness variations to create depth.\n\nFor branding, [tool:brand-color-analyzer] analyzes triadic color palettes and provides usage recommendations, including harmony and contrast analysis."
+		},
+		"section3": {
+			"title": "Best Practices and Advanced Techniques",
+			"content": "When working with triadic harmony, it's important to choose one dominant color (about 60% of composition) and use the other two as accents (20% each). This prevents visual overload and creates clear hierarchy.\n\nTo soften contrast, you can use less saturated versions of triadic colors or add neutral colors. In web design, triadic colors work great for navigation, call-to-action buttons, and important interface elements.\n\nFor creating accessible interfaces, it's important to check contrast: use [tool:contrast-checker] to ensure text readability. When creating emotional palettes, [tool:emotion-colors] can use triadic colors to generate energetic and dynamic combinations."
+		},
+		"conclusion": "Triadic harmony is a powerful tool for creating bright, balanced, and visually interesting designs.\n\nProper use of triadic colors can create an energetic but harmonious composition that attracts attention and conveys dynamics. Use modern tools to find and apply triadic colors in your projects.",
+		"keywords": "triadic harmony, triadic colors, color harmony, color scheme, color wheel, color theory, web design, graphic design, color combinations, color palette, balanced colors, color relationships, visual harmony, color design, color selection, color composition, color balance, visual design, color theory, artistic design, branding, energetic colors"
+	}
+}

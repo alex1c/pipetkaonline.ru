@@ -9,6 +9,7 @@ import { PaletteGenerator } from '@/components/color-lab/PaletteGenerator'
 import { DominantColors } from '@/components/color-lab/DominantColors'
 import { ColorLabSEO } from '@/components/color-lab/ColorLabSEO'
 import { useColorPicker } from '@/hooks/useColorPicker'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Color Lab client component
@@ -139,6 +140,9 @@ export function ColorLabClient() {
 
 			{/* Dominant colors */}
 			<DominantColors imageUrl={imageUrl} />
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='color-lab' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ColorLabSEO />

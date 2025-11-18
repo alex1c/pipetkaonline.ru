@@ -1,2 +1,41 @@
-{"title":"CSS Color Keywords","description":"Learn about predefined CSS color keywords","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others."},"basic":{"title":"Basic Colors","content":"CSS includes basic colors: red, blue, green, yellow, black, white, and others."},"extended":{"title":"Extended Colors","content":"CSS also includes many extended colors such as coral, skyblue, tomato, teal, and many others."},"usage":{"title":"Usage","content":"Color keywords are convenient for quick use but are limited in the number of available colors. For precise colors, it's better to use HEX or RGB."}}}
-
+{
+	"title": "CSS Color Keywords",
+	"description": "Learn about predefined CSS color keywords",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others."
+		},
+		"basic": {
+			"title": "Basic Colors",
+			"content": "CSS includes basic colors: red, blue, green, yellow, black, white, and others."
+		},
+		"extended": {
+			"title": "Extended Colors",
+			"content": "CSS also includes many extended colors such as coral, skyblue, tomato, teal, and many others."
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Color keywords are convenient for quick use but are limited in the number of available colors. For precise colors, it's better to use HEX or RGB."
+		}
+	},
+	"seo": {
+		"title": "CSS-Farb-Schlüsselwörter: Vollständiges Nachschlagewerk für Webentwickler",
+		"intro": "CSS bietet einen umfangreichen Satz vordefinierter Farb-Schlüsselwörter, von grundlegenden (red, blue, green) bis zu erweiterten (coral, skyblue, tomato, teal). Diese Schlüsselwörter vereinfachen die Arbeit mit Farben in CSS, haben aber Einschränkungen in Präzision und Anzahl verfügbarer Farbtöne.\n\nIn diesem detaillierten Leitfaden behandeln wir alle CSS-Farb-Schlüsselwörter, ihre Anwendung, Vorteile und Nachteile. Sie lernen, wie Sie [tool:color-name-finder] verwenden, um Farbnamen zu finden, mit [tool:color-converter] arbeiten, um Schlüsselwörter in HEX/RGB zu konvertieren, und [tool:ui-tokens-generator] anwenden, um Design-Systeme basierend auf CSS-Farben zu erstellen.",
+		"section1": {
+			"title": "Grundlegende und erweiterte CSS-Farb-Schlüsselwörter",
+			"content": "Der CSS-Standard definiert 147 Farb-Schlüsselwörter, einschließlich grundlegender Farben (red, blue, green, yellow, black, white, gray) und einer erweiterten Palette (coral, skyblue, tomato, teal, lavender, salmon, turquoise und viele andere).\n\nJedes Schlüsselwort entspricht einem spezifischen HEX-Wert, zum Beispiel ist 'red' gleichwertig mit #FF0000, 'blue' ist #0000FF. Diese Schlüsselwörter sind praktisch für schnelles Prototyping und Lernen, aber in der Präzision begrenzt.\n\nFür professionelle Projekte wird empfohlen, HEX-, RGB- oder HSL-Formate für präzise Farbkontrolle zu verwenden. Das Tool [tool:color-name-finder] ermöglicht es, den Namen jeder Farbe zu finden, einschließlich CSS-Schlüsselwörter, und ihre genauen HEX/RGB-Werte zu erhalten."
+		},
+		"section2": {
+			"title": "Praktische Anwendung von CSS-Farb-Schlüsselwörtern",
+			"content": "CSS-Farb-Schlüsselwörter werden in Eigenschaften wie color, background-color, border-color und anderen verwendet. Die Syntax ist einfach: color: red; background-color: blue;. Sie sind besonders nützlich für schnelles Prototyping, Lernen und die Erstellung einfacher Schnittstellen.\n\nFür präzise Markenfarben, Gradienten und komplexe Design-Systeme ist es jedoch besser, HEX- oder RGB-Werte zu verwenden. Moderne Tools wie [tool:color-converter] ermöglichen die sofortige Konvertierung von CSS-Schlüsselwörtern in HEX-, RGB- und HSL-Formate, was bei der Arbeit mit Design-Mockups kritisch ist.\n\nBei der Erstellung von Design-Systemen verwendet [tool:ui-tokens-generator] präzise Farbwerte statt Schlüsselwörter, um Konsistenz und Kontrolle zu gewährleisten."
+		},
+		"section3": {
+			"title": "Einschränkungen und Best Practices",
+			"content": "Die Hauptbeschränkung von CSS-Farb-Schlüsselwörtern ist ein fester Satz von 147 Farben, was für moderne Designprojekte unzureichend ist. Außerdem gibt es keine Kontrolle über Farbtöne, Sättigung und Helligkeit.\n\nFür die Erstellung von Themes, Gradienten und barrierefreien Schnittstellen sind präzise Farbwerte erforderlich. Bei der Arbeit mit Branding ist es wichtig, präzise Markenfarben zu verwenden, nicht ungefähre Schlüsselwörter.\n\nFür die Kontrastprüfung verwenden Sie [tool:contrast-checker], das mit präzisen Farbwerten arbeitet. Bei der Erstellung von Farbpaletten generiert [tool:palette-generator] harmonische Kombinationen basierend auf präzisen HEX/RGB-Werten, nicht Schlüsselwörtern."
+		},
+		"conclusion": "CSS-Farb-Schlüsselwörter sind ein praktisches Tool für schnelles Prototyping und Lernen, aber für professionelle Projekte wird empfohlen, präzise Farbformate (HEX, RGB, HSL) für vollständige Farbkontrolle und Design-Konsistenz zu verwenden.",
+		"keywords": "CSS-Farb-Schlüsselwörter, CSS-Farbnamen, vordefinierte Farben, CSS-Farben, Webfarben, HTML-Farben, Farbkonstanten, CSS-Standard, CSS-Farbpalette, CSS-Farbkonverter, CSS zu HEX, CSS zu RGB, Webdesign, Frontend-Entwicklung, CSS-Eigenschaften, Farbwerte"
+	}
+}

@@ -1,2 +1,53 @@
-{"title":"Color Blindness Considerations","description":"Learn how to account for color blindness in design","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"About 8% of men and 0.5% of women have some form of color blindness. It's important not to rely solely on color to convey information."},"types":{"title":"Types of Color Blindness","protanopia":{"title":"Protanopia","desc":"Inability to see red color"},"deuteranopia":{"title":"Deuteranopia","desc":"Inability to see green color"},"tritanopia":{"title":"Tritanopia","desc":"Inability to see blue color"}},"solutions":{"title":"Solutions","items":{"0":"Use icons and text along with color","1":"Ensure sufficient contrast between elements","2":"Test designs using simulation tools","3":"Avoid red and green for important information"}}}}
-
+{
+	"title": "Color Blindness Considerations",
+	"description": "Learn how to account for color blindness in design",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "About 8% of men and 0.5% of women have some form of color blindness. It's important not to rely solely on color to convey information."
+		},
+		"types": {
+			"title": "Types of Color Blindness",
+			"protanopia": {
+				"title": "Protanopia",
+				"desc": "Inability to see red color"
+			},
+			"deuteranopia": {
+				"title": "Deuteranopia",
+				"desc": "Inability to see green color"
+			},
+			"tritanopia": {
+				"title": "Tritanopia",
+				"desc": "Inability to see blue color"
+			}
+		},
+		"solutions": {
+			"title": "Solutions",
+			"items": {
+				"0": "Use icons and text along with color",
+				"1": "Ensure sufficient contrast between elements",
+				"2": "Test designs using simulation tools",
+				"3": "Avoid red and green for important information"
+			}
+		}
+	},
+	"seo": {
+		"title": "Daltonismo en diseño: Creación de interfaces accesibles para todos",
+		"intro": "El daltonismo (deficiencia de visión del color) es un trastorno de percepción del color que afecta aproximadamente al 8% de los hombres y 0.5% de las mujeres. Los tipos más comunes son protanopia (incapacidad de ver rojo), deuteranopia (incapacidad de ver verde) y tritanopia (incapacidad de ver azul).\n\nTener en cuenta el daltonismo en diseño es crítico para crear interfaces accesibles que todos los usuarios puedan usar. En esta guía detallada cubrimos tipos de daltonismo, su impacto en la percepción del diseño y soluciones prácticas para crear interfaces accesibles.\n\nAprenderá a usar [tool:color-blindness-simulator] para probar diseños, aplicar [tool:contrast-checker] para asegurar contraste suficiente, y trabajar con [tool:text-image-accessibility] para verificar la legibilidad de texto en imágenes.",
+		"section1": {
+			"title": "Tipos de daltonismo y su impacto en diseño",
+			"content": "Protanopia es la incapacidad de ver el color rojo. Las personas con protanopia no pueden distinguir rojo y verde, lo que hace estos colores prácticamente idénticos. Deuteranopia es la incapacidad de ver el color verde, también lleva a confusión de rojo y verde.\n\nTritanopia es la incapacidad de ver el color azul, menos común pero también requiere consideración en diseño. Las personas con tritanopia no pueden distinguir azul y amarillo.\n\nLa combinación más problemática para personas con daltonismo es rojo y verde, que se usan para indicar éxito/error, estados e información importante. La herramienta [tool:color-blindness-simulator] permite ver cómo su diseño es percibido por personas con diferentes tipos de daltonismo, lo cual es crítico para crear interfaces accesibles."
+		},
+		"section2": {
+			"title": "Soluciones para diseño accesible",
+			"content": "No confíe solo en el color para transmitir información. Use iconos, texto, formas y patrones junto con color. Por ejemplo, en lugar de solo rojo y verde para estados, agregue iconos ✓ y ✗ o etiquetas de texto.\n\nAsegure contraste suficiente entre elementos, incluso si solo difieren en color. Use [tool:contrast-checker] para verificar el contraste de todas las combinaciones de color en su diseño.\n\nEvite rojo y verde para información importante. Si debe usar estos colores, agregue indicadores visuales adicionales. Al trabajar con texto en imágenes, use [tool:text-image-accessibility] para verificar la legibilidad considerando varios tipos de daltonismo."
+		},
+		"section3": {
+			"title": "Pruebas y mejores prácticas",
+			"content": "Pruebe diseños usando herramientas de simulación de daltonismo en todas las etapas de desarrollo. Esto permite identificar problemas antes de la publicación y asegurar accesibilidad para todos los usuarios.\n\nUse una paleta de colores que funcione para todos los tipos de percepción del color. La combinación de color con forma, tamaño, textura y texto hace la interfaz accesible independientemente de la percepción del color del usuario.\n\nAl crear sistemas de diseño, es importante predefinir pares de colores e indicadores adicionales que funcionen para todos los tipos de daltonismo. Esto garantiza consistencia y accesibilidad en todo el proyecto."
+		},
+		"conclusion": "Tener en cuenta el daltonismo en diseño no es una característica adicional, sino una necesidad para crear interfaces accesibles e inclusivas.\n\nEl uso correcto de colores, contraste e indicadores visuales adicionales hace las interfaces accesibles para todos los usuarios, independientemente de su percepción del color. Use herramientas modernas para probar y mejorar la accesibilidad de sus proyectos.",
+		"keywords": "daltonismo, deficiencia de visión del color, protanopia, deuteranopia, tritanopia, diseño accesible, accesibilidad de color, diseño inclusivo, diseño para daltonismo, colores accesibles, percepción del color, accesibilidad de diseño, pruebas de daltonismo, interfaces accesibles, usuarios con daltonismo, pautas de accesibilidad de color, esquemas de color accesibles"
+	}
+}

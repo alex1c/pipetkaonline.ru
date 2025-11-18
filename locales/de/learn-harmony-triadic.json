@@ -1,2 +1,38 @@
-{"title":"Triadic Harmony","description":"Learn about triadic color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations."},"examples":{"title":"Examples","primary":"Primary colors: red, yellow, blue","secondary":"Secondary colors: orange, green, purple"},"usage":{"title":"Usage","content":"Triadic harmony provides high contrast while maintaining balance. It's ideal for creating bright and energetic designs."}}}
-
+{
+	"title": "Triadic Harmony",
+	"description": "Learn about triadic color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "The triadic scheme uses three colors evenly distributed around the color wheel. This creates bright and balanced combinations."
+		},
+		"examples": {
+			"title": "Examples",
+			"primary": "Primary colors: red, yellow, blue",
+			"secondary": "Secondary colors: orange, green, purple"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Triadic harmony provides high contrast while maintaining balance. It's ideal for creating bright and energetic designs."
+		}
+	},
+	"seo": {
+		"title": "Triadische Harmonie: Erstellung heller und ausgewogener Farbschemata",
+		"intro": "Triadische Harmonie ist ein Farbschema, das drei Farben verwendet, die gleichmäßig um den Farbkreis verteilt sind, jeweils 120 Grad voneinander entfernt. Dieses Schema schafft helle, energetische und gleichzeitig ausgewogene Kombinationen, was es im modernen Design beliebt macht.\n\nIn diesem detaillierten Leitfaden behandeln wir die Theorie der triadischen Harmonie, klassische Beispiele (Rot-Gelb-Blau, Orange-Grün-Lila), praktische Anwendungen und Verwendungstechniken. Sie lernen, wie Sie [tool:color-harmony] verwenden, um automatisch triadische Farben zu finden, [tool:palette-generator] anwenden, um Paletten zu erstellen, und mit [tool:brand-color-analyzer] arbeiten, um triadische Schemata im Branding zu analysieren.",
+		"section1": {
+			"title": "Theorie der triadischen Harmonie: Gleichgewicht und Energie",
+			"content": "Das triadische Schema basiert auf einem gleichseitigen Dreieck auf dem Farbkreis, wobei jede Farbe 120 Grad von den anderen entfernt ist. Ein klassisches Beispiel sind Primärfarben (Rot, Gelb, Blau), die ein perfektes Dreieck bilden. Sekundärfarben (Orange, Grün, Lila) bilden ebenfalls ein triadisches Schema.\n\nTriadische Harmonie bietet hohen Kontrast dank gleichmäßiger Farbverteilung, behält aber das Gleichgewicht dank gleicher Abstände zwischen ihnen. Dies schafft visuell interessante, aber nicht überladene Kompositionen.\n\nDas Tool [tool:color-harmony] berechnet automatisch triadische Farben für jede ausgewählte Farbe unter Verwendung mathematischer Farbkreis-Prinzipien."
+		},
+		"section2": {
+			"title": "Praktische Anwendung der triadischen Harmonie",
+			"content": "Triadische Harmonie wird im Webdesign, Grafikdesign, Illustration und Branding weit verbreitet verwendet. Im Webdesign schaffen triadische Schemata helle, aufmerksamkeitsstarke Schnittstellen mit klarer Hierarchie.\n\nIm Branding werden sie verwendet, um einprägsame, energetische Identitäten zu erstellen. Bei der Erstellung von Paletten kann [tool:palette-generator] harmonische Kombinationen basierend auf triadischen Farben generieren und Sättigungs- und Helligkeitsvariationen hinzufügen, um Tiefe zu schaffen.\n\nFür Branding analysiert [tool:brand-color-analyzer] triadische Farbpaletten und bietet Verwendungsempfehlungen, einschließlich Harmonie- und Kontrastanalyse."
+		},
+		"section3": {
+			"title": "Best Practices und fortgeschrittene Techniken",
+			"content": "Bei der Arbeit mit triadischer Harmonie ist es wichtig, eine dominante Farbe (etwa 60% der Komposition) zu wählen und die anderen beiden als Akzente (je 20%) zu verwenden. Dies verhindert visuelle Überlastung und schafft klare Hierarchie.\n\nUm Kontrast zu mildern, können Sie weniger gesättigte Versionen von triadischen Farben verwenden oder neutrale Farben hinzufügen. Im Webdesign funktionieren triadische Farben hervorragend für Navigation, Call-to-Action-Buttons und wichtige Interface-Elemente.\n\nFür die Erstellung barrierefreier Schnittstellen ist es wichtig, den Kontrast zu überprüfen: Verwenden Sie [tool:contrast-checker], um die Lesbarkeit von Text sicherzustellen. Bei der Erstellung emotionaler Paletten kann [tool:emotion-colors] triadische Farben verwenden, um energetische und dynamische Kombinationen zu generieren."
+		},
+		"conclusion": "Triadische Harmonie ist ein leistungsstarkes Tool zur Erstellung heller, ausgewogener und visuell interessanter Designs.\n\nDie richtige Verwendung triadischer Farben kann eine energetische, aber harmonische Komposition schaffen, die Aufmerksamkeit auf sich zieht und Dynamik vermittelt. Verwenden Sie moderne Tools, um triadische Farben in Ihren Projekten zu finden und anzuwenden.",
+		"keywords": "triadische Harmonie, triadische Farben, Farbharmonie, Farbschema, Farbkreis, Farbtheorie, Webdesign, Grafikdesign, Farbkombinationen, Farbpalette, ausgewogene Farben, Farbbeziehungen, visuelle Harmonie, Farbdesign, Farbauswahl, Farbkomposition, Farbbalance, visuelles Design, Farbtheorie, künstlerisches Design, Branding, energetische Farben"
+	}
+}

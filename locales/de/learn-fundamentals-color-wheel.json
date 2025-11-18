@@ -1,2 +1,47 @@
-{"title":"Color Wheel Basics","description":"Learn the structure and use of the color wheel","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"The color wheel is a tool for understanding relationships between colors. It helps visualize how colors interact with each other."},"primary":{"title":"Primary Colors","content":"Primary colors cannot be created by mixing other colors. In the traditional model, these are red, blue, and yellow.","red":"Red","blue":"Blue","yellow":"Yellow"},"secondary":{"title":"Secondary Colors","content":"Secondary colors are created by mixing two primary colors in equal proportions.","orange":"Orange","green":"Green","purple":"Purple"},"usage":{"title":"Usage","content":"The color wheel is used to create harmonious color schemes, find complementary colors, and understand color relationships."}}}
-
+{
+	"title": "Color Wheel Basics",
+	"description": "Learn the structure and use of the color wheel",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "The color wheel is a tool for understanding relationships between colors. It helps visualize how colors interact with each other."
+		},
+		"primary": {
+			"title": "Primary Colors",
+			"content": "Primary colors cannot be created by mixing other colors. In the traditional model, these are red, blue, and yellow.",
+			"red": "Red",
+			"blue": "Blue",
+			"yellow": "Yellow"
+		},
+		"secondary": {
+			"title": "Secondary Colors",
+			"content": "Secondary colors are created by mixing two primary colors in equal proportions.",
+			"orange": "Orange",
+			"green": "Green",
+			"purple": "Purple"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "The color wheel is used to create harmonious color schemes, find complementary colors, and understand color relationships."
+		}
+	},
+	"seo": {
+		"title": "Farbkreis: Vollständiger Leitfaden zur Farbtheorie für Designer",
+		"intro": "Der Farbkreis ist ein grundlegendes Tool der Farbtheorie, das Beziehungen zwischen Farben visualisiert und bei der Erstellung harmonischer Farbschemata hilft. In diesem umfassenden Leitfaden behandeln wir die Struktur des Farbkreises, Primär- und Sekundärfarben, Farbharmonien und praktische Anwendungen im Design.\n\nSie lernen, wie Sie [tool:color-harmony] verwenden, um automatisch harmonische Kombinationen basierend auf dem Farbkreis zu finden, [tool:palette-generator] anwenden, um Paletten zu erstellen, und mit [tool:color-lab] arbeiten, um Farbbeziehungen zu visualisieren.",
+		"section1": {
+			"title": "Farbkreis-Struktur: Primär- und Sekundärfarben",
+			"content": "Der Farbkreis besteht aus 12 Hauptsektoren, die in einem Kreis angeordnet sind. Drei Primärfarben (Rot, Blau, Gelb) sind in gleichen Abständen voneinander positioniert und bilden ein Dreieck. Diese Farben können nicht durch Mischen anderer erhalten werden — sie sind grundlegend.\n\nSekundärfarben (Orange, Grün, Lila) werden durch Mischen von zwei Primärfarben erhalten: Rot + Gelb = Orange, Blau + Gelb = Grün, Rot + Blau = Lila. Tertiärfarben entstehen durch Mischen von Primär- und Sekundärfarben und schaffen sanfte Übergänge zwischen Kreissektoren.\n\nModerne Tools wie [tool:color-harmony] verwenden mathematische Farbkreis-Modelle, um automatisch komplementäre, analoge und triadische Farben zu berechnen."
+		},
+		"section2": {
+			"title": "Farbharmonien basierend auf dem Farbkreis",
+			"content": "Der Farbkreis ermöglicht die Erstellung verschiedener Arten von Farbharmonien. Komplementärfarben sind gegenüber auf dem Rad positioniert (z.B. Rot und Grün) und schaffen maximalen Kontrast.\n\nAnaloge Farben befinden sich nebeneinander (z.B. Rot, Orange, Gelb) und schaffen sanfte Übergänge. Triadische Farben bilden ein gleichseitiges Dreieck auf dem Rad (z.B. Rot, Blau, Gelb) und gewährleisten eine ausgewogene Kombination.\n\nDie geteilte Komplementär-Schema verwendet eine Grundfarbe und zwei benachbarte zu ihrem Komplement. Das Tool [tool:palette-generator] generiert automatisch harmonische Paletten basierend auf der ausgewählten Farbe und dem Harmonietyp unter Verwendung mathematischer Farbkreis-Prinzipien."
+		},
+		"section3": {
+			"title": "Praktische Anwendung des Farbkreises im Design",
+			"content": "Der Farbkreis ist ein unverzichtbares Tool für Webdesigner, Grafikdesigner und Künstler. Er hilft bei der Auswahl von Farbschemata für Schnittstellen, der Erstellung kontrastierender Akzente, der Entwicklung von Brand Books und Farbpaletten.\n\nBei der Arbeit mit Webdesign wird der Farbkreis verwendet, um barrierefreie Schnittstellen mit ausreichendem Kontrast zu erstellen. Das Tool [tool:color-lab] visualisiert den Farbkreis und ermöglicht die interaktive Farbauswahl, wobei ihre Beziehungen auf dem Rad sichtbar sind.\n\nFür Branding analysiert [tool:brand-color-analyzer] ausgewählte Farben basierend auf ihren Positionen auf dem Farbkreis und bietet Harmonie-Empfehlungen. Bei der Erstellung emotionaler Paletten verwendet [tool:emotion-colors] Farbkreis-Sektoren, um Farben zu generieren, die bestimmten Stimmungen entsprechen."
+		},
+		"conclusion": "Der Farbkreis ist die Grundlage für das Verständnis der Farbtheorie und die Erstellung visuell ansprechender Designs. Die Beherrschung der Arbeit mit dem Farbkreis ist für jeden Designer und Entwickler, der mit Farben arbeitet, wesentlich.\n\nVerwenden Sie moderne Tools zur Visualisierung und Anwendung von Farbkreis-Prinzipien in Ihren Projekten.",
+		"keywords": "Farbkreis, Farbtheorie, Primärfarben, Sekundärfarben, Farbharmonien, Komplementärfarben, analoge Farben, triadische Farben, Farbschema, Farbbeziehungen, Farbpalette, Webdesign, Grafikdesign, Farbmodell, Farbraum, Farbtheorie, Farbdesign, Farbauswahl, Farbkombinationen, Farbkontrast, Farbbalance, visuelles Design, Farbkomposition, künstlerisches Design"
+	}
+}

@@ -1,2 +1,40 @@
-{"title":"Split-Complementary Combinations","description":"Learn about split-complementary color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension."},"examples":{"title":"Examples","base":"Base color","split1":"First split","split2":"Second split","description":"Blue with orange and red instead of pure orange"},"usage":{"title":"Usage","content":"Split-complementary scheme is more subtle than complementary but still provides good contrast. It's suitable for more complex designs."}}}
-
+{
+	"title": "Split-Complementary Combinations",
+	"description": "Learn about split-complementary color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension."
+		},
+		"examples": {
+			"title": "Examples",
+			"base": "Base color",
+			"split1": "First split",
+			"split2": "Second split",
+			"description": "Blue with orange and red instead of pure orange"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Split-complementary scheme is more subtle than complementary but still provides good contrast. It's suitable for more complex designs."
+		}
+	},
+	"seo": {
+		"title": "Colores complementarios divididos: Balance entre contraste y armonía",
+		"intro": "El esquema de complementario dividido (split-complementary) es una versión mejorada del esquema complementario que usa un color base y dos colores adyacentes a su color complementario. Este esquema ofrece alto contraste como el complementario, pero con menos tensión visual, lo que lo hace más versátil y agradable para el ojo.\n\nEn esta guía detallada cubrimos la teoría de colores complementarios divididos, sus ventajas sobre el esquema complementario clásico y aplicaciones prácticas. Aprenderá a usar [tool:color-harmony] para encontrar automáticamente colores complementarios divididos, aplicar [tool:contrast-checker] para verificar contraste, y trabajar con [tool:palette-generator] para crear paletas.",
+		"section1": {
+			"title": "Teoría de colores complementarios divididos: Contraste suavizado",
+			"content": "El esquema de complementario dividido consiste en un color base y dos colores posicionados a ambos lados de su color complementario en el círculo cromático. Por ejemplo, si el color base es Azul (240°), su complemento es Naranja (60°), y los colores divididos son Rojo-Naranja (30°) y Amarillo-Naranja (90°). Esto crea una estructura en forma de Y en el círculo cromático.\n\nLa ventaja de este esquema es que mantiene el alto contraste del esquema complementario, pero suaviza la tensión visual, lo que hace la composición más equilibrada y agradable.\n\nLa herramienta [tool:color-harmony] calcula automáticamente colores complementarios divididos para cualquier color seleccionado usando principios matemáticos del círculo cromático."
+		},
+		"section2": {
+			"title": "Aplicación práctica de colores complementarios divididos",
+			"content": "Los colores complementarios divididos se usan ampliamente en diseño web, diseño gráfico, fotografía y branding. En diseño web crean interfaces dinámicas con buen contraste, pero sin excesiva agresividad.\n\nEn branding se usan para crear identidades memorables pero no sobrecargadas. Al crear paletas, [tool:palette-generator] puede generar combinaciones armónicas basadas en colores complementarios divididos y agregar tonos intermedios para crear transiciones suaves.\n\nPara verificación de contraste, es importante usar [tool:contrast-checker], ya que los esquemas de complementario dividido pueden crear alto contraste que requiere verificación de cumplimiento de estándares WCAG."
+		},
+		"section3": {
+			"title": "Mejores prácticas y técnicas avanzadas",
+			"content": "Al trabajar con colores complementarios divididos, es importante usar el color base como dominante (aproximadamente 70% de la composición) y los colores divididos como acentos (15% cada uno). Esto crea jerarquía clara y previene sobrecarga visual.\n\nPara suavizar el contraste, puede usar versiones menos saturadas de colores o agregar colores neutros. En diseño web, los colores complementarios divididos funcionan excelentemente para navegación, botones de llamada a la acción e importantes notificaciones.\n\nPara branding, [tool:brand-color-analyzer] analiza paletas de colores complementarios divididos y ofrece recomendaciones de uso. Al crear paletas emocionales, [tool:emotion-colors] puede usar colores complementarios divididos para generar combinaciones energéticas pero equilibradas."
+		},
+		"conclusion": "Los colores complementarios divididos son el balance ideal entre contraste y armonía.\n\nOfrecen interés visual y energía característicos de los colores complementarios, pero con mayor equilibrio y versatilidad. Use herramientas modernas para encontrar y aplicar colores complementarios divididos en sus proyectos.",
+		"keywords": "colores complementarios divididos, split-complementary, armonía de color, esquema de color, círculo cromático, teoría del color, diseño web, diseño gráfico, combinaciones de color, paleta de colores, colores contrastantes, relaciones de color, armonía visual, diseño de color, selección de color, composición de color, balance de color, diseño visual, teoría del color, diseño artístico, branding, colores equilibrados"
+	}
+}

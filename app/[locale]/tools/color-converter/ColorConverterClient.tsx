@@ -7,6 +7,7 @@ import { HslInput } from '@/components/color-converter/HslInput'
 import { ResultPreview } from '@/components/color-converter/ResultPreview'
 import { useColorConverter } from '@/hooks/useColorConverter'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Client component for Color Converter tool
@@ -72,6 +73,9 @@ export function ColorConverterClient() {
 					textColor={textColor}
 				/>
 			)}
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='color-converter' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ServiceSEO namespace='tools.colorConverter.seo' />

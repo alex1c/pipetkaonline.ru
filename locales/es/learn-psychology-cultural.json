@@ -1,2 +1,52 @@
-{"title":"Cultural Color Meanings","description":"Learn about cultural color meanings in different countries","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Color meanings can vary greatly across different cultures. Understanding these differences is important for international design."},"red":{"title":"Red","western":"Western cultures","westernDesc":"Passion, energy, danger, love","asian":"Asian cultures","asianDesc":"Luck, prosperity, celebration, happiness"},"blue":{"title":"Blue","content":"Universally associated with calm, trust, and stability. Often used in corporate design."},"yellow":{"title":"Yellow","content":"In the West - joy and optimism. In some Asian cultures - imperial color and nobility."},"green":{"title":"Green","content":"In most cultures - nature, growth, harmony. In some cultures may be associated with envy."},"importance":{"title":"Importance","content":"When creating designs for international audiences, it's important to consider cultural color meanings to avoid wrong associations."}}}
-
+{
+	"title": "Cultural Color Meanings",
+	"description": "Learn about cultural color meanings in different countries",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Color meanings can vary greatly across different cultures. Understanding these differences is important for international design."
+		},
+		"red": {
+			"title": "Red",
+			"western": "Western cultures",
+			"westernDesc": "Passion, energy, danger, love",
+			"asian": "Asian cultures",
+			"asianDesc": "Luck, prosperity, celebration, happiness"
+		},
+		"blue": {
+			"title": "Blue",
+			"content": "Universally associated with calm, trust, and stability. Often used in corporate design."
+		},
+		"yellow": {
+			"title": "Yellow",
+			"content": "In the West - joy and optimism. In some Asian cultures - imperial color and nobility."
+		},
+		"green": {
+			"title": "Green",
+			"content": "In most cultures - nature, growth, harmony. In some cultures may be associated with envy."
+		},
+		"importance": {
+			"title": "Importance",
+			"content": "When creating designs for international audiences, it's important to consider cultural color meanings to avoid wrong associations."
+		}
+	},
+	"seo": {
+		"title": "Significados culturales del color: Creación de diseños internacionales con sensibilidad cultural",
+		"intro": "Los significados del color pueden variar dramáticamente en diferentes culturas. Lo que simboliza alegría en una cultura puede significar luto en otra. Comprender los significados culturales del color es crítico para crear diseños internacionales efectivos que no evoquen asociaciones incorrectas y conflictos culturales.\n\nEn esta guía detallada cubrimos significados culturales de colores primarios en varias regiones del mundo, sus raíces históricas y religiosas y recomendaciones prácticas para crear diseños culturalmente sensibles.\n\nAprenderá a usar [tool:brand-color-analyzer] para analizar paletas de colores considerando significados culturales, aplicar [tool:emotion-colors] para generar paletas culturalmente adaptadas, y trabajar con [tool:palette-generator] para crear esquemas de color universales.",
+		"section1": {
+			"title": "Rojo: De pasión a suerte",
+			"content": "En culturas occidentales, el rojo está asociado con pasión, energía, peligro y amor. Se usa para advertencias, botones de llamada a la acción y temas románticos.\n\nEn culturas asiáticas, especialmente en China, el rojo simboliza suerte, prosperidad, celebración y felicidad. El rojo es el color tradicional para bodas, festividades y eventos importantes.\n\nEn algunas culturas africanas, el rojo está asociado con sangre, sacrificio y vida. Esto demuestra cuán diferentes pueden ser los significados de un color en diferentes culturas.\n\nAl crear diseños internacionales, es importante considerar estas diferencias. La herramienta [tool:brand-color-analyzer] analiza paletas de colores y ofrece recomendaciones considerando significados culturales."
+		},
+		"section2": {
+			"title": "Colores universales y culturalmente específicos",
+			"content": "El azul está universalmente asociado con calma, confianza y estabilidad. Esto lo convierte en una elección segura para marcas internacionales y diseño corporativo. El azul rara vez tiene asociaciones culturales negativas.\n\nEl amarillo tiene varios significados: en Occidente — alegría y optimismo, en algunas culturas asiáticas — color imperial y nobleza. En algunas culturas, el amarillo puede estar asociado con cobardía o enfermedad.\n\nEl verde en la mayoría de las culturas simboliza naturaleza, crecimiento y armonía. Sin embargo, en algunas culturas, el verde puede estar asociado con envidia o mala suerte. La herramienta [tool:emotion-colors] ayuda a generar paletas considerando significados culturales del color."
+		},
+		"section3": {
+			"title": "Recomendaciones prácticas para diseño internacional",
+			"content": "Al crear diseños para audiencias internacionales, es importante investigar significados culturales del color en regiones objetivo. Esto permite evitar asociaciones incorrectas y conflictos culturales.\n\nUse colores universales (azul, verde) para elementos principales y culturalmente específicos — para acentos, considerando audiencia objetivo. Cree versiones adaptadas del diseño para varias regiones culturales.\n\nPruebe esquemas de color con representantes de culturas objetivo. Esto permite identificar problemas potenciales antes de la publicación. La herramienta [tool:palette-generator] ayuda a crear esquemas de color universales que funcionan en varios contextos culturales."
+		},
+		"conclusion": "Los significados culturales del color son un aspecto importante de crear diseños internacionales efectivos.\n\nComprender y considerar diferencias culturales en significados del color permite crear diseños que no evoquen asociaciones incorrectas y funcionen efectivamente en varios contextos culturales. Use herramientas modernas para analizar y adaptar esquemas de color para audiencias internacionales.",
+		"keywords": "significados culturales del color, cultura del color, diseño de color internacional, asociaciones culturales de color, simbolismo del color, psicología cultural del color, significados del color por cultura, diseño internacional, sensibilidad cultural, diferencias culturales del color, diseño de color global, diseño intercultural"
+	}
+}

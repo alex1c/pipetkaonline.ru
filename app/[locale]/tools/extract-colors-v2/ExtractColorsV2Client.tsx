@@ -19,6 +19,7 @@ import { AnalyticsBox } from '@/components/extract-v2/AnalyticsBox'
 import { PalettesDisplay } from '@/components/extract-v2/PalettesDisplay'
 import { ExportPanel } from '@/components/extract-v2/ExportPanel'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Extract Colors V2 Client Component
@@ -147,6 +148,9 @@ export function ExtractColorsV2Client() {
 					/>
 				</section>
 			)}
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='extract-colors-v2' />
 
 			{/* SEO Content */}
 			<ServiceSEO namespace='tools.extractColorsV2.seo' />

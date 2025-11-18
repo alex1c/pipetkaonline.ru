@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * RGB vs CMYK page
@@ -89,6 +90,16 @@ export default function RGBCMYKPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.fundamentals.rgbCmyk'
+				toolLinks={[
+					{ slug: 'color-converter', anchorText: 'конвертер цветов' },
+					{ slug: 'extract-colors-v2', anchorText: 'извлечение цветов' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+				]}
+			/>
 		</div>
 	)
 }

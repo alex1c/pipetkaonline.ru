@@ -1,2 +1,47 @@
-{"title":"Color Wheel Basics","description":"Learn the structure and use of the color wheel","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"The color wheel is a tool for understanding relationships between colors. It helps visualize how colors interact with each other."},"primary":{"title":"Primary Colors","content":"Primary colors cannot be created by mixing other colors. In the traditional model, these are red, blue, and yellow.","red":"Red","blue":"Blue","yellow":"Yellow"},"secondary":{"title":"Secondary Colors","content":"Secondary colors are created by mixing two primary colors in equal proportions.","orange":"Orange","green":"Green","purple":"Purple"},"usage":{"title":"Usage","content":"The color wheel is used to create harmonious color schemes, find complementary colors, and understand color relationships."}}}
-
+{
+	"title": "Color Wheel Basics",
+	"description": "Learn the structure and use of the color wheel",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "The color wheel is a tool for understanding relationships between colors. It helps visualize how colors interact with each other."
+		},
+		"primary": {
+			"title": "Primary Colors",
+			"content": "Primary colors cannot be created by mixing other colors. In the traditional model, these are red, blue, and yellow.",
+			"red": "Red",
+			"blue": "Blue",
+			"yellow": "Yellow"
+		},
+		"secondary": {
+			"title": "Secondary Colors",
+			"content": "Secondary colors are created by mixing two primary colors in equal proportions.",
+			"orange": "Orange",
+			"green": "Green",
+			"purple": "Purple"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "The color wheel is used to create harmonious color schemes, find complementary colors, and understand color relationships."
+		}
+	},
+	"seo": {
+		"title": "Color Wheel: Complete Guide to Color Theory for Designers",
+		"intro": "The color wheel is a fundamental tool of color theory that visualizes relationships between colors and helps create harmonious color schemes. In this comprehensive guide, we'll cover the color wheel structure, primary and secondary colors, color harmonies, and practical applications in design.\n\nYou'll learn how to use [tool:color-harmony] to automatically find harmonious combinations based on the color wheel, apply [tool:palette-generator] to create palettes, and work with [tool:color-lab] to visualize color relationships.",
+		"section1": {
+			"title": "Color Wheel Structure: Primary and Secondary Colors",
+			"content": "The color wheel consists of 12 main sectors arranged in a circle. Three primary colors (red, blue, yellow) are positioned at equal distances from each other, forming a triangle. These colors cannot be obtained by mixing others — they are fundamental.\n\nSecondary colors (orange, green, purple) are obtained by mixing two primary colors: red + yellow = orange, blue + yellow = green, red + blue = purple. Tertiary colors are formed by mixing primary and secondary colors, creating smooth transitions between circle sectors.\n\nModern tools like [tool:color-harmony] use mathematical color wheel models to automatically calculate complementary, analogous, and triadic colors."
+		},
+		"section2": {
+			"title": "Color Harmonies Based on the Color Wheel",
+			"content": "The color wheel allows creating various types of color harmonies. Complementary colors are positioned opposite each other on the wheel (e.g., red and green), creating maximum contrast.\n\nAnalogous colors are located next to each other (e.g., red, orange, yellow), creating smooth transitions. Triadic colors form an equilateral triangle on the wheel (e.g., red, blue, yellow), ensuring a balanced combination.\n\nSplit-complementary scheme uses a base color and two adjacent to its complement. The [tool:palette-generator] tool automatically generates harmonious palettes based on the selected color and harmony type, using mathematical color wheel principles."
+		},
+		"section3": {
+			"title": "Practical Application of the Color Wheel in Design",
+			"content": "The color wheel is an indispensable tool for web designers, graphic designers, and artists. It helps choose color schemes for interfaces, create contrasting accents, develop brand books, and color palettes.\n\nWhen working with web design, the color wheel is used to create accessible interfaces with sufficient contrast. The [tool:color-lab] tool visualizes the color wheel and allows interactive color selection, seeing their relationships on the wheel.\n\nFor branding, [tool:brand-color-analyzer] analyzes selected colors based on their positions on the color wheel and provides harmony recommendations. When creating emotional palettes, [tool:emotion-colors] uses color wheel sectors to generate colors corresponding to specific moods."
+		},
+		"conclusion": "The color wheel is the foundation of understanding color theory and creating visually pleasing designs. Mastering color wheel work is essential for every designer and developer working with colors.\n\nUse modern tools to visualize and apply color wheel principles in your projects.",
+		"keywords": "color wheel, color theory, primary colors, secondary colors, color harmonies, complementary colors, analogous colors, triadic colors, color scheme, color relationships, color palette, web design, graphic design, color model, color space, color theory, color design, color selection, color combinations, color contrast, color balance, visual design, color composition, artistic design"
+	}
+}

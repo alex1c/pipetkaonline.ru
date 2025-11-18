@@ -3,7 +3,19 @@
 	"nav.tools": "Werkzeuge",
 	"nav.learn": "Lernen",
 	"nav.tech": "Technische Seiten",
-	"nav.language": "Sprache"
+	"nav.language": "Sprache",
+	"nav.openMenu": "Menü öffnen",
+	"nav.closeMenu": "Menü schließen",
+	"notFound.title": "Seite nicht gefunden — 404",
+	"notFound.description": "Entschuldigung, die gesuchte Seite existiert nicht oder wurde verschoben.",
+	"notFound.heading": "Seite nicht gefunden",
+	"notFound.goHome": "Zur Startseite",
+	"notFound.browseTools": "Werkzeuge durchsuchen",
+	"notFound.browseLearn": "Lernen durchsuchen",
+	"notFound.suggestions.title": "Was Sie tun können:",
+	"notFound.suggestions.checkUrl": "Überprüfen Sie, ob die URL korrekt ist",
+	"notFound.suggestions.useNavigation": "Verwenden Sie das Navigationsmenü, um die gewünschte Seite zu finden",
+	"notFound.suggestions.searchTools": "Durchsuchen Sie verfügbare Werkzeuge und Lernabschnitte"
 }
 
 

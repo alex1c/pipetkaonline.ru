@@ -8,6 +8,7 @@ import { GradientHistory } from '@/components/gradient/GradientHistory'
 import { GradientCode } from '@/components/gradient/GradientCode'
 import { useGradientGenerator } from '@/hooks/useGradientGenerator'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Client component for Gradient Generator tool
@@ -116,6 +117,9 @@ export function GradientGeneratorClient() {
 				onLoad={loadGradient}
 				onDelete={deleteSavedGradient}
 			/>
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='gradient-generator' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ServiceSEO namespace='tools.gradientGenerator.seo' />

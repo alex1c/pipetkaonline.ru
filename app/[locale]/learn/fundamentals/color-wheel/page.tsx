@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Color Wheel page
@@ -92,6 +93,18 @@ export default function ColorWheelPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.fundamentals.colorWheel'
+				toolLinks={[
+					{ slug: 'color-harmony', anchorText: 'цветовая гармония' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+					{ slug: 'color-lab', anchorText: 'выбор цвета' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализатор цветов бренда' },
+					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
+				]}
+			/>
 		</div>
 	)
 }

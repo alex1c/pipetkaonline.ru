@@ -1,2 +1,52 @@
-{"title":"HSL Notation","description":"Learn about HSL format for representing colors","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"HSL format describes color through hue, saturation, and lightness. HSLA adds an alpha channel."},"components":{"title":"Components","hue":{"title":"Hue","desc":"Position of color on the color wheel (0-360 degrees)"},"saturation":{"title":"Saturation","desc":"Intensity of color (0-100%)"},"lightness":{"title":"Lightness","desc":"Lightness of color (0-100%)"}},"examples":{"title":"Examples","content":"hsl(9, 100%, 60%) represents a bright orange-red color. hsla(195, 100%, 40%, 0.5) represents semi-transparent cyan."},"advantages":{"title":"Advantages","content":"HSL format is convenient for programmatically changing color properties, such as darkening or lightening, as you can change only lightness."}}}
-
+{
+	"title": "HSL Notation",
+	"description": "Learn about HSL format for representing colors",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "HSL format describes color through hue, saturation, and lightness. HSLA adds an alpha channel."
+		},
+		"components": {
+			"title": "Components",
+			"hue": {
+				"title": "Hue",
+				"desc": "Position of color on the color wheel (0-360 degrees)"
+			},
+			"saturation": {
+				"title": "Saturation",
+				"desc": "Intensity of color (0-100%)"
+			},
+			"lightness": {
+				"title": "Lightness",
+				"desc": "Lightness of color (0-100%)"
+			}
+		},
+		"examples": {
+			"title": "Examples",
+			"content": "hsl(9, 100%, 60%) represents a bright orange-red color. hsla(195, 100%, 40%, 0.5) represents semi-transparent cyan."
+		},
+		"advantages": {
+			"title": "Advantages",
+			"content": "HSL format is convenient for programmatically changing color properties, such as darkening or lightening, as you can change only lightness."
+		}
+	},
+	"seo": {
+		"title": "HSL y HSLA: Modelo de color intuitivo para diseño web",
+		"intro": "HSL (Tono, Saturación, Luminosidad) es un modelo de color intuitivo que describe colores a través de tono, saturación y luminosidad. A diferencia de RGB, HSL permite cambiar fácilmente las propiedades de color programáticamente, lo que lo hace ideal para crear temas, gradientes y esquemas de color dinámicos.\n\nEn esta guía aprenderá todo sobre el formato HSL: desde principios fundamentales hasta técnicas avanzadas de uso en desarrollo web moderno. Mostraremos cómo usar [tool:color-converter] para convertir HSL a otros formatos, [tool:ui-theme-generator] para crear temas basados en HSL, y trabajar con [tool:color-harmony] para generar combinaciones de colores armónicas.",
+		"section1": {
+			"title": "Comprensión de componentes HSL: Tono, Saturación y Luminosidad",
+			"content": "El modelo HSL consta de tres componentes, cada uno responsable de una propiedad de color específica. Tono (Hue) es la posición del color en el círculo cromático de 0 a 360 grados: 0° es rojo, 120° es verde, 240° es azul.\n\nSaturación (Saturation) determina la intensidad del color de 0% (gris) a 100% (completamente saturado). Luminosidad (Lightness) controla el brillo del color de 0% (negro) a 100% (blanco), donde 50% produce un color puro.\n\nPor ejemplo, hsl(9, 100%, 60%) crea un color naranja-rojo brillante con saturación máxima y luminosidad media. HSLA agrega un canal alfa para transparencia: hsla(195, 100%, 40%, 0.5) es cian semi-transparente.\n\nLa herramienta [tool:color-converter] permite la conversión instantánea de valores HSL a RGB, HEX y otros formatos, lo cual es crítico al trabajar con diferentes herramientas de diseño."
+		},
+		"section2": {
+			"title": "Ventajas prácticas de HSL en desarrollo web",
+			"content": "La principal ventaja de HSL es la capacidad de cambiar propiedades de color programáticamente. Para oscurecer un color, simplemente reduzca el valor de luminosidad; para aclarar, auméntelo. Para cambiar la saturación, varíe Saturation, y para cambiar el color, varíe Hue.\n\nEsto hace que HSL sea ideal para crear temas (oscuro/claro), generar variaciones de color y crear gradientes. Las funciones CSS hsl() y hsla() aceptan valores directamente: background: hsl(210, 50%, 50%).\n\nLas herramientas modernas como [tool:ui-theme-generator] usan HSL para generar automáticamente paletas de colores completas a partir de un solo color base. Al crear armonías de color, [tool:color-harmony] usa valores HSL para calcular colores complementarios, análogos y triádicos, lo que garantiza combinaciones visualmente atractivas."
+		},
+		"section3": {
+			"title": "Técnicas avanzadas de HSL",
+			"content": "Los desarrolladores experimentados usan HSL para crear esquemas de color dinámicos. Las variables CSS con HSL permiten cambiar temas fácilmente: --primary-hue: 210; --primary: hsl(var(--primary-hue), 50%, 50%). Cambiar solo el tono crea paletas monocromáticas, cambiar la luminosidad crea matices de un color.\n\nPara crear interfaces accesibles, es importante controlar el contraste a través de la luminosidad. Use [tool:contrast-checker] para verificar la legibilidad de colores HSL según estándares WCAG.\n\nAl trabajar con branding, [tool:brand-color-analyzer] analiza paletas HSL y ofrece recomendaciones de uso. Para crear paletas emocionales, [tool:emotion-colors] usa HSL para generar colores que corresponden a estados de ánimo y emociones específicos."
+		},
+		"conclusion": "El formato HSL es una herramienta poderosa para el desarrollo web moderno que simplifica el trabajo con colores y permite crear interfaces dinámicas, accesibles y visualmente atractivas.\n\nDominar el modelo HSL es esencial para cualquier diseñador web y desarrollador que trabaje con colores.",
+		"keywords": "color HSL, color HSLA, tono saturación luminosidad, modelo de color HSL, círculo cromático, paleta de colores HSL, CSS HSL, HTML HSL, cambio programático de color, temas de color, gradientes HSL, armonía de color, convertidor HSL, HSL a RGB, HSL a HEX, esquema de color, sistema de diseño, diseño web, desarrollo frontend, colores dinámicos, accesibilidad de color"
+	}
+}

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * CSS Color Keywords page
@@ -99,6 +100,18 @@ export default function CSSPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.formats.css'
+				toolLinks={[
+					{ slug: 'color-name-finder', anchorText: 'поиск названия цвета' },
+					{ slug: 'color-converter', anchorText: 'конвертер цветов' },
+					{ slug: 'ui-tokens-generator', anchorText: 'генератор UI токенов' },
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+				]}
+			/>
 		</div>
 	)
 }

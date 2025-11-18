@@ -1,2 +1,41 @@
-{"title":"CSS Color Keywords","description":"Learn about predefined CSS color keywords","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others."},"basic":{"title":"Basic Colors","content":"CSS includes basic colors: red, blue, green, yellow, black, white, and others."},"extended":{"title":"Extended Colors","content":"CSS also includes many extended colors such as coral, skyblue, tomato, teal, and many others."},"usage":{"title":"Usage","content":"Color keywords are convenient for quick use but are limited in the number of available colors. For precise colors, it's better to use HEX or RGB."}}}
-
+{
+	"title": "CSS Color Keywords",
+	"description": "Learn about predefined CSS color keywords",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "CSS provides a set of predefined color keywords such as 'red', 'blue', 'green', and others."
+		},
+		"basic": {
+			"title": "Basic Colors",
+			"content": "CSS includes basic colors: red, blue, green, yellow, black, white, and others."
+		},
+		"extended": {
+			"title": "Extended Colors",
+			"content": "CSS also includes many extended colors such as coral, skyblue, tomato, teal, and many others."
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Color keywords are convenient for quick use but are limited in the number of available colors. For precise colors, it's better to use HEX or RGB."
+		}
+	},
+	"seo": {
+		"title": "Palabras clave de color CSS: Guía de referencia completa para desarrolladores web",
+		"intro": "CSS proporciona un conjunto extenso de palabras clave de color predefinidas, desde básicas (red, blue, green) hasta extendidas (coral, skyblue, tomato, teal). Estas palabras clave simplifican el trabajo con colores en CSS, pero tienen limitaciones en precisión y número de tonos disponibles.\n\nEn esta guía detallada cubrimos todas las palabras clave de color CSS, su aplicación, ventajas y desventajas. Aprenderá a usar [tool:color-name-finder] para encontrar nombres de colores, trabajar con [tool:color-converter] para convertir palabras clave a HEX/RGB, y aplicar [tool:ui-tokens-generator] para crear sistemas de diseño basados en colores CSS.",
+		"section1": {
+			"title": "Palabras clave de color CSS básicas y extendidas",
+			"content": "El estándar CSS define 147 palabras clave de color, incluyendo colores básicos (red, blue, green, yellow, black, white, gray) y una paleta extendida (coral, skyblue, tomato, teal, lavender, salmon, turquoise y muchos otros).\n\nCada palabra clave corresponde a un valor HEX específico, por ejemplo 'red' es equivalente a #FF0000, 'blue' es #0000FF. Estas palabras clave son convenientes para prototipado rápido y aprendizaje, pero limitadas en precisión.\n\nPara proyectos profesionales, se recomienda usar formatos HEX, RGB o HSL para control preciso de color. La herramienta [tool:color-name-finder] permite encontrar el nombre de cualquier color, incluyendo palabras clave CSS, y obtener sus valores HEX/RGB exactos."
+		},
+		"section2": {
+			"title": "Aplicación práctica de palabras clave de color CSS",
+			"content": "Las palabras clave de color CSS se usan en propiedades como color, background-color, border-color y otras. La sintaxis es simple: color: red; background-color: blue;. Son especialmente útiles para prototipado rápido, aprendizaje y creación de interfaces simples.\n\nSin embargo, para colores de marca precisos, gradientes y sistemas de diseño complejos, es mejor usar valores HEX o RGB. Las herramientas modernas como [tool:color-converter] permiten la conversión instantánea de palabras clave CSS a formatos HEX, RGB y HSL, lo cual es crítico al trabajar con mockups de diseño.\n\nAl crear sistemas de diseño, [tool:ui-tokens-generator] usa valores de color precisos en lugar de palabras clave para garantizar consistencia y control."
+		},
+		"section3": {
+			"title": "Limitaciones y mejores prácticas",
+			"content": "La principal limitación de las palabras clave de color CSS es un conjunto fijo de 147 colores, lo cual es insuficiente para proyectos de diseño modernos. Además, no hay control sobre tonos, saturación y luminosidad.\n\nPara crear temas, gradientes e interfaces accesibles, se requieren valores de color precisos. Al trabajar con branding, es importante usar colores de marca precisos, no palabras clave aproximadas.\n\nPara verificación de contraste, use [tool:contrast-checker], que trabaja con valores de color precisos. Al crear paletas de colores, [tool:palette-generator] genera combinaciones armónicas basadas en valores HEX/RGB precisos, no palabras clave."
+		},
+		"conclusion": "Las palabras clave de color CSS son una herramienta conveniente para prototipado rápido y aprendizaje, pero para proyectos profesionales se recomienda usar formatos de color precisos (HEX, RGB, HSL) para control completo de color y consistencia de diseño.",
+		"keywords": "palabras clave de color CSS, nombres de color CSS, colores predefinidos, colores CSS, colores web, colores HTML, constantes de color, estándar CSS, paleta de colores CSS, convertidor de color CSS, CSS a HEX, CSS a RGB, diseño web, desarrollo frontend, propiedades CSS, valores de color"
+	}
+}

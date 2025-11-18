@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * WCAG Contrast Guidelines page
@@ -76,6 +77,17 @@ export default function WCAGPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.accessibility.wcag'
+				toolLinks={[
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+					{ slug: 'text-image-accessibility', anchorText: 'проверка доступности текста' },
+					{ slug: 'color-blindness-simulator', anchorText: 'симулятор цветовой слепоты' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+				]}
+			/>
 		</div>
 	)
 }

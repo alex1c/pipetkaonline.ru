@@ -2,6 +2,9 @@
 	"title": "Color Tools",
 	"description": "Detect color codes, build palettes, and check contrast and harmony.",
 	"comingSoon": "Coming Soon",
+	"similarTools.title": "Similar Tools",
+	"similarTools.description": "Discover other useful color tools",
+	"similarTools.viewTool": "View Tool",
 	"tools.picker.title": "Color Picker",
 	"tools.picker.desc": "Extract colors from images and screenshots",
 	"tools.palette.title": "Palette Generator",
@@ -22,6 +25,18 @@
 	"tools.colorNameFinder.desc": "Find the name of any color: standard, algorithmic, and marketing names",
 	"tools.brandColorAnalyzer.title": "Brand Color Analyzer",
 	"tools.brandColorAnalyzer.desc": "Analyze brand colors: clustering, harmony, contrast, and descriptions",
+	"tools.uiThemeGenerator.title": "UI Theme Generator",
+	"tools.uiThemeGenerator.desc": "Generate complete palettes for interfaces: accent, background, text, and auxiliary colors",
+	"tools.textImageAccessibility.title": "Text-on-Image Accessibility Checker",
+	"tools.textImageAccessibility.desc": "Check text readability on image backgrounds with contrast analysis and WCAG compliance",
+	"tools.gradientMapGenerator.title": "Gradient Map Generator",
+	"tools.gradientMapGenerator.desc": "Transform images with color gradients based on pixel brightness",
+	"tools.emotionColors.title": "Emotions and Color",
+	"tools.emotionColors.desc": "Find the perfect color palette for your mood — joy, calm, energy, inspiration",
+	"tools.solidBackground.title": "Solid Color Background Generator",
+	"tools.solidBackground.desc": "Create and download solid color backgrounds in different sizes and formats",
+	"tools.patternGenerator.title": "Pattern Generator",
+	"tools.patternGenerator.desc": "Create seamless repeating patterns and designs",
 	"uiTokensGenerator": {
 		"title": "UI Tokens Generator",
 		"description": "Select a base color and automatically get a complete UI token set: color scales, semantic colors, and ready-to-use CSS variables.",
@@ -405,6 +420,535 @@
 				"q6": {
 					"question": "How to export palette for use in project?",
 					"answer": "Use CSS variables export for direct use in styles. JSON format is suitable for integration into design systems or transfer to other tools."
+				}
+			}
+		}
+	},
+	"uiThemeGenerator": {
+		"title": "UI Theme Generator",
+		"subtitle": "Generate complete palettes for interfaces: accent colors, backgrounds, text, borders, and auxiliary colors",
+		"sections": {
+			"input": {
+				"title": "Base Color Input"
+			},
+			"preview": {
+				"title": "Theme Preview"
+			},
+			"tokens": {
+				"title": "Color Tokens"
+			},
+			"contrast": {
+				"title": "Contrast"
+			},
+			"export": {
+				"title": "Export"
+			}
+		},
+		"seo": {
+			"keywords": "UI theme generator, UI palette, interface color tokens, interface theme generator, UI color scheme, design tokens for UI, interface color palette generator, UI theme online, create UI theme, interface color generator, UI color variables, interface palette generator, interface color system, UI color generator, create interface theme, UI token generator, web interface color palette, UI palette generator, create interface color scheme, UI primary color generator, UI semantic color generator, interface design token generator, free UI theme generator, CSS theme generator, Tailwind theme generator, design system theme generator, create UI color palette, interface color variable generator, UI design system generator",
+			"guide": {
+				"title": "Complete guide to using UI Theme Generator",
+				"intro": "UI Theme Generator is a tool for generating complete color palettes for interfaces. It creates accent colors, backgrounds, text, borders, and auxiliary colors based on a single base color.",
+				"step1": {
+					"title": "Step 1: Select base color",
+					"description": "Choose a primary color using the color picker, enter HEX/RGB/HSL manually, select a ready-made theme from the list (Light, Dark, Vibrant, Pastel, Minimal, Corporate), or upload an image to extract the dominant color."
+				},
+				"step2": {
+					"title": "Step 2: Configure mode",
+					"description": "Select theme mode: Light (light theme), Dark (dark theme), or Auto (automatic detection based on base color)."
+				},
+				"step3": {
+					"title": "Step 3: View preview",
+					"description": "View theme preview on real UI components: buttons, text blocks, card, form, navigation panel. This allows you to see the theme in action."
+				},
+				"step4": {
+					"title": "Step 4: Explore tokens",
+					"description": "Explore all generated color tokens, organized by categories: Primary (main), Secondary (secondary), Neutral (neutral), Status (status), Borders (borders), Shadows (shadows)."
+				},
+				"step5": {
+					"title": "Step 5: Check contrast",
+					"description": "Review automatic contrast analysis for key color pairs: primary vs primary-foreground, secondary vs secondary-foreground, text vs background, card vs background. Ensure WCAG AA/AAA compliance."
+				},
+				"step6": {
+					"title": "Step 6: Export",
+					"description": "Export theme in various formats: CSS Variables (for direct use in CSS), Tailwind config (for Tailwind CSS integration), JSON tokens (for design systems), Figma Tokens (for use in Figma). Use 'Export All' button to export all formats at once."
+				}
+			},
+			"howTo": {
+				"title": "How to use UI Theme Generator: step-by-step guide",
+				"howTo1": {
+					"title": "How to select base color",
+					"description": "Use color picker for visual selection, enter color manually in any format (HEX, RGB, HSL), select a ready-made theme from dropdown list, or upload an image for automatic dominant color extraction."
+				},
+				"howTo2": {
+					"title": "How to configure theme mode",
+					"description": "Select Light for light theme, Dark for dark theme, or Auto for automatic detection based on base color brightness. Mode affects neutral color and shadow generation."
+				},
+				"howTo3": {
+					"title": "How to use theme preview",
+					"description": "Preview shows theme on real UI components: buttons with hover/active states, text blocks, cards, forms, navigation panel. This helps visually evaluate the theme before use."
+				},
+				"howTo4": {
+					"title": "How to work with tokens",
+					"description": "All tokens are organized by categories. Each token shows color swatch, HEX value, and copy button. Tokens are ready for use in your project."
+				},
+				"howTo5": {
+					"title": "How to interpret contrast analysis",
+					"description": "Contrast table shows ratios for key color pairs. Green labels (✓ AA, ✓ AAA) indicate compliance with standards. Red labels (✗ Below AA) require contrast improvement."
+				},
+				"howTo6": {
+					"title": "How to export theme",
+					"description": "Select desired export format (CSS Variables, Tailwind Config, JSON Tokens, Figma Tokens), copy code or download file. Use 'Export All' to get all formats at once."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about UI Theme Generator",
+				"q1": {
+					"question": "What are UI tokens?",
+					"answer": "UI tokens are named color values used in design systems. They ensure color consistency in interfaces and simplify theme maintenance. Examples: primary, secondary, background, foreground."
+				},
+				"q2": {
+					"question": "How does token generation work?",
+					"answer": "Generator uses base color and creates variations through lightening/darkening (for hover/active states), mixing with neutral colors (for secondary), and automatic contrast color selection (for foreground). Status colors are generated by adjusting hue."
+				},
+				"q3": {
+					"question": "What is Auto mode?",
+					"answer": "Auto mode automatically determines whether theme should be light or dark based on base color brightness. If base color is light (luma >= 0.5), light theme is selected, otherwise dark theme."
+				},
+				"q4": {
+					"question": "How to use exported tokens?",
+					"answer": "CSS Variables can be used directly in CSS: var(--color-primary). Tailwind config should be added to tailwind.config.js. JSON tokens are suitable for integration into design systems. Figma Tokens can be imported into Figma via plugin."
+				},
+				"q5": {
+					"question": "Why do some color pairs fail contrast check?",
+					"answer": "If base color is too light or dark, automatically generated foreground colors may not provide sufficient contrast. In this case, it's recommended to choose a different base color or manually adjust foreground colors."
+				},
+				"q6": {
+					"question": "Can I edit tokens manually?",
+					"answer": "In current version, tokens are generated automatically. For manual editing, you can copy exported values and modify them in your project. Future versions plan to add manual editing capability."
+				}
+			}
+		}
+	},
+	"textImageAccessibility": {
+		"title": "Text-on-Image Accessibility Checker",
+		"subtitle": "Check text readability on image backgrounds with contrast analysis and WCAG compliance",
+		"upload": "Upload Image",
+		"controls": {
+			"text": "Text",
+			"color": "Text Color",
+			"size": "Font Size",
+			"weight": "Font Weight",
+			"position": "Position",
+			"background": "Background Overlay",
+			"shadow": "Text Shadow"
+		},
+		"results": {
+			"title": "Accessibility Analysis",
+			"contrast": "Contrast Ratio",
+			"wcagSmall": "WCAG AA (Small Text)",
+			"wcagLarge": "WCAG AA (Large Text)",
+			"recommendation": "Recommendation"
+		},
+		"heatmap": {
+			"toggle": "Show Heatmap"
+		},
+		"seo": {
+			"keywords": "text on image accessibility checker, text contrast on background, WCAG text check, text readability on image, text contrast analysis, text accessibility on image, text readability check, WCAG contrast, text on image analysis, text contrast check, text accessibility online, contrast checker tool, WCAG 2.1 check, text and background contrast, text readability check on image, text accessibility analysis, text contrast checker tool, WCAG AA AAA check, text contrast on image, text readability analysis, text accessibility check on background, text readability checker tool, WCAG compliance checker, text and image contrast, text readability check, text contrast analysis on image, text accessibility checker tool, text contrast check online, WCAG contrast testing, text readability check on image background",
+			"guide": {
+				"title": "Complete guide to using Text-on-Image Accessibility Checker",
+				"intro": "Text-on-Image Accessibility Checker is a tool for checking text readability on image backgrounds. It analyzes contrast, checks WCAG compliance, and provides recommendations for improving accessibility.",
+				"step1": {
+					"title": "Step 1: Upload image",
+					"description": "Upload an image (PNG, JPG, WebP) via drag & drop or file selection. The image will be displayed in preview with text overlay capability."
+				},
+				"step2": {
+					"title": "Step 2: Configure text",
+					"description": "Configure text: enter text, select color, size, font weight, position (horizontal and vertical), enable/disable shadow and background overlay."
+				},
+				"step3": {
+					"title": "Step 3: Contrast analysis",
+					"description": "The tool automatically analyzes contrast between text and image background, considering local colors under text. Results are displayed in real-time."
+				},
+				"step4": {
+					"title": "Step 4: WCAG check",
+					"description": "WCAG 2.1 compliance is checked: AA for small text (4.5:1), AA for large text (3:1), AAA (7:1). Results show whether text passes the check."
+				},
+				"step5": {
+					"title": "Step 5: Heatmap",
+					"description": "Enable 'Show Heatmap' mode to visualize readability: green — high contrast, yellow — medium, red — low. This helps find optimal text position."
+				},
+				"step6": {
+					"title": "Step 6: Recommendations",
+					"description": "The tool provides recommendations for improving contrast, e.g., 'Increase text brightness by 12%' or 'Use darker background'."
+				}
+			},
+			"howTo": {
+				"title": "How to use Text-on-Image Accessibility Checker: step-by-step guide",
+				"howTo1": {
+					"title": "How to upload image",
+					"description": "Drag & drop image into upload area or click to select file. Supported formats: PNG, JPG, WebP. After upload, image will be displayed in preview."
+				},
+				"howTo2": {
+					"title": "How to configure text",
+					"description": "Enter text in 'Text' field, select color via color picker or enter HEX, set font size (12-120px), weight (normal, bold, light, medium), position (left/center/right, top/middle/bottom)."
+				},
+				"howTo3": {
+					"title": "How to use background overlay",
+					"description": "Enable 'Background Overlay' to add semi-transparent overlay under text. Select color and adjust opacity (0-100%). This improves readability on complex backgrounds."
+				},
+				"howTo4": {
+					"title": "How to interpret results",
+					"description": "Contrast Ratio shows contrast ratio (1:1 — no contrast, 21:1 — maximum). WCAG AA Small requires 4.5:1 for normal text, AA Large — 3:1 for large text, AAA — 7:1."
+				},
+				"howTo5": {
+					"title": "How to use heatmap",
+					"description": "Enable 'Show Heatmap' to visualize readability. Green areas — high contrast (≥4.5:1), yellow — medium (3-4.5:1), red — low (<3:1). Move text to green areas for better readability."
+				},
+				"howTo6": {
+					"title": "How to improve accessibility",
+					"description": "Follow tool recommendations: increase text brightness, use darker/lighter color, add background overlay, increase font size, move text to area with better contrast."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Text-on-Image Accessibility Checker",
+				"q1": {
+					"question": "What is WCAG?",
+					"answer": "WCAG (Web Content Accessibility Guidelines) are web content accessibility standards. WCAG AA requires 4.5:1 contrast for normal text and 3:1 for large text. WCAG AAA requires 7:1 for normal text."
+				},
+				"q2": {
+					"question": "How is contrast calculated?",
+					"answer": "Contrast is calculated using WCAG 2.1 formula: (L1 + 0.05) / (L2 + 0.05), where L1 and L2 are relative luminance of lighter and darker colors. Local background color under text is considered."
+				},
+				"q3": {
+					"question": "What does heatmap show?",
+					"answer": "Heatmap visualizes text readability in different image areas. Green — high contrast (≥4.5:1), yellow — medium (3-4.5:1), red — low (<3:1). This helps find optimal text position."
+				},
+				"q4": {
+					"question": "How to improve text contrast?",
+					"answer": "Use more contrasting text color (white on dark background or black on light), add background overlay with opacity adjustment, increase font size, move text to area with better contrast, add text shadow."
+				},
+				"q5": {
+					"question": "Is background overlay considered in contrast calculation?",
+					"answer": "Yes, if background overlay is enabled, contrast is calculated between text color and overlay color. If overlay is disabled, contrast is calculated between text and local image color under text."
+				},
+				"q6": {
+					"question": "What font size is considered large?",
+					"answer": "According to WCAG, large text is text 18pt (24px) and larger, or text 14pt (18.67px) and larger in bold. Large text requires lower contrast (3:1 instead of 4.5:1)."
+				}
+			}
+		}
+	},
+	"gradientMapGenerator": {
+		"title": "Gradient Map Generator",
+		"subtitle": "Transform images with color gradients based on pixel brightness",
+		"upload": "Upload Image",
+		"gradientEditor": {
+			"title": "Gradient Editor",
+			"addPoint": "Add Point",
+			"removePoint": "Remove Point",
+			"presets": "Presets"
+		},
+		"controls": {
+			"intensity": "Intensity",
+			"blendMode": "Blend Mode"
+		},
+		"preview": {
+			"before": "Before",
+			"after": "After",
+			"splitView": "Split View"
+		},
+		"export": {
+			"downloadImage": "Download Image",
+			"downloadPreset": "Download Preset",
+			"copyCss": "Copy CSS Gradient"
+		},
+		"seo": {
+			"keywords": "gradient map generator, image gradient mapping, duotone effect, image color map, gradient filter for images, image transformation with gradient, gradient map generator, duotone generator, image color mapping, gradient effect for photos, cinematic gradient, artistic filters for images, image color recolor, gradient map online, duotone effect generator, gradient mapping online, gradient mapping tool, create duotone images, gradient filters for photos, color map for images, color map generator, image transformation tool, gradient mapping photos, duotone online, image color transformation, gradient image effect, gradient filter generator, duotone tool, gradient color map, gradient mapping tool",
+			"guide": {
+				"title": "Complete guide to using Gradient Map Generator",
+				"intro": "Gradient Map Generator is a tool for transforming images with color gradients based on pixel brightness. It allows you to create duotone effects, cinematic color grades, artistic filters, and image color recoloring.",
+				"step1": {
+					"title": "Step 1: Upload image",
+					"description": "Upload an image (PNG, JPG, WebP) via drag & drop or file selection. The image will be displayed in preview with gradient mapping capability."
+				},
+				"step2": {
+					"title": "Step 2: Configure gradient",
+					"description": "Use the gradient editor to create a color map: add gradient stops, select colors, adjust positions. You can choose a ready-made preset (Duotone, Cinematic, Warm, Cold, etc.) or create your own gradient."
+				},
+				"step3": {
+					"title": "Step 3: Apply and export",
+					"description": "Adjust intensity and blend mode (Normal, Multiply, Screen, Overlay, etc.). Preview the result in Before/After/Split View modes. Export the result as PNG, save preset as JSON, or copy CSS gradient."
+				}
+			},
+			"howTo": {
+				"title": "How to use Gradient Map Generator: step-by-step guide",
+				"howTo1": {
+					"title": "How to create gradient mapping",
+					"description": "Upload an image, select or create a gradient in the editor. The gradient is applied to the image based on each pixel's brightness: dark areas get colors from the left side of the gradient, light areas from the right. Adjust intensity and blend mode for desired effect."
+				},
+				"howTo2": {
+					"title": "How to use presets",
+					"description": "Select a ready-made preset from the list (Duotone, Cinematic, Warm, Cold, Gold/Blue, Cyber Neon, Pastel, Black & White, Retro Film). The preset will automatically apply the gradient to your image. You can then customize it by adding or modifying gradient stops."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Gradient Map Generator",
+				"q1": {
+					"question": "What is gradient mapping?",
+					"answer": "Gradient mapping is an image transformation technique where gradient colors are applied to pixels based on their brightness. Dark pixels get colors from the start of the gradient, light pixels from the end. This creates duotone effects, cinematic color grades, and artistic filters."
+				},
+				"q2": {
+					"question": "What's the difference between HSL and LAB for brightness calculation?",
+					"answer": "LAB (Lightness, A, B) is a more perceptually uniform color space than HSL. Using LAB gives smoother and more natural color transitions in gradient mapping. HSL is faster to compute but may give less uniform results."
+				},
+				"q3": {
+					"question": "How to save gradient for reuse?",
+					"answer": "Use the 'Download Preset (JSON)' button to save the current gradient, intensity, and blend mode to a JSON file. Later you can load this file into the tool for reuse on other images."
+				}
+			}
+		}
+	},
+	"emotionColors": {
+		"title": "Emotions and Color — Color Selection by Mood",
+		"subtitle": "Find the perfect color palette for your mood — joy, calm, energy, inspiration and other emotions.",
+		"selectEmotion": "Select Emotion",
+		"customEmotion": "Other Emotion",
+		"customEmotionPlaceholder": "Enter your mood...",
+		"additionalOptions": "Additional Options",
+		"options": {
+			"warm": "Warm Palette",
+			"bright": "Bright Palette",
+			"natural": "Natural Palette"
+		},
+		"generatePalette": "Generate Palette",
+		"generateVariation": "Generate Another",
+		"emotions": {
+			"joy": "Joy",
+			"calm": "Calm",
+			"energy": "Energy",
+			"nostalgia": "Nostalgia",
+			"confidence": "Confidence",
+			"anxiety": "Anxiety",
+			"romance": "Romance",
+			"inspiration": "Inspiration"
+		},
+		"palette": {
+			"keyColors": "Key Colors",
+			"secondary": "Secondary Accents",
+			"softColors": "Supporting Shades",
+			"keyColor": "Key Color {{number}}",
+			"secondaryColor": "Accent {{number}}",
+			"softColor": "Shade {{number}}"
+		},
+		"explanation": {
+			"title": "Why This Palette Fits Your Mood",
+			"textStyle": "Text Style"
+		},
+		"export": {
+			"title": "Export",
+			"json": "Download JSON",
+			"css": "Copy CSS Variables",
+			"saveToCollection": "Add to Collection"
+		},
+		"seo": {
+			"keywords": "emotions and color, color selection by mood, color palette by emotions, color generator by mood, joy colors, calm colors, energy colors, inspiration colors, romance colors, nostalgia colors, confidence colors, anxiety colors, color combinations by emotions, palette for mood, color psychology, emotional colors, palette selection by feelings, palette generator by emotions, colors for joy, colors for calm, colors for energy, colors for inspiration, emotional palette, color mood, mood palette, emotional color generator, color selection by mood, color scheme by emotions, emotion palette, mood colors",
+			"guide": {
+				"title": "Complete guide to using 'Emotions and Color' tool",
+				"intro": "The 'Emotions and Color' tool helps you find the perfect color palette for your mood. It uses color psychology principles to create harmonious color combinations that match various emotional states.",
+				"step1": {
+					"title": "Step 1: Select emotion",
+					"description": "Choose one of 8 preset emotions (Joy, Calm, Energy, Nostalgia, Confidence, Anxiety, Romance, Inspiration) or enter your own emotion in the text field. The tool automatically identifies similar emotions and creates a mixed palette."
+				},
+				"step2": {
+					"title": "Step 2: Adjust parameters",
+					"description": "Optionally adjust additional parameters: choose warm or cold palette, bright or muted, natural or synthetic. These parameters affect color generation from HSL ranges corresponding to the selected emotion."
+				},
+				"step3": {
+					"title": "Step 3: Generate and export",
+					"description": "Click 'Generate Palette' to create a color palette. View key colors, secondary accents, and supporting shades. Read the explanation of why these colors fit your mood. Export the palette to JSON, copy CSS variables, or save to collection for reuse."
+				}
+			},
+			"howTo": {
+				"title": "How to use 'Emotions and Color' tool: step-by-step guide",
+				"howTo1": {
+					"title": "How to select emotion",
+					"description": "Click on one of the emotion buttons (Joy, Calm, Energy, etc.) or enter your own emotion in the 'Other Emotion' field. For custom emotions, the tool uses an algorithm to find similar emotions and creates a mixed palette based on found matches."
+				},
+				"howTo2": {
+					"title": "How to customize palette",
+					"description": "Use checkboxes in the 'Additional Options' section: 'Warm Palette' shifts colors toward warm tones, 'Bright Palette' increases saturation and brightness, 'Natural Palette' creates more natural, muted tones. You can combine multiple parameters."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about 'Emotions and Color' tool",
+				"q1": {
+					"question": "How does color generation by emotions work?",
+					"answer": "The tool uses a mapping of emotions to HSL color ranges. Each emotion has predefined ranges of hue, saturation, and lightness based on color psychology principles. During generation, random colors are selected from these ranges, ensuring harmonious combinations that match the emotional state."
+				},
+				"q2": {
+					"question": "Can I use my own emotion?",
+					"answer": "Yes, you can enter any emotion in the 'Other Emotion' field. The tool analyzes the entered text, finds 3 most similar preset emotions, and creates a mixed palette based on them. This allows you to get unique color combinations for any emotional states."
+				},
+				"q3": {
+					"question": "How to save palette for reuse?",
+					"answer": "Use the 'Add to Collection' button to save the palette to browser's local storage. Palettes are saved in localStorage and available between sessions. You can also export the palette to a JSON file or copy CSS variables for use in your project."
+				}
+			}
+		}
+	},
+	"solidBackground": {
+		"title": "Solid Color Background Generator",
+		"description": "Create and download solid color backgrounds in different sizes and formats for your projects",
+		"pickColor": "Pick Color",
+		"download": "Download",
+		"downloadPng": "PNG",
+		"downloadJpg": "JPG",
+		"downloadWebp": "WebP",
+		"copyColor": "Copy",
+		"copied": "Copied",
+		"presets": {
+			"title": "Presets",
+			"neutral": "Neutral",
+			"pastel": "Pastel",
+			"bright": "Bright",
+			"dark": "Dark"
+		},
+		"history": {
+			"title": "History",
+			"empty": "History is empty. Select colors to see them here."
+		},
+		"sizes": "Sizes",
+		"hex": "HEX",
+		"rgb": "RGB",
+		"hsl": "HSL",
+		"luminance": "Luminance",
+		"contrastBlack": "Contrast with Black",
+		"contrastWhite": "Contrast with White",
+		"technicalInfo": "Technical Information",
+		"seo": {
+			"keywords": "solid color background generator, generator of solid backgrounds, solid background, download solid background, background generator, create backgrounds, single color background, download background PNG, download background JPG, download background WebP, color background generator, create solid backgrounds, background creation tool, online background generator, solid background for website, solid background for banner, solid background for social media, free background generator, create single color backgrounds, background generation tool, solid image generator, download solid background free, create backgrounds online, color image generator, solid background PNG, solid background JPG, solid background WebP, background generator by color, create solid images, background generation tool",
+			"guide": {
+				"title": "Complete guide to using Solid Color Background Generator",
+				"intro": "Solid Color Background Generator is a tool for creating and downloading solid color backgrounds in different sizes and formats. Perfect for web design, banners, social media, and other projects.",
+				"step1": {
+					"title": "Step 1: Select color",
+					"description": "Choose a color using the color picker or enter it manually in HEX, RGB, or HSL format. You can select a color from presets (Neutral, Pastel, Bright, Dark) or from history of previously selected colors."
+				},
+				"step2": {
+					"title": "Step 2: View preview",
+					"description": "View preview of the selected color in different sizes: Desktop (1920×1080), Square (1080×1080), Portrait (1080×1920), Social (1200×628). This helps you choose the right size for your project."
+				},
+				"step3": {
+					"title": "Step 3: Download",
+					"description": "Download the solid background in the desired format (PNG, JPG, WebP) and size. Each size is available for download in three formats. You can also copy the color in HEX, RGB, or HSL formats for use in CSS."
+				}
+			},
+			"howTo": {
+				"title": "How to use Solid Color Background Generator: step-by-step guide",
+				"howTo1": {
+					"title": "How to select color",
+					"description": "Use the color picker for visual color selection, or enter color manually: HEX format (#FFFFFF), RGB format (255, 255, 255), or HSL format (360, 100%, 50%). You can also select a color from presets or history."
+				},
+				"howTo2": {
+					"title": "How to download background",
+					"description": "Select the desired size (Desktop, Square, Portrait, Social) and format (PNG, JPG, WebP). Click the corresponding download button. The file will be automatically downloaded to your device."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Solid Color Background Generator",
+				"q1": {
+					"question": "What formats are available for download?",
+					"answer": "Three formats are available: PNG (lossless, with transparency), JPG (lossy compression, without transparency), WebP (modern format with good compression). Each size can be downloaded in any of these formats."
+				},
+				"q2": {
+					"question": "How to save color for reuse?",
+					"answer": "Selected colors are automatically saved to history (up to 8 recent colors) in browser's localStorage. You can select a color from history at any time. You can also copy the color in HEX, RGB, or HSL format for use in your project."
+				},
+				"q3": {
+					"question": "What are different sizes for?",
+					"answer": "Different sizes are intended for various purposes: Desktop (1920×1080) — for website backgrounds and desktop applications, Square (1080×1080) — for Instagram and other square formats, Portrait (1080×1920) — for mobile devices and Stories, Social (1200×628) — for Open Graph images and social media."
+				}
+			}
+		}
+	},
+	"patternGenerator": {
+		"title": "Pattern Generator",
+		"description": "Create seamless repeating patterns and designs for your projects",
+		"patternType": "Pattern Type",
+		"tileSize": "Tile Size",
+		"backgroundColor": "Background Color",
+		"elementColor": "Element Color",
+		"density": "Density",
+		"elementSize": "Element Size",
+		"rotation": "Rotation",
+		"randomness": "Randomness",
+		"download": "Download",
+		"downloadPng": "PNG",
+		"downloadJpg": "JPG",
+		"downloadWebp": "WebP",
+		"presets": "Presets",
+		"history": "History",
+		"history.empty": "History is empty. Create patterns to see them here.",
+		"save": "Save",
+		"apply": "Apply",
+		"reset": "Reset",
+		"direction": "Direction",
+		"directionVertical": "Vertical",
+		"directionHorizontal": "Horizontal",
+		"directionDiagonal": "Diagonal",
+		"amplitude": "Amplitude",
+		"frequency": "Frequency",
+		"lineWidth": "Line Width",
+		"shape": "Shape",
+		"shapeCircle": "Circle",
+		"shapeSquare": "Square",
+		"preview": "Preview",
+		"settings": "Settings",
+		"fileSize": "File Size",
+		"technicalInfo": "Technical Information",
+		"seo": {
+			"keywords": "pattern generator, seamless patterns, repeating patterns, pattern maker, tile generator, design patterns, seamless tile generator, pattern creator, online pattern generator, free pattern generator, create patterns online, pattern design tool, download pattern, background patterns, pattern generator PNG, seamless tile maker, repeating pattern generator, pattern creation tool, design pattern generator, tile pattern maker",
+			"guide": {
+				"title": "Complete guide to using Pattern Generator",
+				"intro": "Pattern Generator is a tool for creating seamless repeating patterns and designs for your projects. Supports 9 pattern types: dots, stripes, grid, triangles, zigzag, waves, crosses, noise, and minimalistic shapes.",
+				"step1": {
+					"title": "Step 1: Select pattern type",
+					"description": "Choose a pattern type from available options: Polka Dots, Stripes, Grid, Triangles, Zigzag, Waves, Crosses, Noise, or Minimalistic Shapes. Each type has its own features and settings."
+				},
+				"step2": {
+					"title": "Step 2: Configure parameters",
+					"description": "Configure pattern parameters: tile size (128, 256, 512, 1024px), background and element colors, density, element size, rotation, and randomness. Some types have additional settings: direction for stripes, amplitude and frequency for waves, shape for dots, line width for grid."
+				},
+				"step3": {
+					"title": "Step 3: Preview and export",
+					"description": "Preview the pattern on a large field (1000×800px) with automatic tiling. Make sure the pattern is seamless and looks good when repeated. Then download the pattern in the desired format: PNG (lossless), JPG (compressed), or WebP (modern format)."
+				}
+			},
+			"howTo": {
+				"title": "How to use Pattern Generator: step-by-step guide",
+				"howTo1": {
+					"title": "How to create seamless pattern",
+					"description": "Select a pattern type and configure parameters. Make sure pattern elements don't exceed tile boundaries, otherwise seams will be visible when repeated. Use the 'Randomness' setting to create more natural patterns. Preview to ensure seamlessness."
+				},
+				"howTo2": {
+					"title": "How to use presets and history",
+					"description": "Use ready-made presets for quick start: minimalistic, pastel, bright, monochrome, scandinavian, retro, memphis, geometry, business UI, dark theme, kids, tech. Save favorite patterns to history (up to 10 recent) for quick access. History is saved in browser's localStorage."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Pattern Generator",
+				"q1": {
+					"question": "What formats are available for export?",
+					"answer": "Three formats are available: PNG (lossless, with transparency, ideal for web design), JPG (lossy compression, smaller file size, without transparency), WebP (modern format with good compression and transparency support). Choose format based on your needs."
+				},
+				"q2": {
+					"question": "How to save pattern for reuse?",
+					"answer": "Use the 'Save' button to add pattern to history. History stores up to 10 recent patterns in browser's localStorage. You can select any pattern from history and apply its settings. You can also use ready-made presets for quick access to popular styles."
+				},
+				"q3": {
+					"question": "What tile size to choose?",
+					"answer": "Tile size affects detail and file size: 128px — for simple patterns and space saving, 256px — optimal balance for most cases, 512px — for detailed patterns, 1024px — for maximum detail (large file size). It's recommended to use 256px or 512px for most projects."
 				}
 			}
 		}

@@ -1,2 +1,41 @@
-{"title":"RGB and RGBA Values","description":"Learn about RGB format for representing colors","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"RGB format uses three values from 0 to 255 for red, green, and blue channels. RGBA adds an alpha channel for transparency."},"rgb":{"title":"RGB","content":"RGB uses three values from 0 to 255. For example, rgb(255, 0, 0) represents pure red color."},"rgba":{"title":"RGBA","content":"RGBA adds a fourth value from 0 to 1 for transparency. For example, rgba(0, 168, 204, 0.5) represents semi-transparent cyan."},"usage":{"title":"Usage","content":"RGB format is intuitive and often used in graphics editors. RGBA is useful for creating semi-transparent elements."}}}
-
+{
+	"title": "RGB and RGBA Values",
+	"description": "Learn about RGB format for representing colors",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "RGB format uses three values from 0 to 255 for red, green, and blue channels. RGBA adds an alpha channel for transparency."
+		},
+		"rgb": {
+			"title": "RGB",
+			"content": "RGB uses three values from 0 to 255. For example, rgb(255, 0, 0) represents pure red color."
+		},
+		"rgba": {
+			"title": "RGBA",
+			"content": "RGBA adds a fourth value from 0 to 1 for transparency. For example, rgba(0, 168, 204, 0.5) represents semi-transparent cyan."
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "RGB format is intuitive and often used in graphics editors. RGBA is useful for creating semi-transparent elements."
+		}
+	},
+	"seo": {
+		"title": "RGB y RGBA: Guía completa del modelo de color aditivo",
+		"intro": "RGB (Rojo, Verde, Azul) es un modelo de color aditivo que forma la base de las pantallas digitales y el desarrollo web. En esta guía completa cubrimos todo sobre los formatos RGB y RGBA: desde principios fundamentales hasta aplicaciones prácticas en diseño y desarrollo.\n\nAprenderá a usar [tool:color-converter] para convertir RGB a otros formatos, [tool:extract-colors-v2] para analizar valores RGB de imágenes, y [tool:color-harmony] para crear combinaciones de colores armónicas basadas en RGB.",
+		"section1": {
+			"title": "Fundamentos del modelo RGB: Cómo funcionan los colores aditivos",
+			"content": "RGB es un modelo de color aditivo donde los colores se crean mezclando luz roja, verde y azul. Cada canal puede tener valores de 0 (sin color) a 255 (intensidad máxima). Por ejemplo, rgb(255, 0, 0) es rojo puro, rgb(0, 255, 0) es verde puro, rgb(0, 0, 255) es azul puro.\n\nLa combinación de los tres canales al máximo rgb(255, 255, 255) produce blanco, mientras que la ausencia de todos rgb(0, 0, 0) produce negro. El modelo RGB se usa en todas las pantallas digitales: monitores, televisores, smartphones.\n\nEs el estándar para desarrollo web, CSS, editores gráficos y fotografía digital. La herramienta [tool:color-converter] permite la conversión instantánea de valores RGB a HEX, HSL y otros formatos, lo cual es crítico al trabajar con diferentes herramientas de diseño."
+		},
+		"section2": {
+			"title": "RGBA: Transparencia y canal alfa en diseño web",
+			"content": "RGBA extiende el modelo RGB agregando un canal alfa para control de transparencia. El cuarto valor en rgba() puede variar de 0.0 (completamente transparente) a 1.0 (completamente opaco). Por ejemplo, rgba(0, 168, 204, 0.5) crea un color cian semi-transparente.\n\nRGBA es indispensable para crear efectos de superposición, ventanas modales, sombras, gradientes con transparencia y mezcla de capas en diseño. En CSS, RGBA se usa en propiedades como background-color, color, border-color, box-shadow. Los navegadores modernos también soportan el formato HEX de 8 dígitos con canal alfa: #00A8CC80.\n\nAl trabajar con imágenes, [tool:extract-colors-v2] analiza valores RGB de cada píxel y permite extraer colores dominantes y crear paletas de colores precisas. Para crear combinaciones armónicas, [tool:color-harmony] usa valores RGB para calcular colores complementarios, análogos y triádicos."
+		},
+		"section3": {
+			"title": "Aplicación práctica de RGB/RGBA en desarrollo moderno",
+			"content": "El formato RGB domina el desarrollo web gracias a su intuición y amplio soporte. Las funciones CSS rgb() y rgba() aceptan valores directamente: background: rgb(52, 152, 219). Los desarrolladores JavaScript trabajan con RGB a través de objetos {r: 255, g: 87, b: 51} o arrays [255, 87, 51].\n\nLos editores gráficos (Photoshop, Figma, Sketch) usan RGB como formato primario para proyectos digitales. Para impresión, RGB se convierte a CMYK, pero para web, RGB sigue siendo el estándar.\n\nAl crear sistemas de diseño, los valores RGB se usan para generar tokens de color y variables. Los temas oscuros requieren valores RGB más bajos, los claros — más altos. El contraste es crítico: use [tool:contrast-checker] para verificar la legibilidad de colores RGB según estándares WCAG.\n\nPara branding, [tool:brand-color-analyzer] analiza paletas RGB y ofrece recomendaciones de uso."
+		},
+		"conclusion": "RGB y RGBA son formatos fundamentales del desarrollo digital moderno. Comprender el modelo de color aditivo es esencial para cualquier diseñador web y desarrollador.\n\nUse herramientas modernas para trabajar con RGB, experimente con transparencia a través de RGBA y siempre verifique el contraste para asegurar la accesibilidad de sus proyectos.",
+		"keywords": "color RGB, color RGBA, modelo de color aditivo, rojo verde azul, canales de color, color digital, color web, CSS RGB, HTML RGB, transparencia de color, canal alfa, modelo de color, espacio de color, valores RGB, paleta de colores, convertidor RGB, RGB a HEX, RGB a HSL, armonía de color RGB, contraste de color, accesibilidad de color, diseño web, desarrollo frontend, fotografía digital"
+	}
+}

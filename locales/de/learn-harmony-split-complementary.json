@@ -1,2 +1,40 @@
-{"title":"Split-Complementary Combinations","description":"Learn about split-complementary color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension."},"examples":{"title":"Examples","base":"Base color","split1":"First split","split2":"Second split","description":"Blue with orange and red instead of pure orange"},"usage":{"title":"Usage","content":"Split-complementary scheme is more subtle than complementary but still provides good contrast. It's suitable for more complex designs."}}}
-
+{
+	"title": "Split-Complementary Combinations",
+	"description": "Learn about split-complementary color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension."
+		},
+		"examples": {
+			"title": "Examples",
+			"base": "Base color",
+			"split1": "First split",
+			"split2": "Second split",
+			"description": "Blue with orange and red instead of pure orange"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Split-complementary scheme is more subtle than complementary but still provides good contrast. It's suitable for more complex designs."
+		}
+	},
+	"seo": {
+		"title": "Geteilte Komplementärfarben: Balance zwischen Kontrast und Harmonie",
+		"intro": "Geteilte Komplementär-Schema (split-complementary) ist eine verbesserte Version des Komplementär-Schemas, die eine Grundfarbe und zwei Farben verwendet, die benachbart zu ihrer Komplementärfarbe sind. Dieses Schema bietet hohen Kontrast wie Komplementär, aber mit weniger visueller Spannung, was es vielseitiger und angenehmer für das Auge macht.\n\nIn diesem detaillierten Leitfaden behandeln wir die Theorie geteilter Komplementärfarben, ihre Vorteile gegenüber dem klassischen Komplementär-Schema und praktische Anwendungen. Sie lernen, wie Sie [tool:color-harmony] verwenden, um automatisch geteilte Komplementärfarben zu finden, [tool:contrast-checker] anwenden, um den Kontrast zu überprüfen, und mit [tool:palette-generator] arbeiten, um Paletten zu erstellen.",
+		"section1": {
+			"title": "Theorie geteilter Komplementärfarben: Gemilderter Kontrast",
+			"content": "Das geteilte Komplementär-Schema besteht aus einer Grundfarbe und zwei Farben, die auf beiden Seiten ihrer Komplementärfarbe auf dem Farbkreis positioniert sind. Zum Beispiel, wenn die Grundfarbe Blau (240°) ist, ist ihr Komplement Orange (60°), und die geteilten Farben sind Rot-Orange (30°) und Gelb-Orange (90°). Dies schafft eine Y-förmige Struktur auf dem Farbkreis.\n\nDer Vorteil dieses Schemas ist, dass es den hohen Kontrast des Komplementär-Schemas beibehält, aber visuelle Spannung mildert, was die Komposition ausgewogener und angenehmer macht.\n\nDas Tool [tool:color-harmony] berechnet automatisch geteilte Komplementärfarben für jede ausgewählte Farbe unter Verwendung mathematischer Farbkreis-Prinzipien."
+		},
+		"section2": {
+			"title": "Praktische Anwendung geteilter Komplementärfarben",
+			"content": "Geteilte Komplementärfarben werden im Webdesign, Grafikdesign, Fotografie und Branding weit verbreitet verwendet. Im Webdesign schaffen sie dynamische Schnittstellen mit gutem Kontrast, aber ohne übermäßige Aggressivität.\n\nIm Branding werden sie verwendet, um einprägsame, aber nicht überladene Identitäten zu erstellen. Bei der Erstellung von Paletten kann [tool:palette-generator] harmonische Kombinationen basierend auf geteilten Komplementärfarben generieren und Zwischentöne hinzufügen, um sanfte Übergänge zu schaffen.\n\nFür die Kontrastprüfung ist es wichtig, [tool:contrast-checker] zu verwenden, da geteilte Komplementär-Schemata hohen Kontrast schaffen können, der eine Überprüfung auf WCAG-Standard-Konformität erfordert."
+		},
+		"section3": {
+			"title": "Best Practices und fortgeschrittene Techniken",
+			"content": "Bei der Arbeit mit geteilten Komplementärfarben ist es wichtig, die Grundfarbe als dominant (etwa 70% der Komposition) zu verwenden und die geteilten Farben als Akzente (je 15%) zu verwenden. Dies schafft klare Hierarchie und verhindert visuelle Überlastung.\n\nUm Kontrast zu mildern, können Sie weniger gesättigte Versionen von Farben verwenden oder neutrale Farben hinzufügen. Im Webdesign funktionieren geteilte Komplementärfarben hervorragend für Navigation, Call-to-Action-Buttons und wichtige Benachrichtigungen.\n\nFür Branding analysiert [tool:brand-color-analyzer] geteilte Komplementärfarbpaletten und bietet Verwendungsempfehlungen. Bei der Erstellung emotionaler Paletten kann [tool:emotion-colors] geteilte Komplementärfarben verwenden, um energetische, aber ausgewogene Kombinationen zu generieren."
+		},
+		"conclusion": "Geteilte Komplementärfarben sind die ideale Balance zwischen Kontrast und Harmonie.\n\nSie bieten visuelles Interesse und Energie, die für Komplementärfarben charakteristisch sind, aber mit größerem Gleichgewicht und Vielseitigkeit. Verwenden Sie moderne Tools, um geteilte Komplementärfarben in Ihren Projekten zu finden und anzuwenden.",
+		"keywords": "geteilte Komplementärfarben, split-complementary, Farbharmonie, Farbschema, Farbkreis, Farbtheorie, Webdesign, Grafikdesign, Farbkombinationen, Farbpalette, kontrastierende Farben, Farbbeziehungen, visuelle Harmonie, Farbdesign, Farbauswahl, Farbkomposition, Farbbalance, visuelles Design, Farbtheorie, künstlerisches Design, Branding, ausgewogene Farben"
+	}
+}

@@ -1,2 +1,40 @@
-{"title":"Complementary Colors","description":"Learn about complementary color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Complementary colors are located opposite each other on the color wheel. They create maximum contrast and visual energy."},"examples":{"title":"Examples","redGreen":"Red ↔ Green","blueOrange":"Blue ↔ Orange","yellowPurple":"Yellow ↔ Purple","cyanRed":"Cyan ↔ Red"},"usage":{"title":"Usage","content":"Complementary colors are used to create bright, dynamic compositions. They are perfect for attracting attention and creating accents."}}}
-
+{
+	"title": "Complementary Colors",
+	"description": "Learn about complementary color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Complementary colors are located opposite each other on the color wheel. They create maximum contrast and visual energy."
+		},
+		"examples": {
+			"title": "Examples",
+			"redGreen": "Red ↔ Green",
+			"blueOrange": "Blue ↔ Orange",
+			"yellowPurple": "Yellow ↔ Purple",
+			"cyanRed": "Cyan ↔ Red"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Complementary colors are used to create bright, dynamic compositions. They are perfect for attracting attention and creating accents."
+		}
+	},
+	"seo": {
+		"title": "Complementary Colors: Creating Maximum Contrast in Design",
+		"intro": "Complementary (complementary) colors are pairs of colors positioned opposite each other on the color wheel. They create maximum visual contrast and energy, making them a powerful tool in design.\n\nIn this detailed guide, we'll cover the theory of complementary colors, their application in web design, graphic design, and branding. You'll learn how to use [tool:color-harmony] to automatically find complementary colors, apply [tool:contrast-checker] to verify contrast, and work with [tool:palette-generator] to create palettes based on complementary schemes.",
+		"section1": {
+			"title": "Theory of Complementary Colors: How They Work",
+			"content": "Complementary colors are positioned on opposite sides of the color wheel, forming a 180-degree angle. Classic pairs include red and green, blue and orange, yellow and purple.\n\nWhen complementary colors are placed next to each other, they enhance each other, creating maximum contrast and visual energy. This happens because each color contains wavelengths that are absent in its complement.\n\nIn web design, complementary colors are used to create accents, draw attention to important elements, and improve readability. The [tool:color-harmony] tool automatically calculates the complementary color for any selected color, using mathematical color wheel principles."
+		},
+		"section2": {
+			"title": "Practical Application of Complementary Colors",
+			"content": "Complementary colors are widely used in various design fields. In web design, they create dynamic interfaces with clear accents. In graphic design, complementary pairs attract attention and create visual interest.\n\nIn branding, they are used to create memorable logos and color schemes. However, it's important to control contrast: too high contrast can be tiring for the eyes.\n\nUse [tool:contrast-checker] to verify WCAG accessibility standards compliance. When creating palettes, [tool:palette-generator] can generate harmonious combinations based on complementary colors, adding intermediate shades to soften contrast."
+		},
+		"section3": {
+			"title": "Best Practices and Advanced Techniques",
+			"content": "When working with complementary colors, it's important to maintain balance. Use one color as dominant (about 70-80% of composition), and the second as accent (20-30%). This prevents visual overload.\n\nTo soften contrast, you can use less saturated versions of complementary colors or add neutral colors (white, gray, black). In web design, complementary colors work great for call-to-action buttons, important notifications, and navigation elements.\n\nFor branding, [tool:brand-color-analyzer] analyzes complementary color pairs and provides usage recommendations. When creating emotional palettes, [tool:emotion-colors] can use complementary colors to generate energetic and dynamic combinations."
+		},
+		"conclusion": "Complementary colors are a powerful tool for creating contrasting, dynamic, and attention-grabbing designs.\n\nProper use of complementary colors can significantly improve the visual appeal and effectiveness of your projects. Use modern tools to find and verify complementary colors in your designs.",
+		"keywords": "complementary colors, contrasting colors, color contrast, color harmony, color scheme, color wheel, color theory, web design, graphic design, color pairs, visual contrast, color accents, color composition, color design, color selection, color combinations, color balance, visual design, color theory, artistic design, branding, color palette"
+	}
+}

@@ -1,2 +1,40 @@
-{"title":"Split-Complementary Combinations","description":"Learn about split-complementary color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension."},"examples":{"title":"Examples","base":"Base color","split1":"First split","split2":"Second split","description":"Blue with orange and red instead of pure orange"},"usage":{"title":"Usage","content":"Split-complementary scheme is more subtle than complementary but still provides good contrast. It's suitable for more complex designs."}}}
-
+{
+	"title": "Split-Complementary Combinations",
+	"description": "Learn about split-complementary color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "This scheme uses a base color and two colors adjacent to its complementary color. It provides high contrast with less tension."
+		},
+		"examples": {
+			"title": "Examples",
+			"base": "Base color",
+			"split1": "First split",
+			"split2": "Second split",
+			"description": "Blue with orange and red instead of pure orange"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Split-complementary scheme is more subtle than complementary but still provides good contrast. It's suitable for more complex designs."
+		}
+	},
+	"seo": {
+		"title": "Split-Complementary Colors: Balance Between Contrast and Harmony",
+		"intro": "Split-complementary color scheme is an enhanced version of the complementary scheme, using a base color and two colors adjacent to its complementary color. This scheme provides high contrast, like complementary, but with less visual tension, making it more versatile and pleasant to the eye.\n\nIn this detailed guide, we'll cover the theory of split-complementary colors, their advantages over the classic complementary scheme, and practical applications. You'll learn how to use [tool:color-harmony] to automatically find split-complementary colors, apply [tool:contrast-checker] to verify contrast, and work with [tool:palette-generator] to create palettes.",
+		"section1": {
+			"title": "Theory of Split-Complementary Colors: Softened Contrast",
+			"content": "The split-complementary scheme consists of a base color and two colors positioned on either side of its complementary color on the color wheel. For example, if the base color is blue (240°), its complementary is orange (60°), and the split colors are red-orange (30°) and yellow-orange (90°). This creates a Y-shaped structure on the color wheel.\n\nThe advantage of this scheme is that it maintains the high contrast of the complementary scheme but softens visual tension, making the composition more balanced and pleasant.\n\nThe [tool:color-harmony] tool automatically calculates split-complementary colors for any selected color, using mathematical color wheel principles."
+		},
+		"section2": {
+			"title": "Practical Application of Split-Complementary Colors",
+			"content": "Split-complementary colors are widely used in web design, graphic design, photography, and branding. In web design, they create dynamic interfaces with good contrast but without excessive aggressiveness.\n\nIn branding, they are used to create memorable but not overloaded identities. When creating palettes, [tool:palette-generator] can generate harmonious combinations based on split-complementary colors, adding intermediate shades to create smooth transitions.\n\nFor contrast checking, it's important to use [tool:contrast-checker], as split-complementary schemes can create high contrast requiring WCAG standards verification."
+		},
+		"section3": {
+			"title": "Best Practices and Advanced Techniques",
+			"content": "When working with split-complementary colors, it's important to use the base color as dominant (about 70% of composition), and the split colors as accents (15% each). This creates clear hierarchy and prevents visual overload.\n\nTo soften contrast, you can use less saturated versions of colors or add neutral colors. In web design, split-complementary colors work great for navigation, call-to-action buttons, and important notifications.\n\nFor branding, [tool:brand-color-analyzer] analyzes split-complementary color palettes and provides usage recommendations. When creating emotional palettes, [tool:emotion-colors] can use split-complementary colors to generate energetic but balanced combinations."
+		},
+		"conclusion": "Split-complementary colors are the ideal balance between contrast and harmony.\n\nThey provide visual interest and energy characteristic of complementary colors but with greater balance and versatility. Use modern tools to find and apply split-complementary colors in your projects.",
+		"keywords": "split-complementary colors, color harmony, color scheme, color wheel, color theory, web design, graphic design, color combinations, color palette, contrasting colors, color relationships, visual harmony, color design, color selection, color composition, color balance, visual design, color theory, artistic design, branding, balanced colors"
+	}
+}

@@ -9,6 +9,7 @@ import { ColorRelationDiagram } from '@/components/color-harmony/ColorRelationDi
 import { useColorHarmony } from '@/hooks/useColorHarmony'
 import { rgbToHex } from '@/lib/color-utils'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Client component for Color Harmony Finder tool
@@ -66,6 +67,9 @@ export function ColorHarmonyClient() {
 			{harmony.colors.length > 0 && (
 				<ColorRelationDiagram baseColor={baseHsl} colors={harmony.colors} />
 			)}
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='color-harmony' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ServiceSEO namespace='tools.colorHarmony.seo' />

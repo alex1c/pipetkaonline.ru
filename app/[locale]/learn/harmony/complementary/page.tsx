@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Complementary Colors page
@@ -68,6 +69,18 @@ export default function ComplementaryPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.harmony.complementary'
+				toolLinks={[
+					{ slug: 'color-harmony', anchorText: 'цветовая гармония' },
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
+				]}
+			/>
 		</div>
 	)
 }

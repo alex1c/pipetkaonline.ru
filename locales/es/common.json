@@ -3,7 +3,19 @@
 	"nav.tools": "Herramientas",
 	"nav.learn": "Aprender",
 	"nav.tech": "Páginas técnicas",
-	"nav.language": "Idioma"
+	"nav.language": "Idioma",
+	"nav.openMenu": "Abrir menú",
+	"nav.closeMenu": "Cerrar menú",
+	"notFound.title": "Página no encontrada — 404",
+	"notFound.description": "Lo sentimos, la página que buscas no existe o ha sido movida.",
+	"notFound.heading": "Página no encontrada",
+	"notFound.goHome": "Ir al inicio",
+	"notFound.browseTools": "Explorar herramientas",
+	"notFound.browseLearn": "Explorar aprendizaje",
+	"notFound.suggestions.title": "Qué puede hacer:",
+	"notFound.suggestions.checkUrl": "Verifique si la URL es correcta",
+	"notFound.suggestions.useNavigation": "Use el menú de navegación para encontrar la página que necesita",
+	"notFound.suggestions.searchTools": "Explore las herramientas y secciones de aprendizaje disponibles"
 }
 
 

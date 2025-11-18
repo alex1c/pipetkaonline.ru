@@ -18,6 +18,7 @@ import { ContrastTable } from '@/components/brand-analyzer/ContrastTable'
 import { DescriptionsComponent } from '@/components/brand-analyzer/Descriptions'
 import { ExportPanel } from '@/components/brand-analyzer/ExportPanel'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Brand Color Analyzer Client Component
@@ -133,6 +134,9 @@ export function BrandColorAnalyzerClient() {
 			)}
 
 			{/* SEO Content */}
+			{/* Similar Tools */}
+			<SimilarTools currentTool='brand-color-analyzer' />
+
 			<ServiceSEO namespace='tools.brandColorAnalyzer.seo' />
 		</div>
 	)

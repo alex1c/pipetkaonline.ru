@@ -17,6 +17,19 @@
 		"tools": "Tools",
 		"learn": "Learn"
 	},
+	"share": {
+		"title": "Share",
+		"description": "Share the site with friends and colleagues",
+		"twitter": "Twitter",
+		"facebook": "Facebook",
+		"linkedin": "LinkedIn",
+		"telegram": "Telegram",
+		"vk": "VKontakte",
+		"whatsapp": "WhatsApp",
+		"copyLink": "Copy Link",
+		"copied": "Copied!",
+		"shareText": "Great color tools: {url}"
+	},
 	"copyright": "All rights reserved."
 }
 

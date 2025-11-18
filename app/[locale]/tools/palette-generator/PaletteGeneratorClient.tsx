@@ -8,6 +8,7 @@ import { PaletteResult } from '@/components/palette-generator/PaletteResult'
 import { usePaletteGenerator } from '@/hooks/usePaletteGenerator'
 import { rgbToHex } from '@/lib/color-utils'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * Client component for Palette Generator tool
@@ -60,6 +61,9 @@ export function PaletteGeneratorClient() {
 					<PaletteResult palette={palette} />
 				</div>
 			)}
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='palette-generator' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ServiceSEO namespace='tools.paletteGenerator.seo' />

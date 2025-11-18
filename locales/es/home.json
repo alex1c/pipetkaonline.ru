@@ -1,13 +1,21 @@
 {
 	"title": "PipetkaOnline — Herramientas de color en línea",
-	"subtitle": "Detecta colores, crea paletas y aprende teoría del color.",
+	"subtitle": "Detecta colores, crea paletas y aprende teoría del color. Herramientas profesionales para diseñadores y desarrolladores.",
+	"keywords": "herramientas de color, paleta de colores, convertidor de color, generador de gradientes, esquemas de color, herramientas de diseño online, detección de color, armonía de color, verificador de contraste, generador de patrones, tokens UI, análisis de colores de marca",
+	"hero.badge": "17+ Herramientas Gratis",
+	"hero.cta": "Todas las Herramientas",
+	"hero.learn": "Aprender Teoría",
 	"cta.detect": "Detectar color",
 	"cta.palette": "Crear paleta",
 	"cta.learn": "Aprender teoría del color",
 	"cta.detectDesc": "Selecciona colores de imágenes y obtén códigos de color",
 	"cta.paletteDesc": "Genera paletas de colores armónicas",
 	"cta.learnDesc": "Aprende teoría del color y mejores prácticas",
+	"tools.title": "Herramientas Populares",
+	"tools.description": "Elige una herramienta para trabajar con colores, paletas y diseño",
+	"tools.viewAll": "Ver Todas las Herramientas",
 	"features.title": "Herramientas Profesionales de Color",
+	"features.subtitle": "Todo lo que necesitas para trabajar con colores en un solo lugar",
 	"features.detection.title": "Detección de Color",
 	"features.detection.desc": "Sube imágenes y extrae códigos de color al instante",
 	"features.contrast.title": "Verificador de Contraste",
@@ -15,7 +23,13 @@
 	"features.conversion.title": "Conversión de Color",
 	"features.conversion.desc": "Convierte entre HEX, RGB, HSL y otros formatos",
 	"features.harmony.title": "Armonía de Color",
-	"features.harmony.desc": "Descubre colores complementarios y análogos"
+	"features.harmony.desc": "Descubre colores complementarios y análogos",
+	"stats.tools": "17+",
+	"stats.toolsLabel": "Herramientas",
+	"stats.formats": "10+",
+	"stats.formatsLabel": "Formatos",
+	"stats.languages": "4",
+	"stats.languagesLabel": "Idiomas"
 }
 
 

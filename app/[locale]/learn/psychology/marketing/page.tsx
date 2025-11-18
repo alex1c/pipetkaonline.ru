@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Color in Marketing page
@@ -72,6 +73,16 @@ export default function MarketingPage() {
 					</ul>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.psychology.marketing'
+				toolLinks={[
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+				]}
+			/>
 		</div>
 	)
 }

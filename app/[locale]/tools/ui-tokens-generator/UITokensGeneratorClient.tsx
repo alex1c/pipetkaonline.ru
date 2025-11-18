@@ -16,6 +16,7 @@ import { TokensPreview } from '@/components/ui-tokens/TokensPreview'
 import { TokensEditor } from '@/components/ui-tokens/TokensEditor'
 import { TokensExport } from '@/components/ui-tokens/TokensExport'
 import { ServiceSEO } from '@/components/service-seo/ServiceSEO'
+import { SimilarTools } from '@/components/similar-tools'
 
 /**
  * UI Tokens Generator Client Component
@@ -95,6 +96,9 @@ export function UITokensGeneratorClient() {
 					<TokensExport tokens={tokens} />
 				</section>
 			)}
+
+			{/* Similar Tools */}
+			<SimilarTools currentTool='ui-tokens-generator' />
 
 			{/* SEO Content: Guide, How-To, FAQ */}
 			<ServiceSEO namespace='tools.uiTokensGenerator.seo' />

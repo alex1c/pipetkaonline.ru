@@ -1,13 +1,21 @@
 {
 	"title": "PipetkaOnline — Online Farbwerkzeuge",
-	"subtitle": "Farben erkennen, Paletten erstellen und Farbtheorie entdecken.",
+	"subtitle": "Farben erkennen, Paletten erstellen und Farbtheorie entdecken. Professionelle Werkzeuge für Designer und Entwickler.",
+	"keywords": "Farbwerkzeuge, Farbpalette, Farbkonverter, Farbverlaufsgenerator, Farbschemata, Online-Designwerkzeuge, Farberkennung, Farbharmonie, Kontrastprüfung, Muster-Generator, UI-Token, Markenfarbanalyse",
+	"hero.badge": "17+ Kostenlose Werkzeuge",
+	"hero.cta": "Alle Werkzeuge",
+	"hero.learn": "Theorie lernen",
 	"cta.detect": "Farbe erkennen",
 	"cta.palette": "Palette erstellen",
 	"cta.learn": "Farbtheorie lernen",
 	"cta.detectDesc": "Farben aus Bildern auswählen und Farbcodes erhalten",
 	"cta.paletteDesc": "Harmonische Farbpaletten erstellen",
 	"cta.learnDesc": "Farbtheorie und bewährte Praktiken lernen",
+	"tools.title": "Beliebte Werkzeuge",
+	"tools.description": "Wählen Sie ein Werkzeug für die Arbeit mit Farben, Paletten und Design",
+	"tools.viewAll": "Alle Werkzeuge anzeigen",
 	"features.title": "Professionelle Farbwerkzeuge",
+	"features.subtitle": "Alles, was Sie für die Arbeit mit Farben benötigen, an einem Ort",
 	"features.detection.title": "Farberkennung",
 	"features.detection.desc": "Bilder hochladen und sofort Farbcodes extrahieren",
 	"features.contrast.title": "Kontrastprüfung",
@@ -15,7 +23,13 @@
 	"features.conversion.title": "Farbkonvertierung",
 	"features.conversion.desc": "Konvertieren zwischen HEX, RGB, HSL und anderen Formaten",
 	"features.harmony.title": "Farbharmonie",
-	"features.harmony.desc": "Komplementär- und Analogfarben entdecken"
+	"features.harmony.desc": "Komplementär- und Analogfarben entdecken",
+	"stats.tools": "17+",
+	"stats.toolsLabel": "Werkzeuge",
+	"stats.formats": "10+",
+	"stats.formatsLabel": "Formate",
+	"stats.languages": "4",
+	"stats.languagesLabel": "Sprachen"
 }
 
 

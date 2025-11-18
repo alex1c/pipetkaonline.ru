@@ -21,6 +21,7 @@
 
 'use client'
 
+import { useState, useEffect, useRef } from 'react'
 import { useParams, usePathname, useRouter } from 'next/navigation'
 import { locales } from '@/i18n'
 
@@ -62,6 +63,30 @@ export function LanguageSwitcher() {
 	const params = useParams()
 	const pathname = usePathname()
 	const currentLocale = params.locale as string
+	
+	// State for mobile dropdown menu
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+	const dropdownRef = useRef<HTMLDivElement>(null)
+
+	// Close dropdown when clicking outside
+	useEffect(() => {
+		function handleClickOutside(event: MouseEvent) {
+			if (
+				dropdownRef.current &&
+				!dropdownRef.current.contains(event.target as Node)
+			) {
+				setIsDropdownOpen(false)
+			}
+		}
+
+		if (isDropdownOpen) {
+			document.addEventListener('mousedown', handleClickOutside)
+		}
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside)
+		}
+	}, [isDropdownOpen])
 
 	/**
 	 * Handles locale change event
@@ -80,41 +105,117 @@ export function LanguageSwitcher() {
 	 * @returns {void}
 	 */
 	function handleLocaleChange(newLocale: string) {
-		if (newLocale === currentLocale) return
+		if (newLocale === currentLocale) {
+			setIsDropdownOpen(false)
+			return
+		}
 
 		// Remove current locale from pathname and add new one
 		const pathWithoutLocale = pathname.replace(`/${currentLocale}`, '')
 		const newPath = `/${newLocale}${pathWithoutLocale}`
 
 		router.push(newPath)
+		setIsDropdownOpen(false)
 	}
 
-	return (
-		<div className='flex items-center gap-2 p-1 bg-slate-100 rounded-lg'>
-			{locales.map((locale) => {
-				const info = languageInfo[locale]
-				const isActive = locale === currentLocale
+	const currentInfo = languageInfo[currentLocale]
 
-				return (
-					<button
-						key={locale}
-						onClick={() => handleLocaleChange(locale)}
-						className={`
-							flex items-center gap-1 px-3 py-1.5 rounded-md
-							text-sm font-medium transition-all duration-200
-							${
-								isActive
-									? 'bg-white text-slate-900 shadow-sm'
-									: 'text-slate-600 hover:bg-slate-200 hover:text-slate-900'
-							}
-						`}
-						aria-label={`Switch to ${info.label}`}
+	return (
+		<div className='relative'>
+			{/* Desktop: Horizontal button group */}
+			<div className='hidden md:flex items-center gap-2 p-1 bg-slate-100 rounded-lg'>
+				{locales.map((locale) => {
+					const info = languageInfo[locale]
+					const isActive = locale === currentLocale
+
+					return (
+						<button
+							key={locale}
+							onClick={() => handleLocaleChange(locale)}
+							className={`
+								flex items-center gap-1 px-3 py-1.5 rounded-md
+								text-sm font-medium transition-all duration-200
+								${
+									isActive
+										? 'bg-white text-slate-900 shadow-sm'
+										: 'text-slate-600 hover:bg-slate-200 hover:text-slate-900'
+								}
+							`}
+							aria-label={`Switch to ${info.label}`}
+						>
+							<span className='text-base'>{info.flag}</span>
+							<span>{info.label}</span>
+						</button>
+					)
+				})}
+			</div>
+
+			{/* Mobile: Dropdown button */}
+			<div className='md:hidden relative' ref={dropdownRef}>
+				<button
+					type='button'
+					onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+					className='flex items-center gap-2 px-3 py-2 bg-slate-100 rounded-lg text-slate-700 hover:bg-slate-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-300'
+					aria-label='Select language'
+					aria-expanded={isDropdownOpen}
+				>
+					<span className='text-base'>{currentInfo.flag}</span>
+					<span className='text-sm font-medium'>{currentInfo.label}</span>
+					{/* Dropdown arrow icon */}
+					<svg
+						className={`w-4 h-4 transition-transform duration-200 ${
+							isDropdownOpen ? 'rotate-180' : ''
+						}`}
+						fill='none'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+						strokeWidth='2'
+						viewBox='0 0 24 24'
+						stroke='currentColor'
 					>
-						<span className='text-base'>{info.flag}</span>
-						<span>{info.label}</span>
-					</button>
-				)
-			})}
+						<path d='M19 9l-7 7-7-7' />
+					</svg>
+				</button>
+
+				{/* Mobile dropdown menu */}
+				<div
+					className={`absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 overflow-hidden transition-all duration-300 ease-in-out z-50 ${
+						isDropdownOpen
+							? 'max-h-96 opacity-100'
+							: 'max-h-0 opacity-0 pointer-events-none'
+					}`}
+				>
+					<div className='py-1'>
+						{locales.map((locale) => {
+							const info = languageInfo[locale]
+							const isActive = locale === currentLocale
+
+							return (
+								<button
+									key={locale}
+									onClick={() => handleLocaleChange(locale)}
+									className={`
+										w-full flex items-center gap-2 px-4 py-2 text-left
+										text-sm font-medium transition-colors duration-200
+										${
+											isActive
+												? 'bg-slate-100 text-slate-900 font-semibold'
+												: 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
+										}
+									`}
+									aria-label={`Switch to ${info.label}`}
+								>
+									<span className='text-base'>{info.flag}</span>
+									<span>{info.label}</span>
+									{isActive && (
+										<span className='ml-auto text-slate-400'>✓</span>
+									)}
+								</button>
+							)
+						})}
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }

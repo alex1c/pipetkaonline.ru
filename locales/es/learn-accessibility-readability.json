@@ -1,2 +1,48 @@
-{"title":"Text Readability","description":"Learn about text readability principles","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background."},"contrast":{"title":"Contrast","good":"Good contrast","goodDesc":"Dark text on light background or light text on dark background","bad":"Bad contrast","badDesc":"Light text on light background or dark text on dark background"},"fontSize":{"title":"Font Size","content":"Use large enough font size (minimum 16px for body text) and ensure sufficient line height for comfortable reading."},"bestPractices":{"title":"Best Practices","items":{"0":"Use contrast of at least 4.5:1 for normal text","1":"Avoid overly bright or dark combinations","2":"Test readability on different devices"}}}}
-
+{
+	"title": "Text Readability",
+	"description": "Learn about text readability principles",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Good text readability is critical for accessibility. Ensure text has sufficient contrast with the background."
+		},
+		"contrast": {
+			"title": "Contrast",
+			"good": "Good contrast",
+			"goodDesc": "Dark text on light background or light text on dark background",
+			"bad": "Bad contrast",
+			"badDesc": "Light text on light background or dark text on dark background"
+		},
+		"fontSize": {
+			"title": "Font Size",
+			"content": "Use large enough font size (minimum 16px for body text) and ensure sufficient line height for comfortable reading."
+		},
+		"bestPractices": {
+			"title": "Best Practices",
+			"items": {
+				"0": "Use contrast of at least 4.5:1 for normal text",
+				"1": "Avoid overly bright or dark combinations",
+				"2": "Test readability on different devices"
+			}
+		}
+	},
+	"seo": {
+		"title": "Legibilidad de texto: Guía completa de accesibilidad y comodidad de lectura",
+		"intro": "La legibilidad de texto es un aspecto fundamental de la accesibilidad de contenido web, determinando qué tan fácilmente los usuarios pueden percibir y comprender información. La mala legibilidad no solo degrada la experiencia del usuario, sino que también viola estándares de accesibilidad WCAG.\n\nEn esta guía detallada cubrimos todos los factores que afectan la legibilidad: contraste, tamaño de fuente, altura de línea, elección de fuente y combinaciones de color. Aprenderá a crear contenido de texto accesible para todos los usuarios.\n\nAprenderá a usar [tool:contrast-checker] para verificar contraste de texto, aplicar [tool:text-image-accessibility] para analizar legibilidad de texto en imágenes, y trabajar con [tool:color-blindness-simulator] para probar accesibilidad de combinaciones de color.",
+		"section1": {
+			"title": "Contraste: Base de la legibilidad de texto",
+			"content": "El contraste entre texto y fondo es el factor de legibilidad más importante. Los estándares WCAG requieren un contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande (18pt+ o 14pt+ en negrita).\n\nTexto oscuro sobre fondo claro o texto claro sobre fondo oscuro crean buen contraste. Texto claro sobre fondo claro o oscuro sobre oscuro — mal contraste, haciendo el texto ilegible.\n\nEl contraste se calcula usando la fórmula de luminancia relativa. La herramienta [tool:contrast-checker] calcula automáticamente el contraste y verifica el cumplimiento de estándares WCAG AA y AAA, ofreciendo recomendaciones de mejora."
+		},
+		"section2": {
+			"title": "Tamaño de fuente y altura de línea",
+			"content": "El tamaño de fuente es crítico para la legibilidad. El tamaño mínimo recomendado para texto de cuerpo es 16px (1rem). Tamaños más pequeños dificultan la lectura, especialmente en dispositivos móviles.\n\nLa altura de línea debe ser suficiente para lectura cómoda. El valor recomendado es 1.5-1.6 del tamaño de fuente. Altura de línea demasiado pequeña hace el texto apretado, demasiado grande — fragmentado.\n\nAl trabajar con texto en imágenes, es importante considerar no solo el contraste general, sino también el contraste local de cada píxel. La herramienta [tool:text-image-accessibility] analiza la legibilidad de texto en cualquier imagen, considerando el contraste local y ofreciendo recomendaciones detalladas."
+		},
+		"section3": {
+			"title": "Mejores prácticas y pruebas",
+			"content": "Para garantizar máxima legibilidad, use un contraste de al menos 4.5:1 para texto normal y 7:1 para nivel AAA. Evite combinaciones demasiado brillantes u oscuras que puedan causar fatiga visual.\n\nPruebe la legibilidad en diferentes dispositivos, tamaños de pantalla y condiciones de iluminación. Considere varios tipos de daltonismo: use [tool:color-blindness-simulator] para verificar cómo sus combinaciones de color son percibidas por personas con daltonismo.\n\nAl crear sistemas de diseño, es importante predefinir pares de colores para texto y fondo que cumplan con estándares WCAG. Esto garantiza consistencia y accesibilidad en todo el proyecto."
+		},
+		"conclusion": "La legibilidad de texto no es solo estética, sino una necesidad para crear contenido web accesible e inclusivo.\n\nContraste correcto, tamaño de fuente y altura de línea hacen el contenido accesible para todos los usuarios, incluyendo personas con discapacidades visuales. Use herramientas modernas para verificar y mejorar la legibilidad en sus proyectos.",
+		"keywords": "legibilidad de texto, legibilidad, contraste de texto, tamaño de fuente, altura de línea, accesibilidad de texto, legibilidad WCAG, texto legible, legibilidad de texto, texto accesible, diseño de texto, tipografía, accesibilidad web, visibilidad de texto, comodidad de lectura, claridad de texto, tipografía accesible, mejores prácticas de texto, estándares de legibilidad"
+	}
+}

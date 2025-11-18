@@ -17,6 +17,19 @@
 		"tools": "Инструменты",
 		"learn": "Обучение"
 	},
+	"share": {
+		"title": "Поделиться",
+		"description": "Поделитесь сайтом с друзьями и коллегами",
+		"twitter": "Twitter",
+		"facebook": "Facebook",
+		"linkedin": "LinkedIn",
+		"telegram": "Telegram",
+		"vk": "ВКонтакте",
+		"whatsapp": "WhatsApp",
+		"copyLink": "Копировать ссылку",
+		"copied": "Скопировано!",
+		"shareText": "Отличные инструменты для работы с цветом: {url}"
+	},
 	"copyright": "Все права защищены."
 }
 

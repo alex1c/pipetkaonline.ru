@@ -1,2 +1,53 @@
-{"title":"Color Blindness Considerations","description":"Learn how to account for color blindness in design","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"About 8% of men and 0.5% of women have some form of color blindness. It's important not to rely solely on color to convey information."},"types":{"title":"Types of Color Blindness","protanopia":{"title":"Protanopia","desc":"Inability to see red color"},"deuteranopia":{"title":"Deuteranopia","desc":"Inability to see green color"},"tritanopia":{"title":"Tritanopia","desc":"Inability to see blue color"}},"solutions":{"title":"Solutions","items":{"0":"Use icons and text along with color","1":"Ensure sufficient contrast between elements","2":"Test designs using simulation tools","3":"Avoid red and green for important information"}}}}
-
+{
+	"title": "Color Blindness Considerations",
+	"description": "Learn how to account for color blindness in design",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "About 8% of men and 0.5% of women have some form of color blindness. It's important not to rely solely on color to convey information."
+		},
+		"types": {
+			"title": "Types of Color Blindness",
+			"protanopia": {
+				"title": "Protanopia",
+				"desc": "Inability to see red color"
+			},
+			"deuteranopia": {
+				"title": "Deuteranopia",
+				"desc": "Inability to see green color"
+			},
+			"tritanopia": {
+				"title": "Tritanopia",
+				"desc": "Inability to see blue color"
+			}
+		},
+		"solutions": {
+			"title": "Solutions",
+			"items": {
+				"0": "Use icons and text along with color",
+				"1": "Ensure sufficient contrast between elements",
+				"2": "Test designs using simulation tools",
+				"3": "Avoid red and green for important information"
+			}
+		}
+	},
+	"seo": {
+		"title": "Color Blindness in Design: Creating Accessible Interfaces for Everyone",
+		"intro": "Color blindness (color vision deficiency) is a color perception disorder affecting about 8% of men and 0.5% of women. Most common types are protanopia (inability to see red), deuteranopia (inability to see green), and tritanopia (inability to see blue).\n\nAccounting for color blindness in design is critical for creating accessible interfaces that all users can use. In this detailed guide, we'll cover types of color blindness, their impact on design perception, and practical solutions for creating accessible interfaces.\n\nYou'll learn how to use [tool:color-blindness-simulator] to test designs, apply [tool:contrast-checker] to ensure sufficient contrast, and work with [tool:text-image-accessibility] to verify text readability on images.",
+		"section1": {
+			"title": "Types of Color Blindness and Their Impact on Design",
+			"content": "Protanopia is the inability to see red color. People with protanopia cannot distinguish red and green, making these colors practically identical. Deuteranopia is the inability to see green color, also leading to confusion of red and green.\n\nTritanopia is the inability to see blue color, less common but also requiring consideration in design. People with tritanopia cannot distinguish blue and yellow.\n\nThe most problematic combination for colorblind people is red and green, which are used to indicate success/error, statuses, and important information. The [tool:color-blindness-simulator] tool allows seeing how your design is perceived by people with various types of color blindness, which is critical for creating accessible interfaces."
+		},
+		"section2": {
+			"title": "Solutions for Accessible Design",
+			"content": "Don't rely solely on color to convey information. Use icons, text, shapes, and patterns together with color. For example, instead of only red and green for statuses, add icons ✓ and ✗ or text labels.\n\nEnsure sufficient contrast between elements, even if they differ only in color. Use [tool:contrast-checker] to verify contrast of all color combinations in your design.\n\nAvoid red and green for important information. If you must use these colors, add additional visual indicators. When working with text on images, use [tool:text-image-accessibility] to verify readability considering various types of color blindness."
+		},
+		"section3": {
+			"title": "Testing and Best Practices",
+			"content": "Test designs using color blindness simulation tools at all development stages. This allows identifying issues before publication and ensuring accessibility for all users.\n\nUse a color palette that works for all types of color perception. Combining color with shape, size, texture, and text makes the interface accessible regardless of user's color perception.\n\nWhen creating design systems, predefine color pairs and additional indicators that work for all types of color blindness. This ensures consistency and accessibility throughout the project."
+		},
+		"conclusion": "Accounting for color blindness in design is not an additional feature but a necessity for creating accessible and inclusive interfaces.\n\nProper use of colors, contrast, and additional visual indicators makes interfaces accessible to all users, regardless of their color perception. Use modern tools to test and improve accessibility of your projects.",
+		"keywords": "color blindness, color vision deficiency, protanopia, deuteranopia, tritanopia, accessible design, color accessibility, inclusive design, color blind design, accessible colors, color perception, design accessibility, color blind testing, accessible interfaces, color blind users, color accessibility guidelines, accessible color schemes"
+	}
+}

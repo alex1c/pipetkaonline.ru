@@ -2,6 +2,9 @@
 	"title": "Herramientas de color",
 	"description": "Detecta códigos de color, crea paletas y verifica contraste y armonía.",
 	"comingSoon": "Próximamente",
+	"similarTools.title": "Herramientas Similares",
+	"similarTools.description": "Descubre otras herramientas útiles de color",
+	"similarTools.viewTool": "Ver Herramienta",
 	"tools.picker.title": "Selector de Color",
 	"tools.picker.desc": "Extrae colores de imágenes y capturas de pantalla",
 	"tools.palette.title": "Generador de Paletas",
@@ -22,6 +25,18 @@
 	"tools.colorNameFinder.desc": "Encuentra el nombre de cualquier color: estándar, algorítmico y nombres de marketing",
 	"tools.brandColorAnalyzer.title": "Analizador de Colores de Marca",
 	"tools.brandColorAnalyzer.desc": "Analiza colores de marca: agrupación, armonía, contraste y descripciones",
+	"tools.uiThemeGenerator.title": "Generador de Tema UI",
+	"tools.uiThemeGenerator.desc": "Genera paletas completas para interfaces: colores de acento, fondo, texto y auxiliares",
+	"tools.textImageAccessibility.title": "Verificador de Accesibilidad de Texto en Imagen",
+	"tools.textImageAccessibility.desc": "Verifica legibilidad de texto en fondos de imagen con análisis de contraste y cumplimiento WCAG",
+	"tools.gradientMapGenerator.title": "Generador de Mapa de Gradiente",
+	"tools.gradientMapGenerator.desc": "Transforma imágenes con gradientes de color basados en brillo de píxeles",
+	"tools.emotionColors.title": "Emociones y Color",
+	"tools.emotionColors.desc": "Encuentra la paleta de colores perfecta para tu estado de ánimo — alegría, calma, energía, inspiración",
+	"tools.solidBackground.title": "Generador de Fondos Sólidos",
+	"tools.solidBackground.desc": "Crea y descarga fondos de color sólido en diferentes tamaños y formatos",
+	"tools.patternGenerator.title": "Generador de Patrones",
+	"tools.patternGenerator.desc": "Crea patrones repetitivos sin costuras para tus diseños",
 	"uiTokensGenerator": {
 		"title": "Generador de tokens UI",
 		"description": "Selecciona un color base y obtén automáticamente un conjunto completo de tokens UI: escalas de color, colores semánticos y variables CSS listas para usar.",
@@ -405,6 +420,453 @@
 				"q6": {
 					"question": "¿Cómo exportar paleta para usar en proyecto?",
 					"answer": "Use exportación de variables CSS para uso directo en estilos. Formato JSON es adecuado para integración en sistemas de diseño o transferencia a otras herramientas."
+				}
+			}
+		}
+	},
+	"uiThemeGenerator": {
+		"title": "Generador de Tema UI",
+		"subtitle": "Genera paletas completas para interfaces: colores de acento, fondos, texto, bordes y colores auxiliares",
+		"sections": {
+			"input": {
+				"title": "Entrada de Color Base"
+			},
+			"preview": {
+				"title": "Vista Previa del Tema"
+			},
+			"tokens": {
+				"title": "Tokens de Color"
+			},
+			"contrast": {
+				"title": "Contraste"
+			},
+			"export": {
+				"title": "Exportar"
+			}
+		},
+		"seo": {
+			"keywords": "generador de tema UI, paleta UI, tokens de color de interfaz, generador de tema de interfaz, esquema de color UI, tokens de diseño para UI, generador de paleta de color de interfaz, tema UI online, crear tema UI, generador de color de interfaz, variables de color UI, generador de paleta de interfaz, sistema de color de interfaz, generador de color UI, crear tema de interfaz, generador de tokens UI, paleta de color de interfaz web, generador de paleta UI, crear esquema de color de interfaz, generador de color primary para UI, generador de color semántico para UI, generador de tokens de diseño de interfaz, generador de tema UI gratis, generador de tema CSS, generador de tema Tailwind, generador de tema de sistema de diseño, crear paleta de color UI, generador de variables de color de interfaz, generador de sistema de diseño UI",
+			"guide": {
+				"title": "Guía completa para usar Generador de Tema UI",
+				"intro": "Generador de Tema UI es una herramienta para generar paletas de color completas para interfaces. Crea colores de acento, fondos, texto, bordes y colores auxiliares basados en un solo color base.",
+				"step1": {
+					"title": "Paso 1: Seleccionar color base",
+					"description": "Elija un color primario usando el selector de color, ingrese HEX/RGB/HSL manualmente, seleccione un tema listo de la lista (Light, Dark, Vibrant, Pastel, Minimal, Corporate) o cargue una imagen para extraer el color dominante."
+				},
+				"step2": {
+					"title": "Paso 2: Configurar modo",
+					"description": "Seleccione modo de tema: Light (tema claro), Dark (tema oscuro) o Auto (detección automática basada en color base)."
+				},
+				"step3": {
+					"title": "Paso 3: Ver vista previa",
+					"description": "Vea la vista previa del tema en componentes UI reales: botones, bloques de texto, tarjeta, formulario, panel de navegación. Esto permite ver el tema en acción."
+				},
+				"step4": {
+					"title": "Paso 4: Explorar tokens",
+					"description": "Explore todos los tokens de color generados, organizados por categorías: Primary (principales), Secondary (secundarios), Neutral (neutrales), Status (estado), Borders (bordes), Shadows (sombras)."
+				},
+				"step5": {
+					"title": "Paso 5: Verificar contraste",
+					"description": "Revise el análisis automático de contraste para pares de colores clave: primary vs primary-foreground, secondary vs secondary-foreground, text vs background, card vs fondo. Asegure cumplimiento WCAG AA/AAA."
+				},
+				"step6": {
+					"title": "Paso 6: Exportar",
+					"description": "Exporte el tema en varios formatos: Variables CSS (para uso directo en CSS), config de Tailwind (para integración con Tailwind CSS), tokens JSON (para sistemas de diseño), Tokens de Figma (para uso en Figma). Use botón 'Export All' para exportar todos los formatos a la vez."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar Generador de Tema UI: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo seleccionar color base",
+					"description": "Use selector de color para selección visual, ingrese color manualmente en cualquier formato (HEX, RGB, HSL), seleccione un tema listo de la lista desplegable o cargue una imagen para extracción automática de color dominante."
+				},
+				"howTo2": {
+					"title": "Cómo configurar modo de tema",
+					"description": "Seleccione Light para tema claro, Dark para tema oscuro o Auto para detección automática basada en brillo del color base. El modo afecta la generación de colores neutros y sombras."
+				},
+				"howTo3": {
+					"title": "Cómo usar vista previa del tema",
+					"description": "La vista previa muestra el tema en componentes UI reales: botones con estados hover/active, bloques de texto, tarjetas, formularios, panel de navegación. Esto ayuda a evaluar visualmente el tema antes de usarlo."
+				},
+				"howTo4": {
+					"title": "Cómo trabajar con tokens",
+					"description": "Todos los tokens están organizados por categorías. Cada token muestra muestra de color, valor HEX y botón de copiar. Los tokens están listos para usar en su proyecto."
+				},
+				"howTo5": {
+					"title": "Cómo interpretar análisis de contraste",
+					"description": "La tabla de contraste muestra relaciones para pares de colores clave. Etiquetas verdes (✓ AA, ✓ AAA) indican cumplimiento con estándares. Etiquetas rojas (✗ Below AA) requieren mejora de contraste."
+				},
+				"howTo6": {
+					"title": "Cómo exportar tema",
+					"description": "Seleccione formato de exportación deseado (Variables CSS, Config de Tailwind, Tokens JSON, Tokens de Figma), copie código o descargue archivo. Use 'Export All' para obtener todos los formatos a la vez."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre Generador de Tema UI",
+				"q1": {
+					"question": "¿Qué son los tokens UI?",
+					"answer": "Los tokens UI son valores de color con nombre usados en sistemas de diseño. Aseguran consistencia de colores en interfaces y simplifican mantenimiento de temas. Ejemplos: primary, secondary, background, foreground."
+				},
+				"q2": {
+					"question": "¿Cómo funciona la generación de tokens?",
+					"answer": "El generador usa color base y crea variaciones mediante aclarado/oscurecimiento (para estados hover/active), mezcla con colores neutros (para secondary) y selección automática de colores contrastantes (para foreground). Los colores de estado se generan ajustando el tono."
+				},
+				"q3": {
+					"question": "¿Qué es el modo Auto?",
+					"answer": "El modo Auto determina automáticamente si el tema debe ser claro u oscuro basado en el brillo del color base. Si el color base es claro (luma >= 0.5), se selecciona tema claro, de lo contrario tema oscuro."
+				},
+				"q4": {
+					"question": "¿Cómo usar tokens exportados?",
+					"answer": "Las Variables CSS se pueden usar directamente en CSS: var(--color-primary). La config de Tailwind debe agregarse a tailwind.config.js. Los tokens JSON son adecuados para integración en sistemas de diseño. Los Tokens de Figma se pueden importar a Figma mediante plugin."
+				},
+				"q5": {
+					"question": "¿Por qué algunos pares de colores no pasan la verificación de contraste?",
+					"answer": "Si el color base es demasiado claro u oscuro, los colores foreground generados automáticamente pueden no proporcionar suficiente contraste. En este caso, se recomienda elegir un color base diferente o ajustar manualmente los colores foreground."
+				},
+				"q6": {
+					"question": "¿Puedo editar tokens manualmente?",
+					"answer": "En la versión actual, los tokens se generan automáticamente. Para edición manual, puede copiar los valores exportados y modificarlos en su proyecto. Las versiones futuras planean agregar capacidad de edición manual."
+				}
+			}
+		}
+	},
+	"textImageAccessibility": {
+		"title": "Verificador de Accesibilidad de Texto en Imagen",
+		"subtitle": "Verifica legibilidad de texto en fondos de imagen con análisis de contraste y cumplimiento WCAG",
+		"upload": "Subir Imagen",
+		"controls": {
+			"text": "Texto",
+			"color": "Color del Texto",
+			"size": "Tamaño de Fuente",
+			"weight": "Peso de Fuente",
+			"position": "Posición",
+			"background": "Superposición de Fondo",
+			"shadow": "Sombra del Texto"
+		},
+		"results": {
+			"title": "Análisis de Accesibilidad",
+			"contrast": "Relación de Contraste",
+			"wcagSmall": "WCAG AA (Texto Pequeño)",
+			"wcagLarge": "WCAG AA (Texto Grande)",
+			"recommendation": "Recomendación"
+		},
+		"heatmap": {
+			"toggle": "Mostrar Mapa de Calor"
+		},
+		"seo": {
+			"keywords": "verificador de accesibilidad de texto en imagen, contraste de texto en fondo, verificación WCAG de texto, legibilidad de texto en imagen, análisis de contraste de texto, accesibilidad de texto en imagen, verificación de legibilidad de texto, contraste WCAG, análisis de texto en imagen, verificación de contraste de texto, accesibilidad de texto online, herramienta verificadora de contraste, verificación WCAG 2.1, contraste de texto y fondo, verificación de legibilidad de texto en imagen, análisis de accesibilidad de texto, herramienta verificadora de contraste de texto, verificación WCAG AA AAA, contraste de texto en imagen, análisis de legibilidad de texto, verificación de accesibilidad de texto en fondo, herramienta verificadora de legibilidad de texto, verificador de cumplimiento WCAG, contraste de texto e imagen, verificación de legibilidad de texto, análisis de contraste de texto en imagen, herramienta verificadora de accesibilidad de texto, verificación de contraste de texto online, prueba de contraste WCAG, verificación de legibilidad de texto en fondo de imagen"
+		}
+	},
+	"gradientMapGenerator": {
+		"title": "Generador de Mapa de Gradiente",
+		"subtitle": "Transforma imágenes con gradientes de color basados en brillo de píxeles",
+		"upload": "Subir Imagen",
+		"gradientEditor": {
+			"title": "Editor de Gradiente",
+			"addPoint": "Agregar Punto",
+			"removePoint": "Eliminar Punto",
+			"presets": "Preajustes"
+		},
+		"controls": {
+			"intensity": "Intensidad",
+			"blendMode": "Modo de Mezcla"
+		},
+		"preview": {
+			"before": "Antes",
+			"after": "Después",
+			"splitView": "Vista Dividida"
+		},
+		"export": {
+			"downloadImage": "Descargar Imagen",
+			"downloadPreset": "Descargar Preajuste",
+			"copyCss": "Copiar Gradiente CSS"
+		},
+		"seo": {
+			"keywords": "generador de mapa de gradiente, mapeo de gradiente de imagen, efecto duotone, mapa de color de imagen, filtro de gradiente para imágenes, transformación de imagen con gradiente, generador de mapa de gradiente, generador duotone, mapeo de color de imagen, efecto de gradiente para fotos, gradiente cinematográfico, filtros artísticos para imágenes, recoloración de imagen, mapa de gradiente online, generador de efecto duotone, mapeo de gradiente online, herramienta de mapeo de gradiente, crear imágenes duotone, filtros de gradiente para fotos, mapa de color para imágenes, generador de mapa de color, herramienta de transformación de imagen, mapeo de gradiente de fotos, duotone online, transformación de color de imagen, efecto de gradiente de imagen, generador de filtro de gradiente, herramienta duotone, mapa de color de gradiente, herramienta de mapeo de gradiente",
+			"guide": {
+				"title": "Guía completa para usar el Generador de Mapa de Gradiente",
+				"intro": "El Generador de Mapa de Gradiente es una herramienta para transformar imágenes con gradientes de color basados en el brillo de los píxeles. Permite crear efectos duotone, gradaciones cinematográficas, filtros artísticos y recoloración de imágenes.",
+				"step1": {
+					"title": "Paso 1: Subir imagen",
+					"description": "Suba una imagen (PNG, JPG, WebP) mediante arrastrar y soltar o selección de archivo. La imagen se mostrará en la vista previa con capacidad de mapeo de gradiente."
+				},
+				"step2": {
+					"title": "Paso 2: Configurar gradiente",
+					"description": "Use el editor de gradiente para crear un mapa de color: agregue puntos de gradiente, seleccione colores, ajuste posiciones. Puede elegir un preajuste listo (Duotone, Cinematic, Warm, Cold, etc.) o crear su propio gradiente."
+				},
+				"step3": {
+					"title": "Paso 3: Aplicar y exportar",
+					"description": "Ajuste la intensidad y el modo de mezcla (Normal, Multiply, Screen, Overlay, etc.). Vea el resultado en los modos Before/After/Split View. Exporte el resultado como PNG, guarde el preajuste como JSON o copie el gradiente CSS."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar el Generador de Mapa de Gradiente: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo crear mapeo de gradiente",
+					"description": "Suba una imagen, seleccione o cree un gradiente en el editor. El gradiente se aplica a la imagen basándose en el brillo de cada píxel: las áreas oscuras obtienen colores del lado izquierdo del gradiente, las claras del derecho. Ajuste la intensidad y el modo de mezcla para el efecto deseado."
+				},
+				"howTo2": {
+					"title": "Cómo usar preajustes",
+					"description": "Seleccione un preajuste listo de la lista (Duotone, Cinematic, Warm, Cold, Gold/Blue, Cyber Neon, Pastel, Black & White, Retro Film). El preajuste aplicará automáticamente el gradiente a su imagen. Luego puede personalizarlo agregando o modificando puntos de gradiente."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre el Generador de Mapa de Gradiente",
+				"q1": {
+					"question": "¿Qué es el mapeo de gradiente?",
+					"answer": "El mapeo de gradiente es una técnica de transformación de imágenes donde los colores del gradiente se aplican a los píxeles según su brillo. Los píxeles oscuros obtienen colores del inicio del gradiente, los claros del final. Esto crea efectos duotone, gradaciones cinematográficas y filtros artísticos."
+				},
+				"q2": {
+					"question": "¿Cuál es la diferencia entre HSL y LAB para el cálculo de brillo?",
+					"answer": "LAB (Lightness, A, B) es un espacio de color más perceptualmente uniforme que HSL. Usar LAB da transiciones de color más suaves y naturales en el mapeo de gradiente. HSL es más rápido de calcular pero puede dar resultados menos uniformes."
+				},
+				"q3": {
+					"question": "¿Cómo guardar el gradiente para reutilización?",
+					"answer": "Use el botón 'Download Preset (JSON)' para guardar el gradiente actual, intensidad y modo de mezcla en un archivo JSON. Más tarde puede cargar este archivo en la herramienta para reutilizarlo en otras imágenes."
+				}
+			}
+		}
+	},
+	"emotionColors": {
+		"title": "Emociones y Color — Selección de Color por Estado de Ánimo",
+		"subtitle": "Encuentra la paleta de colores perfecta para tu estado de ánimo — alegría, calma, energía, inspiración y otras emociones.",
+		"selectEmotion": "Seleccionar Emoción",
+		"customEmotion": "Otra Emoción",
+		"customEmotionPlaceholder": "Ingresa tu estado de ánimo...",
+		"additionalOptions": "Opciones Adicionales",
+		"options": {
+			"warm": "Paleta Cálida",
+			"bright": "Paleta Brillante",
+			"natural": "Paleta Natural"
+		},
+		"generatePalette": "Generar Paleta",
+		"generateVariation": "Generar Otra",
+		"emotions": {
+			"joy": "Alegría",
+			"calm": "Calma",
+			"energy": "Energía",
+			"nostalgia": "Nostalgia",
+			"confidence": "Confianza",
+			"anxiety": "Ansiedad",
+			"romance": "Romance",
+			"inspiration": "Inspiración"
+		},
+		"palette": {
+			"keyColors": "Colores Principales",
+			"secondary": "Acentos Secundarios",
+			"softColors": "Tonos de Apoyo",
+			"keyColor": "Color Principal {{number}}",
+			"secondaryColor": "Acento {{number}}",
+			"softColor": "Tono {{number}}"
+		},
+		"explanation": {
+			"title": "Por Qué Esta Paleta Se Adapta a Tu Estado de Ánimo",
+			"textStyle": "Estilo de Texto"
+		},
+		"export": {
+			"title": "Exportar",
+			"json": "Descargar JSON",
+			"css": "Copiar Variables CSS",
+			"saveToCollection": "Agregar a Colección"
+		},
+		"seo": {
+			"keywords": "emociones y color, selección de color por estado de ánimo, paleta de colores por emociones, generador de colores por estado de ánimo, colores de alegría, colores de calma, colores de energía, colores de inspiración, colores de romance, colores de nostalgia, colores de confianza, colores de ansiedad, combinaciones de colores por emociones, paleta para estado de ánimo, psicología del color, colores emocionales, selección de paleta por sentimientos, generador de paleta por emociones, colores para alegría, colores para calma, colores para energía, colores para inspiración, paleta emocional, estado de ánimo de color, paleta de estado de ánimo, generador de colores emocionales, selección de colores por estado de ánimo, esquema de color por emociones, paleta de emociones, colores de estado de ánimo",
+			"guide": {
+				"title": "Guía completa para usar la herramienta 'Emociones y Color'",
+				"intro": "La herramienta 'Emociones y Color' te ayuda a encontrar la paleta de colores perfecta para tu estado de ánimo. Utiliza principios de psicología del color para crear combinaciones de colores armoniosas que coincidan con diversos estados emocionales.",
+				"step1": {
+					"title": "Paso 1: Seleccionar emoción",
+					"description": "Elige una de las 8 emociones preestablecidas (Alegría, Calma, Energía, Nostalgia, Confianza, Ansiedad, Romance, Inspiración) o ingresa tu propia emoción en el campo de texto. La herramienta identifica automáticamente emociones similares y crea una paleta mixta."
+				},
+				"step2": {
+					"title": "Paso 2: Ajustar parámetros",
+					"description": "Opcionalmente, ajusta parámetros adicionales: elige paleta cálida o fría, brillante o apagada, natural o sintética. Estos parámetros afectan la generación de colores desde rangos HSL correspondientes a la emoción seleccionada."
+				},
+				"step3": {
+					"title": "Paso 3: Generar y exportar",
+					"description": "Haz clic en 'Generar Paleta' para crear una paleta de colores. Visualiza colores principales, acentos secundarios y tonos de apoyo. Lee la explicación de por qué estos colores se adaptan a tu estado de ánimo. Exporta la paleta a JSON, copia variables CSS o guarda en la colección para reutilización."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar la herramienta 'Emociones y Color': guía paso a paso",
+				"howTo1": {
+					"title": "Cómo seleccionar emoción",
+					"description": "Haz clic en uno de los botones de emociones (Alegría, Calma, Energía, etc.) o ingresa tu propia emoción en el campo 'Otra Emoción'. Para emociones personalizadas, la herramienta usa un algoritmo para encontrar emociones similares y crea una paleta mixta basada en coincidencias encontradas."
+				},
+				"howTo2": {
+					"title": "Cómo personalizar paleta",
+					"description": "Usa las casillas de verificación en la sección 'Opciones Adicionales': 'Paleta Cálida' desplaza colores hacia tonos cálidos, 'Paleta Brillante' aumenta saturación y brillo, 'Paleta Natural' crea tonos más naturales y apagados. Puedes combinar múltiples parámetros."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre la herramienta 'Emociones y Color'",
+				"q1": {
+					"question": "¿Cómo funciona la generación de colores por emociones?",
+					"answer": "La herramienta usa un mapeo de emociones a rangos de colores HSL. Cada emoción tiene rangos predefinidos de matiz, saturación y luminosidad basados en principios de psicología del color. Durante la generación, se seleccionan colores aleatorios de estos rangos, asegurando combinaciones armoniosas que coinciden con el estado emocional."
+				},
+				"q2": {
+					"question": "¿Puedo usar mi propia emoción?",
+					"answer": "Sí, puedes ingresar cualquier emoción en el campo 'Otra Emoción'. La herramienta analiza el texto ingresado, encuentra las 3 emociones preestablecidas más similares y crea una paleta mixta basada en ellas. Esto te permite obtener combinaciones de colores únicas para cualquier estado emocional."
+				},
+				"q3": {
+					"question": "¿Cómo guardar paleta para reutilización?",
+					"answer": "Usa el botón 'Agregar a Colección' para guardar la paleta en el almacenamiento local del navegador. Las paletas se guardan en localStorage y están disponibles entre sesiones. También puedes exportar la paleta a un archivo JSON o copiar variables CSS para usar en tu proyecto."
+				}
+			}
+		}
+	},
+	"solidBackground": {
+		"title": "Generador de Fondos Sólidos",
+		"description": "Crea y descarga fondos de color sólido en diferentes tamaños y formatos para tus proyectos",
+		"pickColor": "Seleccionar Color",
+		"download": "Descargar",
+		"downloadPng": "PNG",
+		"downloadJpg": "JPG",
+		"downloadWebp": "WebP",
+		"copyColor": "Copiar",
+		"copied": "Copiado",
+		"presets": {
+			"title": "Preajustes",
+			"neutral": "Neutrales",
+			"pastel": "Pastel",
+			"bright": "Brillantes",
+			"dark": "Oscuros"
+		},
+		"history": {
+			"title": "Historial",
+			"empty": "El historial está vacío. Selecciona colores para verlos aquí."
+		},
+		"sizes": "Tamaños",
+		"hex": "HEX",
+		"rgb": "RGB",
+		"hsl": "HSL",
+		"luminance": "Luminosidad",
+		"contrastBlack": "Contraste con Negro",
+		"contrastWhite": "Contraste con Blanco",
+		"technicalInfo": "Información Técnica",
+		"seo": {
+			"keywords": "generador de fondos sólidos, generador de fondos de color sólido, fondo sólido, descargar fondo sólido, generador de fondos, crear fondos, fondo de color único, descargar fondo PNG, descargar fondo JPG, descargar fondo WebP, generador de fondos de color, crear fondos sólidos, herramienta de creación de fondos, generador de fondos online, fondo sólido para sitio web, fondo sólido para banner, fondo sólido para redes sociales, generador de fondos gratis, crear fondos de color único, herramienta de generación de fondos, generador de imágenes sólidas, descargar fondo sólido gratis, crear fondos online, generador de imágenes de color, fondo sólido PNG, fondo sólido JPG, fondo sólido WebP, generador de fondos por color, crear imágenes sólidas, herramienta de generación de fondos",
+			"guide": {
+				"title": "Guía completa para usar el Generador de Fondos Sólidos",
+				"intro": "El Generador de Fondos Sólidos es una herramienta para crear y descargar fondos de color sólido en diferentes tamaños y formatos. Perfecto para diseño web, banners, redes sociales y otros proyectos.",
+				"step1": {
+					"title": "Paso 1: Seleccionar color",
+					"description": "Elige un color usando el selector de color o ingrésalo manualmente en formato HEX, RGB o HSL. Puedes seleccionar un color de los preajustes (Neutrales, Pastel, Brillantes, Oscuros) o del historial de colores previamente seleccionados."
+				},
+				"step2": {
+					"title": "Paso 2: Ver vista previa",
+					"description": "Visualiza la vista previa del color seleccionado en diferentes tamaños: Desktop (1920×1080), Square (1080×1080), Portrait (1080×1920), Social (1200×628). Esto te ayuda a elegir el tamaño adecuado para tu proyecto."
+				},
+				"step3": {
+					"title": "Paso 3: Descargar",
+					"description": "Descarga el fondo sólido en el formato deseado (PNG, JPG, WebP) y tamaño. Cada tamaño está disponible para descarga en tres formatos. También puedes copiar el color en formatos HEX, RGB o HSL para usar en CSS."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar el Generador de Fondos Sólidos: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo seleccionar color",
+					"description": "Usa el selector de color para la selección visual de color, o ingresa el color manualmente: formato HEX (#FFFFFF), formato RGB (255, 255, 255), o formato HSL (360, 100%, 50%). También puedes seleccionar un color de los preajustes o del historial."
+				},
+				"howTo2": {
+					"title": "Cómo descargar fondo",
+					"description": "Selecciona el tamaño deseado (Desktop, Square, Portrait, Social) y el formato (PNG, JPG, WebP). Haz clic en el botón de descarga correspondiente. El archivo se descargará automáticamente a tu dispositivo."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre el Generador de Fondos Sólidos",
+				"q1": {
+					"question": "¿Qué formatos están disponibles para descargar?",
+					"answer": "Tres formatos están disponibles: PNG (sin pérdidas, con transparencia), JPG (compresión con pérdidas, sin transparencia), WebP (formato moderno con buena compresión). Cada tamaño se puede descargar en cualquiera de estos formatos."
+				},
+				"q2": {
+					"question": "¿Cómo guardar color para reutilización?",
+					"answer": "Los colores seleccionados se guardan automáticamente en el historial (hasta 8 colores recientes) en el almacenamiento local del navegador. Puedes seleccionar un color del historial en cualquier momento. También puedes copiar el color en formato HEX, RGB o HSL para usar en tu proyecto."
+				},
+				"q3": {
+					"question": "¿Para qué son los diferentes tamaños?",
+					"answer": "Los diferentes tamaños están destinados a varios propósitos: Desktop (1920×1080) — para fondos de sitios web y aplicaciones de escritorio, Square (1080×1080) — para Instagram y otros formatos cuadrados, Portrait (1080×1920) — para dispositivos móviles y Stories, Social (1200×628) — para imágenes Open Graph y redes sociales."
+				}
+			}
+		}
+	},
+	"patternGenerator": {
+		"title": "Generador de Patrones",
+		"description": "Crea patrones repetitivos sin costuras para tus proyectos de diseño",
+		"patternType": "Tipo de Patrón",
+		"tileSize": "Tamaño de Mosaico",
+		"backgroundColor": "Color de Fondo",
+		"elementColor": "Color de Elemento",
+		"density": "Densidad",
+		"elementSize": "Tamaño de Elemento",
+		"rotation": "Rotación",
+		"randomness": "Aleatoriedad",
+		"download": "Descargar",
+		"downloadPng": "PNG",
+		"downloadJpg": "JPG",
+		"downloadWebp": "WebP",
+		"presets": "Preajustes",
+		"history": "Historial",
+		"history.empty": "El historial está vacío. Crea patrones para verlos aquí.",
+		"save": "Guardar",
+		"apply": "Aplicar",
+		"reset": "Restablecer",
+		"direction": "Dirección",
+		"directionVertical": "Vertical",
+		"directionHorizontal": "Horizontal",
+		"directionDiagonal": "Diagonal",
+		"amplitude": "Amplitud",
+		"frequency": "Frecuencia",
+		"lineWidth": "Ancho de Línea",
+		"shape": "Forma",
+		"shapeCircle": "Círculo",
+		"shapeSquare": "Cuadrado",
+		"preview": "Vista Previa",
+		"settings": "Configuración",
+		"fileSize": "Tamaño de Archivo",
+		"technicalInfo": "Información Técnica",
+		"seo": {
+			"keywords": "generador de patrones, patrones sin costuras, patrones repetitivos, creador de patrones, generador de mosaicos, patrones de diseño, generador de mosaicos sin costuras, creador de patrones, generador de patrones online, generador de patrones gratis, crear patrones online, herramienta de diseño de patrones, descargar patrón, patrones de fondo, generador de patrones PNG, creador de mosaicos sin costuras, generador de patrones repetitivos, herramienta de creación de patrones, generador de patrones de diseño, creador de patrones de mosaico",
+			"guide": {
+				"title": "Guía completa para usar el Generador de Patrones",
+				"intro": "El Generador de Patrones es una herramienta para crear patrones repetitivos sin costuras para tus proyectos. Soporta 9 tipos de patrones: puntos, rayas, cuadrícula, triángulos, zigzag, ondas, cruces, ruido y formas minimalistas.",
+				"step1": {
+					"title": "Paso 1: Seleccionar tipo de patrón",
+					"description": "Elige un tipo de patrón de las opciones disponibles: Polka Dots, Rayas, Cuadrícula, Triángulos, Zigzag, Ondas, Cruces, Ruido o Formas Minimalistas. Cada tipo tiene sus propias características y configuraciones."
+				},
+				"step2": {
+					"title": "Paso 2: Configurar parámetros",
+					"description": "Configura los parámetros del patrón: tamaño de mosaico (128, 256, 512, 1024px), colores de fondo y elementos, densidad, tamaño de elementos, rotación y aleatoriedad. Algunos tipos tienen configuraciones adicionales: dirección para rayas, amplitud y frecuencia para ondas, forma para puntos, ancho de línea para cuadrícula."
+				},
+				"step3": {
+					"title": "Paso 3: Vista previa y exportar",
+					"description": "Visualiza la vista previa del patrón en un campo grande (1000×800px) con mosaico automático. Asegúrate de que el patrón sea sin costuras y se vea bien al repetirse. Luego descarga el patrón en el formato deseado: PNG (sin pérdidas), JPG (comprimido) o WebP (formato moderno)."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar el Generador de Patrones: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo crear patrón sin costuras",
+					"description": "Selecciona un tipo de patrón y configura los parámetros. Asegúrate de que los elementos del patrón no excedan los límites del mosaico, de lo contrario se verán costuras al repetirse. Usa la configuración 'Aleatoriedad' para crear patrones más naturales. Visualiza la vista previa para asegurar que no tenga costuras."
+				},
+				"howTo2": {
+					"title": "Cómo usar preajustes e historial",
+					"description": "Usa preajustes listos para usar para un inicio rápido: minimalista, pastel, brillante, monocromo, escandinavo, retro, memphis, geometría, Business UI, tema oscuro, infantil, tech. Guarda patrones favoritos en el historial (hasta 10 recientes) para acceso rápido. El historial se guarda en localStorage del navegador."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre el Generador de Patrones",
+				"q1": {
+					"question": "¿Qué formatos están disponibles para exportar?",
+					"answer": "Tres formatos están disponibles: PNG (sin pérdidas, con transparencia, ideal para diseño web), JPG (compresión con pérdidas, tamaño de archivo más pequeño, sin transparencia), WebP (formato moderno con buena compresión y soporte de transparencia). Elige el formato según tus necesidades."
+				},
+				"q2": {
+					"question": "¿Cómo guardar patrón para reutilización?",
+					"answer": "Usa el botón 'Guardar' para agregar patrón al historial. El historial almacena hasta 10 patrones recientes en localStorage del navegador. Puedes seleccionar cualquier patrón del historial y aplicar sus configuraciones. También puedes usar preajustes listos para acceso rápido a estilos populares."
+				},
+				"q3": {
+					"question": "¿Qué tamaño de mosaico elegir?",
+					"answer": "El tamaño del mosaico afecta el detalle y el tamaño del archivo: 128px — para patrones simples y ahorro de espacio, 256px — equilibrio óptimo para la mayoría de casos, 512px — para patrones detallados, 1024px — para máximo detalle (tamaño de archivo grande). Se recomienda usar 256px o 512px para la mayoría de proyectos."
 				}
 			}
 		}

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Warm and Cool Colors page
@@ -92,6 +93,16 @@ export default function WarmCoolColorsPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.fundamentals.warmCool'
+				toolLinks={[
+					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+				]}
+			/>
 		</div>
 	)
 }

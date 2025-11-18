@@ -1,2 +1,52 @@
-{"title":"Alternative Color Indicators","description":"Learn about alternative ways to convey information","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Don't rely solely on color to convey important information. Use additional visual indicators."},"indicators":{"title":"Types of Indicators","icons":{"title":"Icons","desc":"Use icons together with color to convey information"},"text":{"title":"Text","desc":"Add text labels to color indicators"},"shapes":{"title":"Shapes","desc":"Use different shapes to distinguish elements"},"patterns":{"title":"Patterns","desc":"Apply different patterns and textures"}},"examples":{"title":"Examples","content":"Instead of using only red and green for statuses, add icons ✓ and ✗ or text labels 'Success' and 'Error'."}}}
-
+{
+	"title": "Alternative Color Indicators",
+	"description": "Learn about alternative ways to convey information",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Don't rely solely on color to convey important information. Use additional visual indicators."
+		},
+		"indicators": {
+			"title": "Types of Indicators",
+			"icons": {
+				"title": "Icons",
+				"desc": "Use icons together with color to convey information"
+			},
+			"text": {
+				"title": "Text",
+				"desc": "Add text labels to color indicators"
+			},
+			"shapes": {
+				"title": "Shapes",
+				"desc": "Use different shapes to distinguish elements"
+			},
+			"patterns": {
+				"title": "Patterns",
+				"desc": "Apply different patterns and textures"
+			}
+		},
+		"examples": {
+			"title": "Examples",
+			"content": "Instead of using only red and green for statuses, add icons ✓ and ✗ or text labels 'Success' and 'Error'."
+		}
+	},
+	"seo": {
+		"title": "Indicadores de color alternativos: Creación de interfaces accesibles sin dependencia del color",
+		"intro": "Los indicadores de color alternativos son elementos visuales adicionales que transmiten información independientemente del color. Son críticos para crear interfaces accesibles que pueden ser usadas por personas con daltonismo, discapacidades visuales y en varias condiciones de iluminación.\n\nEn esta guía detallada cubrimos varios tipos de indicadores alternativos: iconos, texto, formas, patrones y sus aplicaciones en diseño moderno. Aprenderá a crear interfaces que transmiten información a través de múltiples canales de percepción.\n\nAprenderá a usar [tool:color-blindness-simulator] para probar diseños, aplicar [tool:contrast-checker] para asegurar contraste suficiente, y trabajar con [tool:text-image-accessibility] para verificar la legibilidad de texto en imágenes.",
+		"section1": {
+			"title": "Tipos de indicadores alternativos y sus aplicaciones",
+			"content": "Los iconos son una forma universal de transmitir información que funciona independientemente del color. Use iconos junto con color para indicar estados, acciones y categorías. Por ejemplo, ✓ para éxito, ✗ para error, ⚠️ para advertencia.\n\nLas etiquetas de texto agregan claridad y accesibilidad. En lugar de solo indicadores de color, use etiquetas de texto: 'Éxito', 'Error', 'En Proceso'. Esto hace la interfaz comprensible para todos los usuarios.\n\nLas formas y patrones permiten distinguir elementos sin usar color. Formas circulares, cuadradas, triangulares o varios patrones crean diferencias visuales accesibles para todos. La herramienta [tool:color-blindness-simulator] ayuda a verificar cómo sus indicadores alternativos funcionan para personas con diferentes tipos de daltonismo."
+		},
+		"section2": {
+			"title": "Aplicación práctica de indicadores alternativos",
+			"content": "En formularios, use iconos y texto junto con color para indicar errores y validación exitosa. Esto hace los formularios accesibles para todos los usuarios, independientemente de su percepción del color.\n\nEn gráficos y diagramas, use varias formas, patrones y etiquetas de texto junto con color. Esto permite distinguir datos incluso en impresión en blanco y negro o para personas con daltonismo.\n\nEn navegación e interfaces, use iconos, formas y texto para indicar estados y acciones. La herramienta [tool:contrast-checker] ayuda a asegurar contraste suficiente para todos los indicadores, lo cual es crítico para su visibilidad."
+		},
+		"section3": {
+			"title": "Mejores prácticas y combinaciones",
+			"content": "Combine varios tipos de indicadores para máxima accesibilidad. Color + icono + texto crea triple protección, asegurando transmisión de información a través de múltiples canales.\n\nPruebe diseños en varias condiciones: impresión en blanco y negro, varios tipos de daltonismo, diferentes dispositivos. Esto permite identificar dependencias del color y mejorar la accesibilidad.\n\nAl crear sistemas de diseño, es importante predefinir indicadores alternativos para todos los estados de color. Esto garantiza consistencia y accesibilidad en todo el proyecto. La herramienta [tool:text-image-accessibility] ayuda a verificar la legibilidad de texto e indicadores alternativos en imágenes."
+		},
+		"conclusion": "Los indicadores de color alternativos no son una característica adicional, sino una necesidad para crear interfaces accesibles e inclusivas.\n\nEl uso de iconos, texto, formas y patrones junto con color hace las interfaces accesibles para todos los usuarios, independientemente de su percepción del color, condiciones de visualización y dispositivos. Use herramientas modernas para probar y mejorar la accesibilidad de sus proyectos.",
+		"keywords": "indicadores de color alternativos, indicadores accesibles, indicadores visuales, iconos, etiquetas de texto, formas, patrones, diseño accesible, diseño inclusivo, diseño independiente del color, interfaces accesibles, accesibilidad visual, accesibilidad de diseño, UI accesible, señales visuales alternativas"
+	}
+}

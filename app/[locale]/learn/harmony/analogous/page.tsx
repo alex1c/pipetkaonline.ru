@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
+import { LearnSEOContent } from '@/components/learn-seo-content'
 
 /**
  * Analogous Colors page
@@ -65,6 +66,18 @@ export default function AnalogousPage() {
 					</p>
 				</section>
 			</div>
+
+			{/* SEO Content */}
+			<LearnSEOContent
+				namespace='learn.harmony.analogous'
+				toolLinks={[
+					{ slug: 'color-harmony', anchorText: 'цветовая гармония' },
+					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
+					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
+					{ slug: 'brand-color-analyzer', anchorText: 'анализатор цветов бренда' },
+					{ slug: 'contrast-checker', anchorText: 'проверка контраста' },
+				]}
+			/>
 		</div>
 	)
 }

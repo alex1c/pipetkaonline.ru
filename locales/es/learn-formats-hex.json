@@ -1,2 +1,43 @@
-{"title":"HEX Color Codes","description":"Learn about HEX format for representing colors","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"HEX (hexadecimal) format is widely used in web design. It consists of a # symbol and six hexadecimal digits."},"format":{"title":"Format","content":"HEX code consists of a # symbol and six characters (0-9, A-F), representing red, green, and blue channels with two characters each."},"examples":{"title":"Examples","red":"Red","blue":"Blue","gray":"Gray"},"usage":{"title":"Usage","content":"HEX format is compact, easy to read, and widely supported in CSS and web development. It's ideal for web design."}}}
-
+{
+	"title": "HEX Color Codes",
+	"description": "Learn about HEX format for representing colors",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "HEX (hexadecimal) format is widely used in web design. It consists of a # symbol and six hexadecimal digits."
+		},
+		"format": {
+			"title": "Format",
+			"content": "HEX code consists of a # symbol and six characters (0-9, A-F), representing red, green, and blue channels with two characters each."
+		},
+		"examples": {
+			"title": "Examples",
+			"red": "Red",
+			"blue": "Blue",
+			"gray": "Gray"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "HEX format is compact, easy to read, and widely supported in CSS and web development. It's ideal for web design."
+		}
+	},
+	"seo": {
+		"title": "Códigos de color HEX: Guía completa para diseñadores web y desarrolladores",
+		"intro": "El formato HEX (hexadecimal) es el estándar de la industria para representar colores en desarrollo web. En esta guía completa cubrimos todo lo que necesita saber sobre códigos HEX: desde los fundamentos hasta técnicas avanzadas de uso.\n\nAprenderá a usar [tool:color-converter] para convertir entre formatos, [tool:color-lab] para extraer colores de imágenes, y [tool:ui-tokens-generator] para crear sistemas de diseño.",
+		"section1": {
+			"title": "¿Qué es el formato HEX y por qué es tan popular?",
+			"content": "HEX (hexadecimal) es un sistema numérico de base 16 usado para codificar colores en desarrollo web. Cada código HEX consiste en un símbolo hash (#) y seis caracteres que pueden ser dígitos del 0 al 9 o letras de A a F.\n\nLos dos primeros caracteres representan el canal rojo, los siguientes dos el verde, y los últimos dos el azul. Por ejemplo, #FF5733 significa rojo=255, verde=87, azul=51.\n\nLas ventajas del formato HEX son obvias: compacidad (solo 7 caracteres), legibilidad, soporte universal en todos los navegadores y herramientas de desarrollo. Los códigos HEX se usan en CSS, HTML, JavaScript, editores gráficos y sistemas de diseño.\n\nLas herramientas modernas como [tool:color-converter] permiten la conversión instantánea de HEX a RGB, HSL y otros formatos, lo que simplifica significativamente el trabajo de los diseñadores."
+		},
+		"section2": {
+			"title": "Aplicación práctica de códigos HEX en diseño web",
+			"content": "En desarrollo web moderno, los códigos HEX se usan en todas partes. Las propiedades CSS como background-color, color y border-color aceptan valores HEX directamente. Por ejemplo, background-color: #3498db crea un fondo azul.\n\nLos atributos de estilo HTML también soportan HEX: style=\"color: #e74c3c\". Los desarrolladores JavaScript usan HEX para cambiar colores de elementos dinámicamente a través de la propiedad style. Los gradientes CSS también soportan HEX: linear-gradient(to right, #667eea, #764ba2).\n\nPara proyectos grandes, se recomienda usar [tool:ui-tokens-generator], que crea automáticamente un conjunto completo de tokens de color a partir de un solo valor HEX. Esto asegura consistencia de diseño y simplifica el mantenimiento del esquema de colores.\n\nAl trabajar con imágenes, [tool:color-lab] permite extraer códigos HEX directamente de fotos y diseños, lo cual es especialmente útil al crear brand books y paletas de colores."
+		},
+		"section3": {
+			"title": "Técnicas avanzadas y mejores prácticas",
+			"content": "Los desarrolladores experimentados usan varias técnicas avanzadas al trabajar con códigos HEX. La notación abreviada permite usar 3 caracteres en lugar de 6: #F53 equivale a #FF5533. El canal alfa en formato HEX8 agrega transparencia: #FF5733FF (los dos últimos caracteres son transparencia de 00 a FF).\n\nPara temas oscuros, se recomienda usar tonos más oscuros con baja luminosidad (valores de canal más bajos), para temas claros — alta luminosidad. El contraste de texto es crítico para accesibilidad: use [tool:contrast-checker] para verificar el cumplimiento de WCAG.\n\nAl crear paletas de colores, [tool:palette-generator] genera automáticamente combinaciones armónicas basadas en su color HEX. Para branding, [tool:brand-color-analyzer] analiza sus códigos HEX de paleta y ofrece recomendaciones detalladas de uso."
+		},
+		"conclusion": "El formato HEX sigue siendo el estándar de oro del desarrollo web gracias a su simplicidad, universalidad y amplio soporte.\n\nDominar los códigos HEX es una habilidad esencial para cualquier diseñador web y desarrollador. Use herramientas modernas para trabajar con colores, experimente con paletas y siempre verifique el contraste para asegurar la accesibilidad de sus proyectos.",
+		"keywords": "color HEX, color hexadecimal, código HEX, código de color, diseño web, color CSS, color HTML, paleta de colores, RGB a HEX, convertidor de color, esquema de color, sistema de diseño, desarrollo web, formato de color, modelo de color, espacio de color, armonía de color, contraste de color, accesibilidad de color, tokens de color, diseño UI, desarrollo frontend, variables CSS, paleta de colores de marca"
+	}
+}

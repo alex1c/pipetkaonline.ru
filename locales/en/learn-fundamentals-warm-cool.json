@@ -1,2 +1,53 @@
-{"title":"Warm and Cool Colors","description":"Learn about color temperature","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Colors are divided into warm and cool based on their visual perception and psychological impact."},"warm":{"title":"Warm Colors","description":"Warm colors are associated with sun, fire, and energy","examples":"Examples of warm colors","items":{"0":"Red - passion, energy, activity","1":"Orange - warmth, friendliness, enthusiasm","2":"Yellow - joy, optimism, brightness"}},"cool":{"title":"Cool Colors","description":"Cool colors are associated with water, sky, and calm","examples":"Examples of cool colors","items":{"0":"Blue - calm, trust, stability","1":"Green - nature, growth, harmony","2":"Purple - creativity, mystery, luxury"}},"application":{"title":"Design Application","content":"Warm colors attract attention and create a sense of closeness, while cool colors create a sense of depth and calm. Proper use of color temperature helps create the desired mood in design."}}}
-
+{
+	"title": "Warm and Cool Colors",
+	"description": "Learn about color temperature",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Colors are divided into warm and cool based on their visual perception and psychological impact."
+		},
+		"warm": {
+			"title": "Warm Colors",
+			"description": "Warm colors are associated with sun, fire, and energy",
+			"examples": "Examples of warm colors",
+			"items": {
+				"0": "Red - passion, energy, activity",
+				"1": "Orange - warmth, friendliness, enthusiasm",
+				"2": "Yellow - joy, optimism, brightness"
+			}
+		},
+		"cool": {
+			"title": "Cool Colors",
+			"description": "Cool colors are associated with water, sky, and calm",
+			"examples": "Examples of cool colors",
+			"items": {
+				"0": "Blue - calm, trust, stability",
+				"1": "Green - nature, growth, harmony",
+				"2": "Purple - creativity, mystery, luxury"
+			}
+		},
+		"application": {
+			"title": "Design Application",
+			"content": "Warm colors attract attention and create a sense of closeness, while cool colors create a sense of depth and calm. Proper use of color temperature helps create the desired mood in design."
+		}
+	},
+	"seo": {
+		"title": "Warm and Cool Colors: Psychology of Color Temperature in Design",
+		"intro": "Color temperature is a concept that divides colors into warm and cool based on their visual perception and psychological impact. Warm colors (red, orange, yellow) are associated with sun, fire, and energy. Cool colors (blue, green, purple) — with water, sky, and calm.\n\nUnderstanding color temperature is critical for creating effective designs that convey desired emotions and moods. In this detailed guide, we'll cover the psychology of warm and cool colors, their applications in various design fields, and practical usage techniques.\n\nYou'll learn how to use [tool:emotion-colors] to generate palettes based on color temperature, apply [tool:brand-color-analyzer] to analyze temperature characteristics of brand colors, and work with [tool:palette-generator] to create balanced color schemes.",
+		"section1": {
+			"title": "Warm Colors: Energy, Passion, and Closeness",
+			"content": "Warm colors are located in the red-orange-yellow part of the color wheel. They are associated with sun, fire, earth and create a sense of warmth, energy, and closeness.\n\nRed conveys passion, energy, activity, and urgency. Orange — warmth, friendliness, enthusiasm, and creativity. Yellow — joy, optimism, brightness, and attention.\n\nIn design, warm colors attract attention, create a sense of closeness, and are used for accents, call-to-action buttons, and important elements. They visually \"advance\" forward, making them ideal for creating hierarchy. The [tool:emotion-colors] tool uses warm colors to generate energetic, positive palettes corresponding to specific emotions and moods."
+		},
+		"section2": {
+			"title": "Cool Colors: Calm, Trust, and Depth",
+			"content": "Cool colors are located in the blue-green-purple part of the color wheel. They are associated with water, sky, ice and create a sense of calm, stability, and depth.\n\nBlue conveys calm, trust, stability, and professionalism. Green — nature, growth, harmony, and balance. Purple — creativity, mystery, luxury, and mystique.\n\nIn design, cool colors create a sense of depth, are used for backgrounds, create professional atmosphere, and visually \"recede\" backward. They are ideal for corporate websites, financial services, and medical institutions. The [tool:brand-color-analyzer] tool analyzes temperature characteristics of color palettes and provides recommendations for their use in branding."
+		},
+		"section3": {
+			"title": "Balance and Application of Color Temperature",
+			"content": "Proper use of color temperature creates visual balance and conveys desired emotions. Combining warm and cool colors creates contrast and visual interest.\n\nIn web design, warm colors are used to attract attention to important elements, cool colors — to create calm, professional atmosphere. In branding, color temperature determines brand character: warm colors for energetic, innovative brands, cool — for stable, reliable ones.\n\nWhen creating palettes, [tool:palette-generator] considers color temperature to create balanced and harmonious color schemes. For emotional palettes, [tool:emotion-colors] uses color temperature to generate colors corresponding to specific moods."
+		},
+		"conclusion": "Color temperature is a powerful tool for creating emotionally effective designs.\n\nProper use of warm and cool colors allows conveying desired emotions, creating visual balance, and directing user attention. Use modern tools to analyze and apply color temperature in your projects.",
+		"keywords": "warm colors, cool colors, color temperature, color psychology, color perception, color wheel, color theory, web design, graphic design, color scheme, color palette, brand colors, emotional design, color balance, visual design, color harmony, color selection, design psychology, color impact, color mood"
+	}
+}

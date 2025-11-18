@@ -1,13 +1,21 @@
 {
 	"title": "PipetkaOnline — Online Color Tools",
-	"subtitle": "Detect colors, create palettes, and explore color theory.",
+	"subtitle": "Detect colors, create palettes, and explore color theory. Professional tools for designers and developers.",
+	"keywords": "color tools, color palette, color converter, gradient generator, color schemes, online design tools, color detection, color harmony, contrast checker, pattern generator, UI tokens, brand color analysis",
+	"hero.badge": "17+ Free Tools",
+	"hero.cta": "All Tools",
+	"hero.learn": "Learn Theory",
 	"cta.detect": "Detect Color",
 	"cta.palette": "Create Palette",
 	"cta.learn": "Learn About Color",
 	"cta.detectDesc": "Pick colors from images and get color codes",
 	"cta.paletteDesc": "Generate harmonious color palettes",
 	"cta.learnDesc": "Learn color theory and best practices",
+	"tools.title": "Popular Tools",
+	"tools.description": "Choose a tool for working with colors, palettes, and design",
+	"tools.viewAll": "View All Tools",
 	"features.title": "Professional Color Tools",
+	"features.subtitle": "Everything you need to work with colors in one place",
 	"features.detection.title": "Color Detection",
 	"features.detection.desc": "Upload images and extract color codes instantly",
 	"features.contrast.title": "Contrast Checker",
@@ -15,7 +23,13 @@
 	"features.conversion.title": "Color Conversion",
 	"features.conversion.desc": "Convert between HEX, RGB, HSL, and other formats",
 	"features.harmony.title": "Color Harmony",
-	"features.harmony.desc": "Discover complementary and analogous colors"
+	"features.harmony.desc": "Discover complementary and analogous colors",
+	"stats.tools": "17+",
+	"stats.toolsLabel": "Tools",
+	"stats.formats": "10+",
+	"stats.formatsLabel": "Formats",
+	"stats.languages": "4",
+	"stats.languagesLabel": "Languages"
 }
 
 

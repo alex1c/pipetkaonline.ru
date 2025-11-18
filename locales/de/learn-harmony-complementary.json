@@ -1,2 +1,40 @@
-{"title":"Complementary Colors","description":"Learn about complementary color scheme","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Complementary colors are located opposite each other on the color wheel. They create maximum contrast and visual energy."},"examples":{"title":"Examples","redGreen":"Red ↔ Green","blueOrange":"Blue ↔ Orange","yellowPurple":"Yellow ↔ Purple","cyanRed":"Cyan ↔ Red"},"usage":{"title":"Usage","content":"Complementary colors are used to create bright, dynamic compositions. They are perfect for attracting attention and creating accents."}}}
-
+{
+	"title": "Complementary Colors",
+	"description": "Learn about complementary color scheme",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Complementary colors are located opposite each other on the color wheel. They create maximum contrast and visual energy."
+		},
+		"examples": {
+			"title": "Examples",
+			"redGreen": "Red ↔ Green",
+			"blueOrange": "Blue ↔ Orange",
+			"yellowPurple": "Yellow ↔ Purple",
+			"cyanRed": "Cyan ↔ Red"
+		},
+		"usage": {
+			"title": "Usage",
+			"content": "Complementary colors are used to create bright, dynamic compositions. They are perfect for attracting attention and creating accents."
+		}
+	},
+	"seo": {
+		"title": "Komplementärfarben: Erstellung maximalen Kontrasts im Design",
+		"intro": "Komplementärfarben (komplementäre Farben) sind Farbpaare, die gegenüber auf dem Farbkreis positioniert sind. Sie schaffen maximalen visuellen Kontrast und Energie, was sie zu einem leistungsstarken Tool im Design macht.\n\nIn diesem detaillierten Leitfaden behandeln wir die Theorie der Komplementärfarben, ihre Anwendung im Webdesign, Grafikdesign und Branding. Sie lernen, wie Sie [tool:color-harmony] verwenden, um automatisch Komplementärfarben zu finden, [tool:contrast-checker] anwenden, um den Kontrast zu überprüfen, und mit [tool:palette-generator] arbeiten, um Paletten basierend auf Komplementär-Schemata zu erstellen.",
+		"section1": {
+			"title": "Theorie der Komplementärfarben: Wie sie funktionieren",
+			"content": "Komplementärfarben sind auf gegenüberliegenden Seiten des Farbkreises positioniert und bilden einen 180-Grad-Winkel. Klassische Paare umfassen Rot und Grün, Blau und Orange, Gelb und Lila.\n\nWenn Komplementärfarben nebeneinander platziert werden, verstärken sie sich gegenseitig und schaffen maximalen Kontrast und visuelle Energie. Dies geschieht, weil jede Farbe Wellenlängen enthält, die in ihrem Komplement fehlen.\n\nIm Webdesign werden Komplementärfarben verwendet, um Akzente zu erstellen, Aufmerksamkeit auf wichtige Elemente zu lenken und die Lesbarkeit zu verbessern. Das Tool [tool:color-harmony] berechnet automatisch die Komplementärfarbe für jede ausgewählte Farbe unter Verwendung mathematischer Farbkreis-Prinzipien."
+		},
+		"section2": {
+			"title": "Praktische Anwendung von Komplementärfarben",
+			"content": "Komplementärfarben werden in verschiedenen Designbereichen weit verbreitet verwendet. Im Webdesign schaffen sie dynamische Schnittstellen mit klaren Akzenten. Im Grafikdesign ziehen Komplementärpaare Aufmerksamkeit auf sich und schaffen visuelles Interesse.\n\nIm Branding werden sie verwendet, um einprägsame Logos und Farbschemata zu erstellen. Es ist jedoch wichtig, den Kontrast zu kontrollieren: Zu hoher Kontrast kann für die Augen ermüdend sein.\n\nVerwenden Sie [tool:contrast-checker], um die Einhaltung der WCAG-Barrierefreiheitsstandards zu überprüfen. Bei der Erstellung von Paletten kann [tool:palette-generator] harmonische Kombinationen basierend auf Komplementärfarben generieren und Zwischentöne hinzufügen, um den Kontrast zu mildern."
+		},
+		"section3": {
+			"title": "Best Practices und fortgeschrittene Techniken",
+			"content": "Bei der Arbeit mit Komplementärfarben ist es wichtig, das Gleichgewicht zu wahren. Verwenden Sie eine Farbe als dominant (etwa 70-80% der Komposition) und die zweite als Akzent (20-30%). Dies verhindert visuelle Überlastung.\n\nUm den Kontrast zu mildern, können Sie weniger gesättigte Versionen von Komplementärfarben verwenden oder neutrale Farben (Weiß, Grau, Schwarz) hinzufügen. Im Webdesign funktionieren Komplementärfarben hervorragend für Call-to-Action-Buttons, wichtige Benachrichtigungen und Navigationselemente.\n\nFür Branding analysiert [tool:brand-color-analyzer] Komplementärfarbpaare und bietet Verwendungsempfehlungen. Bei der Erstellung emotionaler Paletten kann [tool:emotion-colors] Komplementärfarben verwenden, um energetische und dynamische Kombinationen zu generieren."
+		},
+		"conclusion": "Komplementärfarben sind ein leistungsstarkes Tool zur Erstellung kontrastierender, dynamischer und aufmerksamkeitsstarker Designs.\n\nDie richtige Verwendung von Komplementärfarben kann die visuelle Attraktivität und Effektivität Ihrer Projekte erheblich verbessern. Verwenden Sie moderne Tools, um Komplementärfarben in Ihren Designs zu finden und zu überprüfen.",
+		"keywords": "Komplementärfarben, kontrastierende Farben, Farbkontrast, Farbharmonie, Farbschema, Farbkreis, Farbtheorie, Webdesign, Grafikdesign, Farbpaare, visueller Kontrast, Farbakzente, Farbkomposition, Farbdesign, Farbauswahl, Farbkombinationen, Farbbalance, visuelles Design, Farbtheorie, künstlerisches Design, Branding, Farbpalette"
+	}
+}

@@ -1,7 +1,58 @@
+/**
+ * Internationalization (i18n) Configuration
+ * 
+ * This module configures next-intl for the application, providing:
+ * - Locale definitions and default locale
+ * - Translation message loading and processing
+ * - Message structure transformation (flat to nested)
+ * - Multi-locale support (Russian, English, German, Spanish)
+ * 
+ * Architecture:
+ * - All translation files are statically imported at build time
+ * - Messages are processed and nested for next-intl compatibility
+ * - Complex structures (tools, learn) are handled with special processors
+ * - All messages are validated and serialized before use
+ * 
+ * Supported Locales:
+ * - ru (Russian) - default
+ * - en (English)
+ * - de (German)
+ * - es (Spanish)
+ * 
+ * Translation Structure:
+ * - common.json - Common UI elements (navigation, buttons, etc.)
+ * - home.json - Home page content
+ * - tools.json - Tools section (with nested tool definitions)
+ * - learn.json - Learning section (with nested sub-sections)
+ * - footer.json - Footer content
+ * - Legal pages: privacy.json, cookies.json, terms.json
+ * - Contact pages: about.json, contact.json
+ * 
+ * Learn Sub-sections:
+ * The learn section has a complex nested structure with multiple sub-sections:
+ * - formats/ - Color format guides (hex, rgb, hsl, css)
+ * - fundamentals/ - Basic color theory (color-wheel, rgb-cmyk, warm-cool, saturation-brightness)
+ * - harmony/ - Color harmony guides (complementary, analogous, triadic, split-complementary)
+ * - psychology/ - Color psychology (cultural, emotions, branding, marketing)
+ * - accessibility/ - Accessibility guides (wcag, color-blindness, readability, alternatives)
+ * 
+ * @module i18n
+ * @see https://next-intl.dev/docs/getting-started/app-router
+ */
+
 import { getRequestConfig } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 
-// Static imports - no dynamic imports to avoid webpack issues
+/**
+ * Static Imports - Translation Files
+ * 
+ * All translation files are statically imported to avoid webpack issues
+ * with dynamic imports. This ensures all translations are available at build time
+ * and properly bundled.
+ * 
+ * Note: Dynamic imports can cause issues with Next.js static generation
+ * and webpack bundling, so we use static imports for all translation files.
+ */
 import commonRu from './locales/ru/common.json'
 import homeRu from './locales/ru/home.json'
 import toolsRu from './locales/ru/tools.json'
@@ -154,17 +205,72 @@ import learnAccessibilityColorBlindnessEs from './locales/es/learn-accessibility
 import learnAccessibilityReadabilityEs from './locales/es/learn-accessibility-readability.json'
 import learnAccessibilityAlternativesEs from './locales/es/learn-accessibility-alternatives.json'
 
+/**
+ * Supported Locales Configuration
+ * 
+ * Defines all locales supported by the application.
+ * These must match the locale directories in locales/ and the middleware configuration.
+ * 
+ * @constant {readonly string[]} locales - Array of supported locale codes
+ * @type {('ru' | 'en' | 'de' | 'es')[]}
+ */
 export const locales = ['ru', 'en', 'de', 'es'] as const
+
+/**
+ * Locale Type
+ * 
+ * TypeScript type representing a valid locale code.
+ * Extracted from the locales array for type safety.
+ * 
+ * @typedef {('ru' | 'en' | 'de' | 'es')} Locale
+ */
 export type Locale = (typeof locales)[number]
+
+/**
+ * Default Locale
+ * 
+ * The default locale used when:
+ * - No locale is detected from browser settings
+ * - An invalid locale is requested
+ * - User visits the root path without locale
+ * 
+ * @constant {Locale} defaultLocale - Default locale code ('ru')
+ */
 export const defaultLocale: Locale = 'ru'
 
 /**
- * Converts flat keys with dots to nested structure
- * Example: { "nav.home": "Home" } -> { nav: { home: "Home" } }
+ * Converts Flat Keys to Nested Structure
  * 
- * @param flatMessages - Flat object with dot-notation keys
- * @param debugContext - Optional context for debugging
- * @returns Nested object structure
+ * Transforms a flat object with dot-notation keys into a nested object structure.
+ * This is required because next-intl expects nested objects, but JSON files
+ * often use flat keys for easier editing.
+ * 
+ * Algorithm:
+ * 1. Split each key by '.' to get path segments
+ * 2. Create nested objects for each path segment
+ * 3. Assign the value to the final key in the path
+ * 
+ * Example:
+ * Input:  { "nav.home": "Home", "nav.tools": "Tools" }
+ * Output: { nav: { home: "Home", tools: "Tools" } }
+ * 
+ * Edge Cases Handled:
+ * - Empty keys are skipped
+ * - Undefined values are skipped
+ * - Invalid inputs return empty object
+ * - Arrays are preserved as-is (not nested)
+ * 
+ * Performance:
+ * - O(n * m) where n is number of keys, m is average depth
+ * - Optimized for typical translation structures (2-3 levels deep)
+ * 
+ * @param {Record<string, any>} flatMessages - Flat object with dot-notation keys
+ * @param {string} [debugContext] - Optional context string for debugging/logging
+ * @returns {Record<string, any>} Nested object structure compatible with next-intl
+ * 
+ * @example
+ * nestMessages({ "nav.home": "Home" })
+ * // Returns: { nav: { home: "Home" } }
  */
 function nestMessages(
 	flatMessages: Record<string, any>,
@@ -227,10 +333,43 @@ function nestMessages(
 }
 
 /**
- * Process tools.json - extract nested objects and nest flat keys
+ * Process Tools Translation Object
  * 
- * @param tools - Tools translation object
- * @returns Processed tools object with nested structure
+ * Processes the tools.json translation file which has a mixed structure:
+ * - Some tools have nested objects (e.g., colorLab: { title: "...", ... })
+ * - Some keys are flat with dots (e.g., "tools.title": "...")
+ * 
+ * This function:
+ * 1. Separates nested tool objects from flat keys
+ * 2. Processes flat keys through nestMessages()
+ * 3. Combines both structures into final nested format
+ * 
+ * Tool Objects (preserved as nested):
+ * - colorLab
+ * - contrastChecker
+ * - colorConverter
+ * - paletteGenerator
+ * - colorHarmony
+ * - gradientGenerator
+ * - colorBlindnessSimulator
+ * 
+ * Flat Keys (converted to nested):
+ * - All other keys with dot notation
+ * 
+ * @param {any} tools - Tools translation object from tools.json
+ * @returns {Record<string, any>} Processed tools object with proper nested structure
+ * 
+ * @example
+ * processTools({
+ *   "title": "Tools",
+ *   "colorLab": { "title": "Color Lab" },
+ *   "tools.description": "Browse tools"
+ * })
+ * // Returns: {
+ * //   title: "Tools",
+ * //   colorLab: { title: "Color Lab" },
+ * //   tools: { description: "Browse tools" }
+ * // }
  */
 function processTools(tools: any) {
 	try {
@@ -289,12 +428,50 @@ function processTools(tools: any) {
 }
 
 /**
- * Process learn.json and all learn-* sub-sections
- * Combines main learn.json with all sub-section files
+ * Process Learn Translation Structure
  * 
- * @param learn - Main learn translation object
- * @param learnSubsections - Object containing all learn-* sub-section imports
- * @returns Processed learn object with nested structure and all sub-sections
+ * Processes the complex learn section which consists of:
+ * - Main learn.json file (base structure)
+ * - Multiple learn-* sub-section files (formats, fundamentals, harmony, etc.)
+ * 
+ * This function:
+ * 1. Nests the main learn.json flat keys
+ * 2. Parses sub-section filenames to determine nested paths
+ * 3. Merges all sub-sections into the correct nested structure
+ * 4. Converts kebab-case filenames to camelCase object keys
+ * 
+ * Filename Pattern:
+ * - learn-{section}-{subsection}.json -> learn.{section}.{subsection}
+ * - learn-formats-hex.json -> learn.formats.hex
+ * - learn-fundamentals-warm-cool.json -> learn.fundamentals.warmCool
+ * 
+ * Structure:
+ * learn/
+ *   formats/
+ *     hex, rgb, hsl, css
+ *   fundamentals/
+ *     rgbCmyk, colorWheel, warmCool, saturationBrightness
+ *   harmony/
+ *     complementary, analogous, triadic, splitComplementary
+ *   psychology/
+ *     cultural, emotions, branding, marketing
+ *   accessibility/
+ *     wcag, colorBlindness, readability, alternatives
+ * 
+ * @param {any} learn - Main learn.json translation object
+ * @param {Record<string, any>} learnSubsections - Object mapping filenames to content
+ *   Example: { "learn-formats-hex": {...}, "learn-harmony-complementary": {...} }
+ * @returns {Record<string, any>} Fully processed learn object with all sub-sections nested
+ * 
+ * @example
+ * processLearn(
+ *   { "title": "Learn" },
+ *   { "learn-formats-hex": { "title": "HEX Format" } }
+ * )
+ * // Returns: {
+ * //   title: "Learn",
+ * //   formats: { hex: { title: "HEX Format" } }
+ * // }
  */
 function processLearn(learn: any, learnSubsections: Record<string, any>) {
 	try {
@@ -523,7 +700,32 @@ function prepareLearnSubsectionsEs() {
 	}
 }
 
-// Direct mapping of all translations
+/**
+ * All Messages Configuration
+ * 
+ * Complete translation messages for all supported locales.
+ * This object contains all translations organized by locale, with each locale
+ * having its own nested structure of namespaces.
+ * 
+ * Structure:
+ * {
+ *   ru: { common: {...}, home: {...}, tools: {...}, learn: {...}, ... },
+ *   en: { common: {...}, home: {...}, tools: {...}, learn: {...}, ... },
+ *   de: { common: {...}, home: {...}, tools: {...}, learn: {...}, ... },
+ *   es: { common: {...}, home: {...}, tools: {...}, learn: {...}, ... }
+ * }
+ * 
+ * Processing:
+ * - common: Nested from flat keys
+ * - home: Nested from flat keys
+ * - tools: Processed through processTools() (handles mixed structure)
+ * - learn: Processed through processLearn() (handles sub-sections)
+ * - footer, privacy, cookies, terms, about, contact: Used as-is (already nested)
+ * 
+ * This object is used by getRequestConfig() to provide messages to next-intl.
+ * 
+ * @constant {Record<Locale, Record<string, any>>} allMessages
+ */
 const allMessages = {
 	ru: {
 		...nestMessages(commonRu as Record<string, any>, 'commonRu'),
@@ -575,6 +777,44 @@ const allMessages = {
 	},
 }
 
+/**
+ * Next-Intl Request Configuration
+ * 
+ * This is the main configuration function for next-intl. It's called
+ * on every request to provide the appropriate translation messages
+ * for the requested locale.
+ * 
+ * Process Flow:
+ * 1. Receives locale from next-intl middleware
+ * 2. Validates locale exists in allMessages
+ * 3. Retrieves locale-specific messages
+ * 4. Serializes messages to ensure they're JSON-compatible
+ * 5. Validates message structure (development only)
+ * 6. Returns configuration object for next-intl
+ * 
+ * Error Handling:
+ * - Invalid locale: Calls notFound() to trigger 404
+ * - Serialization errors: Logs problematic keys and re-throws
+ * - Structure validation: Logs warnings in development mode
+ * 
+ * Performance:
+ * - Messages are processed at build time (static imports)
+ * - Serialization happens once per request
+ * - Validation only runs in development mode
+ * 
+ * @param {Object} config - Configuration object from next-intl
+ * @param {Locale} config.locale - Requested locale code
+ * @returns {Promise<{ locale: Locale; messages: Record<string, any> }>}
+ *   Configuration object with locale and messages
+ * 
+ * @throws {Error} If locale is invalid or messages cannot be serialized
+ * 
+ * @example
+ * // Called automatically by next-intl on each request
+ * // User visits /ru/tools
+ * // getRequestConfig({ locale: 'ru' }) is called
+ * // Returns: { locale: 'ru', messages: { ... } }
+ */
 export default getRequestConfig(async ({ locale }) => {
 	try {
 		// Debug logging only in development

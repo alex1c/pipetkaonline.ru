@@ -1,2 +1,53 @@
-{"title":"Warm and Cool Colors","description":"Learn about color temperature","back":"Back to Learning","sections":{"intro":{"title":"Introduction","content":"Colors are divided into warm and cool based on their visual perception and psychological impact."},"warm":{"title":"Warm Colors","description":"Warm colors are associated with sun, fire, and energy","examples":"Examples of warm colors","items":{"0":"Red - passion, energy, activity","1":"Orange - warmth, friendliness, enthusiasm","2":"Yellow - joy, optimism, brightness"}},"cool":{"title":"Cool Colors","description":"Cool colors are associated with water, sky, and calm","examples":"Examples of cool colors","items":{"0":"Blue - calm, trust, stability","1":"Green - nature, growth, harmony","2":"Purple - creativity, mystery, luxury"}},"application":{"title":"Design Application","content":"Warm colors attract attention and create a sense of closeness, while cool colors create a sense of depth and calm. Proper use of color temperature helps create the desired mood in design."}}}
-
+{
+	"title": "Warm and Cool Colors",
+	"description": "Learn about color temperature",
+	"back": "Back to Learning",
+	"sections": {
+		"intro": {
+			"title": "Introduction",
+			"content": "Colors are divided into warm and cool based on their visual perception and psychological impact."
+		},
+		"warm": {
+			"title": "Warm Colors",
+			"description": "Warm colors are associated with sun, fire, and energy",
+			"examples": "Examples of warm colors",
+			"items": {
+				"0": "Red - passion, energy, activity",
+				"1": "Orange - warmth, friendliness, enthusiasm",
+				"2": "Yellow - joy, optimism, brightness"
+			}
+		},
+		"cool": {
+			"title": "Cool Colors",
+			"description": "Cool colors are associated with water, sky, and calm",
+			"examples": "Examples of cool colors",
+			"items": {
+				"0": "Blue - calm, trust, stability",
+				"1": "Green - nature, growth, harmony",
+				"2": "Purple - creativity, mystery, luxury"
+			}
+		},
+		"application": {
+			"title": "Design Application",
+			"content": "Warm colors attract attention and create a sense of closeness, while cool colors create a sense of depth and calm. Proper use of color temperature helps create the desired mood in design."
+		}
+	},
+	"seo": {
+		"title": "Colores cálidos y fríos: Psicología de la temperatura del color en diseño",
+		"intro": "La temperatura del color es un concepto que divide los colores en cálidos y fríos basándose en su percepción visual e impacto psicológico. Los colores cálidos (Rojo, Naranja, Amarillo) están asociados con sol, fuego y energía. Los colores fríos (Azul, Verde, Púrpura) — con agua, cielo y calma.\n\nComprender la temperatura del color es crítico para crear diseños efectivos que transmitan emociones y estados de ánimo deseados. En esta guía detallada cubrimos la psicología de colores cálidos y fríos, sus aplicaciones en diferentes áreas de diseño y técnicas prácticas de uso.\n\nAprenderá a usar [tool:emotion-colors] para generar paletas basadas en temperatura del color, aplicar [tool:brand-color-analyzer] para analizar características de temperatura de colores de marca, y trabajar con [tool:palette-generator] para crear esquemas de color equilibrados.",
+		"section1": {
+			"title": "Colores cálidos: Energía, pasión y cercanía",
+			"content": "Los colores cálidos se encuentran en la parte rojo-naranja-amarillo del círculo cromático. Están asociados con sol, fuego, tierra y crean una sensación de calor, energía y cercanía.\n\nEl rojo transmite pasión, energía, actividad y urgencia. El naranja — calor, amabilidad, entusiasmo y creatividad. El amarillo — alegría, optimismo, brillo y atención.\n\nEn diseño, los colores cálidos atraen la atención, crean sensación de cercanía y se usan para acentos, botones de llamada a la acción y elementos importantes. 'Avanzan' visualmente, lo que los hace ideales para crear jerarquías. La herramienta [tool:emotion-colors] usa colores cálidos para generar paletas energéticas y positivas que corresponden a emociones y estados de ánimo específicos."
+		},
+		"section2": {
+			"title": "Colores fríos: Calma, confianza y profundidad",
+			"content": "Los colores fríos se encuentran en la parte azul-verde-púrpura del círculo cromático. Están asociados con agua, cielo, hielo y crean una sensación de calma, estabilidad y profundidad.\n\nEl azul transmite calma, confianza, estabilidad y profesionalismo. El verde — naturaleza, crecimiento, armonía y balance. El púrpura — creatividad, misterio, lujo y misticismo.\n\nEn diseño, los colores fríos crean sensación de profundidad, se usan para fondos, crean atmósfera profesional y 'retroceden' visualmente. Son ideales para sitios web corporativos, servicios financieros e instalaciones médicas. La herramienta [tool:brand-color-analyzer] analiza características de temperatura de paletas de colores y ofrece recomendaciones para su uso en branding."
+		},
+		"section3": {
+			"title": "Balance y aplicación de temperatura del color",
+			"content": "El uso correcto de la temperatura del color crea balance visual y transmite emociones deseadas. La combinación de colores cálidos y fríos crea contraste e interés visual.\n\nEn diseño web, los colores cálidos se usan para dirigir la atención a elementos importantes, los fríos — para crear atmósfera tranquila y profesional. En branding, la temperatura del color determina el carácter de la marca: colores cálidos para marcas energéticas e innovadoras, fríos — para estables y confiables.\n\nAl crear paletas, [tool:palette-generator] tiene en cuenta la temperatura del color para crear esquemas de color equilibrados y armónicos. Para paletas emocionales, [tool:emotion-colors] usa temperatura del color para generar colores que corresponden a estados de ánimo específicos."
+		},
+		"conclusion": "La temperatura del color es una herramienta poderosa para crear diseños emocionalmente efectivos.\n\nEl uso correcto de colores cálidos y fríos permite transmitir emociones deseadas, crear balance visual y dirigir la atención del usuario. Use herramientas modernas para analizar y aplicar temperatura del color en sus proyectos.",
+		"keywords": "colores cálidos, colores fríos, temperatura del color, psicología del color, percepción del color, círculo cromático, teoría del color, diseño web, diseño gráfico, esquema de color, paleta de colores, colores de marca, diseño emocional, balance de color, diseño visual, armonía de color, selección de color, psicología del diseño, impacto del color, estado de ánimo del color"
+	}
+}

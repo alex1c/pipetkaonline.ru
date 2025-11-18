@@ -93,6 +93,94 @@ export function rgbToLab(r: number, g: number, b: number): { l: number; a: numbe
 }
 
 /**
+ * LAB to XYZ color space conversion
+ * 
+ * Converts LAB to XYZ using D65 white point reference.
+ * 
+ * @param {number} l - Lightness (0-100)
+ * @param {number} a - A component
+ * @param {number} b - B component
+ * @returns {{ x: number; y: number; z: number }} XYZ color values
+ */
+function labToXyz(l: number, a: number, b: number): { x: number; y: number; z: number } {
+	// D65 white point
+	const xn = 95.047
+	const yn = 100.0
+	const zn = 108.883
+
+	const fy = (l + 16) / 116
+	const fx = a / 500 + fy
+	const fz = fy - b / 200
+
+	const f = (t: number) => {
+		const t3 = Math.pow(t, 3)
+		return t3 > 0.008856 ? t3 : (t - 16 / 116) / 7.787
+	}
+
+	const x = f(fx) * xn
+	const y = f(fy) * yn
+	const z = f(fz) * zn
+
+	return { x, y, z }
+}
+
+/**
+ * XYZ to RGB color space conversion
+ * 
+ * Converts XYZ to RGB using D65 illuminant.
+ * 
+ * @param {number} x - X component
+ * @param {number} y - Y component
+ * @param {number} z - Z component
+ * @returns {{ r: number; g: number; b: number }} RGB color values (0-255)
+ */
+function xyzToRgb(x: number, y: number, z: number): { r: number; g: number; b: number } {
+	// Normalize XYZ
+	x = x / 100
+	y = y / 100
+	z = z / 100
+
+	// Convert to linear RGB
+	let r = x * 3.2404542 + y * -1.5371385 + z * -0.4985314
+	let g = x * -0.969266 + y * 1.8760108 + z * 0.041556
+	let b = x * 0.0556434 + y * -0.2040259 + z * 1.0572252
+
+	// Apply gamma correction
+	const gamma = (t: number) => {
+		return t > 0.0031308 ? 1.055 * Math.pow(t, 1 / 2.4) - 0.055 : 12.92 * t
+	}
+
+	r = gamma(r)
+	g = gamma(g)
+	b = gamma(b)
+
+	// Clamp and convert to 0-255
+	return {
+		r: Math.max(0, Math.min(255, Math.round(r * 255))),
+		g: Math.max(0, Math.min(255, Math.round(g * 255))),
+		b: Math.max(0, Math.min(255, Math.round(b * 255))),
+	}
+}
+
+/**
+ * Convert LAB to RGB color space
+ * 
+ * @param {Object} lab - LAB color values
+ * @param {number} lab.l - Lightness (0-100)
+ * @param {number} lab.a - A component
+ * @param {number} lab.b - B component
+ * @returns {{ r: number; g: number; b: number }} RGB color values (0-255)
+ */
+export function labToRgb(lab: { l: number; a: number; b: number }): {
+	r: number
+	g: number
+	b: number
+} {
+	const xyz = labToXyz(lab.l, lab.a, lab.b)
+	return xyzToRgb(xyz.x, xyz.y, xyz.z)
+}
+
+/**
  * LAB to LCH color space conversion
  * 
  * Converts LAB to LCH (Lightness, Chroma, Hue).
@@ -107,6 +195,23 @@ export function labToLch(l: number, a: number, b: number): { l: number; c: numbe
 	let h = Math.atan2(b, a) * (180 / Math.PI)
 	if (h < 0) h += 360
 	return { l, c, h }
+}
+
+/**
+ * LCH to LAB color space conversion
+ * 
+ * Converts LCH to LAB (Lightness, A, B).
+ * 
+ * @param {number} l - Lightness (0-100)
+ * @param {number} c - Chroma
+ * @param {number} h - Hue (0-360)
+ * @returns {{ l: number; a: number; b: number }} LAB color values
+ */
+export function lchToLab(l: number, c: number, h: number): { l: number; a: number; b: number } {
+	const hRad = (h * Math.PI) / 180
+	const a = c * Math.cos(hRad)
+	const b = c * Math.sin(hRad)
+	return { l, a, b }
 }
 
 /**
