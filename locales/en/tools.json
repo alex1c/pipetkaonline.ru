@@ -13,7 +13,983 @@
 	"tools.harmony.title": "Harmony Finder",
 	"tools.harmony.desc": "Discover complementary and analogous colors",
 	"tools.gradient.title": "Gradient Generator",
-	"tools.gradient.desc": "Create smooth CSS gradients"
+	"tools.gradient.desc": "Create smooth CSS gradients",
+	"tools.uiTokensGenerator.title": "UI Tokens Generator",
+	"tools.uiTokensGenerator.desc": "Generate a complete design token set from one color",
+	"uiTokensGenerator": {
+		"title": "UI Tokens Generator",
+		"description": "Select a base color and automatically get a complete UI token set: color scales, semantic colors, and ready-to-use CSS variables.",
+		"sections": {
+			"baseColor": {
+				"title": "Base Color",
+				"description": "Select the primary color for generating all UI tokens. This color will be used as the foundation for creating the color scale and semantic colors."
+			},
+			"preview": {
+				"title": "Preview"
+			},
+			"tokens": {
+				"title": "All Tokens"
+			}
+		},
+		"seo": {
+			"keywords": "UI tokens generator, design tokens, CSS variables generator, color tokens, design token generator, UI tokens online, create design tokens, color scale generator, color palette generator, semantic colors, CSS variables generator, Tailwind tokens, design system tokens, CSS color variables, UI color palette generator, design token creation, design system token generator, web design color tokens, UI color generator, color scale creation, primary color generator, semantic color generator, online design token generator, free token generator, CSS token generator, Tailwind token generator, design system token generator, UI token creation, color variable generator, design system generator",
+			"guide": {
+				"title": "Complete guide to using UI Tokens Generator",
+				"intro": "UI Tokens Generator is a powerful online tool for creating a complete set of design tokens from a single base color. With this service, you can automatically generate color scales, semantic colors, and ready-to-use CSS variables for your design system.",
+				"step1": {
+					"title": "Step 1: Select base color",
+					"description": "Start by selecting a base color for your design system. Use the color picker or enter a HEX code manually. This color will be used as the foundation for generating all other tokens."
+				},
+				"step2": {
+					"title": "Step 2: Generate color scale",
+					"description": "The tool automatically creates a color scale of 10 shades (from 50 to 900) based on the selected base color. Each shade is optimized for use in different interface components."
+				},
+				"step3": {
+					"title": "Step 3: Review primary tokens",
+					"description": "Check the generated primary tokens: primary (base, hover, active, muted), background (background, surface, borders) and semantic (success, warning, danger). All tokens are automatically configured for optimal visual hierarchy."
+				},
+				"step4": {
+					"title": "Step 4: Preview tokens",
+					"description": "Use the preview section to visually check tokens on real UI components: buttons, cards, text. This helps ensure all colors work harmoniously together."
+				},
+				"step5": {
+					"title": "Step 5: Export tokens",
+					"description": "Choose export format: CSS Variables for use in CSS, Tailwind Config for Tailwind CSS integration, or JSON for use in design systems. Copy the code with one click."
+				},
+				"step6": {
+					"title": "Step 6: Integrate into project",
+					"description": "Copy the exported code and paste it into your project. CSS variables can be added to :root, Tailwind config to tailwind.config.js, and JSON tokens to your design system."
+				}
+			},
+			"howTo": {
+				"title": "How to use UI Tokens Generator: step-by-step guide",
+				"howTo1": {
+					"title": "How to create design tokens from one color",
+					"description": "Select a base color using the color picker or enter a HEX code. The tool automatically generates a complete set of tokens: color scale, primary colors, background colors, and semantic colors."
+				},
+				"howTo2": {
+					"title": "How to generate color scale",
+					"description": "After selecting a base color, the tool automatically creates a scale of 10 shades (50-900). Each shade is optimized for use in different component states: from lightest (50) to darkest (900)."
+				},
+				"howTo3": {
+					"title": "How to export tokens as CSS variables",
+					"description": "Go to the 'Export' section, select the 'CSS Variables' tab and click 'Copy'. The copied code contains all tokens in CSS variable format, ready to use in your project."
+				},
+				"howTo4": {
+					"title": "How to export tokens for Tailwind CSS",
+					"description": "In the 'Export' section, select the 'Tailwind Config' tab. Copy the code and add it to the tailwind.config.js file in the theme.extend.colors section. Tokens will be available as Tailwind classes."
+				},
+				"howTo5": {
+					"title": "How to create semantic colors",
+					"description": "The tool automatically generates semantic colors (success, warning, danger) based on the base color by adjusting the hue. These colors are perfect for notifications, alerts, and status indicators."
+				},
+				"howTo6": {
+					"title": "How to use tokens in design system",
+					"description": "Export tokens in JSON format for use in design systems. JSON contains structured data about all colors that can be imported into design tools (Figma, Sketch) or used in code."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about UI Tokens Generator",
+				"q1": {
+					"question": "What are UI tokens?",
+					"answer": "UI tokens are standardized design values (colors, spacing, sizes) used in design systems to ensure interface consistency. Tokens make it easy to maintain a unified style throughout the application."
+				},
+				"q2": {
+					"question": "How does the token generator work?",
+					"answer": "The generator takes one base color and automatically creates a complete set of tokens: color scale (10 shades), primary colors (primary, hover, active), background colors, and semantic colors (success, warning, danger). All tokens are optimized for UI use."
+				},
+				"q3": {
+					"question": "What export formats are supported?",
+					"answer": "The generator supports three export formats: CSS Variables (for use in CSS), Tailwind Config (for Tailwind CSS integration), and JSON (for use in design systems and design tools)."
+				},
+				"q4": {
+					"question": "How to use exported CSS variables?",
+					"answer": "Copy the code from the 'CSS Variables' section and add it to your stylesheet (e.g., globals.css) in the :root block. After that, you can use variables in CSS: var(--color-primary), var(--color-primary-hover), etc."
+				},
+				"q5": {
+					"question": "Can I customize the color scale?",
+					"answer": "The color scale is automatically generated based on the base color using HSL algorithms to ensure visual consistency. Changing the base color automatically updates the entire scale."
+				},
+				"q6": {
+					"question": "What are semantic colors?",
+					"answer": "Semantic colors are colors with specific meaning: success (green), warning (yellow/orange), danger (red). They are automatically generated based on the base color by adjusting the hue on the color wheel."
+				}
+			}
+		}
+	},
+	"colorLab": {
+		"title": "Color Lab — Extract Colors from Images",
+		"description": "Upload images, pick colors with eyedropper, find similar shades, and create palettes",
+		"upload": {
+			"title": "Upload Image",
+			"dragDrop": "Drag & drop image or click to select",
+			"formats": "PNG, JPG, WEBP (max 10MB)"
+		},
+		"picker": {
+			"title": "Color Picker",
+			"hint": "Hover over the image and click to select a color"
+		},
+		"similar": {
+			"title": "Similar Colors",
+			"hint": "Click any color to copy its HEX code"
+		},
+		"palette": {
+			"title": "Color Palette",
+			"triad": "Triadic",
+			"complementary": "Complementary",
+			"monochromatic": "Monochromatic"
+		},
+		"dominant": {
+			"title": "Dominant Colors",
+			"analyzing": "Analyzing image...",
+			"ofImage": "of image"
+		},
+		"copy": "Copy",
+		"copied": "✓ Copied",
+		"seo": {
+			"keywords": "color picker from image, extract color from image, color extraction tool, online color picker, image color picker, color palette generator, HEX color code, RGB color from image, HSL color, color converter, triadic palette, complementary colors, monochromatic palette, color harmony, color analysis, color tool, eyedropper tool, screenshot color picker, design color palette, color combinations, color code, color palette for design, dominant colors, similar colors, color schemes, color wheel, color picker online free",
+			"guide": {
+				"title": "Complete Guide to Using Color Lab for Color Picking from Images",
+				"intro": "Color Lab is a powerful online tool for extracting colors from images. With this service, you can determine HEX, RGB, and HSL codes of any colors in photos, create color palettes, and find similar shades.",
+				"step1": {
+					"title": "Step 1: Upload Image",
+					"description": "Start by uploading an image in PNG, JPG, or WEBP format. Maximum file size is 10 MB. You can drag and drop the file into the upload area or select it through a dialog box."
+				},
+				"step2": {
+					"title": "Step 2: Pick Color with Eyedropper",
+					"description": "After uploading the image, hover your cursor over the desired area and click. The tool will automatically determine the color and display its codes in HEX, RGB, and HSL formats."
+				},
+				"step3": {
+					"title": "Step 3: Copy Color Codes",
+					"description": "Use the 'Copy' buttons next to each format (HEX, RGB, HSL) to quickly copy the code to your clipboard. This is especially convenient when working with CSS and design."
+				},
+				"step4": {
+					"title": "Step 4: Find Similar Colors",
+					"description": "After selecting a color, the tool automatically shows 10 similar shades. Click on any color to copy its HEX code."
+				},
+				"step5": {
+					"title": "Step 5: Generate Color Palettes",
+					"description": "Create professional color palettes in three modes: triadic (three colors), complementary (opposite colors), and monochromatic (shades of one color)."
+				},
+				"step6": {
+					"title": "Step 6: Analyze Dominant Colors",
+					"description": "The tool automatically analyzes the image and determines 5 main colors with their percentage ratio. This is useful for creating color schemes based on photographs."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Color Lab: Step-by-Step Guide",
+				"howTo1": {
+					"title": "How to Pick Color from Image Online",
+					"description": "Upload an image, hover your cursor over the desired color and click. The tool will show HEX, RGB, and HSL codes of the selected color."
+				},
+				"howTo2": {
+					"title": "How to Extract Color from Image",
+					"description": "Use the eyedropper function: upload a PNG, JPG, or WEBP file, hover your cursor over the pixel with the desired color and click. The color code will be copied automatically."
+				},
+				"howTo3": {
+					"title": "How to Create Color Palette from Image",
+					"description": "Select a base color from the image, then use the palette generator. Choose a mode: triadic, complementary, or monochromatic palette. The tool will create a harmonious color scheme."
+				},
+				"howTo4": {
+					"title": "How to Find Dominant Colors in Photo",
+					"description": "After uploading an image, the tool automatically analyzes it and shows 5 main colors with their percentage ratio. This helps understand the color gamut of the image."
+				},
+				"howTo5": {
+					"title": "How to Copy HEX Color Code",
+					"description": "Select a color from the image, find the block with HEX code and click the 'Copy' button. The code will be copied to clipboard and ready to use in CSS, design, or programming."
+				},
+				"howTo6": {
+					"title": "How to Find Similar Colors",
+					"description": "After selecting a color, the tool automatically generates 10 similar shades by varying brightness and saturation. Click on any color to copy its HEX code."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Color Lab",
+				"q1": {
+					"question": "How to pick color from image?",
+					"answer": "Upload an image in PNG, JPG, or WEBP format, hover your cursor over the desired area and click. The tool will automatically determine the color and show its codes in HEX, RGB, and HSL formats."
+				},
+				"q2": {
+					"question": "What image formats are supported?",
+					"answer": "Color Lab supports PNG, JPG, and WEBP formats. Maximum file size is 10 MB."
+				},
+				"q3": {
+					"question": "How to copy color code?",
+					"answer": "After selecting a color, click the 'Copy' button next to the desired format (HEX, RGB, or HSL). The code will be copied to your clipboard."
+				},
+				"q4": {
+					"question": "What are dominant colors?",
+					"answer": "Dominant colors are the main colors of an image, determined using a clustering algorithm. The tool shows 5 main colors with their percentage ratio in the image."
+				},
+				"q5": {
+					"question": "How to create color palette?",
+					"answer": "Select a base color from the image, then use the palette generator. Choose one of three modes: triadic (three colors), complementary (opposite colors), or monochromatic (shades of one color)."
+				},
+				"q6": {
+					"question": "What is triadic palette?",
+					"answer": "A triadic palette consists of three colors evenly distributed around the color wheel (e.g., red, yellow, blue). This creates a vibrant and contrasting color scheme."
+				},
+				"q7": {
+					"question": "How to find similar colors?",
+					"answer": "After selecting a color, the tool automatically generates 10 similar shades by varying brightness and saturation in HSL color space. Click on any color to copy its HEX code."
+				},
+				"q8": {
+					"question": "Can I use Color Lab for design?",
+					"answer": "Yes, Color Lab is perfect for designers. You can extract colors from reference images, create harmonious palettes, and use the obtained codes in CSS, Figma, Adobe, and other design tools."
+				}
+			}
+		}
+	},
+	"contrastChecker": {
+		"title": "Contrast Checker — WCAG Calculator",
+		"description": "Check text and background color contrast for WCAG accessibility compliance",
+		"foreground": {
+			"label": "Text Color",
+			"placeholder": "#000000 or rgb(0,0,0) or hsl(0,0%,0%)"
+		},
+		"background": {
+			"label": "Background Color",
+			"placeholder": "#ffffff or rgb(255,255,255) or hsl(0,0%,100%)"
+		},
+		"ratio": "Contrast Ratio",
+		"levels": {
+			"aaNormal": "AA (normal text)",
+			"aaLarge": "AA (large text)",
+			"aaaNormal": "AAA (normal text)",
+			"aaaLarge": "AAA (large text)"
+		},
+		"pass": "Pass",
+		"fail": "Fail",
+		"preview": {
+			"title": "Text Preview",
+			"heading": "Heading",
+			"normal": "Normal text",
+			"bold": "Bold text"
+		},
+		"seo": {
+			"keywords": "contrast checker, WCAG contrast, contrast calculator, color accessibility check, text background contrast, WCAG AA, WCAG AAA, relative luminance, contrast ratio, website accessibility, color contrast online, color contrast check, contrast checking tool, contrast for accessibility, WCAG standards, text contrast check, background text contrast, WCAG contrast calculator, online contrast check, accessibility tool, color contrast, contrast check for design, web design contrast, CSS contrast check, interface contrast, interface accessibility, UI contrast",
+			"guide": {
+				"title": "Complete Guide to Using Contrast Checker Tool",
+				"intro": "The contrast checker tool allows you to verify if text and background color combinations meet WCAG accessibility standards. This is important for ensuring content readability for all users, including those with visual impairments.",
+				"step1": {
+					"title": "Step 1: Enter Text Color",
+					"description": "Enter the text color in any format: HEX (#000000), RGB (rgb(0,0,0)) or HSL (hsl(0,0%,0%)). The tool will automatically recognize the format and convert it."
+				},
+				"step2": {
+					"title": "Step 2: Enter Background Color",
+					"description": "Enter the background color in the same format. The tool will automatically calculate the contrast ratio between the colors."
+				},
+				"step3": {
+					"title": "Step 3: Check WCAG Results",
+					"description": "The tool will show the contrast ratio and compliance status for AA and AAA levels, both for normal and large text."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Contrast Checker Tool",
+				"howTo1": {
+					"title": "How to Check Color Contrast",
+					"description": "Enter text color and background color in any format (HEX, RGB, HSL). The tool will automatically calculate the contrast ratio and show WCAG compliance."
+				},
+				"howTo2": {
+					"title": "How to Achieve WCAG AA Level",
+					"description": "Normal text requires a minimum contrast ratio of 4.5:1, large text (18pt+) requires 3:1. Use the tool to find suitable colors."
+				},
+				"howTo3": {
+					"title": "How to Achieve WCAG AAA Level",
+					"description": "Normal text requires a minimum contrast ratio of 7:1, large text requires 4.5:1. This ensures maximum accessibility."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Contrast Checker",
+				"q1": {
+					"question": "What is contrast ratio?",
+					"answer": "Contrast ratio is a numerical value showing the difference in brightness between text color and background color. It is calculated using WCAG formula based on relative luminance of colors."
+				},
+				"q2": {
+					"question": "What color formats are supported?",
+					"answer": "The tool supports HEX (#ffffff), RGB (rgb(255,255,255)) and HSL (hsl(0,0%,100%)) formats. Automatically recognizes and converts any format."
+				},
+				"q3": {
+					"question": "What do AA and AAA levels mean?",
+					"answer": "AA and AAA are WCAG compliance levels. AA is the minimum accessibility level, AAA is an enhanced level with stricter contrast requirements."
+				}
+			}
+		}
+	},
+	"colorConverter": {
+		"title": "Color Converter — HEX, RGB, HSL",
+		"description": "Convert colors between HEX, RGB, and HSL formats. Enter color in any format and get all code variants.",
+		"inputs": {
+			"title": "Color Input",
+			"description": "Enter color in any of the formats below. Other formats will update automatically.",
+			"hex": {
+				"label": "HEX",
+				"placeholder": "ffffff",
+				"hint": "Format: #ffffff or ffffff"
+			},
+			"rgb": {
+				"label": "RGB",
+				"placeholder": "rgb(255, 255, 255)",
+				"hint": "Format: rgb(255, 255, 255)"
+			},
+			"hsl": {
+				"label": "HSL",
+				"placeholder": "hsl(0, 0%, 100%)",
+				"hint": "Format: hsl(0, 0%, 100%)"
+			}
+		},
+		"preview": {
+			"title": "Color Preview",
+			"textExample": "Text example",
+			"formats": "Color Codes",
+			"copy": "Copy",
+			"copied": "✓ Copied"
+		},
+		"seo": {
+			"keywords": "color converter, color conversion, HEX to RGB, RGB to HEX, HSL converter, online color converter, HEX RGB HSL converter, color transformation, color translation, color code converter, HEX RGB converter, RGB HSL converter, online color converter, free color converter, CSS color converter, color code converter, HEX to RGB conversion, RGB to HSL conversion, HSL to HEX conversion, color format converter, web color converter, color conversion tool, color converter for design, color converter for CSS, free online color converter, color format converter, HEX RGB HSL converter online, color converter web design, color converter programming, color converter development",
+			"guide": {
+				"title": "Complete Guide to Using Color Converter",
+				"intro": "Color Converter is a universal online tool for converting colors between HEX, RGB, and HSL formats. With this service, you can quickly convert any color from one format to another, which is especially useful when working with CSS, web design, and programming.",
+				"step1": {
+					"title": "Step 1: Choose Input Format",
+					"description": "You can enter a color in any of three formats: HEX (#ffffff), RGB (rgb(255, 255, 255)) or HSL (hsl(0, 0%, 100%)). Simply choose the format that's convenient for you and enter the color value."
+				},
+				"step2": {
+					"title": "Step 2: Automatic Conversion",
+					"description": "After entering a color in one format, the tool automatically converts it to all other formats. You'll immediately see HEX, RGB, and HSL codes of the selected color."
+				},
+				"step3": {
+					"title": "Step 3: Color Preview",
+					"description": "The tool shows a visual preview of the selected color with a text example. Text color is automatically chosen (black or white) to ensure the best readability."
+				},
+				"step4": {
+					"title": "Step 4: Copy Color Codes",
+					"description": "Use the 'Copy' buttons next to each format (HEX, RGB, HSL) to quickly copy the code to your clipboard. This is especially convenient when working with CSS and design."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Color Converter",
+				"howTo1": {
+					"title": "How to Convert HEX to RGB",
+					"description": "Enter the HEX color code (e.g., #ff0000) in the HEX field. The tool will automatically show the RGB equivalent (rgb(255, 0, 0)) and HSL value. You can copy any of the formats."
+				},
+				"howTo2": {
+					"title": "How to Convert RGB to HEX",
+					"description": "Enter the RGB value in the format rgb(255, 0, 0) in the RGB field. The tool will automatically convert it to HEX (#ff0000) and HSL. All formats update instantly."
+				},
+				"howTo3": {
+					"title": "How to Convert HSL to HEX and RGB",
+					"description": "Enter the HSL value in the format hsl(0, 100%, 50%) in the HSL field. The tool will automatically show HEX and RGB equivalents. This is useful when working with CSS, where HSL is often used to create color variations."
+				},
+				"howTo4": {
+					"title": "How to Use Converter for CSS",
+					"description": "Color converter is perfect for web development. You can quickly switch between formats, copy codes, and use them in CSS files, styles, and design systems."
+				},
+				"howTo5": {
+					"title": "How to Copy Color Code",
+					"description": "After converting a color, click the 'Copy' button next to the desired format. The code will be copied to your clipboard and ready to use in your project."
+				},
+				"howTo6": {
+					"title": "How to Use Color Preview",
+					"description": "The tool automatically shows a visual preview of the color with a text example. This helps evaluate how the color will look in real use."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Color Converter",
+				"q1": {
+					"question": "What color formats are supported?",
+					"answer": "The converter supports three main formats: HEX (#ffffff), RGB (rgb(255, 255, 255)) and HSL (hsl(0, 0%, 100%)). You can enter a color in any of these formats, and the tool will automatically convert it to the others."
+				},
+				"q2": {
+					"question": "How to convert HEX to RGB?",
+					"answer": "Simply enter the HEX code (e.g., #ff0000) in the HEX field. The tool will automatically show the RGB equivalent (rgb(255, 0, 0)) and HSL value. You can copy any of the formats."
+				},
+				"q3": {
+					"question": "How to convert RGB to HEX?",
+					"answer": "Enter the RGB value in the format rgb(255, 0, 0) in the RGB field. The tool will automatically convert it to HEX (#ff0000) and HSL. All formats update instantly when any of them is changed."
+				},
+				"q4": {
+					"question": "What is HSL format?",
+					"answer": "HSL (Hue, Saturation, Lightness) is a color model that describes color through hue, saturation, and lightness. HSL is convenient for creating color variations and is often used in CSS."
+				},
+				"q5": {
+					"question": "Can I use the converter for CSS?",
+					"answer": "Yes, color converter is perfect for web development. You can quickly switch between formats, copy codes, and use them in CSS files, styles, and design systems."
+				},
+				"q6": {
+					"question": "How to copy color code?",
+					"answer": "After converting a color, click the 'Copy' button next to the desired format (HEX, RGB, or HSL). The code will be copied to your clipboard and ready to use."
+				},
+				"q7": {
+					"question": "Does the converter work with short HEX codes?",
+					"answer": "Yes, the tool automatically recognizes and converts short HEX codes (e.g., #f00) to full formats. Input without the # symbol is also supported."
+				},
+				"q8": {
+					"question": "Can I use the converter for design?",
+					"answer": "Yes, color converter is great for designers. You can quickly switch between formats used in various design tools (Figma, Adobe, Sketch) and copy codes for use in projects."
+				}
+			}
+		}
+	},
+	"paletteGenerator": {
+		"title": "Palette Generator — Create Color Schemes",
+		"description": "Create harmonious color palettes from a base color. Choose a generation mode and get a ready-to-use color scheme for design.",
+		"baseColor": {
+			"label": "Base Color",
+			"placeholder": "#3498db or rgb(52, 152, 219) or hsl(204, 70%, 53%)",
+			"hint": "Enter color in HEX, RGB, or HSL format",
+			"random": "Random Color"
+		},
+		"mode": {
+			"label": "Generation Mode"
+		},
+		"modes": {
+			"monochromatic": "Monochromatic",
+			"analogous": "Analogous",
+			"complementary": "Complementary",
+			"triad": "Triad",
+			"tetradic": "Tetradic",
+			"shades": "Shades",
+			"tints": "Tints",
+			"tones": "Tones"
+		},
+		"result": {
+			"title": "Generated Palette",
+			"copied": "✓ Copied",
+			"preview": {
+				"title": "UI Preview",
+				"button": "Button",
+				"cardTitle": "Card Title",
+				"cardText": "Example card text"
+			}
+		},
+		"seo": {
+			"keywords": "palette generator, create color palettes, color palette online, color scheme generator, monochromatic palette, analogous palette, complementary palette, triadic palette, tetradic palette, color shades, color tints, color tones, color harmony, color scheme for design, online color palette, color palette generator, create palette from color, CSS color palette, web design palette, UI color palette, color combination generator, online palette generator, free palette generator, design color palette, project color palette, online color scheme, free palette generator, color palette tool",
+			"guide": {
+				"title": "Complete Guide to Using Palette Generator",
+				"intro": "Palette Generator is a powerful online tool for creating harmonious color schemes from a base color. With this service, you can generate professional palettes in various modes: monochromatic, analogous, complementary, triad, and more.",
+				"step1": {
+					"title": "Step 1: Choose Base Color",
+					"description": "Enter a base color in any format: HEX (#3498db), RGB (rgb(52, 152, 219)) or HSL (hsl(204, 70%, 53%)). You can also use the 'Random Color' button to generate a random base color."
+				},
+				"step2": {
+					"title": "Step 2: Select Generation Mode",
+					"description": "Choose one of eight generation modes: monochromatic (shades of one color), analogous (adjacent colors on color wheel), complementary (opposite colors), triad (three colors 120° apart), tetradic (four colors 90° apart), shades, tints, or tones."
+				},
+				"step3": {
+					"title": "Step 3: View Generated Palette",
+					"description": "The tool will automatically create a palette of 4-8 colors depending on the selected mode. Each color is displayed with HEX, RGB, and HSL codes that can be copied with one click."
+				},
+				"step4": {
+					"title": "Step 4: Use UI Preview",
+					"description": "The tool shows a preview of the palette in real UI elements (buttons, cards), which helps evaluate how colors will look in design."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Palette Generator",
+				"howTo1": {
+					"title": "How to Create Monochromatic Palette",
+					"description": "Select a base color and 'Monochromatic' mode. The tool will create a palette of shades of one color with different brightness, perfect for minimalist design."
+				},
+				"howTo2": {
+					"title": "How to Create Analogous Palette",
+					"description": "Select a base color and 'Analogous' mode. The tool will create a palette of adjacent colors on the color wheel (±30°), creating a harmonious and calm color scheme."
+				},
+				"howTo3": {
+					"title": "How to Create Complementary Palette",
+					"description": "Select a base color and 'Complementary' mode. The tool will create a palette of opposite colors (180° on color wheel), providing high contrast and visual appeal."
+				},
+				"howTo4": {
+					"title": "How to Create Triadic Palette",
+					"description": "Select a base color and 'Triad' mode. The tool will create a palette of three colors evenly distributed around the color wheel (120° apart), creating a vibrant and balanced scheme."
+				},
+				"howTo5": {
+					"title": "How to Copy Color Codes",
+					"description": "Click on any color code (HEX, RGB, or HSL) in the generated palette. The code will be copied to your clipboard and ready to use in CSS, design tools, or programming."
+				},
+				"howTo6": {
+					"title": "How to Use Palette for Design",
+					"description": "After generating a palette, use the UI preview to evaluate colors. Copy the needed codes and use them in Figma, Adobe, Sketch, or other design tools."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Palette Generator",
+				"q1": {
+					"question": "What generation modes are available?",
+					"answer": "8 modes are available: monochromatic (shades of one color), analogous (adjacent colors), complementary (opposite colors), triad (three colors 120° apart), tetradic (four colors 90° apart), shades (decreasing brightness), tints (increasing brightness), and tones (varying saturation)."
+				},
+				"q2": {
+					"question": "How to choose base color?",
+					"answer": "You can enter a color in HEX (#3498db), RGB (rgb(52, 152, 219)) or HSL (hsl(204, 70%, 53%)) format. A 'Random Color' button is also available for quick generation of a random base color."
+				},
+				"q3": {
+					"question": "How many colors in a palette?",
+					"answer": "The number of colors depends on the mode: monochromatic — 6 colors, analogous — 5 colors, complementary — 6 colors, triad — 8 colors, tetradic — 4 colors, shades/tints/tones — 6 colors."
+				},
+				"q4": {
+					"question": "What is monochromatic palette?",
+					"answer": "A monochromatic palette consists of shades of one color with different brightness. This creates a calm and harmonious color scheme, perfect for minimalist design."
+				},
+				"q5": {
+					"question": "What is complementary palette?",
+					"answer": "A complementary palette consists of opposite colors on the color wheel (180° apart). This creates high contrast and visual appeal, perfect for accents and call-to-action elements."
+				},
+				"q6": {
+					"question": "Can I use the palette for CSS?",
+					"answer": "Yes, all colors in the palette are available in HEX, RGB, and HSL formats that can be directly used in CSS. Simply copy the needed code and paste it into your CSS file."
+				},
+				"q7": {
+					"question": "How to copy color code?",
+					"answer": "Click on any color code (HEX, RGB, or HSL) in the color card. The code will be copied to your clipboard, and you'll see a confirmation '✓ Copied'."
+				},
+				"q8": {
+					"question": "Can I use the palette for web design?",
+					"answer": "Yes, palette generator is perfect for web design. You can create a harmonious color scheme for your website, copy codes, and use them in CSS, design tools, or design systems."
+				}
+			}
+		}
+	},
+	"colorHarmony": {
+		"title": "Color Harmony Finder — Harmonious Color Combinations",
+		"description": "Find perfect harmonious color combinations based on color theory. Choose a base color and harmony mode to create professional color schemes.",
+		"baseColor": {
+			"label": "Base Color",
+			"placeholder": "#3498db or rgb(52, 152, 219) or hsl(204, 70%, 53%)",
+			"hint": "Enter color in HEX, RGB, or HSL format",
+			"random": "Random Color"
+		},
+		"mode": {
+			"label": "Harmony Mode"
+		},
+		"modes": {
+			"analogous": "Analogous",
+			"monochromatic": "Monochromatic",
+			"complementary": "Complementary",
+			"splitComplementary": "Split Complementary",
+			"triadic": "Triadic",
+			"tetradic": "Tetradic",
+			"square": "Square",
+			"neutral": "Neutral"
+		},
+		"descriptions": {
+			"analogous": "Analogous harmony uses colors adjacent on the color wheel (±30°). Creates a calm and harmonious color scheme.",
+			"monochromatic": "Monochromatic harmony uses shades of one color with different brightness and saturation. Perfect for minimalist design.",
+			"complementary": "Complementary harmony uses opposite colors on the color wheel (180°). Provides high contrast and visual appeal.",
+			"splitComplementary": "Split complementary harmony uses the base color and two colors adjacent to its complement. Creates a balanced scheme with moderate contrast.",
+			"triadic": "Triadic harmony uses three colors evenly distributed around the color wheel (120° apart). Creates a vibrant and dynamic scheme.",
+			"tetradic": "Tetradic harmony uses four colors evenly distributed around the color wheel (90° apart). Provides a rich and diverse palette.",
+			"square": "Square harmony uses four colors at 90° intervals on the color wheel. Creates a balanced and structured color scheme.",
+			"neutral": "Neutral harmony uses colors with low saturation (5-20%) at the same color temperature. Creates a calm and elegant palette."
+		},
+		"result": {
+			"title": "Harmonious Colors",
+			"copied": "✓ Copied",
+			"preview": {
+				"title": "UI Preview",
+				"button": "Button",
+				"cardTitle": "Card Title",
+				"cardText": "Example card text"
+			}
+		},
+		"diagram": {
+			"title": "Color Relation Diagram",
+			"description": "Visualization of harmonious colors on the color wheel. Lines show angular offsets between colors."
+		},
+		"seo": {
+			"keywords": "color harmony finder, harmonious color combinations, color harmony online, analogous harmony, monochromatic harmony, complementary harmony, triadic harmony, tetradic harmony, color theory, color wheel, harmonious colors, color scheme, color palette, color combinations, color harmony for design, online color harmony tool, harmonious color generator, color harmony CSS, color harmony web design, color harmony UI, free color harmony finder, color harmony tool, color harmony online free, color harmony for project, color harmony design, color harmony palette, color harmony scheme",
+			"guide": {
+				"title": "Complete Guide to Using Color Harmony Finder",
+				"intro": "Color Harmony Finder is a powerful online tool for creating harmonious color combinations based on color theory. With this service, you can find perfect color combinations for your design.",
+				"step1": {
+					"title": "Step 1: Choose Base Color",
+					"description": "Enter a base color in any format: HEX (#3498db), RGB (rgb(52, 152, 219)) or HSL (hsl(204, 70%, 53%)). You can also use the 'Random Color' button to generate a random base color."
+				},
+				"step2": {
+					"title": "Step 2: Select Harmony Mode",
+					"description": "Choose one of eight harmony modes: analogous (adjacent colors), monochromatic (shades of one color), complementary (opposite colors), split complementary, triadic, tetradic, square, or neutral."
+				},
+				"step3": {
+					"title": "Step 3: View Harmonious Colors",
+					"description": "The tool will automatically create a harmonious color scheme of 3-5 colors depending on the selected mode. Each color is displayed with HEX, RGB, and HSL codes that can be copied with one click."
+				},
+				"step4": {
+					"title": "Step 4: Explore Color Relation Diagram",
+					"description": "The tool shows a visualization of harmonious colors on the color wheel with lines showing angular offsets between colors. This helps understand color harmony theory."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Color Harmony Finder",
+				"howTo1": {
+					"title": "How to Create Analogous Harmony",
+					"description": "Select a base color and 'Analogous' mode. The tool will create a palette of adjacent colors on the color wheel (±30°), creating a calm and harmonious color scheme."
+				},
+				"howTo2": {
+					"title": "How to Create Complementary Harmony",
+					"description": "Select a base color and 'Complementary' mode. The tool will create a palette of opposite colors (180° on color wheel), providing high contrast and visual appeal."
+				},
+				"howTo3": {
+					"title": "How to Create Triadic Harmony",
+					"description": "Select a base color and 'Triadic' mode. The tool will create a palette of three colors evenly distributed around the color wheel (120° apart), creating a vibrant and dynamic scheme."
+				},
+				"howTo4": {
+					"title": "How to Use Color Relation Diagram",
+					"description": "The diagram shows a visualization of harmonious colors on the color wheel. Lines show angular offsets between colors, which helps understand color harmony theory."
+				},
+				"howTo5": {
+					"title": "How to Copy Color Codes",
+					"description": "Click on any color code (HEX, RGB, or HSL) in the color card. The code will be copied to your clipboard and ready to use in CSS, design tools, or programming."
+				},
+				"howTo6": {
+					"title": "How to Use Harmonious Colors for Design",
+					"description": "After generating harmonious colors, use the UI preview to evaluate colors. Copy the needed codes and use them in Figma, Adobe, Sketch, or other design tools."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Color Harmony Finder",
+				"q1": {
+					"question": "What harmony modes are available?",
+					"answer": "8 modes are available: analogous (adjacent colors ±30°), monochromatic (shades of one color), complementary (opposite colors 180°), split complementary (150°, 210°), triadic (120°), tetradic (90°), square (90° × 4), and neutral (low saturation)."
+				},
+				"q2": {
+					"question": "How to choose base color?",
+					"answer": "You can enter a color in HEX (#3498db), RGB (rgb(52, 152, 219)) or HSL (hsl(204, 70%, 53%)) format. A 'Random Color' button is also available for quick generation of a random base color."
+				},
+				"q3": {
+					"question": "What is analogous harmony?",
+					"answer": "Analogous harmony uses colors adjacent on the color wheel (±30°). This creates a calm and harmonious color scheme, perfect for natural and soothing designs."
+				},
+				"q4": {
+					"question": "What is complementary harmony?",
+					"answer": "Complementary harmony uses opposite colors on the color wheel (180° apart). This creates high contrast and visual appeal, perfect for accents and call-to-action elements."
+				},
+				"q5": {
+					"question": "What does the color relation diagram show?",
+					"answer": "The diagram shows a visualization of harmonious colors on the color wheel. Lines show angular offsets between colors, which helps understand color harmony theory and relationships between colors."
+				},
+				"q6": {
+					"question": "Can I use harmonious colors for CSS?",
+					"answer": "Yes, all colors in the harmonious scheme are available in HEX, RGB, and HSL formats that can be directly used in CSS. Simply copy the needed code and paste it into your CSS file."
+				},
+				"q7": {
+					"question": "How to copy color code?",
+					"answer": "Click on any color code (HEX, RGB, or HSL) in the color card. The code will be copied to your clipboard, and you'll see a confirmation '✓ Copied'."
+				},
+				"q8": {
+					"question": "Can I use harmonious colors for web design?",
+					"answer": "Yes, color harmony finder is perfect for web design. You can create a harmonious color scheme for your website, copy codes, and use them in CSS, design tools, or design systems."
+				}
+			}
+		}
+	},
+	"gradientGenerator": {
+		"title": "Gradient Generator — Create CSS Gradients",
+		"description": "Create beautiful CSS gradients with full control over colors, positions, and types. Generate code for CSS, TailwindCSS, and use saved gradients.",
+		"preview": {
+			"title": "Gradient Preview"
+		},
+		"controls": {
+			"title": "Gradient Settings",
+			"type": {
+				"label": "Gradient Type",
+				"linear": "Linear",
+				"radial": "Radial"
+			},
+			"direction": {
+				"label": "Direction",
+				"totop": "To Top",
+				"toright": "To Right",
+				"tobottom": "To Bottom",
+				"toleft": "To Left",
+				"totopright": "To Top Right",
+				"tobottomright": "To Bottom Right",
+				"tobottomleft": "To Bottom Left",
+				"totopleft": "To Top Left"
+			},
+			"shape": {
+				"label": "Shape",
+				"circle": "Circle",
+				"ellipse": "Ellipse"
+			},
+			"random": "Random Gradient",
+			"smooth": "Smooth Distribution",
+			"reverse": "Reverse Gradient"
+		},
+		"stops": {
+			"title": "Color Stops",
+			"add": "Add Stop"
+		},
+		"stop": {
+			"title": "Stop",
+			"color": "Color",
+			"position": "Position",
+			"remove": "Remove"
+		},
+		"code": {
+			"title": "Generated Code",
+			"copy": "Copy",
+			"copied": "✓ Copied",
+			"string": "String"
+		},
+		"save": "Save Gradient",
+		"history": {
+			"title": "Saved Gradients",
+			"load": "Load",
+			"delete": "Delete"
+		},
+		"seo": {
+			"keywords": "gradient generator, CSS gradients, create gradients, linear gradient, radial gradient, gradient online, CSS gradient generator, gradient for web design, gradient CSS code, TailwindCSS gradient, free gradient generator, online gradient generator, gradient tool, create CSS gradients, gradient for website, gradient for design, gradient code generator, gradient CSS online, gradient for UI, gradient for web development, gradient for programming, gradient for CSS, gradient for Tailwind, gradient for project, gradient for website design, gradient for web application, gradient for mobile design, gradient for interface, gradient for background",
+			"guide": {
+				"title": "Complete Guide to Using Gradient Generator",
+				"intro": "Gradient Generator is a powerful online tool for creating beautiful CSS gradients with full control over colors, positions, and types. With this service, you can create professional gradients for your design.",
+				"step1": {
+					"title": "Step 1: Choose Gradient Type",
+					"description": "Select gradient type: linear or radial. Linear gradients create smooth transitions in a specific direction, while radial gradients transition from center to edges."
+				},
+				"step2": {
+					"title": "Step 2: Configure Direction or Shape",
+					"description": "For linear gradients, choose direction (to top, to right, to bottom, to left, or diagonal directions). For radial gradients, choose shape: circle or ellipse."
+				},
+				"step3": {
+					"title": "Step 3: Add Color Stops",
+					"description": "Add color stops by clicking 'Add Stop' button. For each stop, set color (using color picker or HEX input) and position (0-100%). Minimum 2 stops are required for a gradient."
+				},
+				"step4": {
+					"title": "Step 4: Use Additional Features",
+					"description": "Use 'Random Gradient' button to generate a random gradient, 'Smooth Distribution' to evenly distribute stop positions, and 'Reverse Gradient' to change color order."
+				},
+				"step5": {
+					"title": "Step 5: Copy Generated Code",
+					"description": "Select code format (CSS, TailwindCSS, or string) and click 'Copy' button. Code will be copied to clipboard and ready to use in your project."
+				},
+				"step6": {
+					"title": "Step 6: Save Gradient",
+					"description": "Click 'Save Gradient' button to save current gradient to history. Saved gradients can be loaded later or deleted."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Gradient Generator",
+				"howTo1": {
+					"title": "How to Create Linear Gradient",
+					"description": "Select 'Linear' type and direction (e.g., 'to right'). Add at least 2 color stops with different colors and positions. Gradient will be created automatically."
+				},
+				"howTo2": {
+					"title": "How to Create Radial Gradient",
+					"description": "Select 'Radial' type and shape (circle or ellipse). Add color stops. Radial gradient will create smooth transition from center to edges."
+				},
+				"howTo3": {
+					"title": "How to Use TailwindCSS Gradients",
+					"description": "After creating gradient, select 'TailwindCSS' format in code block. Copy generated classes and use them in your HTML with TailwindCSS."
+				},
+				"howTo4": {
+					"title": "How to Save and Load Gradients",
+					"description": "Click 'Save Gradient' button to save current gradient. Saved gradients are displayed in history section. Click on gradient to load or 'Delete' button to remove."
+				},
+				"howTo5": {
+					"title": "How to Use Random Gradient",
+					"description": "Click 'Random Gradient' button to automatically generate a random gradient with random colors, type, and direction. This is great for inspiration."
+				},
+				"howTo6": {
+					"title": "How to Evenly Distribute Stops",
+					"description": "Click 'Smooth Distribution' button to automatically evenly distribute positions of all color stops. This is useful for creating symmetrical gradients."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Gradient Generator",
+				"q1": {
+					"question": "What gradient types are supported?",
+					"answer": "Generator supports two gradient types: linear and radial. Linear gradients create smooth transitions in a specific direction, while radial gradients transition from center to edges."
+				},
+				"q2": {
+					"question": "How many color stops can I add?",
+					"answer": "You can add any number of color stops, but minimum 2 stops are required to create a gradient. More stops allow creating more complex and interesting gradients."
+				},
+				"q3": {
+					"question": "Can I use gradients in TailwindCSS?",
+					"answer": "Yes, generator creates TailwindCSS classes for your gradients. Select 'TailwindCSS' format in code block and copy generated classes."
+				},
+				"q4": {
+					"question": "How to save gradient?",
+					"answer": "Click 'Save Gradient' button to save current gradient to history. Saved gradients are stored in browser's localStorage and available on next visit."
+				},
+				"q5": {
+					"question": "What is smooth distribution?",
+					"answer": "Smooth distribution automatically distributes positions of all color stops evenly from 0% to 100%. This is useful for creating symmetrical gradients."
+				},
+				"q6": {
+					"question": "Can I use gradients for website background?",
+					"answer": "Yes, gradients are perfect for website backgrounds. Copy generated CSS code and use it in background property of your element."
+				},
+				"q7": {
+					"question": "How to reverse gradient?",
+					"answer": "Click 'Reverse Gradient' button to change color order in gradient. This will flip positions of all stops, creating reverse effect."
+				},
+				"q8": {
+					"question": "Can I use gradients for mobile design?",
+					"answer": "Yes, gradients work great on mobile devices. CSS gradients are fully supported by modern browsers and mobile devices."
+				}
+			}
+		}
+	},
+	"colorBlindnessSimulator": {
+		"title": "Color Blindness Simulator — Accessibility Check",
+		"description": "Simulate different types of color blindness on your images. Check how your designs look to people with color vision deficiencies.",
+		"upload": {
+			"title": "Upload Image",
+			"dragDrop": "Drag and drop image here",
+			"or": "or",
+			"selectFile": "Select File",
+			"formats": "Supported formats: JPG, PNG, WEBP",
+			"error": "Invalid file type. Please upload JPG, PNG, or WEBP image.",
+			"preview": "Image preview"
+		},
+		"controls": {
+			"title": "Simulation Settings",
+			"type": {
+				"label": "Color Blindness Type",
+				"none": {
+					"name": "None (Original)",
+					"short": "Original image",
+					"description": "Show original image without changes"
+				},
+				"protanopia": {
+					"name": "Protanopia",
+					"short": "Cannot see red",
+					"description": "Complete inability to distinguish red color"
+				},
+				"protanomaly": {
+					"name": "Protanomaly",
+					"short": "Weak red vision",
+					"description": "Reduced ability to distinguish red color"
+				},
+				"deuteranopia": {
+					"name": "Deuteranopia",
+					"short": "Cannot see green",
+					"description": "Complete inability to distinguish green color"
+				},
+				"deuteranomaly": {
+					"name": "Deuteranomaly",
+					"short": "Weak green vision",
+					"description": "Reduced ability to distinguish green color"
+				},
+				"tritanopia": {
+					"name": "Tritanopia",
+					"short": "Cannot see blue",
+					"description": "Complete inability to distinguish blue color"
+				},
+				"tritanomaly": {
+					"name": "Tritanomaly",
+					"short": "Weak blue vision",
+					"description": "Reduced ability to distinguish blue color"
+				},
+				"achromatopsia": {
+					"name": "Achromatopsia",
+					"short": "Complete color blindness",
+					"description": "Complete inability to distinguish colors, sees only shades of gray"
+				},
+				"achromatomaly": {
+					"name": "Achromatomaly",
+					"short": "Partial color blindness",
+					"description": "Reduced ability to distinguish colors"
+				}
+			},
+			"splitView": "Split View",
+			"compareMode": "Compare Mode"
+		},
+		"canvas": {
+			"title": "Simulation Result",
+			"original": "Original",
+			"simulated": "Simulated"
+		},
+		"actions": {
+			"download": "Download Result (PNG)",
+			"reset": "Reset"
+		},
+		"seo": {
+			"keywords": "color blindness simulator, colorblind simulator, color accessibility check, protanopia simulator, deuteranopia simulator, tritanopia simulator, achromatopsia simulator, color blindness simulation online, design check for colorblind, color accessibility, WCAG color accessibility, color vision simulator, color check for colorblind, color blindness simulator online, accessibility check tool, protanopia simulation, deuteranopia simulation, tritanopia simulation, UI check for colorblind, color accessibility for design, free colorblind simulator, online color blindness simulator, web design check for colorblind, color blindness simulator for designers, colorblind simulation tool, color accessibility check, online color vision simulator",
+			"guide": {
+				"title": "Complete Guide to Using Color Blindness Simulator",
+				"intro": "Color Blindness Simulator is a powerful tool for checking the accessibility of your designs. With this service, you can see how your images and designs look to people with different types of color blindness.",
+				"step1": {
+					"title": "Step 1: Upload Image",
+					"description": "Drag and drop an image into the upload area or click 'Select File' button. Supported formats are JPG, PNG, and WEBP. After upload, the image will be displayed in preview."
+				},
+				"step2": {
+					"title": "Step 2: Select Color Blindness Type",
+					"description": "Choose one of nine simulation types: None (original), Protanopia, Protanomaly, Deuteranopia, Deuteranomaly, Tritanopia, Tritanomaly, Achromatopsia (complete), or Achromatomaly (partial)."
+				},
+				"step3": {
+					"title": "Step 3: View Result",
+					"description": "The simulation result is displayed on canvas. You can use 'Split View' mode to view original and simulation simultaneously, or 'Compare Mode' to place them side by side."
+				},
+				"step4": {
+					"title": "Step 4: Download Result",
+					"description": "Click 'Download Result (PNG)' button to save the simulated image to your computer. The image will be saved in PNG format."
+				}
+			},
+			"howTo": {
+				"title": "How to Use Color Blindness Simulator",
+				"howTo1": {
+					"title": "How to Check Design for Protanopia",
+					"description": "Upload your design image and select 'Protanopia' type. This will show how the design looks to people who cannot distinguish red color. This helps ensure important information is not lost."
+				},
+				"howTo2": {
+					"title": "How to Use Compare Mode",
+					"description": "Enable 'Compare Mode' to view original and simulated images side by side simultaneously. This allows you to easily see differences and evaluate how accessible your design is."
+				},
+				"howTo3": {
+					"title": "How to Use Split View",
+					"description": "Enable 'Split View' to display original on the left and simulation on the right in one image. This is useful for quick comparison without switching between modes."
+				},
+				"howTo4": {
+					"title": "How to Check for Complete Color Blindness",
+					"description": "Select 'Achromatopsia' type to simulate complete color blindness. This will show how your design looks in shades of gray, helping ensure important information is conveyed not only by color."
+				},
+				"howTo5": {
+					"title": "How to Download Result",
+					"description": "After applying simulation, click 'Download Result (PNG)' button. The image will be saved to your computer in PNG format and can be used for documentation or presentations."
+				},
+				"howTo6": {
+					"title": "How to Check Web Design for Accessibility",
+					"description": "Take a screenshot of your web design and upload it to the simulator. Check all color blindness types to ensure important elements (buttons, links, warnings) are distinguishable for all users."
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions About Color Blindness Simulator",
+				"q1": {
+					"question": "What color blindness types are supported?",
+					"answer": "Simulator supports 9 types: None (original), Protanopia (cannot see red), Protanomaly (weak red vision), Deuteranopia (cannot see green), Deuteranomaly (weak green vision), Tritanopia (cannot see blue), Tritanomaly (weak blue vision), Achromatopsia (complete color blindness), and Achromatomaly (partial color blindness)."
+				},
+				"q2": {
+					"question": "How does simulation work?",
+					"answer": "Simulation uses color transformation matrices (3x3) that are applied to each pixel of the image. These matrices are based on standard color vision deficiency simulation algorithms and accurately reproduce how people with color blindness see colors."
+				},
+				"q3": {
+					"question": "Can I use it to check web design?",
+					"answer": "Yes, simulator is perfect for checking web design accessibility. Take a screenshot of your design and upload it to the simulator to see how it looks to people with different types of color blindness."
+				},
+				"q4": {
+					"question": "What is protanopia?",
+					"answer": "Protanopia is a type of color blindness where a person cannot distinguish red color. This is the most common type of color blindness, affecting approximately 1% of the male population."
+				},
+				"q5": {
+					"question": "What is deuteranopia?",
+					"answer": "Deuteranopia is a type of color blindness where a person cannot distinguish green color. This is also a common type of color blindness, often confused with protanopia."
+				},
+				"q6": {
+					"question": "What is achromatopsia?",
+					"answer": "Achromatopsia is complete color blindness where a person sees only shades of gray. This is a rare type of color blindness, but checking design for this type helps ensure important information does not depend only on color."
+				},
+				"q7": {
+					"question": "Can I download the result?",
+					"answer": "Yes, you can download the simulated image in PNG format by clicking 'Download Result (PNG)' button. This is useful for documentation, presentations, or sharing with your team."
+				},
+				"q8": {
+					"question": "Why use compare mode?",
+					"answer": "Compare mode allows you to see original and simulated images side by side simultaneously. This helps easily evaluate differences and understand which design elements may be problematic for people with color blindness."
+				}
+			}
+		}
+	}
 }
 
 

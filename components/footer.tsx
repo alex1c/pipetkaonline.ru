@@ -1,3 +1,25 @@
+/**
+ * Footer Component
+ * 
+ * Site footer displaying legal links, site information, and navigation.
+ * This component is required for compliance with advertising platforms
+ * like Google AdSense and Yandex.Direct, which require clear legal
+ * information and site structure.
+ * 
+ * Features:
+ * - Legal pages (Privacy, Cookies, Terms)
+ * - Site information (About, Contact)
+ * - Quick navigation links
+ * - Copyright information
+ * - Responsive grid layout
+ * 
+ * @component
+ * @example
+ * ```tsx
+ * <Footer />
+ * ```
+ */
+
 'use client'
 
 import Link from 'next/link'
@@ -6,8 +28,12 @@ import { useParams } from 'next/navigation'
 
 /**
  * Footer component
- * Displays legal links and site information
- * Required for AdSense and Yandex.Direct compliance
+ * 
+ * Renders the site footer with all necessary legal and informational links.
+ * Uses translations from the 'footer' namespace for internationalization.
+ * Automatically gets the current locale from URL parameters.
+ * 
+ * @returns {JSX.Element} Footer component with legal links and site information
  */
 export function Footer() {
 	const t = useTranslations('footer')
@@ -104,8 +130,16 @@ export function Footer() {
 }
 
 /**
- * Footer link component
- * Styled link for footer navigation
+ * Footer Link Component
+ * 
+ * Reusable link component for footer navigation.
+ * Provides consistent styling and hover effects for all footer links.
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.href - Destination URL for the link
+ * @param {React.ReactNode} props.children - Link text content
+ * 
+ * @returns {JSX.Element} Styled footer link
  */
 function FooterLink({
 	href,

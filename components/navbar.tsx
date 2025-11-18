@@ -1,3 +1,28 @@
+/**
+ * Navigation Bar Component
+ * 
+ * Main site navigation component that appears at the top of every page.
+ * Provides consistent navigation and language switching across the application.
+ * 
+ * Features:
+ * - Sticky positioning (stays at top when scrolling)
+ * - Glassmorphism effect (semi-transparent with backdrop blur)
+ * - Responsive design (desktop horizontal, mobile vertical)
+ * - Internationalized navigation labels
+ * - Smooth transitions and hover effects
+ * 
+ * Layout:
+ * - Desktop: Logo | Nav Links | Language Switcher (horizontal)
+ * - Mobile: Logo | Language Switcher (horizontal)
+ *          Nav Links (vertical, below)
+ * 
+ * @component
+ * @example
+ * ```tsx
+ * <Navbar />
+ * ```
+ */
+
 'use client'
 
 import Link from 'next/link'
@@ -7,38 +32,77 @@ import { LanguageSwitcher } from './language-switcher'
 import { Logo } from './logo'
 
 /**
- * Navigation bar component
- * Displays site navigation links and language switcher
- * Uses sticky positioning and smooth transitions
+ * Navigation Bar Component
+ * 
+ * Renders the main site navigation with:
+ * - Site logo (links to home)
+ * - Main navigation links (Home, Tools, Learn)
+ * - Language switcher
+ * 
+ * Uses sticky positioning to remain visible while scrolling.
+ * Applies glassmorphism styling (semi-transparent background with blur)
+ * for a modern, elegant appearance.
+ * 
+ * Responsive behavior:
+ * - Desktop (md+): All elements in one row
+ * - Mobile: Logo and language switcher in row, nav links below
+ * 
+ * @returns {JSX.Element} Navigation bar with logo, links, and language switcher
  */
 export function Navbar() {
+	// Get translations from default namespace (common translations)
 	const t = useTranslations()
+	// Get current locale from URL parameters
 	const params = useParams()
 	const locale = params.locale as string
 
 	return (
 		<nav className='sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200 transition-all duration-300'>
+			{/* 
+				Container with max-width for content centering
+				- max-w-7xl: Maximum width constraint
+				- mx-auto: Centers horizontally
+				- px-4 sm:px-6: Responsive horizontal padding
+			*/}
 			<div className='max-w-7xl mx-auto px-4 sm:px-6'>
+				{/* 
+					Main navigation row
+					- flex: Horizontal layout
+					- items-center: Vertical centering
+					- justify-between: Space between logo and right side
+					- h-20: Fixed height for consistent appearance
+					- gap-4: Spacing between flex items
+				*/}
 				<div className='flex items-center justify-between h-20 gap-4'>
-					{/* Logo */}
+					{/* Logo section - flex-shrink-0 prevents logo from shrinking */}
 					<div className='flex-shrink-0'>
 						<Logo locale={locale} />
 					</div>
 
-					{/* Navigation links */}
+					{/* 
+						Desktop navigation links
+						- hidden md:flex: Hidden on mobile, visible on desktop
+						- gap-1: Small spacing between links
+					*/}
 					<div className='hidden md:flex items-center gap-1 flex-shrink-0'>
 						<NavLink href={`/${locale}`} label={t('nav.home')} />
 						<NavLink href={`/${locale}/tools`} label={t('nav.tools')} />
 						<NavLink href={`/${locale}/learn`} label={t('nav.learn')} />
 					</div>
 
-					{/* Language switcher */}
+					{/* Language switcher - always visible */}
 					<div className='flex items-center gap-4 flex-shrink-0'>
 						<LanguageSwitcher />
 					</div>
 				</div>
 
-				{/* Mobile navigation */}
+				{/* 
+					Mobile navigation menu
+					- md:hidden: Only visible on mobile devices
+					- pb-4: Bottom padding for spacing
+					- flex flex-col: Vertical layout
+					- gap-2: Spacing between links
+				*/}
 				<div className='md:hidden pb-4 flex flex-col gap-2'>
 					<NavLink href={`/${locale}`} label={t('nav.home')} mobile />
 					<NavLink href={`/${locale}/tools`} label={t('nav.tools')} mobile />
@@ -50,8 +114,23 @@ export function Navbar() {
 }
 
 /**
- * Navigation link component
- * Handles hover effects and active state styling
+ * Navigation Link Component
+ * 
+ * Reusable link component for navigation items.
+ * Provides consistent styling and hover effects for all nav links.
+ * 
+ * Styling features:
+ * - Hover background color change
+ * - Hover text color change
+ * - Smooth transitions
+ * - Responsive padding (different for mobile/desktop)
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.href - Destination URL (includes locale prefix)
+ * @param {string} props.label - Link text (translated)
+ * @param {boolean} [props.mobile=false] - Whether this is a mobile nav link
+ * 
+ * @returns {JSX.Element} Styled navigation link with hover effects
  */
 function NavLink({
 	href,

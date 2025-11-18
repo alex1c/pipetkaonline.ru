@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
@@ -21,7 +22,11 @@ export async function generateMetadata({
  * Tools page component
  * Displays available color tools and utilities
  */
-export default function ToolsPage() {
+export default function ToolsPage({
+	params,
+}: {
+	params: { locale: string }
+}) {
 	const t = useTranslations('tools')
 
 	return (
@@ -40,42 +45,56 @@ export default function ToolsPage() {
 					icon='🎨'
 					title={t('tools.picker.title')}
 					description={t('tools.picker.desc')}
-					status='coming-soon'
+					href={`/${params.locale}/tools/color-lab`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🌈'
 					title={t('tools.palette.title')}
 					description={t('tools.palette.desc')}
-					status='coming-soon'
+					href={`/${params.locale}/tools/palette-generator`}
 					t={t}
 				/>
-				<ToolCard
-					icon='🎯'
-					title={t('tools.contrast.title')}
-					description={t('tools.contrast.desc')}
-					status='coming-soon'
-					t={t}
-				/>
+					<ToolCard
+						icon='🎯'
+						title={t('tools.contrast.title')}
+						description={t('tools.contrast.desc')}
+						href={`/${params.locale}/tools/contrast-checker`}
+						t={t}
+					/>
 				<ToolCard
 					icon='🔄'
 					title={t('tools.converter.title')}
 					description={t('tools.converter.desc')}
-					status='coming-soon'
+					href={`/${params.locale}/tools/color-converter`}
 					t={t}
 				/>
 				<ToolCard
 					icon='💡'
 					title={t('tools.harmony.title')}
 					description={t('tools.harmony.desc')}
-					status='coming-soon'
+					href={`/${params.locale}/tools/color-harmony`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🎭'
 					title={t('tools.gradient.title')}
 					description={t('tools.gradient.desc')}
-					status='coming-soon'
+					href={`/${params.locale}/tools/gradient-generator`}
+					t={t}
+				/>
+				<ToolCard
+					icon='🎨'
+					title={t('tools.uiTokensGenerator.title')}
+					description={t('tools.uiTokensGenerator.desc')}
+					href={`/${params.locale}/tools/ui-tokens-generator`}
+					t={t}
+				/>
+				<ToolCard
+					icon='👁️'
+					title={t('colorBlindnessSimulator.title')}
+					description={t('colorBlindnessSimulator.description')}
+					href={`/${params.locale}/tools/color-blindness-simulator`}
 					t={t}
 				/>
 			</div>
@@ -92,15 +111,17 @@ function ToolCard({
 	title,
 	description,
 	status,
+	href,
 	t,
 }: {
 	icon: string
 	title: string
 	description: string
 	status?: 'available' | 'coming-soon'
+	href?: string
 	t: any
 }) {
-	return (
+	const content = (
 		<div className='bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 group relative overflow-hidden'>
 			{/* Status badge */}
 			{status === 'coming-soon' && (
@@ -119,6 +140,16 @@ function ToolCard({
 			<div className='absolute inset-0 bg-gradient-to-br from-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none' />
 		</div>
 	)
+
+	if (href) {
+		return (
+			<Link href={href} className='block'>
+				{content}
+			</Link>
+		)
+	}
+
+	return content
 }
 
 

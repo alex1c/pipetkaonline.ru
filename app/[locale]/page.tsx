@@ -1,15 +1,46 @@
+/**
+ * Home Page Component
+ * 
+ * The main landing page of the application. Displays:
+ * - Hero section with site title and description
+ * - Call-to-action cards for main features
+ * - Features grid showcasing key capabilities
+ * 
+ * This is a Server Component that uses translations for all text content.
+ * Metadata is generated dynamically based on the current locale.
+ * 
+ * @module app/[locale]/page
+ */
+
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
 /**
- * Generate metadata for the home page
- * Uses translations for dynamic title and description
+ * Generate Metadata for Home Page
+ * 
+ * Creates dynamic metadata (title, description) based on the current locale.
+ * This metadata is used for:
+ * - Browser tab title
+ * - Search engine results (SEO)
+ * - Social media sharing previews
+ * 
+ * The function is async because it needs to fetch translations from the server.
+ * 
+ * @param {Object} params - Route parameters
+ * @param {string} params.locale - Current locale code
+ * @returns {Promise<Metadata>} Metadata object with title and description
+ * 
+ * @example
+ * For locale 'ru':
+ * - title: "PipetkaOnline — Онлайн-инструменты для работы с цветом"
+ * - description: "Определи цвет, создай палитру и узнай всё о цветовых сочетаниях."
  */
 export async function generateMetadata({
 	params: { locale },
 }: {
 	params: { locale: string }
 }) {
+	// Get translations from 'home' namespace for the current locale
 	const t = await getTranslations({ locale, namespace: 'home' })
 
 	return {
@@ -19,10 +50,22 @@ export async function generateMetadata({
 }
 
 /**
- * Home page component
- * Displays welcome message and call-to-action buttons
+ * Home Page Component
+ * 
+ * Main landing page that introduces the application and its features.
+ * 
+ * Structure:
+ * 1. Hero Section - Large title and subtitle
+ * 2. CTA Cards - Three main action cards (Detect, Palette, Learn)
+ * 3. Features Section - Grid of key features with icons
+ * 
+ * All text content is internationalized using the 'home' translation namespace.
+ * 
+ * @returns {JSX.Element} Home page with hero, CTAs, and features
  */
 export default function HomePage() {
+	// Get translations for 'home' namespace
+	// This hook works in Server Components in Next.js 14+
 	const t = useTranslations('home')
 
 	return (
@@ -89,8 +132,23 @@ export default function HomePage() {
 }
 
 /**
- * Call-to-action card component
- * Displays a feature with icon, title, and description
+ * Call-to-Action Card Component
+ * 
+ * Displays a feature card with icon, title, and description.
+ * Used in the main CTA section to highlight key features.
+ * 
+ * Features:
+ * - Hover effects (shadow increase, icon scale)
+ * - Group hover for coordinated animations
+ * - Responsive design
+ * - Accessible structure
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.title - Card title text
+ * @param {string} props.description - Card description text
+ * @param {string} props.icon - Emoji or icon to display
+ * 
+ * @returns {JSX.Element} Styled CTA card with hover effects
  */
 function CTACard({
 	title,
@@ -103,6 +161,7 @@ function CTACard({
 }) {
 	return (
 		<div className='bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer group'>
+			{/* Icon with scale animation on hover */}
 			<div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>
 				{icon}
 			</div>
@@ -113,8 +172,23 @@ function CTACard({
 }
 
 /**
- * Feature item component
- * Displays a single feature in a list
+ * Feature Item Component
+ * 
+ * Displays a single feature in the features grid section.
+ * Shows an icon alongside title and description in a horizontal layout.
+ * 
+ * Used to showcase key application features like:
+ * - Color detection
+ * - Contrast checking
+ * - Color conversion
+ * - Color harmony
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.icon - Emoji or icon to display
+ * @param {string} props.title - Feature title
+ * @param {string} props.description - Feature description
+ * 
+ * @returns {JSX.Element} Feature item with icon and text
  */
 function FeatureItem({
 	icon,
@@ -127,7 +201,9 @@ function FeatureItem({
 }) {
 	return (
 		<div className='flex gap-4'>
+			{/* Icon column */}
 			<div className='text-2xl'>{icon}</div>
+			{/* Text column */}
 			<div>
 				<h4 className='font-semibold text-slate-900 mb-1'>{title}</h4>
 				<p className='text-slate-600 text-sm'>{description}</p>

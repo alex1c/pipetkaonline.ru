@@ -81,6 +81,20 @@ Language is determined by URL path: `/ru/`, `/en/`, `/de/`, `/es/`
 2. Use the `useTranslations` hook in components
 3. Follow the namespace pattern: `common`, `home`, `tools`, `learn`, `tech`
 
+## Documentation
+
+For detailed information about the project architecture, design principles, and development guidelines, see:
+
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Comprehensive architecture documentation covering:
+  - Technology stack and architectural principles
+  - Project structure and component architecture
+  - Internationalization (i18n) system
+  - State management patterns
+  - Styling architecture
+  - Routing and performance optimization
+  - Security considerations
+  - Development workflow and best practices
+
 ## Development Guidelines
 
 - Follow TypeScript strict mode

@@ -1,10 +1,37 @@
+/**
+ * Language Switcher Component
+ * 
+ * Interactive component that allows users to switch between available locales.
+ * Preserves the current page path when changing languages, ensuring users
+ * stay on the same content in their preferred language.
+ * 
+ * Features:
+ * - Visual flag indicators for each language
+ * - Active state highlighting
+ * - Smooth transitions and hover effects
+ * - Accessible button labels
+ * - Path preservation on locale change
+ * 
+ * @component
+ * @example
+ * ```tsx
+ * <LanguageSwitcher />
+ * ```
+ */
+
 'use client'
 
 import { useParams, usePathname, useRouter } from 'next/navigation'
 import { locales } from '@/i18n'
 
 /**
- * Language information for display
+ * Language display information mapping
+ * 
+ * Maps locale codes to their visual representation (flag emoji and label).
+ * Used for displaying language options in the switcher UI.
+ * 
+ * @constant
+ * @type {Record<string, { flag: string; label: string }>}
  */
 const languageInfo = {
 	ru: { flag: '🇷🇺', label: 'RU' },
@@ -14,9 +41,21 @@ const languageInfo = {
 }
 
 /**
- * Language switcher component
- * Allows users to change the interface language
- * Preserves the current path when switching locales
+ * Language Switcher Component
+ * 
+ * Renders a button group for switching between available locales.
+ * Each button shows a flag emoji and language code. The active locale
+ * is highlighted with different styling.
+ * 
+ * When a language is clicked:
+ * 1. Extracts the current pathname
+ * 2. Removes the current locale prefix
+ * 3. Adds the new locale prefix
+ * 4. Navigates to the new URL
+ * 
+ * This preserves the page structure (e.g., /ru/tools/color-lab becomes /en/tools/color-lab)
+ * 
+ * @returns {JSX.Element} Language switcher button group
  */
 export function LanguageSwitcher() {
 	const router = useRouter()
@@ -25,8 +64,20 @@ export function LanguageSwitcher() {
 	const currentLocale = params.locale as string
 
 	/**
-	 * Handles language change by updating the URL locale
-	 * Maintains the current page path in the new locale
+	 * Handles locale change event
+	 * 
+	 * When a user clicks a language button, this function:
+	 * 1. Checks if the new locale is different from current
+	 * 2. Removes the current locale prefix from the pathname
+	 * 3. Constructs a new path with the selected locale
+	 * 4. Navigates to the new path using Next.js router
+	 * 
+	 * Example:
+	 * - Current: /ru/tools/color-lab
+	 * - Click EN: /en/tools/color-lab
+	 * 
+	 * @param {string} newLocale - The locale code to switch to (e.g., 'en', 'ru')
+	 * @returns {void}
 	 */
 	function handleLocaleChange(newLocale: string) {
 		if (newLocale === currentLocale) return
