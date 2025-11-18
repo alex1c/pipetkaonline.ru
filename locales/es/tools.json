@@ -16,6 +16,8 @@
 	"tools.gradient.desc": "Crea gradientes CSS suaves",
 	"tools.uiTokensGenerator.title": "Generador de tokens UI",
 	"tools.uiTokensGenerator.desc": "Genera un conjunto completo de tokens de diseño a partir de un color",
+	"tools.extractColorsV2.title": "Extraer Colores V2",
+	"tools.extractColorsV2.desc": "Análisis avanzado de colores de imágenes con agrupación y paletas",
 	"uiTokensGenerator": {
 		"title": "Generador de tokens UI",
 		"description": "Selecciona un color base y obtén automáticamente un conjunto completo de tokens UI: escalas de color, colores semánticos y variables CSS listas para usar.",
@@ -113,6 +115,103 @@
 				"q6": {
 					"question": "¿Qué son los colores semánticos?",
 					"answer": "Los colores semánticos son colores con significado específico: success (verde), warning (amarillo/naranja), danger (rojo). Se generan automáticamente basados en el color base ajustando el tono en la rueda de colores."
+				}
+			}
+		}
+	},
+	"extractColorsV2": {
+		"title": "Extraer Colores de Imagen V2",
+		"description": "Herramienta avanzada para analizar colores de imágenes. Encuentra automáticamente colores dominantes, crea paletas, agrupa tonos y proporciona análisis detallados.",
+		"sections": {
+			"upload": {
+				"title": "Subir Imagen"
+			},
+			"clusters": {
+				"label": "Cantidad de Clusters"
+			}
+		},
+		"seo": {
+			"keywords": "extraer colores de imagen, análisis de colores de imagen, colores dominantes, agrupación de colores, colores K-means, paleta de imagen, paleta de colores online, generador de paleta de foto, extraer colores de imagen, análisis de paleta de colores, esquema de colores de imagen, colores dominantes foto, paleta de colores de diseño, extraer colores online, análisis de colores de imagen, generador de paleta de imagen, paleta de colores de foto, extraer colores de captura, paleta de colores para diseño, análisis de colores de imagen online, colores dominantes imagen, paleta de colores de imagen, extraer colores gratis, paleta de colores online gratis, análisis de colores de foto, generador de paleta de colores de imagen, paleta de colores de imagen online, extraer colores de imagen online",
+			"guide": {
+				"title": "Guía completa para usar Extraer Colores V2",
+				"intro": "Extraer Colores V2 es una herramienta avanzada para analizar colores de imágenes. Usando el algoritmo de agrupación K-means, encuentra automáticamente colores dominantes, los agrupa por tonos y categorías semánticas, crea paletas y proporciona análisis detallados de imágenes.",
+				"step1": {
+					"title": "Paso 1: Subir imagen",
+					"description": "Arrastra y suelta una imagen en el área de carga o selecciona un archivo a través del diálogo. Formatos admitidos: JPG, PNG y WebP. Tamaño máximo de archivo: 10 MB."
+				},
+				"step2": {
+					"title": "Paso 2: Configurar cantidad de clusters",
+					"description": "Selecciona el número de clusters de color para el análisis: 3, 5, 8, 10 o 12. Más clusters proporcionan análisis más detallados pero requieren más tiempo de procesamiento."
+				},
+				"step3": {
+					"title": "Paso 3: Ver colores dominantes",
+					"description": "La herramienta extrae automáticamente 5 colores dominantes principales de la imagen con indicación de porcentaje para cada color. Los colores se muestran como muestras con capacidad de copiar código HEX."
+				},
+				"step4": {
+					"title": "Paso 4: Analizar paleta extendida",
+					"description": "Revisa la paleta extendida con el número seleccionado de colores. Cada color está clasificado por tono (claro, medio, oscuro) y categoría semántica (cálido, frío, neutro, etc.)."
+				},
+				"step5": {
+					"title": "Paso 5: Explorar grupos de colores",
+					"description": "Explora colores agrupados por varios criterios: tonos (claro, medio, oscuro) y categorías semánticas (cálido, frío, neutro, vibrante, apagado, pastel, tierra)."
+				},
+				"step6": {
+					"title": "Paso 6: Análisis y exportación",
+					"description": "Revisa análisis de imagen: luminosidad promedio, colores más oscuros y más claros, tono dominante y estado de ánimo (temperatura, brillo, vibrancia, contraste). Exporta resultados como variables CSS, config de Tailwind, JSON o PNG."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar Extraer Colores V2: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo extraer colores dominantes de imagen",
+					"description": "Sube una imagen en formato JPG, PNG o WebP. La herramienta analiza automáticamente los píxeles de la imagen usando el algoritmo de agrupación K-means y extrae colores dominantes con sus proporciones porcentuales."
+				},
+				"howTo2": {
+					"title": "Cómo configurar cantidad de clusters de color",
+					"description": "Usa el selector 'Cantidad de Clusters' para elegir el número de colores para el análisis: 3, 5, 8, 10 o 12. Más clusters proporcionan análisis más detallados pero aumentan el tiempo de procesamiento."
+				},
+				"howTo3": {
+					"title": "Cómo usar agrupación de colores",
+					"description": "La herramienta agrupa automáticamente colores por tonos (claro, medio, oscuro) y categorías semánticas (cálido, frío, neutro, vibrante, apagado, pastel, tierra). Esto ayuda a entender la estructura de color de la imagen."
+				},
+				"howTo4": {
+					"title": "Cómo crear paletas de imagen",
+					"description": "La herramienta crea automáticamente tres tipos de paletas: Brand (escalas de color para cada color dominante), UI (optimizada para interfaces) y Creative (pares contrastantes y complementarios)."
+				},
+				"howTo5": {
+					"title": "Cómo exportar colores como variables CSS",
+					"description": "Ve a la sección 'Exportar', selecciona la pestaña 'Variables CSS' y haz clic en 'Copiar'. El código copiado contiene todos los colores dominantes, paleta UI y paleta Brand en formato de variables CSS."
+				},
+				"howTo6": {
+					"title": "Cómo exportar paleta como PNG",
+					"description": "En la sección 'Exportar', selecciona la pestaña 'Exportar PNG' y haz clic en ella. La herramienta crea automáticamente una imagen con la paleta de colores y la descarga a tu dispositivo."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre Extraer Colores V2",
+				"q1": {
+					"question": "¿Cómo funciona el algoritmo de extracción de colores?",
+					"answer": "La herramienta usa el algoritmo de agrupación K-means para agrupar colores similares. El algoritmo analiza los píxeles de la imagen, los agrupa por similitud de color y determina los centros de cluster que se convierten en colores dominantes."
+				},
+				"q2": {
+					"question": "¿Qué son los clusters de color?",
+					"answer": "Los clusters son grupos de colores similares encontrados en la imagen. El número de clusters determina cuántos colores principales se extraerán. Más clusters proporcionan análisis más detallados pero pueden incluir colores menos significativos."
+				},
+				"q3": {
+					"question": "¿Cómo funciona la clasificación semántica?",
+					"answer": "La clasificación semántica agrupa colores por sus características visuales: tono (luminosidad), temperatura (cálido/frío), saturación (vibrante/apagado) y otras características. Esto ayuda a entender el impacto emocional de la paleta de colores."
+				},
+				"q4": {
+					"question": "¿Qué son las paletas Brand, UI y Creative?",
+					"answer": "La paleta Brand contiene escalas de color (10 tonos) para cada color dominante. La paleta UI está optimizada para interfaces (primary, surface, accent, neutral). La paleta Creative contiene pares de colores contrastantes y complementarios."
+				},
+				"q5": {
+					"question": "¿Cómo interpretar análisis de imagen?",
+					"answer": "El análisis muestra la luminosidad promedio de la imagen, los colores más oscuros y más claros, el tono dominante y el estado de ánimo (temperatura, brillo, vibrancia, contraste). Esto ayuda a entender la atmósfera de color general de la imagen."
+				},
+				"q6": {
+					"question": "¿Qué formatos de exportación se admiten?",
+					"answer": "La herramienta admite exportación a variables CSS (para usar en CSS), config de Tailwind (para integración con Tailwind CSS), JSON (para usar en sistemas de diseño) y PNG (representación visual de la paleta)."
 				}
 			}
 		}

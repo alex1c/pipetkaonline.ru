@@ -16,6 +16,8 @@
 	"tools.gradient.desc": "Create smooth CSS gradients",
 	"tools.uiTokensGenerator.title": "UI Tokens Generator",
 	"tools.uiTokensGenerator.desc": "Generate a complete design token set from one color",
+	"tools.extractColorsV2.title": "Extract Colors V2",
+	"tools.extractColorsV2.desc": "Advanced color analysis from images with clustering and palettes",
 	"uiTokensGenerator": {
 		"title": "UI Tokens Generator",
 		"description": "Select a base color and automatically get a complete UI token set: color scales, semantic colors, and ready-to-use CSS variables.",
@@ -113,6 +115,103 @@
 				"q6": {
 					"question": "What are semantic colors?",
 					"answer": "Semantic colors are colors with specific meaning: success (green), warning (yellow/orange), danger (red). They are automatically generated based on the base color by adjusting the hue on the color wheel."
+				}
+			}
+		}
+	},
+	"extractColorsV2": {
+		"title": "Extract Colors From Image V2",
+		"description": "Advanced tool for analyzing colors from images. Automatically finds dominant colors, creates palettes, groups shades, and provides detailed analytics.",
+		"sections": {
+			"upload": {
+				"title": "Upload Image"
+			},
+			"clusters": {
+				"label": "Cluster Count"
+			}
+		},
+		"seo": {
+			"keywords": "extract colors from image, image color analysis, dominant colors, color clustering, K-means colors, palette from image, color palette online, palette generator from photo, extract colors from picture, color palette analysis, image color scheme, dominant colors photo, design color palette, extract colors online, picture color analysis, palette generator from image, color palette from photo, extract colors from screenshot, color palette for design, image color analysis online, dominant colors image, color palette from picture, extract colors free, color palette online free, photo color analysis, color palette generator from image, color palette from image online, extract colors from image online",
+			"guide": {
+				"title": "Complete guide to using Extract Colors V2",
+				"intro": "Extract Colors V2 is an advanced tool for analyzing colors from images. Using K-means clustering algorithm, it automatically finds dominant colors, groups them by tones and semantic categories, creates palettes, and provides detailed image analytics.",
+				"step1": {
+					"title": "Step 1: Upload image",
+					"description": "Drag and drop an image into the upload area or select a file through the dialog. Supported formats: JPG, PNG, and WebP. Maximum file size: 10 MB."
+				},
+				"step2": {
+					"title": "Step 2: Configure cluster count",
+					"description": "Select the number of color clusters for analysis: 3, 5, 8, 10, or 12. More clusters provide more detailed analysis but require more processing time."
+				},
+				"step3": {
+					"title": "Step 3: View dominant colors",
+					"description": "The tool automatically extracts 5 main dominant colors from the image with percentage indication for each color. Colors are displayed as swatches with ability to copy HEX code."
+				},
+				"step4": {
+					"title": "Step 4: Analyze extended palette",
+					"description": "Review the extended palette with selected number of colors. Each color is classified by tone (light, mid, dark) and semantic category (warm, cold, neutral, etc.)."
+				},
+				"step5": {
+					"title": "Step 5: Explore color groups",
+					"description": "Explore colors grouped by various criteria: tones (light, mid, dark) and semantic categories (warm, cold, neutral, vibrant, muted, pastel, earth)."
+				},
+				"step6": {
+					"title": "Step 6: Analytics and export",
+					"description": "Review image analytics: average lightness, darkest and lightest colors, dominant hue, and mood (temperature, brightness, vibrancy, contrast). Export results as CSS variables, Tailwind config, JSON, or PNG."
+				}
+			},
+			"howTo": {
+				"title": "How to use Extract Colors V2: step-by-step guide",
+				"howTo1": {
+					"title": "How to extract dominant colors from image",
+					"description": "Upload an image in JPG, PNG, or WebP format. The tool automatically analyzes image pixels using K-means clustering algorithm and extracts dominant colors with their percentage ratios."
+				},
+				"howTo2": {
+					"title": "How to configure color cluster count",
+					"description": "Use the 'Cluster Count' selector to choose the number of colors for analysis: 3, 5, 8, 10, or 12. More clusters provide more detailed analysis but increase processing time."
+				},
+				"howTo3": {
+					"title": "How to use color grouping",
+					"description": "The tool automatically groups colors by tones (light, mid, dark) and semantic categories (warm, cold, neutral, vibrant, muted, pastel, earth). This helps understand the color structure of the image."
+				},
+				"howTo4": {
+					"title": "How to create palettes from image",
+					"description": "The tool automatically creates three types of palettes: Brand (color scales for each dominant color), UI (optimized for interfaces), and Creative (contrasting and complementary pairs)."
+				},
+				"howTo5": {
+					"title": "How to export colors as CSS variables",
+					"description": "Go to the 'Export' section, select the 'CSS Variables' tab and click 'Copy'. The copied code contains all dominant colors, UI palette, and Brand palette in CSS variable format."
+				},
+				"howTo6": {
+					"title": "How to export palette as PNG",
+					"description": "In the 'Export' section, select the 'PNG Export' tab and click on it. The tool automatically creates an image with the color palette and downloads it to your device."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Extract Colors V2",
+				"q1": {
+					"question": "How does the color extraction algorithm work?",
+					"answer": "The tool uses K-means clustering algorithm to group similar colors. The algorithm analyzes image pixels, groups them by color similarity, and determines cluster centers that become dominant colors."
+				},
+				"q2": {
+					"question": "What are color clusters?",
+					"answer": "Clusters are groups of similar colors found in the image. The number of clusters determines how many main colors will be extracted. More clusters provide more detailed analysis but may include less significant colors."
+				},
+				"q3": {
+					"question": "How does semantic classification work?",
+					"answer": "Semantic classification groups colors by their visual characteristics: tone (lightness), temperature (warm/cold), saturation (vibrant/muted), and other features. This helps understand the emotional impact of the color palette."
+				},
+				"q4": {
+					"question": "What are Brand, UI, and Creative palettes?",
+					"answer": "Brand palette contains color scales (10 shades) for each dominant color. UI palette is optimized for interfaces (primary, surface, accent, neutral). Creative palette contains contrasting and complementary color pairs."
+				},
+				"q5": {
+					"question": "How to interpret image analytics?",
+					"answer": "Analytics shows average lightness of the image, darkest and lightest colors, dominant hue, and mood (temperature, brightness, vibrancy, contrast). This helps understand the overall color atmosphere of the image."
+				},
+				"q6": {
+					"question": "What export formats are supported?",
+					"answer": "The tool supports export to CSS variables (for use in CSS), Tailwind config (for Tailwind CSS integration), JSON (for use in design systems), and PNG (visual representation of palette)."
 				}
 			}
 		}

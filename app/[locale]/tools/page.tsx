@@ -91,6 +91,13 @@ export default function ToolsPage({
 					t={t}
 				/>
 				<ToolCard
+					icon='🔬'
+					title={t('tools.extractColorsV2.title')}
+					description={t('tools.extractColorsV2.desc')}
+					href={`/${params.locale}/tools/extract-colors-v2`}
+					t={t}
+				/>
+				<ToolCard
 					icon='👁️'
 					title={t('colorBlindnessSimulator.title')}
 					description={t('colorBlindnessSimulator.description')}

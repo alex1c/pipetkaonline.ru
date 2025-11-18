@@ -16,6 +16,8 @@
 	"tools.gradient.desc": "Sanfte CSS-Gradienten erstellen",
 	"tools.uiTokensGenerator.title": "UI-Token-Generator",
 	"tools.uiTokensGenerator.desc": "Generiere einen vollständigen Design-Token-Satz aus einer Farbe",
+	"tools.extractColorsV2.title": "Farben extrahieren V2",
+	"tools.extractColorsV2.desc": "Erweiterte Farbanalyse aus Bildern mit Clustering und Paletten",
 	"uiTokensGenerator": {
 		"title": "UI-Token-Generator",
 		"description": "Wählen Sie eine Grundfarbe und erhalten Sie automatisch einen vollständigen UI-Token-Satz: Farbskalen, semantische Farben und einsatzbereite CSS-Variablen.",
@@ -113,6 +115,103 @@
 				"q6": {
 					"question": "Was sind semantische Farben?",
 					"answer": "Semantische Farben sind Farben mit spezifischer Bedeutung: Erfolg (grün), Warnung (gelb/orange), Gefahr (rot). Sie werden automatisch basierend auf der Grundfarbe durch Anpassung des Farbtons auf dem Farbkreis generiert."
+				}
+			}
+		}
+	},
+	"extractColorsV2": {
+		"title": "Farben aus Bild extrahieren V2",
+		"description": "Erweiterte Tool zur Farbanalyse aus Bildern. Findet automatisch dominante Farben, erstellt Paletten, gruppiert Farbtöne und bietet detaillierte Analysen.",
+		"sections": {
+			"upload": {
+				"title": "Bild hochladen"
+			},
+			"clusters": {
+				"label": "Anzahl der Cluster"
+			}
+		},
+		"seo": {
+			"keywords": "Farben aus Bild extrahieren, Bildfarbanalyse, dominante Farben, Farb-Clustering, K-Means-Farben, Palette aus Bild, Farbpalette online, Palettengenerator aus Foto, Farben aus Bild extrahieren, Farbpalettenanalyse, Bildfarb-Schema, dominante Farben Foto, Design-Farbpalette, Farben online extrahieren, Bildfarbanalyse, Palettengenerator aus Bild, Farbpalette aus Foto, Farben aus Screenshot extrahieren, Farbpalette für Design, Bildfarbanalyse online, dominante Farben Bild, Farbpalette aus Bild, Farben kostenlos extrahieren, Farbpalette online kostenlos, Foto-Farbanalyse, Farbpalettengenerator aus Bild, Farbpalette aus Bild online, Farben aus Bild online extrahieren",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung von Extract Colors V2",
+				"intro": "Extract Colors V2 ist ein erweiterte Tool zur Farbanalyse aus Bildern. Mit dem K-Means-Clustering-Algorithmus findet es automatisch dominante Farben, gruppiert sie nach Tönen und semantischen Kategorien, erstellt Paletten und bietet detaillierte Bildanalysen.",
+				"step1": {
+					"title": "Schritt 1: Bild hochladen",
+					"description": "Ziehen Sie ein Bild in den Upload-Bereich oder wählen Sie eine Datei über den Dialog. Unterstützte Formate: JPG, PNG und WebP. Maximale Dateigröße: 10 MB."
+				},
+				"step2": {
+					"title": "Schritt 2: Cluster-Anzahl konfigurieren",
+					"description": "Wählen Sie die Anzahl der Farbcluster für die Analyse: 3, 5, 8, 10 oder 12. Mehr Cluster bieten detailliertere Analysen, erfordern aber mehr Verarbeitungszeit."
+				},
+				"step3": {
+					"title": "Schritt 3: Dominante Farben anzeigen",
+					"description": "Das Tool extrahiert automatisch 5 Hauptfarben aus dem Bild mit Prozentangabe für jede Farbe. Farben werden als Farbfelder mit Möglichkeit zum Kopieren des HEX-Codes angezeigt."
+				},
+				"step4": {
+					"title": "Schritt 4: Erweiterte Palette analysieren",
+					"description": "Überprüfen Sie die erweiterte Palette mit ausgewählter Anzahl von Farben. Jede Farbe ist nach Ton (hell, mittel, dunkel) und semantischer Kategorie (warm, kalt, neutral usw.) klassifiziert."
+				},
+				"step5": {
+					"title": "Schritt 5: Farbgruppen erkunden",
+					"description": "Erkunden Sie Farben, gruppiert nach verschiedenen Kriterien: Töne (hell, mittel, dunkel) und semantische Kategorien (warm, kalt, neutral, lebendig, gedämpft, pastell, erdfarben)."
+				},
+				"step6": {
+					"title": "Schritt 6: Analysen und Export",
+					"description": "Überprüfen Sie Bildanalysen: durchschnittliche Helligkeit, dunkelste und hellste Farben, dominanter Farbton und Stimmung (Temperatur, Helligkeit, Lebendigkeit, Kontrast). Exportieren Sie Ergebnisse als CSS-Variablen, Tailwind-Config, JSON oder PNG."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie Extract Colors V2: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man dominante Farben aus Bild extrahiert",
+					"description": "Laden Sie ein Bild im Format JPG, PNG oder WebP hoch. Das Tool analysiert automatisch Bildpixel mit dem K-Means-Clustering-Algorithmus und extrahiert dominante Farben mit ihren Prozentverhältnissen."
+				},
+				"howTo2": {
+					"title": "Wie man die Anzahl der Farbcluster konfiguriert",
+					"description": "Verwenden Sie den 'Cluster-Anzahl'-Selektor, um die Anzahl der Farben für die Analyse zu wählen: 3, 5, 8, 10 oder 12. Mehr Cluster bieten detailliertere Analysen, erhöhen aber die Verarbeitungszeit."
+				},
+				"howTo3": {
+					"title": "Wie man Farbgruppierung verwendet",
+					"description": "Das Tool gruppiert automatisch Farben nach Tönen (hell, mittel, dunkel) und semantischen Kategorien (warm, kalt, neutral, lebendig, gedämpft, pastell, erdfarben). Dies hilft, die Farbstruktur des Bildes zu verstehen."
+				},
+				"howTo4": {
+					"title": "Wie man Paletten aus Bild erstellt",
+					"description": "Das Tool erstellt automatisch drei Arten von Paletten: Brand (Farbskalen für jede dominante Farbe), UI (optimiert für Interfaces) und Creative (kontrastierende und komplementäre Paare)."
+				},
+				"howTo5": {
+					"title": "Wie man Farben als CSS-Variablen exportiert",
+					"description": "Gehen Sie zum Bereich 'Export', wählen Sie die Registerkarte 'CSS-Variablen' und klicken Sie auf 'Kopieren'. Der kopierte Code enthält alle dominanten Farben, UI-Palette und Brand-Palette im CSS-Variablen-Format."
+				},
+				"howTo6": {
+					"title": "Wie man Palette als PNG exportiert",
+					"description": "Wählen Sie im Bereich 'Export' die Registerkarte 'PNG-Export' und klicken Sie darauf. Das Tool erstellt automatisch ein Bild mit der Farbpalette und lädt es auf Ihr Gerät herunter."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zu Extract Colors V2",
+				"q1": {
+					"question": "Wie funktioniert der Algorithmus zur Farbextraktion?",
+					"answer": "Das Tool verwendet den K-Means-Clustering-Algorithmus, um ähnliche Farben zu gruppieren. Der Algorithmus analysiert Bildpixel, gruppiert sie nach Farbähnlichkeit und bestimmt Cluster-Zentren, die zu dominanten Farben werden."
+				},
+				"q2": {
+					"question": "Was sind Farbcluster?",
+					"answer": "Cluster sind Gruppen ähnlicher Farben, die im Bild gefunden werden. Die Anzahl der Cluster bestimmt, wie viele Hauptfarben extrahiert werden. Mehr Cluster bieten detailliertere Analysen, können aber weniger signifikante Farben enthalten."
+				},
+				"q3": {
+					"question": "Wie funktioniert semantische Klassifizierung?",
+					"answer": "Semantische Klassifizierung gruppiert Farben nach ihren visuellen Eigenschaften: Ton (Helligkeit), Temperatur (warm/kalt), Sättigung (lebendig/gedämpft) und anderen Merkmalen. Dies hilft, die emotionale Wirkung der Farbpalette zu verstehen."
+				},
+				"q4": {
+					"question": "Was sind Brand-, UI- und Creative-Paletten?",
+					"answer": "Brand-Palette enthält Farbskalen (10 Abstufungen) für jede dominante Farbe. UI-Palette ist für Interfaces optimiert (primary, surface, accent, neutral). Creative-Palette enthält kontrastierende und komplementäre Farbpaare."
+				},
+				"q5": {
+					"question": "Wie interpretiert man Bildanalysen?",
+					"answer": "Analysen zeigen durchschnittliche Helligkeit des Bildes, dunkelste und hellste Farben, dominanten Farbton und Stimmung (Temperatur, Helligkeit, Lebendigkeit, Kontrast). Dies hilft, die allgemeine Farbatmosphäre des Bildes zu verstehen."
+				},
+				"q6": {
+					"question": "Welche Exportformate werden unterstützt?",
+					"answer": "Das Tool unterstützt Export in CSS-Variablen (für Verwendung in CSS), Tailwind-Config (für Tailwind-CSS-Integration), JSON (für Verwendung in Design-Systemen) und PNG (visuelle Darstellung der Palette)."
 				}
 			}
 		}
