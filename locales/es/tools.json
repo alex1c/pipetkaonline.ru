@@ -18,6 +18,10 @@
 	"tools.uiTokensGenerator.desc": "Genera un conjunto completo de tokens de diseño a partir de un color",
 	"tools.extractColorsV2.title": "Extraer Colores V2",
 	"tools.extractColorsV2.desc": "Análisis avanzado de colores de imágenes con agrupación y paletas",
+	"tools.colorNameFinder.title": "Buscador de Nombres de Color",
+	"tools.colorNameFinder.desc": "Encuentra el nombre de cualquier color: estándar, algorítmico y nombres de marketing",
+	"tools.brandColorAnalyzer.title": "Analizador de Colores de Marca",
+	"tools.brandColorAnalyzer.desc": "Analiza colores de marca: agrupación, armonía, contraste y descripciones",
 	"uiTokensGenerator": {
 		"title": "Generador de tokens UI",
 		"description": "Selecciona un color base y obtén automáticamente un conjunto completo de tokens UI: escalas de color, colores semánticos y variables CSS listas para usar.",
@@ -212,6 +216,195 @@
 				"q6": {
 					"question": "¿Qué formatos de exportación se admiten?",
 					"answer": "La herramienta admite exportación a variables CSS (para usar en CSS), config de Tailwind (para integración con Tailwind CSS), JSON (para usar en sistemas de diseño) y PNG (representación visual de la paleta)."
+				}
+			}
+		}
+	},
+	"colorNameFinder": {
+		"title": "Buscador de Nombres de Color",
+		"subtitle": "Identifica el nombre de cualquier color: nombres CSS estándar, descripciones algorítmicas y nombres de marketing",
+		"sections": {
+			"pickColor": "Seleccionar Color",
+			"colorName": "Nombre del Color",
+			"similarColors": "Colores Similares",
+			"description": "Descripción",
+			"technicalData": "Datos Técnicos"
+		},
+		"seo": {
+			"keywords": "nombre de color, encontrar nombre de color, identificar color, nombre de color por HEX, nombre de color por RGB, nombre de color por HSL, nombres de colores CSS, nombres de colores estándar, nombre de color algorítmico, nombre de color de marketing, colores similares, CIEDE2000, delta E, etiquetas de color, datos técnicos de color, color LAB, color LCH, contraste de color, contraste WCAG",
+			"guide": {
+				"title": "Guía completa para usar Buscador de Nombres de Color",
+				"intro": "Buscador de Nombres de Color es una herramienta para identificar nombres de colores. Encuentra nombres CSS estándar, crea descripciones algorítmicas y sugiere nombres de marketing para cualquier color.",
+				"step1": {
+					"title": "Paso 1: Seleccionar color",
+					"description": "Use el selector de color o ingrese un color manualmente en formato HEX (#FF5733), RGB (rgb(255, 87, 51)) o HSL (hsl(9, 100%, 60%)). La herramienta detecta el formato automáticamente."
+				},
+				"step2": {
+					"title": "Paso 2: Ver nombres",
+					"description": "La herramienta mostrará varias opciones de nombres: nombre de marketing (ej., 'Sunset Ember'), descripción algorítmica (ej., 'Vivid Warm Orange') y nombres CSS estándar con distancia ΔE."
+				},
+				"step3": {
+					"title": "Paso 3: Colores similares",
+					"description": "Explore los colores más cercanos del diccionario CSS, ordenados por distancia perceptual (ΔE CIEDE2000). Puede seleccionar cualquier color similar para usarlo como color principal."
+				},
+				"step4": {
+					"title": "Paso 4: Descripciones",
+					"description": "Obtenga tres variantes de descripción: corta (1 línea), media (marketing) y larga (artística). Puede ajustar el tono de descripción y editar manualmente la descripción larga."
+				},
+				"step5": {
+					"title": "Paso 5: Datos técnicos",
+					"description": "Vea datos técnicos completos del color: HEX, RGB, HSL, LAB, LCH, contraste con blanco y negro, y etiquetas de color (cálido/frío, saturado/apagado, claro/oscuro)."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar Buscador de Nombres de Color: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo encontrar un nombre de color",
+					"description": "Ingrese un color en cualquier formato (HEX, RGB, HSL) o selecciónelo usando el selector de color. La herramienta encuentra automáticamente los nombres estándar más cercanos y crea nombres algorítmicos y de marketing."
+				},
+				"howTo2": {
+					"title": "Cómo usar colores similares",
+					"description": "Explore la lista de colores similares ordenados por distancia perceptual. Haga clic en cualquier color para usarlo como color principal. La distancia ΔE muestra qué tan cerca está el color de un nombre estándar."
+				},
+				"howTo3": {
+					"title": "Cómo personalizar la descripción del color",
+					"description": "Seleccione el tono de descripción: neutral, marketing o artístico. Para el tono artístico, puede editar manualmente la descripción larga."
+				},
+				"howTo4": {
+					"title": "Cómo interpretar datos técnicos",
+					"description": "LAB y LCH son espacios de color perceptualmente uniformes. El contraste muestra la relación de brillo del color con blanco y negro. Las etiquetas ayudan a entender rápidamente las características del color."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre Buscador de Nombres de Color",
+				"q1": {
+					"question": "¿Qué es ΔE (delta E)?",
+					"answer": "ΔE es una medida de diferencia perceptual entre dos colores. Cuanto menor sea el valor, más similares son los colores. ΔE < 1 significa que los colores son prácticamente indistinguibles para el ojo humano."
+				},
+				"q2": {
+					"question": "¿Qué es un nombre de color algorítmico?",
+					"answer": "Un nombre algorítmico se crea basado en características del color (tono, saturación, luminosidad) y describe el color en términos de sus propiedades visuales, ej., 'Vivid Warm Orange' o 'Muted Cool Blue'."
+				},
+				"q3": {
+					"question": "¿Qué es un nombre de color de marketing?",
+					"answer": "Un nombre de marketing es un nombre de color poético o evocador destinado para uso en diseño y marketing, ej., 'Sunset Ember' o 'Ocean Whisper'."
+				},
+				"q4": {
+					"question": "¿Qué son los espacios de color LAB y LCH?",
+					"answer": "LAB y LCH son espacios de color perceptualmente uniformes donde el mismo cambio en el valor numérico corresponde al mismo cambio visual. LAB usa coordenadas L (luminosidad), A (rojo-verde), B (amarillo-azul). LCH usa L (luminosidad), C (croma), H (tono)."
+				},
+				"q5": {
+					"question": "¿Cómo interpretar el contraste?",
+					"answer": "El contraste muestra la relación de brillo del color con blanco o negro. WCAG recomienda un contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande. Cuanto mayor sea el valor, mejor la legibilidad."
+				}
+			}
+		}
+	},
+	"brandColorAnalyzer": {
+		"title": "Analizador de Colores de Marca",
+		"subtitle": "Analiza colores de marca, identifica propiedades clave de la paleta y crea una estructura visual conveniente",
+		"sections": {
+			"input": {
+				"title": "Entrada de Colores"
+			},
+			"palette": {
+				"title": "Mapa de Paleta"
+			},
+			"properties": {
+				"title": "Propiedades de Paleta"
+			},
+			"contrast": {
+				"title": "Contraste y Accesibilidad"
+			},
+			"descriptions": {
+				"title": "Descripciones de Marca"
+			},
+			"export": {
+				"title": "Exportar"
+			}
+		},
+		"seo": {
+			"keywords": "análisis de colores de marca, colores de marca, paleta de marca, análisis de paleta de colores, agrupación de colores, armonía de colores, contraste de colores, accesibilidad WCAG, colores de brandbook, esquema de colores de marca, análisis de logo, extraer colores de logo, colores de estilo de marca, paleta de marca online, análisis de colores de marca, identidad de colores de marca, análisis de armonía de colores, contraste de colores de marca, accesibilidad de colores de marca, paleta de colores de empresa, análisis de colores de logo, colores de marca online, generador de paleta de marca, análisis de esquema de colores, estrategia de colores de marca",
+			"guide": {
+				"title": "Guía completa para usar Analizador de Colores de Marca",
+				"intro": "Analizador de Colores de Marca es una herramienta para análisis integral de colores de marca. Agrupa colores, analiza sus características, verifica armonía y contraste, y genera descripciones.",
+				"step1": {
+					"title": "Paso 1: Ingresar colores",
+					"description": "Ingrese colores manualmente (HEX, RGB, HSL), cargue una imagen de logo o brandbook, o seleccione de una lista de marcas populares. El sistema admite de 3 a 10 colores."
+				},
+				"step2": {
+					"title": "Paso 2: Agrupación",
+					"description": "La herramienta categoriza automáticamente colores en: primary (principales), secondary (secundarios), accent (acento) y neutral basándose en tono, saturación, luminosidad y distancia LAB."
+				},
+				"step3": {
+					"title": "Paso 3: Análisis de características",
+					"description": "Vea características de paleta: temperatura (cálida/fría), brillo, saturación, estilo (energético, apagado, minimalista, juguetón, corporativo) y etiquetas."
+				},
+				"step4": {
+					"title": "Paso 4: Análisis de armonía",
+					"description": "La herramienta determina tipo de armonía (triada, complementaria, split-complementaria, análoga), detecta conflictos y evalúa nivel de contraste entre colores clave."
+				},
+				"step5": {
+					"title": "Paso 5: Contraste y accesibilidad",
+					"description": "Para cada color se verifica contraste con blanco y negro, se comprueba cumplimiento WCAG AA/AAA y se proporcionan recomendaciones de mejora."
+				},
+				"step6": {
+					"title": "Paso 6: Descripciones y exportación",
+					"description": "Obtenga descripciones generadas automáticamente: corta, marketing, técnica y recomendaciones. Exporte resultados como JSON o variables CSS."
+				}
+			},
+			"howTo": {
+				"title": "Cómo usar Analizador de Colores de Marca: guía paso a paso",
+				"howTo1": {
+					"title": "Cómo ingresar colores de marca",
+					"description": "Ingrese colores manualmente en el campo de texto (separados por comas o saltos de línea), cargue una imagen de logo para extracción automática de colores, o seleccione una marca popular de la lista desplegable."
+				},
+				"howTo2": {
+					"title": "Cómo interpretar agrupación",
+					"description": "Colores primary son los principales, más saturados de la marca. Secondary son colores secundarios. Accent son colores de acento para énfasis. Neutral son colores neutros (grises, blancos, negros)."
+				},
+				"howTo3": {
+					"title": "Cómo entender características de paleta",
+					"description": "Temperatura muestra si dominan tonos cálidos o fríos. Brillo y saturación determinan impacto visual. Estilo describe el estado de ánimo general de la paleta."
+				},
+				"howTo4": {
+					"title": "Cómo verificar armonía de colores",
+					"description": "La herramienta determina automáticamente tipo de armonía de color (triada, complementaria, etc.), identifica conflictos entre tonos similares y evalúa nivel de contraste."
+				},
+				"howTo5": {
+					"title": "Cómo mejorar accesibilidad",
+					"description": "Revise la tabla de contraste. Colores marcados '✗ Below AA' no cumplen estándares de accesibilidad. Siga recomendaciones para mejorar contraste."
+				},
+				"howTo6": {
+					"title": "Cómo exportar resultados",
+					"description": "Use la sección 'Exportar' para guardar resultados. Formato JSON contiene todos los datos de análisis. Variables CSS están listas para usar en su proyecto."
+				}
+			},
+			"faq": {
+				"title": "Preguntas frecuentes sobre Analizador de Colores de Marca",
+				"q1": {
+					"question": "¿Cómo funciona la agrupación de colores?",
+					"answer": "La agrupación usa un algoritmo basado en saturación, luminosidad y tono para categorizar automáticamente colores. Colores neutros (baja saturación) se separan, otros se ordenan por significancia visual."
+				},
+				"q2": {
+					"question": "¿Qué significa estilo de paleta?",
+					"answer": "Estilo describe el estado de ánimo y carácter general de la paleta: energético (dinámico y audaz), apagado (sutil y refinado), minimalista (limpio y simple), juguetón (divertido y creativo), corporativo (profesional y confiable)."
+				},
+				"q3": {
+					"question": "¿Cómo interpretar análisis de armonía?",
+					"answer": "Tipo de armonía muestra cómo se relacionan colores en la rueda de colores. Conflictos surgen cuando tonos similares tienen saturación o luminosidad muy diferentes. Nivel de contraste afecta legibilidad y jerarquía visual."
+				},
+				"q4": {
+					"question": "¿Qué son WCAG AA y AAA?",
+					"answer": "WCAG (Web Content Accessibility Guidelines) define estándares de accesibilidad. AA requiere contraste 4.5:1 para texto normal y 3:1 para texto grande. AAA requiere 7:1 para texto normal. Esto es importante para legibilidad de contenido."
+				},
+				"q5": {
+					"question": "¿Puedo usar colores de marcas populares?",
+					"answer": "Sí, puede seleccionar cualquier marca de la lista para análisis rápido. Esto es útil para estudiar estrategias de color de empresas conocidas o como punto de partida para su propia paleta."
+				},
+				"q6": {
+					"question": "¿Cómo exportar paleta para usar en proyecto?",
+					"answer": "Use exportación de variables CSS para uso directo en estilos. Formato JSON es adecuado para integración en sistemas de diseño o transferencia a otras herramientas."
 				}
 			}
 		}

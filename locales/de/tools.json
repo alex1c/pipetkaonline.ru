@@ -18,6 +18,10 @@
 	"tools.uiTokensGenerator.desc": "Generiere einen vollständigen Design-Token-Satz aus einer Farbe",
 	"tools.extractColorsV2.title": "Farben extrahieren V2",
 	"tools.extractColorsV2.desc": "Erweiterte Farbanalyse aus Bildern mit Clustering und Paletten",
+	"tools.colorNameFinder.title": "Farbnamen-Finder",
+	"tools.colorNameFinder.desc": "Finde den Namen jeder Farbe: Standard-, Algorithmus- und Marketing-Namen",
+	"tools.brandColorAnalyzer.title": "Markenfarben-Analysator",
+	"tools.brandColorAnalyzer.desc": "Analysiere Markenfarben: Clustering, Harmonie, Kontrast und Beschreibungen",
 	"uiTokensGenerator": {
 		"title": "UI-Token-Generator",
 		"description": "Wählen Sie eine Grundfarbe und erhalten Sie automatisch einen vollständigen UI-Token-Satz: Farbskalen, semantische Farben und einsatzbereite CSS-Variablen.",
@@ -212,6 +216,195 @@
 				"q6": {
 					"question": "Welche Exportformate werden unterstützt?",
 					"answer": "Das Tool unterstützt Export in CSS-Variablen (für Verwendung in CSS), Tailwind-Config (für Tailwind-CSS-Integration), JSON (für Verwendung in Design-Systemen) und PNG (visuelle Darstellung der Palette)."
+				}
+			}
+		}
+	},
+	"colorNameFinder": {
+		"title": "Farbnamen-Finder",
+		"subtitle": "Identifiziere den Namen jeder Farbe: Standard-CSS-Namen, algorithmische Beschreibungen und Marketing-Namen",
+		"sections": {
+			"pickColor": "Farbe auswählen",
+			"colorName": "Farbname",
+			"similarColors": "Ähnliche Farben",
+			"description": "Beschreibung",
+			"technicalData": "Technische Daten"
+		},
+		"seo": {
+			"keywords": "Farbname, Farbname finden, Farbe identifizieren, Farbname nach HEX, Farbname nach RGB, Farbname nach HSL, CSS-Farbnamen, Standard-Farbnamen, algorithmischer Farbname, Marketing-Farbname, ähnliche Farben, CIEDE2000, Delta E, Farb-Tags, technische Farbdaten, LAB-Farbe, LCH-Farbe, Farbkontrast, WCAG-Kontrast",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung von Farbnamen-Finder",
+				"intro": "Farbnamen-Finder ist ein Tool zur Identifizierung von Farbnamen. Es findet Standard-CSS-Namen, erstellt algorithmische Beschreibungen und schlägt Marketing-Namen für jede Farbe vor.",
+				"step1": {
+					"title": "Schritt 1: Farbe auswählen",
+					"description": "Verwenden Sie den Farbwähler oder geben Sie eine Farbe manuell im HEX (#FF5733), RGB (rgb(255, 87, 51)) oder HSL (hsl(9, 100%, 60%)) Format ein. Das Tool erkennt das Format automatisch."
+				},
+				"step2": {
+					"title": "Schritt 2: Namen anzeigen",
+					"description": "Das Tool zeigt mehrere Namensoptionen: Marketing-Name (z.B. 'Sunset Ember'), algorithmische Beschreibung (z.B. 'Vivid Warm Orange') und Standard-CSS-Namen mit ΔE-Abstand."
+				},
+				"step3": {
+					"title": "Schritt 3: Ähnliche Farben",
+					"description": "Durchsuchen Sie die nächsten Farben aus dem CSS-Wörterbuch, sortiert nach Wahrnehmungsabstand (ΔE CIEDE2000). Sie können eine ähnliche Farbe auswählen, um sie als Hauptfarbe zu verwenden."
+				},
+				"step4": {
+					"title": "Schritt 4: Beschreibungen",
+					"description": "Erhalten Sie drei Beschreibungsvarianten: kurz (1 Zeile), mittel (Marketing) und lang (künstlerisch). Sie können den Beschreibungston anpassen und die lange Beschreibung manuell bearbeiten."
+				},
+				"step5": {
+					"title": "Schritt 5: Technische Daten",
+					"description": "Zeigen Sie vollständige technische Farbdaten: HEX, RGB, HSL, LAB, LCH, Kontrast mit Weiß und Schwarz sowie Farb-Tags (warm/kalt, gesättigt/gedämpft, hell/dunkel)."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie Farbnamen-Finder: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man einen Farbnamen findet",
+					"description": "Geben Sie eine Farbe in einem beliebigen Format (HEX, RGB, HSL) ein oder wählen Sie sie mit dem Farbwähler aus. Das Tool findet automatisch die nächsten Standard-Namen und erstellt algorithmische und Marketing-Namen."
+				},
+				"howTo2": {
+					"title": "Wie man ähnliche Farben verwendet",
+					"description": "Durchsuchen Sie die Liste ähnlicher Farben, sortiert nach Wahrnehmungsabstand. Klicken Sie auf eine Farbe, um sie als Hauptfarbe zu verwenden. Der ΔE-Abstand zeigt, wie nah die Farbe an einem Standard-Namen ist."
+				},
+				"howTo3": {
+					"title": "Wie man Farbbeschreibung anpasst",
+					"description": "Wählen Sie den Beschreibungston: neutral, Marketing oder künstlerisch. Für künstlerischen Ton können Sie die lange Beschreibung manuell bearbeiten."
+				},
+				"howTo4": {
+					"title": "Wie man technische Daten interpretiert",
+					"description": "LAB und LCH sind wahrnehmungsgleichmäßige Farbräume. Kontrast zeigt das Helligkeitsverhältnis der Farbe mit Weiß und Schwarz. Tags helfen, Farbmerkmale schnell zu verstehen."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zu Farbnamen-Finder",
+				"q1": {
+					"question": "Was ist ΔE (Delta E)?",
+					"answer": "ΔE ist ein Maß für den Wahrnehmungsunterschied zwischen zwei Farben. Je kleiner der Wert, desto ähnlicher die Farben. ΔE < 1 bedeutet, dass Farben für das menschliche Auge praktisch ununterscheidbar sind."
+				},
+				"q2": {
+					"question": "Was ist ein algorithmischer Farbname?",
+					"answer": "Ein algorithmischer Name wird basierend auf Farbmerkmalen (Farbton, Sättigung, Helligkeit) erstellt und beschreibt die Farbe in Bezug auf ihre visuellen Eigenschaften, z.B. 'Vivid Warm Orange' oder 'Muted Cool Blue'."
+				},
+				"q3": {
+					"question": "Was ist ein Marketing-Farbname?",
+					"answer": "Ein Marketing-Name ist ein poetischer oder evokativer Farbname, der für Design und Marketing verwendet wird, z.B. 'Sunset Ember' oder 'Ocean Whisper'."
+				},
+				"q4": {
+					"question": "Was sind LAB- und LCH-Farbräume?",
+					"answer": "LAB und LCH sind wahrnehmungsgleichmäßige Farbräume, bei denen die gleiche Änderung des numerischen Werts der gleichen visuellen Änderung entspricht. LAB verwendet Koordinaten L (Helligkeit), A (Rot-Grün), B (Gelb-Blau). LCH verwendet L (Helligkeit), C (Chromatizität), H (Farbton)."
+				},
+				"q5": {
+					"question": "Wie interpretiert man Kontrast?",
+					"answer": "Kontrast zeigt das Helligkeitsverhältnis der Farbe mit Weiß oder Schwarz. WCAG empfiehlt einen minimalen Kontrast von 4.5:1 für normalen Text und 3:1 für großen Text. Je höher der Wert, desto besser die Lesbarkeit."
+				}
+			}
+		}
+	},
+	"brandColorAnalyzer": {
+		"title": "Markenfarben-Analysator",
+		"subtitle": "Analysieren Sie Markenfarben, identifizieren Sie wichtige Paletteneigenschaften und erstellen Sie eine übersichtliche visuelle Struktur",
+		"sections": {
+			"input": {
+				"title": "Farbeingabe"
+			},
+			"palette": {
+				"title": "Palettenkarte"
+			},
+			"properties": {
+				"title": "Paletteneigenschaften"
+			},
+			"contrast": {
+				"title": "Kontrast & Barrierefreiheit"
+			},
+			"descriptions": {
+				"title": "Markenbeschreibungen"
+			},
+			"export": {
+				"title": "Export"
+			}
+		},
+		"seo": {
+			"keywords": "Markenfarben-Analyse, Markenfarben, Markenpalette, Farbpaletten-Analyse, Farb-Clustering, Farbharmonie, Farbkontrast, WCAG-Barrierefreiheit, Brandbook-Farben, Markenfarb-Schema, Logo-Analyse, Farben aus Logo extrahieren, Markenstil-Farben, Markenpalette online, Markenfarben-Analyse, Markenfarb-Identität, Farbharmonie-Analyse, Markenfarb-Kontrast, Markenfarb-Barrierefreiheit, Firmenfarbpalette, Logo-Farbanalyse, Markenfarben online, Markenpaletten-Generator, Farbschema-Analyse, Markenfarb-Strategie",
+			"guide": {
+				"title": "Vollständige Anleitung zur Verwendung von Markenfarben-Analysator",
+				"intro": "Markenfarben-Analysator ist ein Tool zur umfassenden Analyse von Markenfarben. Es gruppiert Farben, analysiert ihre Eigenschaften, prüft Harmonie und Kontrast und generiert Beschreibungen.",
+				"step1": {
+					"title": "Schritt 1: Farben eingeben",
+					"description": "Geben Sie Farben manuell ein (HEX, RGB, HSL), laden Sie ein Logo- oder Brandbook-Bild hoch oder wählen Sie aus einer Liste beliebter Marken. Das System unterstützt 3 bis 10 Farben."
+				},
+				"step2": {
+					"title": "Schritt 2: Clustering",
+					"description": "Das Tool kategorisiert automatisch Farben in: primary (Hauptfarben), secondary (Sekundärfarben), accent (Akzentfarben) und neutral basierend auf Farbton, Sättigung, Helligkeit und LAB-Abstand."
+				},
+				"step3": {
+					"title": "Schritt 3: Eigenschaften-Analyse",
+					"description": "Zeigen Sie Paletteneigenschaften: Temperatur (warm/kalt), Helligkeit, Sättigung, Stil (energetisch, gedämpft, minimalistisch, verspielt, geschäftlich) und Tags."
+				},
+				"step4": {
+					"title": "Schritt 4: Harmonie-Analyse",
+					"description": "Das Tool bestimmt Harmonietyp (Triade, Komplementär, Split-Komplementär, Analog), erkennt Konflikte und bewertet Kontrastniveau zwischen Schlüsselfarben."
+				},
+				"step5": {
+					"title": "Schritt 5: Kontrast und Barrierefreiheit",
+					"description": "Für jede Farbe wird der Kontrast mit Weiß und Schwarz geprüft, WCAG AA/AAA-Konformität überprüft und Empfehlungen zur Verbesserung gegeben."
+				},
+				"step6": {
+					"title": "Schritt 6: Beschreibungen und Export",
+					"description": "Erhalten Sie automatisch generierte Beschreibungen: kurz, Marketing, technisch und Empfehlungen. Exportieren Sie Ergebnisse als JSON oder CSS-Variablen."
+				}
+			},
+			"howTo": {
+				"title": "So verwenden Sie Markenfarben-Analysator: Schritt-für-Schritt-Anleitung",
+				"howTo1": {
+					"title": "Wie man Markenfarben eingibt",
+					"description": "Geben Sie Farben manuell im Textfeld ein (getrennt durch Kommas oder Zeilenumbrüche), laden Sie ein Logo-Bild für automatische Farbextraktion hoch oder wählen Sie eine beliebte Marke aus der Dropdown-Liste."
+				},
+				"howTo2": {
+					"title": "Wie man Clustering interpretiert",
+					"description": "Primary-Farben sind die Haupt-, am stärksten gesättigten Markenfarben. Secondary sind Sekundärfarben. Accent sind Akzentfarben zur Hervorhebung. Neutral sind neutrale Farben (Grautöne, Weiß, Schwarz)."
+				},
+				"howTo3": {
+					"title": "Wie man Paletteneigenschaften versteht",
+					"description": "Temperatur zeigt, ob warme oder kalte Töne dominieren. Helligkeit und Sättigung bestimmen die visuelle Wirkung. Stil beschreibt die allgemeine Stimmung der Palette."
+				},
+				"howTo4": {
+					"title": "Wie man Farbharmonie prüft",
+					"description": "Das Tool bestimmt automatisch den Farbharmonietyp (Triade, Komplementär usw.), identifiziert Konflikte zwischen ähnlichen Farbtönen und bewertet das Kontrastniveau."
+				},
+				"howTo5": {
+					"title": "Wie man Barrierefreiheit verbessert",
+					"description": "Überprüfen Sie die Kontrasttabelle. Farben mit '✗ Below AA' entsprechen nicht den Barrierefreiheitsstandards. Befolgen Sie Empfehlungen zur Kontrastverbesserung."
+				},
+				"howTo6": {
+					"title": "Wie man Ergebnisse exportiert",
+					"description": "Verwenden Sie den Bereich 'Export', um Ergebnisse zu speichern. JSON-Format enthält alle Analysedaten. CSS-Variablen sind bereit zur Verwendung in Ihrem Projekt."
+				}
+			},
+			"faq": {
+				"title": "Häufig gestellte Fragen zu Markenfarben-Analysator",
+				"q1": {
+					"question": "Wie funktioniert Farb-Clustering?",
+					"answer": "Clustering verwendet einen Algorithmus basierend auf Sättigung, Helligkeit und Farbton, um Farben automatisch zu kategorisieren. Neutrale Farben (niedrige Sättigung) werden getrennt, andere nach visueller Bedeutung sortiert."
+				},
+				"q2": {
+					"question": "Was bedeutet Palettenstil?",
+					"answer": "Stil beschreibt die allgemeine Stimmung und den Charakter der Palette: energetisch (dynamisch und mutig), gedämpft (subtil und raffiniert), minimalistisch (sauber und einfach), verspielt (lustig und kreativ), geschäftlich (professionell und vertrauenswürdig)."
+				},
+				"q3": {
+					"question": "Wie interpretiert man Harmonie-Analyse?",
+					"answer": "Harmonietyp zeigt, wie Farben auf dem Farbkreis in Beziehung stehen. Konflikte entstehen, wenn ähnliche Farbtöne sehr unterschiedliche Sättigung oder Helligkeit haben. Kontrastniveau beeinflusst Lesbarkeit und visuelle Hierarchie."
+				},
+				"q4": {
+					"question": "Was sind WCAG AA und AAA?",
+					"answer": "WCAG (Web Content Accessibility Guidelines) definiert Barrierefreiheitsstandards. AA erfordert 4.5:1 Kontrast für normalen Text und 3:1 für großen Text. AAA erfordert 7:1 für normalen Text. Dies ist wichtig für die Lesbarkeit von Inhalten."
+				},
+				"q5": {
+					"question": "Kann ich Farben von beliebten Marken verwenden?",
+					"answer": "Ja, Sie können eine beliebige Marke aus der Liste für eine schnelle Analyse auswählen. Dies ist nützlich zum Studieren von Farbstrategien bekannter Unternehmen oder als Ausgangspunkt für Ihre eigene Palette."
+				},
+				"q6": {
+					"question": "Wie exportiert man Palette zur Verwendung im Projekt?",
+					"answer": "Verwenden Sie CSS-Variablen-Export für direkte Verwendung in Styles. JSON-Format eignet sich für die Integration in Design-Systeme oder Übertragung an andere Tools."
 				}
 			}
 		}

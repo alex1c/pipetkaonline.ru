@@ -98,6 +98,20 @@ export default function ToolsPage({
 					t={t}
 				/>
 				<ToolCard
+					icon='🏷️'
+					title={t('tools.colorNameFinder.title')}
+					description={t('tools.colorNameFinder.desc')}
+					href={`/${params.locale}/tools/color-name-finder`}
+					t={t}
+				/>
+				<ToolCard
+					icon='🎯'
+					title={t('tools.brandColorAnalyzer.title')}
+					description={t('tools.brandColorAnalyzer.desc')}
+					href={`/${params.locale}/tools/brand-color-analyzer`}
+					t={t}
+				/>
+				<ToolCard
 					icon='👁️'
 					title={t('colorBlindnessSimulator.title')}
 					description={t('colorBlindnessSimulator.description')}

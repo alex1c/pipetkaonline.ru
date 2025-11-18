@@ -18,6 +18,10 @@
 	"tools.uiTokensGenerator.desc": "Generate a complete design token set from one color",
 	"tools.extractColorsV2.title": "Extract Colors V2",
 	"tools.extractColorsV2.desc": "Advanced color analysis from images with clustering and palettes",
+	"tools.colorNameFinder.title": "Color Name Finder",
+	"tools.colorNameFinder.desc": "Find the name of any color: standard, algorithmic, and marketing names",
+	"tools.brandColorAnalyzer.title": "Brand Color Analyzer",
+	"tools.brandColorAnalyzer.desc": "Analyze brand colors: clustering, harmony, contrast, and descriptions",
 	"uiTokensGenerator": {
 		"title": "UI Tokens Generator",
 		"description": "Select a base color and automatically get a complete UI token set: color scales, semantic colors, and ready-to-use CSS variables.",
@@ -212,6 +216,195 @@
 				"q6": {
 					"question": "What export formats are supported?",
 					"answer": "The tool supports export to CSS variables (for use in CSS), Tailwind config (for Tailwind CSS integration), JSON (for use in design systems), and PNG (visual representation of palette)."
+				}
+			}
+		}
+	},
+	"colorNameFinder": {
+		"title": "Color Name Finder",
+		"subtitle": "Identify the name of any color: standard CSS names, algorithmic descriptions, and marketing names",
+		"sections": {
+			"pickColor": "Pick Color",
+			"colorName": "Color Name",
+			"similarColors": "Similar Colors",
+			"description": "Description",
+			"technicalData": "Technical Data"
+		},
+		"seo": {
+			"keywords": "color name, find color name, identify color, color name by HEX, color name by RGB, color name by HSL, CSS color names, standard color names, algorithmic color name, marketing color name, similar colors, CIEDE2000, delta E, color tags, color technical data, LAB color, LCH color, color contrast, WCAG contrast",
+			"guide": {
+				"title": "Complete guide to using Color Name Finder",
+				"intro": "Color Name Finder is a tool for identifying color names. It finds standard CSS names, creates algorithmic descriptions, and suggests marketing names for any color.",
+				"step1": {
+					"title": "Step 1: Pick color",
+					"description": "Use the color picker or enter a color manually in HEX (#FF5733), RGB (rgb(255, 87, 51)), or HSL (hsl(9, 100%, 60%)) format. The tool automatically detects the format."
+				},
+				"step2": {
+					"title": "Step 2: View names",
+					"description": "The tool will show several name options: marketing name (e.g., 'Sunset Ember'), algorithmic description (e.g., 'Vivid Warm Orange'), and standard CSS names with ΔE distance."
+				},
+				"step3": {
+					"title": "Step 3: Similar colors",
+					"description": "Browse the closest colors from the CSS dictionary, sorted by perceptual distance (ΔE CIEDE2000). You can select any similar color to use it as the main color."
+				},
+				"step4": {
+					"title": "Step 4: Descriptions",
+					"description": "Get three description variants: short (1 line), medium (marketing), and long (artistic). You can adjust the description tone and manually edit the long description."
+				},
+				"step5": {
+					"title": "Step 5: Technical data",
+					"description": "View complete technical color data: HEX, RGB, HSL, LAB, LCH, contrast with white and black, and color tags (warm/cold, saturated/muted, dark/light)."
+				}
+			},
+			"howTo": {
+				"title": "How to use Color Name Finder: step-by-step guide",
+				"howTo1": {
+					"title": "How to find a color name",
+					"description": "Enter a color in any format (HEX, RGB, HSL) or select it using the color picker. The tool automatically finds the closest standard names and creates algorithmic and marketing names."
+				},
+				"howTo2": {
+					"title": "How to use similar colors",
+					"description": "Browse the list of similar colors sorted by perceptual distance. Click on any color to use it as the main color. The ΔE distance shows how close the color is to a standard name."
+				},
+				"howTo3": {
+					"title": "How to customize color description",
+					"description": "Select the description tone: neutral, marketing, or artistic. For artistic tone, you can manually edit the long description."
+				},
+				"howTo4": {
+					"title": "How to interpret technical data",
+					"description": "LAB and LCH are perceptually uniform color spaces. Contrast shows the brightness ratio of the color with white and black. Tags help quickly understand color characteristics."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Color Name Finder",
+				"q1": {
+					"question": "What is ΔE (delta E)?",
+					"answer": "ΔE is a measure of perceptual difference between two colors. The smaller the value, the more similar the colors. ΔE < 1 means colors are practically indistinguishable to the human eye."
+				},
+				"q2": {
+					"question": "What is an algorithmic color name?",
+					"answer": "An algorithmic name is created based on color characteristics (hue, saturation, lightness) and describes the color in terms of its visual properties, e.g., 'Vivid Warm Orange' or 'Muted Cool Blue'."
+				},
+				"q3": {
+					"question": "What is a marketing color name?",
+					"answer": "A marketing name is a poetic or evocative color name intended for use in design and marketing, e.g., 'Sunset Ember' or 'Ocean Whisper'."
+				},
+				"q4": {
+					"question": "What are LAB and LCH color spaces?",
+					"answer": "LAB and LCH are perceptually uniform color spaces where the same change in numerical value corresponds to the same visual change. LAB uses coordinates L (lightness), A (red-green), B (yellow-blue). LCH uses L (lightness), C (chroma), H (hue)."
+				},
+				"q5": {
+					"question": "How to interpret contrast?",
+					"answer": "Contrast shows the brightness ratio of the color with white or black. WCAG recommends a minimum contrast of 4.5:1 for normal text and 3:1 for large text. The higher the value, the better the readability."
+				}
+			}
+		}
+	},
+	"brandColorAnalyzer": {
+		"title": "Brand Color Analyzer",
+		"subtitle": "Analyze brand colors, identify key palette properties, and create a convenient visual structure",
+		"sections": {
+			"input": {
+				"title": "Color Input"
+			},
+			"palette": {
+				"title": "Palette Map"
+			},
+			"properties": {
+				"title": "Palette Properties"
+			},
+			"contrast": {
+				"title": "Contrast & Accessibility"
+			},
+			"descriptions": {
+				"title": "Brand Descriptions"
+			},
+			"export": {
+				"title": "Export"
+			}
+		},
+		"seo": {
+			"keywords": "brand color analysis, brand colors, brand palette, color palette analysis, color clustering, color harmony, color contrast, WCAG accessibility, brandbook colors, brand color scheme, logo analysis, extract colors from logo, brand style colors, brand palette online, brand color analysis, brand color identity, color harmony analysis, brand color contrast, brand color accessibility, company color palette, logo color analysis, brand colors online, brand palette generator, color scheme analysis, brand color strategy",
+			"guide": {
+				"title": "Complete guide to using Brand Color Analyzer",
+				"intro": "Brand Color Analyzer is a tool for comprehensive analysis of brand colors. It clusters colors, analyzes their characteristics, checks harmony and contrast, and generates descriptions.",
+				"step1": {
+					"title": "Step 1: Input colors",
+					"description": "Enter colors manually (HEX, RGB, HSL), upload a logo or brandbook image, or select from a list of popular brands. The system supports 3 to 10 colors."
+				},
+				"step2": {
+					"title": "Step 2: Clustering",
+					"description": "The tool automatically categorizes colors into: primary (main), secondary, accent, and neutral based on hue, saturation, luminance, and LAB distance."
+				},
+				"step3": {
+					"title": "Step 3: Characteristics analysis",
+					"description": "View palette characteristics: temperature (warm/cold), brightness, saturation, style (energetic, muted, minimalistic, playful, corporate) and tags."
+				},
+				"step4": {
+					"title": "Step 4: Harmony analysis",
+					"description": "The tool determines harmony type (triad, complementary, split-complementary, analogous), detects conflicts, and evaluates contrast level between key colors."
+				},
+				"step5": {
+					"title": "Step 5: Contrast and accessibility",
+					"description": "For each color, contrast with white and black is checked, WCAG AA/AAA compliance is verified, and recommendations for improvement are provided."
+				},
+				"step6": {
+					"title": "Step 6: Descriptions and export",
+					"description": "Get automatically generated descriptions: short, marketing, technical, and recommendations. Export results as JSON or CSS variables."
+				}
+			},
+			"howTo": {
+				"title": "How to use Brand Color Analyzer: step-by-step guide",
+				"howTo1": {
+					"title": "How to input brand colors",
+					"description": "Enter colors manually in the text field (separated by commas or newlines), upload a logo image for automatic color extraction, or select a popular brand from the dropdown list."
+				},
+				"howTo2": {
+					"title": "How to interpret clustering",
+					"description": "Primary colors are the main, most saturated brand colors. Secondary are secondary colors. Accent are accent colors for emphasis. Neutral are neutral colors (grays, whites, blacks)."
+				},
+				"howTo3": {
+					"title": "How to understand palette characteristics",
+					"description": "Temperature shows whether warm or cool tones dominate. Brightness and saturation determine visual impact. Style describes the overall mood of the palette."
+				},
+				"howTo4": {
+					"title": "How to check color harmony",
+					"description": "The tool automatically determines color harmony type (triad, complementary, etc.), identifies conflicts between similar shades, and evaluates contrast level."
+				},
+				"howTo5": {
+					"title": "How to improve accessibility",
+					"description": "Check the contrast table. Colors marked '✗ Below AA' do not meet accessibility standards. Follow recommendations to improve contrast."
+				},
+				"howTo6": {
+					"title": "How to export results",
+					"description": "Use the 'Export' section to save results. JSON format contains all analysis data. CSS variables are ready for use in your project."
+				}
+			},
+			"faq": {
+				"title": "Frequently asked questions about Brand Color Analyzer",
+				"q1": {
+					"question": "How does color clustering work?",
+					"answer": "Clustering uses an algorithm based on saturation, lightness, and hue to automatically categorize colors. Neutral colors (low saturation) are separated, others are sorted by visual significance."
+				},
+				"q2": {
+					"question": "What does palette style mean?",
+					"answer": "Style describes the overall mood and character of the palette: energetic (dynamic and bold), muted (subtle and refined), minimalistic (clean and simple), playful (fun and creative), corporate (professional and trustworthy)."
+				},
+				"q3": {
+					"question": "How to interpret harmony analysis?",
+					"answer": "Harmony type shows how colors relate on the color wheel. Conflicts occur when similar hues have very different saturation or lightness. Contrast level affects readability and visual hierarchy."
+				},
+				"q4": {
+					"question": "What are WCAG AA and AAA?",
+					"answer": "WCAG (Web Content Accessibility Guidelines) defines accessibility standards. AA requires 4.5:1 contrast for normal text and 3:1 for large text. AAA requires 7:1 for normal text. This is important for content readability."
+				},
+				"q5": {
+					"question": "Can I use colors from popular brands?",
+					"answer": "Yes, you can select any brand from the list for quick analysis. This is useful for studying color strategies of well-known companies or as a starting point for your own palette."
+				},
+				"q6": {
+					"question": "How to export palette for use in project?",
+					"answer": "Use CSS variables export for direct use in styles. JSON format is suitable for integration into design systems or transfer to other tools."
 				}
 			}
 		}
