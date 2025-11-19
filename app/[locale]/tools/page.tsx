@@ -1,20 +1,63 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 
 /**
  * Generate metadata for the tools page
+ * 
+ * Creates comprehensive SEO metadata including:
+ * - Title and description
+ * - Keywords
+ * - Open Graph tags for social sharing
+ * - Twitter Card tags
+ * - Canonical URL and hreflang alternates
  */
 export async function generateMetadata({
 	params: { locale },
 }: {
 	params: { locale: string }
-}) {
+}): Promise<Metadata> {
 	const t = await getTranslations({ locale, namespace: 'tools' })
+	const baseUrl = 'https://pipetkaonline.ru'
 
 	return {
 		title: t('title'),
 		description: t('description'),
+		keywords: 'color tools, palette generator, color converter, contrast checker, color harmony, gradient generator, color picker, design tools, web design, color theory',
+		openGraph: {
+			title: t('title'),
+			description: t('description'),
+			type: 'website',
+			url: `${baseUrl}/${locale}/tools`,
+			siteName: 'PipetkaOnline',
+			images: [
+				{
+					url: `${baseUrl}/og-tools.jpg`,
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+			locale: locale,
+			alternateLocale: ['ru', 'en', 'de', 'es'].filter(l => l !== locale),
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: t('title'),
+			description: t('description'),
+			images: [`${baseUrl}/og-tools.jpg`],
+		},
+		alternates: {
+			canonical: `${baseUrl}/${locale}/tools`,
+			languages: {
+				ru: `${baseUrl}/ru/tools`,
+				en: `${baseUrl}/en/tools`,
+				de: `${baseUrl}/de/tools`,
+				es: `${baseUrl}/es/tools`,
+				'x-default': `${baseUrl}/ru/tools`,
+			},
+		},
 	}
 }
 
@@ -22,15 +65,51 @@ export async function generateMetadata({
  * Tools page component
  * Displays available color tools and utilities
  */
-export default function ToolsPage({
+export default async function ToolsPage({
 	params,
 }: {
 	params: { locale: string }
 }) {
-	const t = useTranslations('tools')
+	const t = await getTranslations({ locale: params.locale, namespace: 'tools' })
+	const baseUrl = 'https://pipetkaonline.ru'
+
+	// Structured data for SEO
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: t('title'),
+		description: t('description'),
+		url: `${baseUrl}/${params.locale}/tools`,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: [
+				{
+					'@type': 'SoftwareApplication',
+					name: t('tools.picker.title'),
+					description: t('tools.picker.desc'),
+					applicationCategory: 'DesignApplication',
+					operatingSystem: 'Web',
+				},
+				{
+					'@type': 'SoftwareApplication',
+					name: t('tools.palette.title'),
+					description: t('tools.palette.desc'),
+					applicationCategory: 'DesignApplication',
+					operatingSystem: 'Web',
+				},
+			],
+		},
+	}
 
 	return (
-		<div className='space-y-8'>
+		<>
+			{/* Structured Data for SEO */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+			/>
+
+			<div className='space-y-8'>
 			{/* Page header */}
 			<header className='text-center space-y-4'>
 				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
@@ -162,6 +241,7 @@ export default function ToolsPage({
 				/>
 			</div>
 		</div>
+		</>
 	)
 }
 

@@ -5,7 +5,11 @@
 	"sections": {
 		"acceptance": {
 			"title": "Acceptance of Terms",
-			"content": "By using our website, you agree to these terms of use. If you do not agree with these terms, please do not use our website."
+			"content": "By using our website pipetkaonline.ru, you agree to these terms of use, privacy policy, and cookie policy. If you do not agree with these terms, please do not use our website."
+		},
+		"age": {
+			"title": "Age Restrictions",
+			"content": "Our website is intended for users over 13 years of age (or 16 years in EU countries). By using the site, you confirm that you are at least 13 years old (or 16 years in the EU) and have the right to use the site in accordance with the laws of your country."
 		},
 		"use": {
 			"title": "Use of Website",
@@ -13,21 +17,66 @@
 			"items": [
 				"Detect colors and create palettes",
 				"Learn color theory",
-				"Use tools for personal and commercial purposes"
-			]
+				"Use tools for personal and commercial purposes",
+				"Convert colors between different formats",
+				"Analyze contrast and color accessibility"
+			],
+			"prohibited": {
+				"title": "Prohibited Activities",
+				"content": "When using the site, the following are prohibited:",
+				"items": [
+					"Using the site for illegal purposes",
+					"Attempting to hack or disrupt the site",
+					"Using automated systems (bots) for mass access to the site",
+					"Copying, modifying, or distributing the site code without permission",
+					"Using site content in a way that violates intellectual property rights"
+				]
+			}
+		},
+		"advertising": {
+			"title": "Advertising",
+			"content": "Our website contains advertising placed through Google AdSense and Yandex.Direct. We do not control the content of advertisements and are not responsible for their content. Advertising may use cookies for personalization. For more information, see our Cookie Policy."
 		},
 		"intellectual": {
 			"title": "Intellectual Property",
-			"content": "All website content, including design, texts, and tools, is protected by copyright. You may use website materials for personal and commercial purposes, but may not copy or distribute them without permission."
+			"content": "All website content, including design, texts, tools, logos, and source code, is protected by copyright and belongs to PipetkaOnline or its licensors. You may use the results of tool work (colors, palettes) for personal and commercial purposes, but may not copy, modify, or distribute the site itself, its design, or code without written permission."
+		},
+		"userContent": {
+			"title": "User Content",
+			"content": "When uploading images for color analysis, you retain all rights to these images. We do not store uploaded images on our servers - processing occurs only in your browser. We do not use your images for any other purposes."
 		},
 		"liability": {
 			"title": "Limitation of Liability",
-			"content": "We are not responsible for the accuracy of tool results or for any damage arising from the use of the website. Tools are provided \"as is\" without any warranties."
+			"content": "We provide tools \"as is\" without any warranties. We are not responsible for:",
+			"items": [
+				"Accuracy of tool results",
+				"Any damage arising from use or inability to use the site",
+				"Loss of data or information",
+				"Site interruption or technical failures",
+				"Content of third-party advertisements"
+			]
+		},
+		"indemnification": {
+			"title": "Indemnification",
+			"content": "You agree to indemnify and hold PipetkaOnline harmless from any claims, damages, liabilities, and expenses (including legal fees) arising from your violation of these terms of use or use of the site."
+		},
+		"termination": {
+			"title": "Access Termination",
+			"content": "We reserve the right to terminate or restrict your access to the site at any time and without prior notice in case of violation of these terms of use."
 		},
 		"changes": {
 			"title": "Changes to Terms",
-			"content": "We reserve the right to change these terms at any time. Changes take effect upon publication on the website."
+			"content": "We reserve the right to change these terms at any time. Changes take effect upon publication on the website. Continued use of the site after changes are made means you agree to the new terms. We recommend periodically checking this page for updates."
+		},
+		"governingLaw": {
+			"title": "Governing Law",
+			"content": "These terms of use are governed by the laws of the Russian Federation. Any disputes shall be resolved in courts at the location of the site owner."
+		},
+		"contact": {
+			"title": "Contact",
+			"content": "If you have questions about these terms of use, please contact us:",
+			"email": "Email: calc1.ru@ya.ru",
+			"website": "Website: https://pipetkaonline.ru"
 		}
 	}
 }
-

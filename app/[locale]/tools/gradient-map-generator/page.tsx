@@ -9,7 +9,21 @@
 
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-import { GradientMapGeneratorClient } from './GradientMapGeneratorClient'
+import dynamic from 'next/dynamic'
+
+// Dynamic import for heavy component with canvas and image processing
+// ssr: false because it uses browser APIs (canvas, FileReader)
+const GradientMapGeneratorClient = dynamic(() => import('./GradientMapGeneratorClient').then(mod => ({ default: mod.GradientMapGeneratorClient })), {
+	loading: () => (
+		<div className='flex items-center justify-center min-h-[400px]'>
+			<div className='text-center'>
+				<div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4'></div>
+				<p className='text-slate-600'>Loading Gradient Map Generator...</p>
+			</div>
+		</div>
+	),
+	ssr: false,
+})
 
 /**
  * Generate metadata for Gradient Map Generator page

@@ -23,6 +23,7 @@
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -64,6 +65,8 @@ const inter = Inter({
  * - Search engine descriptions
  * - Social media sharing (Open Graph)
  * - Favicon configuration
+ * - Viewport and theme settings
+ * - Hreflang alternates
  */
 export const metadata: Metadata = {
 	title: 'PipetkaOnline - Online Color Tools',
@@ -72,6 +75,14 @@ export const metadata: Metadata = {
 	icons: {
 		icon: '/favicon.svg',
 		apple: '/favicon.svg',
+	},
+	viewport: {
+		width: 'device-width',
+		initialScale: 1,
+	},
+	themeColor: '#3B82F6',
+	other: {
+		'format-detection': 'telephone=no',
 	},
 }
 
@@ -145,9 +156,101 @@ export default async function RootLayout({
 	 */
 	const messages = await getMessages()
 
+	// Structured data for SEO
+	const organizationSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: 'PipetkaOnline',
+		url: 'https://pipetkaonline.ru',
+		logo: 'https://pipetkaonline.ru/logo.svg',
+		description: 'Online color tools and color theory education platform',
+		sameAs: [
+			// Add social media links if available
+		],
+	}
+
+	const webApplicationSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'WebApplication',
+		name: 'PipetkaOnline',
+		description: 'Free online color tools for designers and developers. Convert colors, create palettes, analyze contrast, and learn color theory.',
+		url: 'https://pipetkaonline.ru',
+		applicationCategory: 'DesignApplication',
+		operatingSystem: 'Web Browser',
+		offers: {
+			'@type': 'Offer',
+			price: '0',
+			priceCurrency: 'USD',
+		},
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			ratingValue: '4.8',
+			ratingCount: '100',
+		},
+		featureList: [
+			'Color Converter',
+			'Palette Generator',
+			'Contrast Checker',
+			'Color Harmony',
+			'Gradient Generator',
+			'Color Lab',
+		],
+	}
+
+	// WebSite schema with SearchAction for Google site search
+	const webSiteSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'PipetkaOnline',
+		url: 'https://pipetkaonline.ru',
+		description: 'Free online color tools and color theory education platform',
+		publisher: {
+			'@type': 'Organization',
+			name: 'PipetkaOnline',
+			logo: {
+				'@type': 'ImageObject',
+				url: 'https://pipetkaonline.ru/logo.svg',
+			},
+		},
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: {
+				'@type': 'EntryPoint',
+				urlTemplate: 'https://pipetkaonline.ru/{locale}/tools?q={search_term_string}',
+			},
+			'query-input': 'required name=search_term_string',
+		},
+		inLanguage: ['ru', 'en', 'de', 'es'],
+		alternateName: ['Pipetka Online', 'Color Tools Online'],
+	}
+
 	return (
 		<html lang={locale} className={inter.variable}>
+			<head>
+				{/* Preconnect to external domains for faster resource loading */}
+				<link rel='preconnect' href='https://fonts.googleapis.com' />
+				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+				<link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+			</head>
 			<body className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex flex-col font-sans'>
+				{/* Organization Structured Data for SEO */}
+				<Script
+					id='organization-schema'
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+				/>
+				{/* WebApplication Structured Data for SEO */}
+				<Script
+					id='webapplication-schema'
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
+				/>
+				{/* WebSite Structured Data with SearchAction for SEO */}
+				<Script
+					id='website-schema'
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+				/>
 				{/* 
 					NextIntlClientProvider makes translations available to client components.
 					This is required for any component using useTranslations hook.

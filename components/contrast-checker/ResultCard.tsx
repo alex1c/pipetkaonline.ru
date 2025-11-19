@@ -90,3 +90,4 @@ export function ResultCard({ result }: ResultCardProps) {
 }
 
 
+

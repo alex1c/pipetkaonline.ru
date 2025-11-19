@@ -1,20 +1,63 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
 
 /**
  * Generate metadata for the learn page
+ * 
+ * Creates comprehensive SEO metadata including:
+ * - Title and description
+ * - Keywords
+ * - Open Graph tags for social sharing
+ * - Twitter Card tags
+ * - Canonical URL and hreflang alternates
  */
 export async function generateMetadata({
 	params: { locale },
 }: {
 	params: { locale: string }
-}) {
+}): Promise<Metadata> {
 	const t = await getTranslations({ locale, namespace: 'learn' })
+	const baseUrl = 'https://pipetkaonline.ru'
 
 	return {
 		title: t('title'),
 		description: t('description'),
+		keywords: 'color theory, color harmony, color psychology, color accessibility, color formats, RGB, HEX, HSL, color wheel, design education, web design tutorial',
+		openGraph: {
+			title: t('title'),
+			description: t('description'),
+			type: 'website',
+			url: `${baseUrl}/${locale}/learn`,
+			siteName: 'PipetkaOnline',
+			images: [
+				{
+					url: `${baseUrl}/og-learn.jpg`,
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+			locale: locale,
+			alternateLocale: ['ru', 'en', 'de', 'es'].filter(l => l !== locale),
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: t('title'),
+			description: t('description'),
+			images: [`${baseUrl}/og-learn.jpg`],
+		},
+		alternates: {
+			canonical: `${baseUrl}/${locale}/learn`,
+			languages: {
+				ru: `${baseUrl}/ru/learn`,
+				en: `${baseUrl}/en/learn`,
+				de: `${baseUrl}/de/learn`,
+				es: `${baseUrl}/es/learn`,
+				'x-default': `${baseUrl}/ru/learn`,
+			},
+		},
 	}
 }
 
@@ -22,15 +65,62 @@ export async function generateMetadata({
  * Learn page component
  * Educational content about color theory and design
  */
-export default function LearnPage({
+export default async function LearnPage({
 	params: { locale },
 }: {
 	params: { locale: string }
 }) {
-	const t = useTranslations('learn')
+	const t = await getTranslations({ locale, namespace: 'learn' })
+	const baseUrl = 'https://pipetkaonline.ru'
+
+	// Structured data for SEO
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: t('title'),
+		description: t('description'),
+		url: `${baseUrl}/${locale}/learn`,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: [
+				{
+					'@type': 'Article',
+					name: t('topics.fundamentals.title'),
+					description: t('topics.fundamentals.desc'),
+				},
+				{
+					'@type': 'Article',
+					name: t('topics.harmony.title'),
+					description: t('topics.harmony.desc'),
+				},
+				{
+					'@type': 'Article',
+					name: t('topics.psychology.title'),
+					description: t('topics.psychology.desc'),
+				},
+				{
+					'@type': 'Article',
+					name: t('topics.accessibility.title'),
+					description: t('topics.accessibility.desc'),
+				},
+				{
+					'@type': 'Article',
+					name: t('topics.formats.title'),
+					description: t('topics.formats.desc'),
+				},
+			],
+		},
+	}
 
 	return (
-		<div className='space-y-8'>
+		<>
+			{/* Structured Data for SEO */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+			/>
+
+			<div className='space-y-8'>
 			{/* Page header */}
 			<header className='text-center space-y-4'>
 				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
@@ -102,6 +192,7 @@ export default function LearnPage({
 				/>
 			</div>
 		</div>
+		</>
 	)
 }
 

@@ -106,14 +106,18 @@ export default async function HomePage({
 	const t = await getTranslations({ locale: params.locale, namespace: 'home' })
 	const tTools = await getTranslations({ locale: params.locale, namespace: 'tools' })
 
-	// Structured data for SEO
-	const structuredData = {
+	const baseUrl = 'https://pipetkaonline.ru'
+	const locale = params.locale
+
+	// Structured data for SEO - WebApplication
+	const webApplicationData = {
 		'@context': 'https://schema.org',
 		'@type': 'WebApplication',
 		name: 'PipetkaOnline',
 		description: t('subtitle'),
 		applicationCategory: 'DesignApplication',
 		operatingSystem: 'Web',
+		url: `${baseUrl}/${locale}`,
 		offers: {
 			'@type': 'Offer',
 			price: '0',
@@ -124,6 +128,46 @@ export default async function HomePage({
 			ratingValue: '4.8',
 			ratingCount: '150',
 		},
+	}
+
+	// Structured data for SEO - ItemList of popular tools
+	const toolsListData = {
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		name: 'Popular Color Tools',
+		description: 'List of popular online color tools available on PipetkaOnline',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				item: {
+					'@type': 'SoftwareApplication',
+					name: tTools('tools.picker.title'),
+					url: `${baseUrl}/${locale}/tools/color-lab`,
+					description: tTools('tools.picker.desc'),
+				},
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				item: {
+					'@type': 'SoftwareApplication',
+					name: tTools('tools.palette.title'),
+					url: `${baseUrl}/${locale}/tools/palette-generator`,
+					description: tTools('tools.palette.desc'),
+				},
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				item: {
+					'@type': 'SoftwareApplication',
+					name: tTools('tools.contrast.title'),
+					url: `${baseUrl}/${locale}/tools/contrast-checker`,
+					description: tTools('tools.contrast.desc'),
+				},
+			},
+		],
 	}
 
 	// Popular tools to showcase on homepage
@@ -180,10 +224,15 @@ export default async function HomePage({
 
 	return (
 		<>
-			{/* Structured Data for SEO */}
+			{/* Structured Data for SEO - WebApplication */}
 			<script
 				type='application/ld+json'
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationData) }}
+			/>
+			{/* Structured Data for SEO - ItemList of Tools */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(toolsListData) }}
 			/>
 
 			<div className='space-y-16'>

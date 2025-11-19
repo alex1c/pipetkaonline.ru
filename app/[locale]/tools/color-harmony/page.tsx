@@ -1,9 +1,14 @@
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { ColorHarmonyClient } from './ColorHarmonyClient'
+import { generateToolMetadata } from '@/lib/metadata-utils'
+import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
 
 /**
  * Generate metadata for Color Harmony Finder page
+ * 
+ * Creates comprehensive SEO metadata including Open Graph, Twitter Cards,
+ * canonical URLs, and hreflang alternates.
  */
 export async function generateMetadata({
 	params: { locale },
@@ -13,23 +18,51 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: 'tools.colorHarmony' })
 	const tSEO = await getTranslations({ locale, namespace: 'tools.colorHarmony.seo' })
 
-	return {
+	return generateToolMetadata({
 		title: t('title'),
 		description: t('description'),
 		keywords: tSEO('keywords'),
-		openGraph: {
-			title: t('title'),
-			description: t('description'),
-		},
-	}
+		locale,
+		path: '/tools/color-harmony',
+		ogImage: 'og-color-harmony.jpg',
+	})
 }
 
 /**
  * Color Harmony Finder page
  * Server component that handles metadata and renders client component
+ * Includes structured data for SEO
  */
-export default function ColorHarmonyPage() {
-	return <ColorHarmonyClient />
+export default async function ColorHarmonyPage({
+	params,
+}: {
+	params: { locale: string }
+}) {
+	const t = await getTranslations({ locale: params.locale, namespace: 'tools.colorHarmony' })
+	const baseUrl = 'https://pipetkaonline.ru'
+
+	// Structured data for SEO
+	const structuredData = generateSoftwareApplicationSchema({
+		name: t('title'),
+		description: t('description'),
+		url: `${baseUrl}/${params.locale}/tools/color-harmony`,
+		features: [
+			'Color harmony detection',
+			'Multiple harmony types',
+			'Visual color wheel',
+			'Palette suggestions',
+		],
+	})
+
+	return (
+		<>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+			/>
+			<ColorHarmonyClient />
+		</>
+	)
 }
 
 

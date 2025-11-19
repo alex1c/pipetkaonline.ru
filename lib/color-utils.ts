@@ -343,8 +343,13 @@ export function parseHsl(hslString: string): { h: number; s: number; l: number }
  * parseColorToRgb("invalid")       // Returns null
  */
 export function parseColorToRgb(
-	colorString: string
+	colorString: string | undefined | null
 ): { r: number; g: number; b: number } | null {
+	// Return null if colorString is undefined, null, or empty
+	if (!colorString || typeof colorString !== 'string') {
+		return null
+	}
+
 	// Try HEX first
 	if (colorString.startsWith('#')) {
 		return hexToRgb(colorString)

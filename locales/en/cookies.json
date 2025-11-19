@@ -5,31 +5,70 @@
 	"sections": {
 		"what": {
 			"title": "What are Cookies",
-			"content": "Cookies are small text files that are stored on your device when you visit a website. They help the site remember your preferences and improve functionality."
+			"content": "Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help the site remember your preferences, improve functionality, and provide content personalization."
 		},
 		"how": {
 			"title": "How We Use Cookies",
-			"content": "We use cookies to ensure website functionality, analyze usage, and display relevant advertising."
+			"content": "We use cookies for the following purposes: ensuring website functionality, analyzing website usage, displaying personalized advertising through advertising networks, improving user experience, and ensuring security."
 		},
 		"types": {
 			"title": "Types of Cookies",
 			"essential": {
 				"title": "Essential Cookies",
-				"content": "These cookies are necessary for the website to function and cannot be disabled. They provide basic functionality and security."
+				"content": "These cookies are necessary for the website to function and cannot be disabled. They provide basic functionality, security, and remember your settings (e.g., selected language). Without these cookies, the website cannot function correctly.",
+				"examples": "Examples: saving selected interface language, ensuring session security."
 			},
 			"analytics": {
 				"title": "Analytics Cookies",
-				"content": "We use Google Analytics to understand how visitors use our site. This data helps us improve the website."
+				"content": "We use Google Analytics to understand how visitors use our site. These cookies collect anonymous statistics about visits, pages viewed, time on site, and traffic sources. This data helps us improve the website and optimize content.",
+				"link": "Learn more: https://policies.google.com/privacy",
+				"optout": "You can opt out of Google Analytics: https://tools.google.com/dlpage/gaoptout"
 			},
 			"advertising": {
 				"title": "Advertising Cookies",
-				"content": "We use cookies to display relevant advertising through Google AdSense and Yandex.Direct. These cookies track your interests to personalize ads."
+				"content": "We use cookies to display relevant advertising through Google AdSense and Yandex.Direct. These cookies track your interests, browsing history, and interaction with ads to personalize advertisements. They also help limit the number of times you see the same ad.",
+				"google": {
+					"title": "Google AdSense",
+					"content": "Google uses cookies to show ads based on your previous visits to our site and other sites. You can customize Google personalized ads: https://adssettings.google.com",
+					"policy": "Privacy Policy: https://policies.google.com/privacy"
+				},
+				"yandex": {
+					"title": "Yandex.Direct",
+					"content": "Yandex uses cookies to show relevant advertising. You can manage advertising settings: https://yandex.ru/support/direct/statistics/retargeting.html",
+					"policy": "Privacy Policy: https://yandex.ru/legal/confidential/"
+				}
+			}
+		},
+		"thirdParty": {
+			"title": "Third-Party Cookies",
+			"content": "Some cookies are set by third parties (Google, Yandex) when you visit our site. We do not control these cookies. For information on how these companies use cookies, visit their privacy policies.",
+			"services": {
+				"0": "Google AdSense and Google Analytics - https://policies.google.com/privacy",
+				"1": "Yandex.Direct - https://yandex.ru/legal/confidential/"
 			}
 		},
 		"manage": {
 			"title": "Managing Cookies",
-			"content": "You can manage cookies through your browser settings. Note that disabling some cookies may affect website functionality."
+			"content": "You can manage cookies in several ways:",
+			"methods": {
+				"0": "Through your browser settings - most browsers allow you to block or delete cookies",
+				"1": "Through Google ad settings - https://adssettings.google.com",
+				"2": "Through Yandex settings - https://yandex.ru/support/direct/statistics/retargeting.html",
+				"3": "Using browser extensions to block ads and tracking"
+			},
+			"warning": "Note that disabling some cookies may affect website functionality and the quality of ads you see."
+		},
+		"duration": {
+			"title": "Cookie Duration",
+			"content": "Different cookies have different durations:",
+			"types": {
+				"0": "Session cookies - deleted when you close your browser",
+				"1": "Persistent cookies - remain on your device for a certain period (from a few days to several years) or until manually deleted"
+			}
+		},
+		"localStorage": {
+			"title": "Local Storage",
+			"content": "In addition to cookies, our website may use browser local storage (localStorage) to save your settings and preferences. This data is stored only on your device and is not transmitted to the server."
 		}
 	}
 }
-

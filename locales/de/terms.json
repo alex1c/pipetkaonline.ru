@@ -5,7 +5,11 @@
 	"sections": {
 		"acceptance": {
 			"title": "Annahme der Bedingungen",
-			"content": "Durch die Nutzung unserer Website stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie bitte unsere Website nicht."
+			"content": "Durch die Nutzung unserer Website pipetkaonline.ru stimmen Sie diesen Nutzungsbedingungen, der Datenschutzerklärung und der Cookie-Richtlinie zu. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie bitte unsere Website nicht."
+		},
+		"age": {
+			"title": "Altersbeschränkungen",
+			"content": "Unsere Website ist für Benutzer über 13 Jahre (oder 16 Jahre in EU-Ländern) bestimmt. Durch die Nutzung der Website bestätigen Sie, dass Sie mindestens 13 Jahre alt sind (oder 16 Jahre in der EU) und das Recht haben, die Website gemäß den Gesetzen Ihres Landes zu nutzen."
 		},
 		"use": {
 			"title": "Nutzung der Website",
@@ -13,21 +17,66 @@
 			"items": [
 				"Farben zu erkennen und Paletten zu erstellen",
 				"Farbtheorie zu lernen",
-				"Werkzeuge für persönliche und kommerzielle Zwecke zu nutzen"
-			]
+				"Werkzeuge für persönliche und kommerzielle Zwecke zu nutzen",
+				"Farben zwischen verschiedenen Formaten zu konvertieren",
+				"Kontrast und Farbzugänglichkeit zu analysieren"
+			],
+			"prohibited": {
+				"title": "Verbotene Aktivitäten",
+				"content": "Bei der Nutzung der Website sind folgende Aktivitäten verboten:",
+				"items": [
+					"Verwendung der Website für illegale Zwecke",
+					"Versuch, die Website zu hacken oder zu stören",
+					"Verwendung automatisierter Systeme (Bots) für den Massenzugriff auf die Website",
+					"Kopieren, Ändern oder Verteilen des Website-Codes ohne Erlaubnis",
+					"Verwendung von Website-Inhalten auf eine Weise, die geistige Eigentumsrechte verletzt"
+				]
+			}
+		},
+		"advertising": {
+			"title": "Werbung",
+			"content": "Unsere Website enthält Werbung, die über Google AdSense und Яндекс.Директ platziert wird. Wir kontrollieren nicht den Inhalt der Werbeanzeigen und sind nicht für deren Inhalt verantwortlich. Werbung kann Cookies zur Personalisierung verwenden. Weitere Informationen finden Sie in unserer Cookie-Richtlinie."
 		},
 		"intellectual": {
 			"title": "Geistiges Eigentum",
-			"content": "Alle Website-Inhalte, einschließlich Design, Texte und Werkzeuge, sind urheberrechtlich geschützt. Sie können Website-Materialien für persönliche und kommerzielle Zwecke verwenden, dürfen sie jedoch nicht ohne Erlaubnis kopieren oder verteilen."
+			"content": "Alle Website-Inhalte, einschließlich Design, Texte, Werkzeuge, Logos und Quellcode, sind urheberrechtlich geschützt und gehören PipetkaOnline oder seinen Lizenzgebern. Sie können die Ergebnisse der Werkzeugarbeit (Farben, Paletten) für persönliche und kommerzielle Zwecke verwenden, dürfen jedoch die Website selbst, ihr Design oder den Code nicht ohne schriftliche Genehmigung kopieren, ändern oder verteilen."
+		},
+		"userContent": {
+			"title": "Benutzerinhalte",
+			"content": "Beim Hochladen von Bildern zur Farbanalyse behalten Sie alle Rechte an diesen Bildern. Wir speichern hochgeladene Bilder nicht auf unseren Servern - die Verarbeitung erfolgt nur in Ihrem Browser. Wir verwenden Ihre Bilder nicht für andere Zwecke."
 		},
 		"liability": {
 			"title": "Haftungsbeschränkung",
-			"content": "Wir sind nicht verantwortlich für die Genauigkeit der Werkzeugeergebnisse oder für Schäden, die durch die Nutzung der Website entstehen. Werkzeuge werden \"wie besehen\" ohne Gewährleistung bereitgestellt."
+			"content": "Wir stellen Werkzeuge \"wie besehen\" ohne Gewährleistung bereit. Wir sind nicht verantwortlich für:",
+			"items": [
+				"Genauigkeit der Werkzeugeergebnisse",
+				"Jegliche Schäden, die durch die Nutzung oder Unfähigkeit zur Nutzung der Website entstehen",
+				"Verlust von Daten oder Informationen",
+				"Unterbrechung der Website oder technische Ausfälle",
+				"Inhalt von Werbeanzeigen Dritter"
+			]
+		},
+		"indemnification": {
+			"title": "Schadensersatz",
+			"content": "Sie verpflichten sich, PipetkaOnline von allen Ansprüchen, Schäden, Haftungen und Ausgaben (einschließlich Rechtskosten) freizustellen, die sich aus Ihrer Verletzung dieser Nutzungsbedingungen oder der Nutzung der Website ergeben."
+		},
+		"termination": {
+			"title": "Zugangskündigung",
+			"content": "Wir behalten uns das Recht vor, Ihren Zugang zur Website jederzeit und ohne vorherige Ankündigung zu beenden oder einzuschränken, wenn Sie gegen diese Nutzungsbedingungen verstoßen."
 		},
 		"changes": {
 			"title": "Änderungen der Bedingungen",
-			"content": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen treten mit der Veröffentlichung auf der Website in Kraft."
+			"content": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen treten mit der Veröffentlichung auf der Website in Kraft. Die fortgesetzte Nutzung der Website nach Änderungen bedeutet, dass Sie den neuen Bedingungen zustimmen. Wir empfehlen, diese Seite regelmäßig auf Updates zu überprüfen."
+		},
+		"governingLaw": {
+			"title": "Anwendbares Recht",
+			"content": "Diese Nutzungsbedingungen unterliegen dem Recht der Russischen Föderation. Alle Streitigkeiten werden vor Gerichten am Standort des Website-Eigentümers beigelegt."
+		},
+		"contact": {
+			"title": "Kontakt",
+			"content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:",
+			"email": "E-Mail: calc1.ru@ya.ru",
+			"website": "Website: https://pipetkaonline.ru"
 		}
 	}
 }
-

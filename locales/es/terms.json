@@ -5,7 +5,11 @@
 	"sections": {
 		"acceptance": {
 			"title": "Aceptación de Términos",
-			"content": "Al utilizar nuestro sitio web, acepta estos términos de uso. Si no está de acuerdo con estos términos, no utilice nuestro sitio web."
+			"content": "Al utilizar nuestro sitio web pipetkaonline.ru, acepta estos términos de uso, política de privacidad y política de cookies. Si no está de acuerdo con estos términos, no utilice nuestro sitio web."
+		},
+		"age": {
+			"title": "Restricciones de Edad",
+			"content": "Nuestro sitio web está destinado a usuarios mayores de 13 años (o 16 años en países de la UE). Al usar el sitio, confirma que tiene al menos 13 años (o 16 años en la UE) y tiene derecho a usar el sitio de acuerdo con las leyes de su país."
 		},
 		"use": {
 			"title": "Uso del Sitio Web",
@@ -13,21 +17,66 @@
 			"items": [
 				"Detectar colores y crear paletas",
 				"Aprender teoría del color",
-				"Usar herramientas para fines personales y comerciales"
-			]
+				"Usar herramientas para fines personales y comerciales",
+				"Convertir colores entre diferentes formatos",
+				"Analizar contraste y accesibilidad de colores"
+			],
+			"prohibited": {
+				"title": "Actividades Prohibidas",
+				"content": "Al usar el sitio, están prohibidas las siguientes actividades:",
+				"items": [
+					"Usar el sitio para fines ilegales",
+					"Intentar hackear o interrumpir el sitio",
+					"Usar sistemas automatizados (bots) para acceso masivo al sitio",
+					"Copiar, modificar o distribuir el código del sitio sin permiso",
+					"Usar el contenido del sitio de una manera que viole los derechos de propiedad intelectual"
+				]
+			}
+		},
+		"advertising": {
+			"title": "Publicidad",
+			"content": "Nuestro sitio web contiene publicidad colocada a través de Google AdSense y Яндекс.Директ. No controlamos el contenido de los anuncios y no somos responsables de su contenido. La publicidad puede usar cookies para personalización. Para más información, consulte nuestra Política de Cookies."
 		},
 		"intellectual": {
 			"title": "Propiedad Intelectual",
-			"content": "Todo el contenido del sitio web, incluido el diseño, textos y herramientas, está protegido por derechos de autor. Puede usar los materiales del sitio web para fines personales y comerciales, pero no puede copiarlos o distribuirlos sin permiso."
+			"content": "Todo el contenido del sitio web, incluido el diseño, textos, herramientas, logotipos y código fuente, está protegido por derechos de autor y pertenece a PipetkaOnline o sus licenciantes. Puede usar los resultados del trabajo de las herramientas (colores, paletas) para fines personales y comerciales, pero no puede copiar, modificar o distribuir el sitio mismo, su diseño o código sin permiso por escrito."
+		},
+		"userContent": {
+			"title": "Contenido del Usuario",
+			"content": "Al cargar imágenes para análisis de color, conserva todos los derechos sobre estas imágenes. No almacenamos las imágenes cargadas en nuestros servidores: el procesamiento ocurre solo en su navegador. No usamos sus imágenes para ningún otro propósito."
 		},
 		"liability": {
 			"title": "Limitación de Responsabilidad",
-			"content": "No somos responsables de la precisión de los resultados de las herramientas ni de ningún daño derivado del uso del sitio web. Las herramientas se proporcionan \"tal cual\" sin garantías."
+			"content": "Proporcionamos herramientas \"tal cual\" sin garantías. No somos responsables de:",
+			"items": [
+				"Precisión de los resultados de las herramientas",
+				"Cualquier daño derivado del uso o incapacidad de usar el sitio",
+				"Pérdida de datos o información",
+				"Interrupción del sitio o fallas técnicas",
+				"Contenido de anuncios de terceros"
+			]
+		},
+		"indemnification": {
+			"title": "Indemnización",
+			"content": "Usted acepta indemnizar y eximir a PipetkaOnline de cualquier reclamo, daño, responsabilidad y gasto (incluidos los honorarios legales) que surjan de su violación de estos términos de uso o uso del sitio."
+		},
+		"termination": {
+			"title": "Terminación de Acceso",
+			"content": "Nos reservamos el derecho de terminar o restringir su acceso al sitio en cualquier momento y sin previo aviso en caso de violación de estos términos de uso."
 		},
 		"changes": {
 			"title": "Cambios en los Términos",
-			"content": "Nos reservamos el derecho de cambiar estos términos en cualquier momento. Los cambios entran en vigor al publicarse en el sitio web."
+			"content": "Nos reservamos el derecho de cambiar estos términos en cualquier momento. Los cambios entran en vigor al publicarse en el sitio web. El uso continuado del sitio después de que se realicen cambios significa que acepta los nuevos términos. Recomendamos verificar periódicamente esta página para actualizaciones."
+		},
+		"governingLaw": {
+			"title": "Ley Aplicable",
+			"content": "Estos términos de uso se rigen por las leyes de la Federación de Rusia. Cualquier disputa será resuelta en los tribunales en el lugar de ubicación del propietario del sitio."
+		},
+		"contact": {
+			"title": "Contacto",
+			"content": "Si tiene preguntas sobre estos términos de uso, contáctenos:",
+			"email": "Email: calc1.ru@ya.ru",
+			"website": "Sitio web: https://pipetkaonline.ru"
 		}
 	}
 }
-

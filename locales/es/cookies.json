@@ -5,31 +5,70 @@
 	"sections": {
 		"what": {
 			"title": "Qué son las Cookies",
-			"content": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Ayudan al sitio a recordar sus preferencias y mejorar la funcionalidad."
+			"content": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo (computadora, tableta o teléfono móvil) cuando visita un sitio web. Ayudan al sitio a recordar sus preferencias, mejorar la funcionalidad y proporcionar personalización de contenido."
 		},
 		"how": {
 			"title": "Cómo Usamos las Cookies",
-			"content": "Utilizamos cookies para garantizar la funcionalidad del sitio web, analizar el uso y mostrar publicidad relevante."
+			"content": "Utilizamos cookies para los siguientes propósitos: garantizar la funcionalidad del sitio web, analizar el uso del sitio web, mostrar publicidad personalizada a través de redes publicitarias, mejorar la experiencia del usuario y garantizar la seguridad."
 		},
 		"types": {
 			"title": "Tipos de Cookies",
 			"essential": {
 				"title": "Cookies Esenciales",
-				"content": "Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar. Proporcionan funcionalidad básica y seguridad."
+				"content": "Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar. Proporcionan funcionalidad básica, seguridad y recuerdan sus configuraciones (por ejemplo, idioma seleccionado). Sin estas cookies, el sitio web no puede funcionar correctamente.",
+				"examples": "Ejemplos: guardar el idioma de la interfaz seleccionado, garantizar la seguridad de la sesión."
 			},
 			"analytics": {
 				"title": "Cookies Analíticas",
-				"content": "Utilizamos Google Analytics para entender cómo los visitantes usan nuestro sitio. Estos datos nos ayudan a mejorar el sitio web."
+				"content": "Utilizamos Google Analytics para entender cómo los visitantes usan nuestro sitio. Estas cookies recopilan estadísticas anónimas sobre visitas, páginas vistas, tiempo en el sitio y fuentes de tráfico. Estos datos nos ayudan a mejorar el sitio web y optimizar el contenido.",
+				"link": "Más información: https://policies.google.com/privacy",
+				"optout": "Puede optar por no participar en Google Analytics: https://tools.google.com/dlpage/gaoptout"
 			},
 			"advertising": {
 				"title": "Cookies Publicitarias",
-				"content": "Utilizamos cookies para mostrar publicidad relevante a través de Google AdSense y Yandex.Direct. Estas cookies rastrean sus intereses para personalizar los anuncios."
+				"content": "Utilizamos cookies para mostrar publicidad relevante a través de Google AdSense y Яндекс.Директ. Estas cookies rastrean sus intereses, historial de navegación e interacción con anuncios para personalizar los anuncios. También ayudan a limitar la cantidad de veces que ve el mismo anuncio.",
+				"google": {
+					"title": "Google AdSense",
+					"content": "Google utiliza cookies para mostrar anuncios basados en sus visitas anteriores a nuestro sitio y otros sitios. Puede personalizar los anuncios personalizados de Google: https://adssettings.google.com",
+					"policy": "Política de Privacidad: https://policies.google.com/privacy"
+				},
+				"yandex": {
+					"title": "Яндекс.Директ",
+					"content": "Яндекс utiliza cookies para mostrar publicidad relevante. Puede gestionar la configuración de publicidad: https://yandex.ru/support/direct/statistics/retargeting.html",
+					"policy": "Política de Privacidad: https://yandex.ru/legal/confidential/"
+				}
+			}
+		},
+		"thirdParty": {
+			"title": "Cookies de Terceros",
+			"content": "Algunas cookies son establecidas por terceros (Google, Яндекс) cuando visita nuestro sitio. No controlamos estas cookies. Para obtener información sobre cómo estas empresas utilizan cookies, visite sus políticas de privacidad.",
+			"services": {
+				"0": "Google AdSense y Google Analytics - https://policies.google.com/privacy",
+				"1": "Яндекс.Директ - https://yandex.ru/legal/confidential/"
 			}
 		},
 		"manage": {
 			"title": "Gestionar Cookies",
-			"content": "Puede gestionar las cookies a través de la configuración de su navegador. Tenga en cuenta que desactivar algunas cookies puede afectar la funcionalidad del sitio web."
+			"content": "Puede gestionar las cookies de varias maneras:",
+			"methods": {
+				"0": "A través de la configuración de su navegador - la mayoría de los navegadores permiten bloquear o eliminar cookies",
+				"1": "A través de la configuración de anuncios de Google - https://adssettings.google.com",
+				"2": "A través de la configuración de Яндекс - https://yandex.ru/support/direct/statistics/retargeting.html",
+				"3": "Usando extensiones del navegador para bloquear anuncios y seguimiento"
+			},
+			"warning": "Tenga en cuenta que desactivar algunas cookies puede afectar la funcionalidad del sitio web y la calidad de los anuncios que ve."
+		},
+		"duration": {
+			"title": "Duración de las Cookies",
+			"content": "Diferentes cookies tienen diferentes duraciones:",
+			"types": {
+				"0": "Cookies de sesión - se eliminan cuando cierra su navegador",
+				"1": "Cookies persistentes - permanecen en su dispositivo durante un período determinado (desde unos días hasta varios años) o hasta que se eliminen manualmente"
+			}
+		},
+		"localStorage": {
+			"title": "Almacenamiento Local",
+			"content": "Además de las cookies, nuestro sitio web puede usar el almacenamiento local del navegador (localStorage) para guardar sus configuraciones y preferencias. Estos datos se almacenan solo en su dispositivo y no se transmiten al servidor."
 		}
 	}
 }
-

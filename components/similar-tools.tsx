@@ -39,7 +39,7 @@ const similarToolsMap: Record<string, ToolInfo[]> = {
 	],
 	'contrast-checker': [
 		{ slug: 'text-image-accessibility', icon: '📝', titleKey: 'tools.textImageAccessibility.title' },
-		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'colorBlindnessSimulator.title' },
+		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'tools.colorBlindnessSimulator.title' },
 		{ slug: 'color-converter', icon: '🔄', titleKey: 'tools.converter.title' },
 	],
 	'color-converter': [
@@ -84,7 +84,7 @@ const similarToolsMap: Record<string, ToolInfo[]> = {
 	],
 	'text-image-accessibility': [
 		{ slug: 'contrast-checker', icon: '🎯', titleKey: 'tools.contrast.title' },
-		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'colorBlindnessSimulator.title' },
+		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'tools.colorBlindnessSimulator.title' },
 		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'tools.extractColorsV2.title' },
 	],
 	'gradient-map-generator': [
@@ -144,8 +144,9 @@ export function SimilarTools({ currentTool }: SimilarToolsProps) {
 	 * Handles different namespaces for different tools
 	 */
 	const getToolTitle = (titleKey: string): string => {
-		if (titleKey.startsWith('colorBlindnessSimulator.')) {
-			return tColorBlindness(titleKey.replace('colorBlindnessSimulator.', ''))
+		// Handle colorBlindnessSimulator which uses separate namespace
+		if (titleKey === 'tools.colorBlindnessSimulator.title') {
+			return tColorBlindness('title')
 		}
 		return t(titleKey)
 	}

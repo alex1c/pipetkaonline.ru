@@ -5,33 +5,77 @@
 	"sections": {
 		"intro": {
 			"title": "Introducción",
-			"content": "Valoramos su privacidad y nos comprometemos a proteger sus datos personales. Esta política de privacidad explica cómo recopilamos, usamos y protegemos información sobre usted cuando utiliza nuestro sitio web."
+			"content": "Valoramos su privacidad y nos comprometemos a proteger sus datos personales. Esta política de privacidad explica cómo recopilamos, usamos y protegemos información sobre usted cuando utiliza nuestro sitio web pipetkaonline.ru."
 		},
 		"data": {
 			"title": "Recopilación de Datos",
 			"content": "Podemos recopilar la siguiente información:",
-			"items": [
-				"Datos técnicos (dirección IP, tipo de navegador, sistema operativo)",
-				"Datos de uso (páginas vistas, duración de la visita)",
-				"Información que proporcione voluntariamente (si nos contacta)"
-			]
+			"items": {
+				"0": "Datos técnicos (dirección IP, tipo de navegador, sistema operativo, dispositivo)",
+				"1": "Datos de uso (páginas vistas, duración de la visita, navegación entre páginas)",
+				"2": "Información que proporcione voluntariamente (si nos contacta a través del formulario de contacto)",
+				"3": "Datos de ubicación (basados en la dirección IP, con precisión hasta el país y la ciudad)"
+			}
 		},
 		"cookies": {
 			"title": "Uso de Cookies",
-			"content": "Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico. La información detallada está disponible en nuestra Política de Cookies."
+			"content": "Nuestro sitio web utiliza cookies y tecnologías similares para mejorar la experiencia del usuario, analizar el tráfico y mostrar publicidad personalizada. La información detallada sobre los tipos de cookies utilizadas y cómo gestionarlas está disponible en nuestra Política de Cookies."
+		},
+		"advertising": {
+			"title": "Publicidad y Programas de Afiliados",
+			"content": "Nuestro sitio web utiliza las redes publicitarias Google AdSense y Яндекс.Директ para mostrar anuncios. Estos servicios pueden utilizar cookies y otras tecnologías para recopilar información sobre sus intereses y mostrar publicidad relevante. No controlamos el contenido de los anuncios publicitarios colocados por estas redes. Para más información, visite:",
+			"links": {
+				"google": "Política de Privacidad de Google",
+				"yandex": "Política de Privacidad de Яндекс"
+			}
 		},
 		"thirdParty": {
 			"title": "Terceros",
-			"content": "Podemos utilizar servicios de terceros como Google Analytics y redes publicitarias que pueden recopilar información sobre su uso del sitio."
+			"content": "Utilizamos los siguientes servicios de terceros que pueden recopilar información sobre su uso del sitio:",
+			"services": {
+				"0": "Google AdSense - para mostrar anuncios (política: https://policies.google.com/privacy)",
+				"1": "Яндекс.Директ - para mostrar anuncios (política: https://yandex.ru/legal/confidential/)",
+				"2": "Google Analytics - para análisis de tráfico (política: https://policies.google.com/privacy)"
+			}
+		},
+		"dataStorage": {
+			"title": "Almacenamiento de Datos",
+			"content": "Almacenamos los datos recopilados durante el tiempo necesario para lograr los propósitos indicados en esta política o de acuerdo con los requisitos legales. Los datos técnicos y de uso se almacenan en forma agregada y no permiten la identificación de usuarios específicos."
+		},
+		"dataSharing": {
+			"title": "Compartir Datos",
+			"content": "No vendemos ni compartimos sus datos personales con terceros, excepto cuando es necesario para el funcionamiento del sitio web (redes publicitarias, servicios de análisis) o cuando lo requiere la ley. Todas las terceras partes están obligadas a mantener la confidencialidad de los datos de acuerdo con sus políticas de privacidad."
 		},
 		"rights": {
 			"title": "Sus Derechos",
-			"content": "Tiene derecho a solicitar acceso, corrección o eliminación de sus datos personales. Para hacerlo, contáctenos a través de la página de contacto."
+			"content": "De acuerdo con el GDPR y otras leyes de protección de datos, usted tiene derecho a:",
+			"items": {
+				"0": "Solicitar acceso a sus datos personales",
+				"1": "Solicitar corrección de datos inexactos",
+				"2": "Solicitar eliminación de sus datos",
+				"3": "Retirar el consentimiento para el procesamiento de datos",
+				"4": "Restringir el procesamiento de sus datos",
+				"5": "Recibir una copia de sus datos en formato estructurado"
+			},
+			"contact": "Para ejercer estos derechos, contáctenos en: calc1.ru@ya.ru"
+		},
+		"children": {
+			"title": "Privacidad de los Niños",
+			"content": "Nuestro sitio web no está destinado a niños menores de 13 años (o 16 años en la UE). No recopilamos conscientemente datos personales de niños. Si es padre o tutor y cree que su hijo nos ha proporcionado datos personales, contáctenos."
+		},
+		"security": {
+			"title": "Seguridad de Datos",
+			"content": "Aplicamos medidas técnicas y organizativas para proteger sus datos contra acceso no autorizado, pérdida o destrucción. Sin embargo, ningún método de transmisión de datos a través de Internet es absolutamente seguro."
+		},
+		"changes": {
+			"title": "Cambios en la Política",
+			"content": "Nos reservamos el derecho de actualizar esta política de privacidad. Le notificaremos sobre cambios significativos publicando una nueva versión en esta página con una fecha actualizada."
 		},
 		"contact": {
 			"title": "Contacto",
-			"content": "Si tiene preguntas sobre esta política de privacidad, contáctenos a través de la página de contacto."
+			"content": "Si tiene preguntas sobre esta política de privacidad o desea ejercer sus derechos, contáctenos:",
+			"email": "Email: calc1.ru@ya.ru",
+			"website": "Sitio web: https://pipetkaonline.ru"
 		}
 	}
 }
-

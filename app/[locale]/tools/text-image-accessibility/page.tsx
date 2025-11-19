@@ -9,7 +9,21 @@
 
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
-import { TextImageAccessibilityClient } from './TextImageAccessibilityClient'
+import dynamic from 'next/dynamic'
+
+// Dynamic import for heavy component with canvas and image processing
+// ssr: false because it uses browser APIs (canvas, FileReader, Image)
+const TextImageAccessibilityClient = dynamic(() => import('./TextImageAccessibilityClient').then(mod => ({ default: mod.TextImageAccessibilityClient })), {
+	loading: () => (
+		<div className='flex items-center justify-center min-h-[400px]'>
+			<div className='text-center'>
+				<div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4'></div>
+				<p className='text-slate-600'>Loading Accessibility Checker...</p>
+			</div>
+		</div>
+	),
+	ssr: false,
+})
 
 /**
  * Generate metadata for Text-on-Image Accessibility Checker page

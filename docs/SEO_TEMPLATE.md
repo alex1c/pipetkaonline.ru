@@ -175,3 +175,4 @@ See `locales/{locale}/tools.json` → `colorLab` section for a complete example.
 - Use semantic HTML (h2, h3, sections) for better SEO
 
 
+

@@ -153,3 +153,4 @@ export function PaletteResult({ palette }: PaletteResultProps) {
 }
 
 
+

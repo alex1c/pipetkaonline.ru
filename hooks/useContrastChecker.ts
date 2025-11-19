@@ -165,8 +165,8 @@ export interface ContrastResult {
  * - Hook parses colors and calculates contrast
  * - Returns complete result with ratio and WCAG compliance
  * 
- * @param {string} foreground - Foreground color (text color) in any format
- * @param {string} background - Background color in any format
+ * @param {string | undefined} foreground - Foreground color (text color) in any format
+ * @param {string | undefined} background - Background color in any format
  * @returns {ContrastResult | null} Contrast calculation result or null if colors invalid
  * 
  * @example
@@ -183,7 +183,10 @@ export interface ContrastResult {
  * // }
  * ```
  */
-export function useContrastChecker(foreground: string, background: string) {
+export function useContrastChecker(
+	foreground?: string,
+	background?: string
+) {
 	const result = useMemo<ContrastResult | null>(() => {
 		const fgRgb = parseColorToRgb(foreground)
 		const bgRgb = parseColorToRgb(background)

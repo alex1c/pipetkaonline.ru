@@ -5,33 +5,77 @@
 	"sections": {
 		"intro": {
 			"title": "Introduction",
-			"content": "We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and protect information about you when you use our website."
+			"content": "We value your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and protect information about you when you use our website pipetkaonline.ru."
 		},
 		"data": {
 			"title": "Data Collection",
 			"content": "We may collect the following information:",
-			"items": [
-				"Technical data (IP address, browser type, operating system)",
-				"Usage data (pages viewed, visit duration)",
-				"Information you voluntarily provide (if you contact us)"
-			]
+			"items": {
+				"0": "Technical data (IP address, browser type, operating system, device)",
+				"1": "Usage data (pages viewed, visit duration, navigation between pages)",
+				"2": "Information you voluntarily provide (if you contact us through the contact form)",
+				"3": "Location data (based on IP address, with accuracy to country and city)"
+			}
 		},
 		"cookies": {
 			"title": "Use of Cookies",
-			"content": "Our website uses cookies to improve user experience and analyze traffic. Detailed information is available in our Cookie Policy."
+			"content": "Our website uses cookies and similar technologies to improve user experience, analyze traffic, and display personalized advertising. Detailed information about the types of cookies used and how to manage them is available in our Cookie Policy."
+		},
+		"advertising": {
+			"title": "Advertising and Partner Programs",
+			"content": "Our website uses Google AdSense and Yandex.Direct advertising networks to display ads. These services may use cookies and other technologies to collect information about your interests and show relevant advertising. We do not control the content of advertisements placed by these networks. For more information, visit:",
+			"links": {
+				"google": "Google Privacy Policy",
+				"yandex": "Yandex Privacy Policy"
+			}
 		},
 		"thirdParty": {
 			"title": "Third Parties",
-			"content": "We may use third-party services such as Google Analytics and advertising networks that may collect information about your use of the site."
+			"content": "We use the following third-party services that may collect information about your use of the site:",
+			"services": {
+				"0": "Google AdSense - for displaying ads (policy: https://policies.google.com/privacy)",
+				"1": "Yandex.Direct - for displaying ads (policy: https://yandex.ru/legal/confidential/)",
+				"2": "Google Analytics - for traffic analysis (policy: https://policies.google.com/privacy)"
+			}
+		},
+		"dataStorage": {
+			"title": "Data Storage",
+			"content": "We store collected data for the time necessary to achieve the purposes stated in this policy or in accordance with legal requirements. Technical data and usage data are stored in aggregated form and do not allow identification of specific users."
+		},
+		"dataSharing": {
+			"title": "Data Sharing",
+			"content": "We do not sell or share your personal data with third parties, except when necessary for website operation (advertising networks, analytics services) or required by law. All third parties are required to maintain data confidentiality in accordance with their privacy policies."
 		},
 		"rights": {
 			"title": "Your Rights",
-			"content": "You have the right to request access, correction, or deletion of your personal data. To do so, please contact us through the contact page."
+			"content": "In accordance with GDPR and other data protection laws, you have the right to:",
+			"items": {
+				"0": "Request access to your personal data",
+				"1": "Request correction of inaccurate data",
+				"2": "Request deletion of your data",
+				"3": "Withdraw consent to data processing",
+				"4": "Restrict processing of your data",
+				"5": "Receive a copy of your data in a structured format"
+			},
+			"contact": "To exercise these rights, contact us at: calc1.ru@ya.ru"
+		},
+		"children": {
+			"title": "Children's Privacy",
+			"content": "Our website is not intended for children under 13 years of age (or 16 years in the EU). We do not knowingly collect personal data from children. If you are a parent or guardian and believe your child has provided us with personal data, please contact us."
+		},
+		"security": {
+			"title": "Data Security",
+			"content": "We apply technical and organizational measures to protect your data from unauthorized access, loss, or destruction. However, no method of data transmission over the internet is absolutely secure."
+		},
+		"changes": {
+			"title": "Policy Changes",
+			"content": "We reserve the right to update this privacy policy. We will notify you of significant changes by posting a new version on this page with an updated date."
 		},
 		"contact": {
 			"title": "Contact",
-			"content": "If you have questions about this privacy policy, please contact us through the contact page."
+			"content": "If you have questions about this privacy policy or wish to exercise your rights, please contact us:",
+			"email": "Email: calc1.ru@ya.ru",
+			"website": "Website: https://pipetkaonline.ru"
 		}
 	}
 }
-

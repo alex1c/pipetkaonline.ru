@@ -71,8 +71,10 @@ export function Logo({ locale, className = '' }: LogoProps) {
 			*/}
 			<img
 				src='/logo.svg'
-				alt='PipetkaOnline Logo'
+				alt='PipetkaOnline - Online Color Tools and Color Theory Education Platform Logo'
 				className='h-12 sm:h-14 w-auto min-w-[240px]'
+				width='240'
+				height='56'
 			/>
 		</Link>
 	)
