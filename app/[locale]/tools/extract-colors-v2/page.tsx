@@ -7,7 +7,7 @@
  * @module app/[locale]/tools/extract-colors-v2/page
  */
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generateToolMetadata } from '@/lib/metadata-utils'
@@ -34,18 +34,24 @@ const ExtractColorsV2Client = dynamic(() => import('./ExtractColorsV2Client').th
  * canonical URLs, and hreflang alternates.
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.extractColorsV2' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.extractColorsV2.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.extractColorsV2' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.extractColorsV2.seo' })
 
 	return generateToolMetadata({
 		title: t('title'),
 		description: t('description'),
 		keywords: tSEO('keywords'),
-		locale,
+		locale: resolvedParams.locale,
 		path: '/tools/extract-colors-v2',
 		ogImage: 'og-extract-colors.jpg',
 	})
@@ -60,16 +66,22 @@ export async function generateMetadata({
 export default async function ExtractColorsV2Page({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.extractColorsV2' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.extractColorsV2' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
 	const structuredData = generateSoftwareApplicationSchema({
 		name: t('title'),
 		description: t('description'),
-		url: `${baseUrl}/${params.locale}/tools/extract-colors-v2`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/extract-colors-v2`,
 		features: [
 			'Color extraction from images',
 			'K-means clustering',

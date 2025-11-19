@@ -88,7 +88,15 @@ export const config = {
 	 * - /en/tools
 	 * - /de/learn/fundamentals
 	 */
-	matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+	matcher: [
+		// Match all pathnames except:
+		// - /api/* - API routes
+		// - /_next/* - Next.js internals
+		// - /_vercel/* - Vercel internals
+		// - Files with extensions - static files
+		// - /favicon.ico, /robots.txt, /sitemap.xml - special files
+		'/((?!api|_next|_vercel|.*\\..*).*)',
+	],
 }
 
 

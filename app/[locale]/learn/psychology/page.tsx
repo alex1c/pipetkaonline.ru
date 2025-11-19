@@ -1,15 +1,19 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 /**
  * Generate metadata for the psychology page
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	const t = await getTranslations({ locale, namespace: 'learn.psychology' })
 
 	return {
@@ -22,12 +26,17 @@ export async function generateMetadata({
  * Color Psychology page
  * Educational content about color psychology
  */
-export default function PsychologyPage({
-	params: { locale },
+export default async function PsychologyPage({
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = useTranslations('learn.psychology')
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
+	const t = await getTranslations({ locale, namespace: 'learn.psychology' })
 
 	return (
 		<div className='space-y-8'>

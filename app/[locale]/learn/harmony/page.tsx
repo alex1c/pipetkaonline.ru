@@ -1,15 +1,19 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 /**
  * Generate metadata for the harmony page
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	const t = await getTranslations({ locale, namespace: 'learn.harmony' })
 
 	return {
@@ -22,12 +26,17 @@ export async function generateMetadata({
  * Color Harmony page
  * Educational content about color harmony
  */
-export default function HarmonyPage({
-	params: { locale },
+export default async function HarmonyPage({
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = useTranslations('learn.harmony')
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
+	const t = await getTranslations({ locale, namespace: 'learn.harmony' })
 
 	return (
 		<div className='space-y-8'>

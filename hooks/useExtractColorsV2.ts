@@ -409,11 +409,11 @@ export function useExtractColorsV2() {
 		const avgSaturation = allColors.reduce((sum, c) => sum + c.hsl.s, 0) / allColors.length
 		const contrast = lightest.hsl.l - darkest.hsl.l
 
-		const mood = {
-			temperature: dominantHue >= 0 && dominantHue <= 180 ? 'warm' : 'cold',
-			brightness: avgLightness >= 50 ? 'bright' : 'dark',
-			vibrancy: avgSaturation >= 50 ? 'vibrant' : 'muted',
-			contrast: contrast >= 40 ? 'high-contrast' : 'low-contrast',
+		const mood: ImageAnalytics['mood'] = {
+			temperature: (dominantHue >= 0 && dominantHue <= 180 ? 'warm' : 'cold') as 'warm' | 'cold',
+			brightness: (avgLightness >= 50 ? 'bright' : 'dark') as 'bright' | 'dark',
+			vibrancy: (avgSaturation >= 50 ? 'vibrant' : 'muted') as 'vibrant' | 'muted',
+			contrast: (contrast >= 40 ? 'high-contrast' : 'low-contrast') as 'high-contrast' | 'low-contrast',
 		}
 
 		return {

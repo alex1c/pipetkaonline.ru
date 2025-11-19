@@ -63,6 +63,7 @@ import cookiesRu from './locales/ru/cookies.json'
 import termsRu from './locales/ru/terms.json'
 import aboutRu from './locales/ru/about.json'
 import contactRu from './locales/ru/contact.json'
+import techRu from './locales/ru/tech.json'
 
 // Learn sub-sections for Russian
 import learnFormatsRu from './locales/ru/learn-formats.json'
@@ -101,6 +102,7 @@ import cookiesEn from './locales/en/cookies.json'
 import termsEn from './locales/en/terms.json'
 import aboutEn from './locales/en/about.json'
 import contactEn from './locales/en/contact.json'
+import techEn from './locales/en/tech.json'
 
 // Learn sub-sections for English
 import learnFormatsEn from './locales/en/learn-formats.json'
@@ -139,6 +141,7 @@ import cookiesDe from './locales/de/cookies.json'
 import termsDe from './locales/de/terms.json'
 import aboutDe from './locales/de/about.json'
 import contactDe from './locales/de/contact.json'
+import techDe from './locales/de/tech.json'
 
 // Learn sub-sections for German
 import learnFormatsDe from './locales/de/learn-formats.json'
@@ -177,6 +180,7 @@ import cookiesEs from './locales/es/cookies.json'
 import termsEs from './locales/es/terms.json'
 import aboutEs from './locales/es/about.json'
 import contactEs from './locales/es/contact.json'
+import techEs from './locales/es/tech.json'
 
 // Learn sub-sections for Spanish
 import learnFormatsEs from './locales/es/learn-formats.json'
@@ -265,7 +269,6 @@ export const defaultLocale: Locale = 'ru'
  * - Optimized for typical translation structures (2-3 levels deep)
  * 
  * @param {Record<string, any>} flatMessages - Flat object with dot-notation keys
- * @param {string} [debugContext] - Optional context string for debugging/logging
  * @returns {Record<string, any>} Nested object structure compatible with next-intl
  * 
  * @example
@@ -273,28 +276,17 @@ export const defaultLocale: Locale = 'ru'
  * // Returns: { nav: { home: "Home" } }
  */
 function nestMessages(
-	flatMessages: Record<string, any>,
-	debugContext?: string
+	flatMessages: Record<string, any>
 ): Record<string, any> {
 	try {
 		if (!flatMessages || typeof flatMessages !== 'object' || Array.isArray(flatMessages)) {
-			if (debugContext) {
-				console.warn(`[i18n:nestMessages] Invalid input for ${debugContext}:`, {
-					type: typeof flatMessages,
-					isArray: Array.isArray(flatMessages),
-					value: flatMessages,
-				})
-			}
 			return {}
 		}
 
 		const nested: Record<string, any> = {}
-		let processedCount = 0
-		let skippedCount = 0
 
 		for (const [key, value] of Object.entries(flatMessages)) {
 			if (!key || value === undefined) {
-				skippedCount++
 				continue
 			}
 
@@ -314,20 +306,12 @@ function nestMessages(
 			const lastKey = keys[keys.length - 1]
 			if (lastKey) {
 				current[lastKey] = value
-				processedCount++
-			} else {
-				skippedCount++
 			}
-		}
-
-		// Only log in development mode to avoid console spam
-		if (process.env.NODE_ENV === 'development' && debugContext && (processedCount > 0 || skippedCount > 0)) {
-			console.log(`[i18n:nestMessages] ${debugContext}: processed ${processedCount}, skipped ${skippedCount}`)
 		}
 
 		return nested
 	} catch (error) {
-		console.error(`[i18n:nestMessages] Error processing ${debugContext || 'messages'}:`, error)
+		console.error('[i18n:nestMessages] Error processing messages:', error)
 		return {}
 	}
 }
@@ -374,10 +358,6 @@ function nestMessages(
 function processTools(tools: any) {
 	try {
 		if (!tools || typeof tools !== 'object' || Array.isArray(tools)) {
-			console.warn('[i18n:processTools] Invalid tools input:', {
-				type: typeof tools,
-				isArray: Array.isArray(tools),
-			})
 			return {}
 		}
 
@@ -403,24 +383,13 @@ function processTools(tools: any) {
 		}
 
 		// Nest flat keys
-		const nestedFlat = nestMessages(flatKeys, 'processTools')
+		const nestedFlat = nestMessages(flatKeys)
 
 		// Combine
-		const result = {
+		return {
 			...nestedFlat,
 			...nestedObjects,
 		}
-
-		// Only log in development mode
-		if (process.env.NODE_ENV === 'development') {
-			console.log('[i18n:processTools] Processed:', {
-				nestedObjectsCount: Object.keys(nestedObjects).length,
-				flatKeysCount: Object.keys(flatKeys).length,
-				resultKeysCount: Object.keys(result).length,
-			})
-		}
-
-		return result
 	} catch (error) {
 		console.error('[i18n:processTools] Error:', error)
 		return {}
@@ -476,17 +445,13 @@ function processTools(tools: any) {
 function processLearn(learn: any, learnSubsections: Record<string, any>) {
 	try {
 		// Start with nested main learn.json
-		const baseLearn = nestMessages(learn as Record<string, any>, 'processLearn:base')
+		const baseLearn = nestMessages(learn as Record<string, any>)
 
 		// Process and merge all sub-sections
 		// File naming pattern: learn-{section}-{subsection}.json
 		// Maps to: learn.{section}.{subsection}
 		for (const [fileName, content] of Object.entries(learnSubsections)) {
 			if (!content || typeof content !== 'object' || Array.isArray(content)) {
-				console.warn(`[i18n:processLearn] Invalid subsection ${fileName}:`, {
-					type: typeof content,
-					isArray: Array.isArray(content),
-				})
 				continue
 			}
 
@@ -494,7 +459,6 @@ function processLearn(learn: any, learnSubsections: Record<string, any>) {
 			// Pattern: learn-{section}-{subsection} or learn-{section}
 			const pathMatch = fileName.match(/^learn-(.+)$/)
 			if (!pathMatch) {
-				console.warn(`[i18n:processLearn] Could not parse path from ${fileName}`)
 				continue
 			}
 
@@ -502,7 +466,6 @@ function processLearn(learn: any, learnSubsections: Record<string, any>) {
 			const pathParts = fullPath.split('-')
 
 			if (pathParts.length === 0) {
-				console.warn(`[i18n:processLearn] Empty path for ${fileName}`)
 				continue
 			}
 
@@ -534,37 +497,20 @@ function processLearn(learn: any, learnSubsections: Record<string, any>) {
 					...(baseLearn[section][camelCaseSubsection] || {}),
 					...content,
 				}
-
-				// Only log in development mode
-				if (process.env.NODE_ENV === 'development') {
-					console.log(
-						`[i18n:processLearn] Merged ${fileName} -> learn.${section}.${camelCaseSubsection}`
-					)
-				}
 			} else {
 				// If no subsection, merge directly into section
 				baseLearn[section] = {
 					...baseLearn[section],
 					...content,
 				}
-
-				// Only log in development mode
-				if (process.env.NODE_ENV === 'development') {
-					console.log(`[i18n:processLearn] Merged ${fileName} -> learn.${section}`)
-				}
 			}
-		}
-
-		// Only log in development mode
-		if (process.env.NODE_ENV === 'development') {
-			console.log('[i18n:processLearn] Final structure keys:', Object.keys(baseLearn))
 		}
 
 		return baseLearn
 	} catch (error) {
 		console.error('[i18n:processLearn] Error:', error)
 		// Fallback to just nested learn.json
-		return nestMessages(learn as Record<string, any>, 'processLearn:fallback')
+		return nestMessages(learn as Record<string, any>)
 	}
 }
 
@@ -728,8 +674,8 @@ function prepareLearnSubsectionsEs() {
  */
 const allMessages = {
 	ru: {
-		...nestMessages(commonRu as Record<string, any>, 'commonRu'),
-		home: nestMessages(homeRu as Record<string, any>, 'homeRu'),
+		...nestMessages(commonRu as Record<string, any>),
+		home: nestMessages(homeRu as Record<string, any>),
 		tools: processTools(toolsRu),
 		learn: processLearn(learnRu, prepareLearnSubsectionsRu()),
 		footer: footerRu,
@@ -738,10 +684,11 @@ const allMessages = {
 		terms: termsRu,
 		about: aboutRu,
 		contact: contactRu,
+		tech: techRu,
 	},
 	en: {
-		...nestMessages(commonEn as Record<string, any>, 'commonEn'),
-		home: nestMessages(homeEn as Record<string, any>, 'homeEn'),
+		...nestMessages(commonEn as Record<string, any>),
+		home: nestMessages(homeEn as Record<string, any>),
 		tools: processTools(toolsEn),
 		learn: processLearn(learnEn, prepareLearnSubsectionsEn()),
 		footer: footerEn,
@@ -750,10 +697,11 @@ const allMessages = {
 		terms: termsEn,
 		about: aboutEn,
 		contact: contactEn,
+		tech: techEn,
 	},
 	de: {
-		...nestMessages(commonDe as Record<string, any>, 'commonDe'),
-		home: nestMessages(homeDe as Record<string, any>, 'homeDe'),
+		...nestMessages(commonDe as Record<string, any>),
+		home: nestMessages(homeDe as Record<string, any>),
 		tools: processTools(toolsDe),
 		learn: processLearn(learnDe, prepareLearnSubsectionsDe()),
 		footer: footerDe,
@@ -762,10 +710,11 @@ const allMessages = {
 		terms: termsDe,
 		about: aboutDe,
 		contact: contactDe,
+		tech: techDe,
 	},
 	es: {
-		...nestMessages(commonEs as Record<string, any>, 'commonEs'),
-		home: nestMessages(homeEs as Record<string, any>, 'homeEs'),
+		...nestMessages(commonEs as Record<string, any>),
+		home: nestMessages(homeEs as Record<string, any>),
 		tools: processTools(toolsEs),
 		learn: processLearn(learnEs, prepareLearnSubsectionsEs()),
 		footer: footerEs,
@@ -774,6 +723,7 @@ const allMessages = {
 		terms: termsEs,
 		about: aboutEs,
 		contact: contactEs,
+		tech: techEs,
 	},
 }
 
@@ -815,39 +765,34 @@ const allMessages = {
  * // getRequestConfig({ locale: 'ru' }) is called
  * // Returns: { locale: 'ru', messages: { ... } }
  */
-export default getRequestConfig(async ({ locale }) => {
+export default getRequestConfig(async ({ requestLocale }) => {
+	// Resolve requestLocale if it's a Promise
+	// requestLocale is set by setRequestLocale() in page components
+	// This ensures static rendering works correctly without using headers()
+	const resolvedRequestLocale = await Promise.resolve(requestLocale)
+	
+	// Validate locale is in the supported locales list
+	// This prevents errors when static files like favicon.ico are processed
+	let locale: Locale
+	if (resolvedRequestLocale && locales.includes(resolvedRequestLocale as Locale)) {
+		locale = resolvedRequestLocale as Locale
+	} else {
+		// Fallback to default locale for invalid locales
+		locale = defaultLocale
+	}
+	
 	try {
-		// Debug logging only in development
-		const isDev = process.env.NODE_ENV === 'development'
-		
-		if (isDev) {
-			console.log(`[i18n:getRequestConfig] Processing locale: ${locale}`)
-		}
-
-		const localeData = allMessages[locale as Locale]
+		const localeData = allMessages[locale]
 
 		if (!localeData) {
 			console.error(`[i18n:getRequestConfig] Locale ${locale} not found in allMessages`)
 			notFound()
 		}
 
-		if (isDev) {
-			console.log(`[i18n:getRequestConfig] Locale data keys:`, Object.keys(localeData))
-			console.log(`[i18n:getRequestConfig] Learn structure:`, {
-				hasLearn: !!localeData.learn,
-				learnKeys: localeData.learn ? Object.keys(localeData.learn) : [],
-				hasFormats: !!(localeData.learn && localeData.learn.formats),
-				formatsKeys: localeData.learn?.formats ? Object.keys(localeData.learn.formats) : [],
-			})
-		}
-
 		// Ensure messages is serializable
 		let messages
 		try {
 			messages = JSON.parse(JSON.stringify(localeData))
-			if (isDev) {
-				console.log(`[i18n:getRequestConfig] Successfully serialized messages for ${locale}`)
-			}
 		} catch (serializeError) {
 			console.error(`[i18n:getRequestConfig] Serialization error for ${locale}:`, serializeError)
 			// Try to identify problematic keys
@@ -866,25 +811,10 @@ export default getRequestConfig(async ({ locale }) => {
 				}
 			}
 			checkSerializable(localeData)
-			console.error(`[i18n:getRequestConfig] Problematic keys:`, problematicKeys)
-			throw serializeError
-		}
-
-		// Validate that messages don't contain flat keys with dots (only in dev)
-		if (isDev) {
-			const validateMessages = (obj: any, namespace: string = 'root') => {
-				for (const [key, value] of Object.entries(obj)) {
-					if (key.includes('.')) {
-						console.error(
-							`[i18n:getRequestConfig] Invalid key with dot found in ${namespace}: ${key}`
-						)
-					}
-					if (value && typeof value === 'object' && !Array.isArray(value)) {
-						validateMessages(value, `${namespace}.${key}`)
-					}
-				}
+			if (problematicKeys.length > 0) {
+				console.error(`[i18n:getRequestConfig] Problematic keys:`, problematicKeys)
 			}
-			validateMessages(messages, locale)
+			throw serializeError
 		}
 
 		return {
@@ -893,7 +823,6 @@ export default getRequestConfig(async ({ locale }) => {
 		}
 	} catch (error) {
 		console.error(`[i18n:getRequestConfig] Fatal error for locale ${locale}:`, error)
-		// Re-throw to let Next.js handle it
 		throw error
 	}
 })

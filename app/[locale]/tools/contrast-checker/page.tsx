@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { ContrastCheckerClient } from './ContrastCheckerClient'
 import { generateToolMetadata } from '@/lib/metadata-utils'
@@ -11,13 +11,19 @@ import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
  * canonical URLs, and hreflang alternates.
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.contrastChecker' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.contrastChecker' })
 	const tSEO = await getTranslations({
-		locale,
+		locale: resolvedParams.locale,
 		namespace: 'tools.contrastChecker.seo',
 	})
 
@@ -25,7 +31,7 @@ export async function generateMetadata({
 		title: t('title'),
 		description: t('description'),
 		keywords: tSEO('keywords'),
-		locale,
+		locale: resolvedParams.locale,
 		path: '/tools/contrast-checker',
 		ogImage: 'og-contrast-checker.jpg',
 	})
@@ -39,16 +45,22 @@ export async function generateMetadata({
 export default async function ContrastCheckerPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.contrastChecker' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.contrastChecker' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
 	const structuredData = generateSoftwareApplicationSchema({
 		name: t('title'),
 		description: t('description'),
-		url: `${baseUrl}/${params.locale}/tools/contrast-checker`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/contrast-checker`,
 		features: [
 			'WCAG contrast checking',
 			'AA/AAA compliance',

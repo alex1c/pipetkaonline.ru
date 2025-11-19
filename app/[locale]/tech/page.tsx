@@ -1,14 +1,18 @@
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 /**
  * Generate metadata for the tech page
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	const t = await getTranslations({ locale, namespace: 'tech' })
 
 	return {
@@ -21,8 +25,17 @@ export async function generateMetadata({
  * Tech page component
  * Technical and administrative content area
  */
-export default function TechPage() {
-	const t = useTranslations('tech')
+export default async function TechPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
+	const t = await getTranslations({ locale, namespace: 'tech' })
 
 	return (
 		<div className='space-y-8'>

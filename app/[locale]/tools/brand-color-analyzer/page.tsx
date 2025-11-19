@@ -7,7 +7,7 @@
  * @module app/[locale]/tools/brand-color-analyzer/page
  */
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { BrandColorAnalyzerClient } from './BrandColorAnalyzerClient'
 import { generateToolMetadata } from '@/lib/metadata-utils'
@@ -24,18 +24,24 @@ import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
  * @returns {Promise<Metadata>} Complete metadata object
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.brandColorAnalyzer' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.brandColorAnalyzer.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.brandColorAnalyzer' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.brandColorAnalyzer.seo' })
 
 	return generateToolMetadata({
 		title: t('title'),
 		description: t('subtitle'),
 		keywords: tSEO('keywords'),
-		locale,
+		locale: resolvedParams.locale,
 		path: '/tools/brand-color-analyzer',
 		ogImage: 'og-brand-analyzer.jpg',
 	})
@@ -54,16 +60,22 @@ export async function generateMetadata({
 export default async function BrandColorAnalyzerPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.brandColorAnalyzer' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.brandColorAnalyzer' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
 	const structuredData = generateSoftwareApplicationSchema({
 		name: t('title'),
 		description: t('subtitle'),
-		url: `${baseUrl}/${params.locale}/tools/brand-color-analyzer`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/brand-color-analyzer`,
 		features: [
 			'Brand color analysis',
 			'Palette clustering',

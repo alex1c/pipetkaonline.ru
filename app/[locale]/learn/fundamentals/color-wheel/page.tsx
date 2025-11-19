@@ -1,111 +1,40 @@
-'use client'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { ColorWheelPageClient } from './color-wheel-client'
 
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { useParams } from 'next/navigation'
-import { LearnSEOContent } from '@/components/learn-seo-content'
+/**
+ * Generate metadata for Color Wheel page
+ * This enables static rendering by calling setRequestLocale
+ */
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}): Promise<Metadata> {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'learn.fundamentals.colorWheel' })
+	return { title: t('title'), description: t('description') }
+}
 
 /**
  * Color Wheel page
- * Educational content about color wheel
+ * Server component wrapper for client component
  */
-export default function ColorWheelPage() {
-	const params = useParams()
-	const locale = params.locale as string
-	const t = useTranslations('learn.fundamentals.colorWheel')
-
-	return (
-		<div className='space-y-8'>
-			{/* Back link */}
-			<Link
-				href={`/${locale}/learn`}
-				className='inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors'
-			>
-				← {t('back')}
-			</Link>
-
-			{/* Page header */}
-			<header className='text-center space-y-4'>
-				<div className='text-6xl mb-4'>🎨</div>
-				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
-				<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-					{t('description')}
-				</p>
-			</header>
-
-			{/* Content */}
-			<div className='bg-white rounded-xl shadow-md p-8 space-y-8'>
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.intro.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.intro.content')}
-					</p>
-				</section>
-
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.primary.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.primary.content')}
-					</p>
-					<div className='grid grid-cols-3 gap-4 mt-4'>
-						<div className='bg-red-500 h-24 rounded-lg flex items-center justify-center text-white font-semibold'>
-							{t('sections.primary.red')}
-						</div>
-						<div className='bg-blue-500 h-24 rounded-lg flex items-center justify-center text-white font-semibold'>
-							{t('sections.primary.blue')}
-						</div>
-						<div className='bg-yellow-500 h-24 rounded-lg flex items-center justify-center text-slate-900 font-semibold'>
-							{t('sections.primary.yellow')}
-						</div>
-					</div>
-				</section>
-
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.secondary.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.secondary.content')}
-					</p>
-					<div className='grid grid-cols-3 gap-4 mt-4'>
-						<div className='bg-orange-500 h-24 rounded-lg flex items-center justify-center text-white font-semibold'>
-							{t('sections.secondary.orange')}
-						</div>
-						<div className='bg-green-500 h-24 rounded-lg flex items-center justify-center text-white font-semibold'>
-							{t('sections.secondary.green')}
-						</div>
-						<div className='bg-purple-500 h-24 rounded-lg flex items-center justify-center text-white font-semibold'>
-							{t('sections.secondary.purple')}
-						</div>
-					</div>
-				</section>
-
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.usage.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.usage.content')}
-					</p>
-				</section>
-			</div>
-
-			{/* SEO Content */}
-			<LearnSEOContent
-				namespace='learn.fundamentals.colorWheel'
-				toolLinks={[
-					{ slug: 'color-harmony', anchorText: 'цветовая гармония' },
-					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
-					{ slug: 'color-lab', anchorText: 'выбор цвета' },
-					{ slug: 'brand-color-analyzer', anchorText: 'анализатор цветов бренда' },
-					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
-				]}
-			/>
-		</div>
-	)
+export default async function ColorWheelPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	return <ColorWheelPageClient />
 }
-

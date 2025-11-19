@@ -34,7 +34,7 @@ import { locales } from '@/i18n'
  * @constant
  * @type {Record<string, { flag: string; label: string }>}
  */
-const languageInfo = {
+const languageInfo: Record<string, { flag: string; label: string }> = {
 	ru: { flag: '🇷🇺', label: 'RU' },
 	en: { flag: '🇬🇧', label: 'EN' },
 	de: { flag: '🇩🇪', label: 'DE' },
@@ -118,7 +118,8 @@ export function LanguageSwitcher() {
 		setIsDropdownOpen(false)
 	}
 
-	const currentInfo = languageInfo[currentLocale]
+	// Get current language info with fallback to English
+	const currentInfo = languageInfo[currentLocale] || languageInfo.en
 
 	return (
 		<div className='relative'>

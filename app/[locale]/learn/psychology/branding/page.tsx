@@ -1,105 +1,40 @@
-'use client'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { BrandingPageClient } from './branding-client'
 
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { useParams } from 'next/navigation'
-import { LearnSEOContent } from '@/components/learn-seo-content'
+/**
+ * Generate metadata for Branding page
+ * This enables static rendering by calling setRequestLocale
+ */
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}): Promise<Metadata> {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'learn.psychology.branding' })
+	return { title: t('title'), description: t('description') }
+}
 
 /**
  * Brand Color Strategies page
+ * Server component wrapper for client component
  */
-export default function BrandingPage() {
-	const params = useParams()
-	const locale = params.locale as string
-	const t = useTranslations('learn.psychology.branding')
-
-	return (
-		<div className='space-y-8'>
-			<Link
-				href={`/${locale}/learn`}
-				className='inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors'
-			>
-				← {t('back')}
-			</Link>
-
-			<header className='text-center space-y-4'>
-				<div className='text-6xl mb-4'>🏢</div>
-				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
-				<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-					{t('description')}
-				</p>
-			</header>
-
-			<div className='bg-white rounded-xl shadow-md p-8 space-y-8'>
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.intro.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.intro.content')}
-					</p>
-				</section>
-
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.examples.title')}
-					</h2>
-					<div className='grid md:grid-cols-2 gap-4 mt-4'>
-						<div className='bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500'>
-							<h3 className='font-semibold text-slate-900 mb-2'>
-								{t('sections.examples.tech.title')}
-							</h3>
-							<p className='text-slate-700 text-sm'>
-								{t('sections.examples.tech.desc')}
-							</p>
-						</div>
-						<div className='bg-green-50 p-6 rounded-lg border-l-4 border-green-500'>
-							<h3 className='font-semibold text-slate-900 mb-2'>
-								{t('sections.examples.eco.title')}
-							</h3>
-							<p className='text-slate-700 text-sm'>
-								{t('sections.examples.eco.desc')}
-							</p>
-						</div>
-						<div className='bg-red-50 p-6 rounded-lg border-l-4 border-red-500'>
-							<h3 className='font-semibold text-slate-900 mb-2'>
-								{t('sections.examples.food.title')}
-							</h3>
-							<p className='text-slate-700 text-sm'>
-								{t('sections.examples.food.desc')}
-							</p>
-						</div>
-						<div className='bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500'>
-							<h3 className='font-semibold text-slate-900 mb-2'>
-								{t('sections.examples.luxury.title')}
-							</h3>
-							<p className='text-slate-700 text-sm'>
-								{t('sections.examples.luxury.desc')}
-							</p>
-						</div>
-					</div>
-				</section>
-
-				<section className='space-y-4 bg-slate-50 p-6 rounded-lg'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.strategy.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.strategy.content')}
-					</p>
-				</section>
-			</div>
-
-			{/* SEO Content */}
-			<LearnSEOContent
-				namespace='learn.psychology.branding'
-				toolLinks={[
-					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
-					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
-					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
-				]}
-			/>
-		</div>
-	)
+export default async function BrandingPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	return <BrandingPageClient />
 }
-

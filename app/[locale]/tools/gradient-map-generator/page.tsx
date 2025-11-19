@@ -7,7 +7,7 @@
  * @module app/[locale]/tools/gradient-map-generator/page
  */
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
@@ -35,12 +35,18 @@ const GradientMapGeneratorClient = dynamic(() => import('./GradientMapGeneratorC
  * @returns {Promise<Metadata>} Metadata object
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.gradientMapGenerator' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.gradientMapGenerator.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.gradientMapGenerator' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.gradientMapGenerator.seo' })
 
 	return {
 		title: t('title'),
@@ -58,9 +64,21 @@ export async function generateMetadata({
  * 
  * Server component that handles metadata and renders the client component.
  * 
- * @returns {JSX.Element} Page component
+ * @param {Object} params - Route parameters
+ * @param {string} params.locale - Current locale code
+ * @returns {Promise<JSX.Element>} Page component
  */
-export default function GradientMapGeneratorPage() {
+export default async function GradientMapGeneratorPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
 	return <GradientMapGeneratorClient />
 }
 

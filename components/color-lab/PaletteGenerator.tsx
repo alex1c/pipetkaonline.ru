@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { usePaletteGenerator } from '@/hooks/usePaletteGenerator'
+import { rgbToHex } from '@/lib/color-utils'
 
 interface PaletteGeneratorProps {
 	baseColor: { r: number; g: number; b: number } | null
@@ -14,8 +15,21 @@ interface PaletteGeneratorProps {
  */
 export function PaletteGenerator({ baseColor }: PaletteGeneratorProps) {
 	const t = useTranslations('tools.colorLab')
-	const [paletteType, setPaletteType] = useState<'monochromatic' | 'analogous' | 'complementary' | 'triad' | 'tetradic' | 'shades' | 'tints' | 'tones'>('triad')
-	const palette = usePaletteGenerator(paletteType as any, baseColor as any)
+	
+	// Convert RGB to HEX string for the hook
+	const baseColorHex = useMemo(() => {
+		if (!baseColor) return '#3498db'
+		return rgbToHex(baseColor.r, baseColor.g, baseColor.b)
+	}, [baseColor])
+	
+	// Use the hook with correct signature
+	const { mode, setMode, palette } = usePaletteGenerator(baseColorHex)
+	
+	// Set initial mode to 'triad' on mount
+	useEffect(() => {
+		setMode('triad')
+	}, [setMode])
+	
 	const [copied, setCopied] = useState<string | null>(null)
 
 	/**
@@ -35,7 +49,7 @@ export function PaletteGenerator({ baseColor }: PaletteGeneratorProps) {
 		return null
 	}
 
-	const paletteTypes: { value: PaletteType; labelKey: string }[] = [
+	const paletteTypes: { value: 'monochromatic' | 'complementary' | 'triad'; labelKey: string }[] = [
 		{ value: 'triad', labelKey: 'palette.triad' },
 		{ value: 'complementary', labelKey: 'palette.complementary' },
 		{ value: 'monochromatic', labelKey: 'palette.monochromatic' },
@@ -50,11 +64,11 @@ export function PaletteGenerator({ baseColor }: PaletteGeneratorProps) {
 				{paletteTypes.map((type) => (
 					<button
 						key={type.value}
-						onClick={() => setPaletteType(type.value)}
+						onClick={() => setMode(type.value)}
 						className={`
 							px-4 py-2 rounded-md text-sm font-medium transition-colors
 							${
-								paletteType === type.value
+								mode === type.value
 									? 'bg-blue-600 text-white'
 									: 'bg-slate-100 text-slate-700 hover:bg-slate-200'
 							}

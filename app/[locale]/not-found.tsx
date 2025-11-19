@@ -15,7 +15,7 @@
  */
 
 import Link from 'next/link'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 
 /**
@@ -50,6 +50,9 @@ export default async function NotFoundPage({
 }: {
 	params: { locale: string }
 }) {
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	const t = await getTranslations('notFound')
 
 	return (

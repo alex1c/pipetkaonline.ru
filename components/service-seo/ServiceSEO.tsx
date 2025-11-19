@@ -1,6 +1,6 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useMessages } from 'next-intl'
 
 interface ServiceSEOProps {
 	/**
@@ -12,47 +12,36 @@ interface ServiceSEOProps {
 
 /**
  * Helper function to safely check if a translation key exists
- * Uses a try-catch with silent error handling to avoid console errors
+ * Uses direct message access to avoid triggering MISSING_MESSAGE errors
  */
 function hasTranslation(
-	t: ReturnType<typeof useTranslations>,
+	messages: Record<string, any>,
 	key: string,
 	namespacePrefix: string
 ): boolean {
-	// Suppress console errors temporarily
-	const originalError = console.error
-	console.error = () => {} // Silently ignore errors
+	// Split namespace prefix to get path segments
+	const namespaceParts = namespacePrefix.split('.')
 	
-	try {
-		// Try to get the translation value
-		// This will throw an IntlError with code 'MISSING_MESSAGE' if key doesn't exist
-		const value = t(key)
-		
-		// Restore console.error
-		console.error = originalError
-		
-		// If we got here, the key exists
-		// Check if it's not a fallback (starts with namespace prefix)
-		if (value && typeof value === 'string') {
-			const firstPart = namespacePrefix.split('.')[0]
-			// If value starts with namespace prefix, it's likely a fallback
-			return !value.startsWith(firstPart + '.')
-		}
-		
-		// If value exists and is not a string, assume it's valid
-		return !!value
-	} catch (error: any) {
-		// Restore console.error
-		console.error = originalError
-		
-		// Check if it's a MISSING_MESSAGE error
-		// This is expected for optional keys
-		if (error?.code === 'MISSING_MESSAGE' || error?.message?.includes('MISSING_MESSAGE')) {
+	// Navigate to the namespace in messages
+	let current: any = messages
+	for (const part of namespaceParts) {
+		if (!current || typeof current !== 'object' || !(part in current)) {
 			return false
 		}
-		// For other errors, return false silently
-		return false
+		current = current[part]
 	}
+	
+	// Navigate to the key within the namespace
+	const keyParts = key.split('.')
+	for (const part of keyParts) {
+		if (!current || typeof current !== 'object' || !(part in current)) {
+			return false
+		}
+		current = current[part]
+	}
+	
+	// Key exists if we reached a non-undefined value
+	return current !== undefined
 }
 
 /**
@@ -62,9 +51,10 @@ function hasTranslation(
  */
 export function ServiceSEO({ namespace }: ServiceSEOProps) {
 	const t = useTranslations(namespace)
+	const messages = useMessages()
 
 	// Helper to check if optional keys exist
-	const hasKey = (key: string) => hasTranslation(t, key, namespace)
+	const hasKey = (key: string) => hasTranslation(messages as Record<string, any>, key, namespace)
 
 	return (
 		<div className='space-y-12 mt-16'>

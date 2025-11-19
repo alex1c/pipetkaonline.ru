@@ -1,13 +1,33 @@
 {
 	"title": "Contact",
 	"description": "Get in touch with us",
-	"intro": "If you have questions, suggestions, or would like to contact us, please use the following information.",
-	"info": {
-		"title": "Contact Information",
-		"email": {
-			"label": "Email",
-			"value": "calc1.ru@ya.ru"
+	"intro": "If you have questions, suggestions, or would like to contact us, please fill out the form below.",
+	"form": {
+		"title": "Contact Form",
+		"subject": {
+			"label": "Subject",
+			"placeholder": "Enter the subject of your message"
 		},
+		"email": {
+			"label": "Your email",
+			"placeholder": "your.email@example.com"
+		},
+		"message": {
+			"label": "Message",
+			"placeholder": "Enter your message..."
+		},
+		"submit": "Send Message",
+		"submitting": "Sending...",
+		"success": "Message sent successfully! We will get back to you soon.",
+		"validation": {
+			"required": "Please fill in all required fields",
+			"email": "Please enter a valid email address"
+		},
+		"error": {
+			"send": "An error occurred while sending the message. Please try again later."
+		}
+	},
+	"info": {
 		"response": {
 			"title": "Response Time",
 			"content": "We try to respond to all inquiries within 24-48 hours."
@@ -15,7 +35,7 @@
 	},
 	"support": {
 		"title": "Support",
-		"content": "If you experience technical issues or have questions about using the site, please contact us at the email address provided."
+		"content": "If you experience technical issues or have questions about using the site, please use the contact form above."
 	}
 }
 

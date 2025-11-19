@@ -25,7 +25,7 @@
 
 'use client'
 
-import { useState } from 'react'
+import { memo, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
@@ -48,9 +48,11 @@ import { Logo } from './logo'
  * - Desktop (md+): All elements in one row
  * - Mobile: Logo and language switcher in row, nav links below
  * 
+ * Memoized to prevent unnecessary re-renders.
+ * 
  * @returns {JSX.Element} Navigation bar with logo, links, and language switcher
  */
-export function Navbar() {
+export const Navbar = memo(function Navbar() {
 	// Get translations from default namespace (common translations)
 	const t = useTranslations()
 	// Get current locale from URL parameters
@@ -59,6 +61,16 @@ export function Navbar() {
 	
 	// State for mobile menu open/close
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	
+	// Memoized toggle function to prevent re-renders
+	const toggleMenu = useCallback(() => {
+		setIsMenuOpen((prev) => !prev)
+	}, [])
+	
+	// Memoized close function for mobile links
+	const closeMenu = useCallback(() => {
+		setIsMenuOpen(false)
+	}, [])
 
 	return (
 		<nav className='sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200 transition-all duration-300'>
@@ -89,9 +101,9 @@ export function Navbar() {
 						- gap-1: Small spacing between links
 					*/}
 					<div className='hidden md:flex items-center gap-1 flex-shrink-0'>
-						<NavLink href={`/${locale}`} label={t('nav.home')} />
-						<NavLink href={`/${locale}/tools`} label={t('nav.tools')} />
-						<NavLink href={`/${locale}/learn`} label={t('nav.learn')} />
+						<NavLink href={`/${locale}`} label={t('nav.home')} prefetch />
+						<NavLink href={`/${locale}/tools`} label={t('nav.tools')} prefetch />
+						<NavLink href={`/${locale}/learn`} label={t('nav.learn')} prefetch />
 					</div>
 
 					{/* Right side: Language switcher and hamburger button */}
@@ -106,7 +118,7 @@ export function Navbar() {
 						*/}
 						<button
 							type='button'
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
+							onClick={toggleMenu}
 							className='md:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-300'
 							aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
 							aria-expanded={isMenuOpen}
@@ -152,26 +164,26 @@ export function Navbar() {
 							href={`/${locale}`} 
 							label={t('nav.home')} 
 							mobile 
-							onClick={() => setIsMenuOpen(false)}
+							onClick={closeMenu}
 						/>
 						<NavLink 
 							href={`/${locale}/tools`} 
 							label={t('nav.tools')} 
 							mobile 
-							onClick={() => setIsMenuOpen(false)}
+							onClick={closeMenu}
 						/>
 						<NavLink 
 							href={`/${locale}/learn`} 
 							label={t('nav.learn')} 
 							mobile 
-							onClick={() => setIsMenuOpen(false)}
+							onClick={closeMenu}
 						/>
 					</div>
 				</div>
 			</div>
 		</nav>
 	)
-}
+})
 
 /**
  * Navigation Link Component
@@ -197,16 +209,19 @@ function NavLink({
 	label,
 	mobile = false,
 	onClick,
+	prefetch = false,
 }: {
 	href: string
 	label: string
 	mobile?: boolean
 	onClick?: () => void
+	prefetch?: boolean
 }) {
 	return (
 		<Link
 			href={href}
 			onClick={onClick}
+			prefetch={prefetch}
 			className={`
 				${mobile ? 'block py-2 px-4 rounded-md' : 'px-4 py-2 rounded-md'}
 				text-slate-700 hover:bg-slate-100 hover:text-slate-900 

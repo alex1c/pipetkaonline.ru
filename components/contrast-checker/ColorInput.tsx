@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, ChangeEvent, useEffect } from 'react'
-import { parseColorToRgb, rgbToHex } from '@/lib/color-utils'
+import { useState, ChangeEvent, useEffect, useCallback } from 'react'
+import { parseColorToRgb } from '@/lib/color-utils'
 
 interface ColorInputProps {
 	label: string
@@ -25,6 +25,29 @@ export function ColorInput({
 	const [error, setError] = useState<string | null>(null)
 
 	/**
+	 * Validate color value
+	 */
+	const validateColor = useCallback(
+		(colorValue: string) => {
+			if (colorValue.trim() === '') {
+				setError(null)
+				onValidChange?.(null)
+				return
+			}
+
+			const rgb = parseColorToRgb(colorValue)
+			if (rgb) {
+				setError(null)
+				onValidChange?.(rgb)
+			} else {
+				setError('Invalid color format')
+				onValidChange?.(null)
+			}
+		},
+		[onValidChange]
+	)
+
+	/**
 	 * Handle input change
 	 */
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -41,39 +64,15 @@ export function ColorInput({
 		}
 
 		onChange(inputValue)
-
-		// Validate and parse
-		const rgb = parseColorToRgb(inputValue)
-		if (rgb) {
-			setError(null)
-			onValidChange?.(rgb)
-		} else if (inputValue.trim() !== '') {
-			setError('Invalid color format')
-		} else {
-			setError(null)
-			onValidChange?.(null)
-		}
+		validateColor(inputValue)
 	}
 
 	/**
-	 * Validate on value change
+	 * Validate on value change (for external updates)
 	 */
 	useEffect(() => {
-		if (value.trim() === '') {
-			setError(null)
-			onValidChange?.(null)
-			return
-		}
-
-		const rgb = parseColorToRgb(value)
-		if (rgb) {
-			setError(null)
-			onValidChange?.(rgb)
-		} else {
-			setError('Invalid color format')
-			onValidChange?.(null)
-		}
-	}, [value, onValidChange])
+		validateColor(value)
+	}, [value, validateColor])
 
 	return (
 		<div className='space-y-2'>

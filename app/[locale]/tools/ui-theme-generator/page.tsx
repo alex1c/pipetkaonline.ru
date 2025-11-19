@@ -7,7 +7,7 @@
  * @module app/[locale]/tools/ui-theme-generator/page
  */
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { UIThemeGeneratorClient } from './UIThemeGeneratorClient'
 import { generateToolMetadata } from '@/lib/metadata-utils'
@@ -20,18 +20,24 @@ import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
  * canonical URLs, and hreflang alternates.
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.uiThemeGenerator' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.uiThemeGenerator.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.uiThemeGenerator' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.uiThemeGenerator.seo' })
 
 	return generateToolMetadata({
 		title: t('title'),
 		description: t('subtitle'),
 		keywords: tSEO('keywords'),
-		locale,
+		locale: resolvedParams.locale,
 		path: '/tools/ui-theme-generator',
 		ogImage: 'og-ui-theme.jpg',
 	})
@@ -46,16 +52,22 @@ export async function generateMetadata({
 export default async function UIThemeGeneratorPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.uiThemeGenerator' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.uiThemeGenerator' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
 	const structuredData = generateSoftwareApplicationSchema({
 		name: t('title'),
 		description: t('subtitle'),
-		url: `${baseUrl}/${params.locale}/tools/ui-theme-generator`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/ui-theme-generator`,
 		features: [
 			'Complete UI theme generation',
 			'Primary and secondary colors',

@@ -9,6 +9,7 @@
 
 'use client'
 
+import { memo, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
@@ -28,89 +29,89 @@ interface ToolInfo {
  */
 const similarToolsMap: Record<string, ToolInfo[]> = {
 	'color-lab': [
-		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'tools.extractColorsV2.title' },
-		{ slug: 'color-name-finder', icon: '🏷️', titleKey: 'tools.colorNameFinder.title' },
-		{ slug: 'color-converter', icon: '🔄', titleKey: 'tools.converter.title' },
+		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'extractColorsV2.title' },
+		{ slug: 'color-name-finder', icon: '🏷️', titleKey: 'colorNameFinder.title' },
+		{ slug: 'color-converter', icon: '🔄', titleKey: 'converter.title' },
 	],
 	'palette-generator': [
-		{ slug: 'color-harmony', icon: '💡', titleKey: 'tools.harmony.title' },
-		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'tools.brandColorAnalyzer.title' },
-		{ slug: 'emotion-colors', icon: '💭', titleKey: 'tools.emotionColors.title' },
+		{ slug: 'color-harmony', icon: '💡', titleKey: 'harmony.title' },
+		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'brandColorAnalyzer.title' },
+		{ slug: 'emotion-colors', icon: '💭', titleKey: 'emotionColors.title' },
 	],
 	'contrast-checker': [
-		{ slug: 'text-image-accessibility', icon: '📝', titleKey: 'tools.textImageAccessibility.title' },
-		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'tools.colorBlindnessSimulator.title' },
-		{ slug: 'color-converter', icon: '🔄', titleKey: 'tools.converter.title' },
+		{ slug: 'text-image-accessibility', icon: '📝', titleKey: 'textImageAccessibility.title' },
+		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'colorBlindnessSimulator.title' },
+		{ slug: 'color-converter', icon: '🔄', titleKey: 'converter.title' },
 	],
 	'color-converter': [
-		{ slug: 'color-name-finder', icon: '🏷️', titleKey: 'tools.colorNameFinder.title' },
-		{ slug: 'color-lab', icon: '🎨', titleKey: 'tools.picker.title' },
-		{ slug: 'color-harmony', icon: '💡', titleKey: 'tools.harmony.title' },
+		{ slug: 'color-name-finder', icon: '🏷️', titleKey: 'colorNameFinder.title' },
+		{ slug: 'color-lab', icon: '🎨', titleKey: 'picker.title' },
+		{ slug: 'color-harmony', icon: '💡', titleKey: 'harmony.title' },
 	],
 	'color-harmony': [
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
-		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'tools.brandColorAnalyzer.title' },
-		{ slug: 'emotion-colors', icon: '💭', titleKey: 'tools.emotionColors.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
+		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'brandColorAnalyzer.title' },
+		{ slug: 'emotion-colors', icon: '💭', titleKey: 'emotionColors.title' },
 	],
 	'gradient-generator': [
-		{ slug: 'gradient-map-generator', icon: '🌈', titleKey: 'tools.gradientMapGenerator.title' },
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
-		{ slug: 'color-harmony', icon: '💡', titleKey: 'tools.harmony.title' },
+		{ slug: 'gradient-map-generator', icon: '🌈', titleKey: 'gradientMapGenerator.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
+		{ slug: 'color-harmony', icon: '💡', titleKey: 'harmony.title' },
 	],
 	'ui-tokens-generator': [
-		{ slug: 'ui-theme-generator', icon: '🎨', titleKey: 'tools.uiThemeGenerator.title' },
-		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'tools.brandColorAnalyzer.title' },
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
+		{ slug: 'ui-theme-generator', icon: '🎨', titleKey: 'uiThemeGenerator.title' },
+		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'brandColorAnalyzer.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
 	],
 	'extract-colors-v2': [
-		{ slug: 'color-lab', icon: '🎨', titleKey: 'tools.picker.title' },
-		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'tools.brandColorAnalyzer.title' },
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
+		{ slug: 'color-lab', icon: '🎨', titleKey: 'picker.title' },
+		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'brandColorAnalyzer.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
 	],
 	'color-name-finder': [
-		{ slug: 'color-converter', icon: '🔄', titleKey: 'tools.converter.title' },
-		{ slug: 'color-harmony', icon: '💡', titleKey: 'tools.harmony.title' },
-		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'tools.extractColorsV2.title' },
+		{ slug: 'color-converter', icon: '🔄', titleKey: 'converter.title' },
+		{ slug: 'color-harmony', icon: '💡', titleKey: 'harmony.title' },
+		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'extractColorsV2.title' },
 	],
 	'brand-color-analyzer': [
-		{ slug: 'ui-theme-generator', icon: '🎨', titleKey: 'tools.uiThemeGenerator.title' },
-		{ slug: 'ui-tokens-generator', icon: '🎨', titleKey: 'tools.uiTokensGenerator.title' },
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
+		{ slug: 'ui-theme-generator', icon: '🎨', titleKey: 'uiThemeGenerator.title' },
+		{ slug: 'ui-tokens-generator', icon: '🎨', titleKey: 'uiTokensGenerator.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
 	],
 	'ui-theme-generator': [
-		{ slug: 'ui-tokens-generator', icon: '🎨', titleKey: 'tools.uiTokensGenerator.title' },
-		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'tools.brandColorAnalyzer.title' },
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
+		{ slug: 'ui-tokens-generator', icon: '🎨', titleKey: 'uiTokensGenerator.title' },
+		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'brandColorAnalyzer.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
 	],
 	'text-image-accessibility': [
-		{ slug: 'contrast-checker', icon: '🎯', titleKey: 'tools.contrast.title' },
-		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'tools.colorBlindnessSimulator.title' },
-		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'tools.extractColorsV2.title' },
+		{ slug: 'contrast-checker', icon: '🎯', titleKey: 'contrast.title' },
+		{ slug: 'color-blindness-simulator', icon: '👁️', titleKey: 'colorBlindnessSimulator.title' },
+		{ slug: 'extract-colors-v2', icon: '🔬', titleKey: 'extractColorsV2.title' },
 	],
 	'gradient-map-generator': [
-		{ slug: 'gradient-generator', icon: '🎭', titleKey: 'tools.gradient.title' },
-		{ slug: 'pattern-generator', icon: '🔷', titleKey: 'tools.patternGenerator.title' },
-		{ slug: 'solid-background', icon: '🎨', titleKey: 'tools.solidBackground.title' },
+		{ slug: 'gradient-generator', icon: '🎭', titleKey: 'gradient.title' },
+		{ slug: 'pattern-generator', icon: '🔷', titleKey: 'patternGenerator.title' },
+		{ slug: 'solid-background', icon: '🎨', titleKey: 'solidBackground.title' },
 	],
 	'emotion-colors': [
-		{ slug: 'palette-generator', icon: '🌈', titleKey: 'tools.palette.title' },
-		{ slug: 'color-harmony', icon: '💡', titleKey: 'tools.harmony.title' },
-		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'tools.brandColorAnalyzer.title' },
+		{ slug: 'palette-generator', icon: '🌈', titleKey: 'palette.title' },
+		{ slug: 'color-harmony', icon: '💡', titleKey: 'harmony.title' },
+		{ slug: 'brand-color-analyzer', icon: '🎯', titleKey: 'brandColorAnalyzer.title' },
 	],
 	'solid-background': [
-		{ slug: 'pattern-generator', icon: '🔷', titleKey: 'tools.patternGenerator.title' },
-		{ slug: 'gradient-generator', icon: '🎭', titleKey: 'tools.gradient.title' },
-		{ slug: 'gradient-map-generator', icon: '🌈', titleKey: 'tools.gradientMapGenerator.title' },
+		{ slug: 'pattern-generator', icon: '🔷', titleKey: 'patternGenerator.title' },
+		{ slug: 'gradient-generator', icon: '🎭', titleKey: 'gradient.title' },
+		{ slug: 'gradient-map-generator', icon: '🌈', titleKey: 'gradientMapGenerator.title' },
 	],
 	'pattern-generator': [
-		{ slug: 'solid-background', icon: '🎨', titleKey: 'tools.solidBackground.title' },
-		{ slug: 'gradient-map-generator', icon: '🌈', titleKey: 'tools.gradientMapGenerator.title' },
-		{ slug: 'gradient-generator', icon: '🎭', titleKey: 'tools.gradient.title' },
+		{ slug: 'solid-background', icon: '🎨', titleKey: 'solidBackground.title' },
+		{ slug: 'gradient-map-generator', icon: '🌈', titleKey: 'gradientMapGenerator.title' },
+		{ slug: 'gradient-generator', icon: '🎭', titleKey: 'gradient.title' },
 	],
 	'color-blindness-simulator': [
-		{ slug: 'contrast-checker', icon: '🎯', titleKey: 'tools.contrast.title' },
-		{ slug: 'text-image-accessibility', icon: '📝', titleKey: 'tools.textImageAccessibility.title' },
-		{ slug: 'color-converter', icon: '🔄', titleKey: 'tools.converter.title' },
+		{ slug: 'contrast-checker', icon: '🎯', titleKey: 'contrast.title' },
+		{ slug: 'text-image-accessibility', icon: '📝', titleKey: 'textImageAccessibility.title' },
+		{ slug: 'color-converter', icon: '🔄', titleKey: 'converter.title' },
 	],
 }
 
@@ -127,28 +128,34 @@ interface SimilarToolsProps {
  * @param {SimilarToolsProps} props - Component props
  * @returns {JSX.Element} Similar tools section
  */
-export function SimilarTools({ currentTool }: SimilarToolsProps) {
+export const SimilarTools = memo(function SimilarTools({ currentTool }: SimilarToolsProps) {
 	const t = useTranslations('tools')
-	const tColorBlindness = useTranslations('colorBlindnessSimulator')
 	const params = useParams()
 	const locale = params.locale as string
 
-	const similarTools = similarToolsMap[currentTool]
-
-	if (!similarTools || similarTools.length === 0) {
-		return null
-	}
+	const similarTools = useMemo(() => similarToolsMap[currentTool], [currentTool])
 
 	/**
 	 * Get translation for tool title
-	 * Handles different namespaces for different tools
+	 * All tools use the 'tools' namespace
+	 * Uses translation function directly to ensure server/client consistency
 	 */
-	const getToolTitle = (titleKey: string): string => {
-		// Handle colorBlindnessSimulator which uses separate namespace
-		if (titleKey === 'tools.colorBlindnessSimulator.title') {
-			return tColorBlindness('title')
-		}
-		return t(titleKey)
+	const getToolTitle = useCallback(
+		(titleKey: string): string => {
+			try {
+				// Use translation function directly - it handles the 'tools' namespace correctly
+				return t(titleKey)
+			} catch (error) {
+				// Fallback to key if translation fails
+				return titleKey
+			}
+		},
+		[t]
+	)
+
+	// Early return after all hooks
+	if (!similarTools || similarTools.length === 0) {
+		return null
 	}
 
 	return (
@@ -183,5 +190,5 @@ export function SimilarTools({ currentTool }: SimilarToolsProps) {
 			</div>
 		</section>
 	)
-}
+})
 

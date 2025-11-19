@@ -1,13 +1,33 @@
 {
 	"title": "Kontakt",
 	"description": "Kontaktieren Sie uns",
-	"intro": "Wenn Sie Fragen, Vorschläge haben oder uns kontaktieren möchten, verwenden Sie bitte die folgenden Informationen.",
-	"info": {
-		"title": "Kontaktinformationen",
-		"email": {
-			"label": "E-Mail",
-			"value": "calc1.ru@ya.ru"
+	"intro": "Wenn Sie Fragen, Vorschläge haben oder uns kontaktieren möchten, füllen Sie bitte das untenstehende Formular aus.",
+	"form": {
+		"title": "Kontaktformular",
+		"subject": {
+			"label": "Betreff",
+			"placeholder": "Geben Sie den Betreff Ihrer Nachricht ein"
 		},
+		"email": {
+			"label": "Ihre E-Mail",
+			"placeholder": "ihre.email@beispiel.com"
+		},
+		"message": {
+			"label": "Nachricht",
+			"placeholder": "Geben Sie Ihre Nachricht ein..."
+		},
+		"submit": "Nachricht senden",
+		"submitting": "Wird gesendet...",
+		"success": "Nachricht erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.",
+		"validation": {
+			"required": "Bitte füllen Sie alle Pflichtfelder aus",
+			"email": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+		},
+		"error": {
+			"send": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+		}
+	},
+	"info": {
 		"response": {
 			"title": "Antwortzeit",
 			"content": "Wir versuchen, alle Anfragen innerhalb von 24-48 Stunden zu beantworten."
@@ -15,7 +35,7 @@
 	},
 	"support": {
 		"title": "Support",
-		"content": "Wenn Sie technische Probleme haben oder Fragen zur Nutzung der Website haben, kontaktieren Sie uns bitte unter der angegebenen E-Mail-Adresse."
+		"content": "Wenn Sie technische Probleme haben oder Fragen zur Nutzung der Website haben, verwenden Sie bitte das obenstehende Kontaktformular."
 	}
 }
 

@@ -16,6 +16,11 @@
  */
 
 import createNextIntlPlugin from 'next-intl/plugin'
+import crypto from 'crypto'
+import { createRequire } from 'module'
+
+// Create require function for CommonJS modules in ES module context
+const require = createRequire(import.meta.url)
 
 // Create the next-intl plugin instance that will wrap the Next.js configuration
 // The plugin reads the i18n configuration from './i18n.ts' file
@@ -29,6 +34,8 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts')
  * - Image optimization: Automatic format conversion (AVIF, WebP)
  * - Caching headers: Improves repeat visit performance
  * - CSS optimization: Minifies and optimizes CSS
+ * - Webpack optimization: Advanced code splitting and caching
+ * - Production optimizations: Disabled source maps, optimized builds
  * 
  * @type {import('next').NextConfig}
  */
@@ -38,6 +45,11 @@ const nextConfig = {
 	 * Reduces bandwidth usage and improves load times
 	 */
 	compress: true,
+
+	/**
+	 * Disable source maps in production for smaller bundle size
+	 */
+	productionBrowserSourceMaps: false,
 
 	/**
 	 * Image optimization configuration
@@ -55,9 +67,83 @@ const nextConfig = {
 
 	/**
 	 * Experimental features for performance
+	 * Note: optimizeCss requires 'critters' package, disabled to avoid build errors
 	 */
 	experimental: {
-		optimizeCss: true,
+		// optimizeCss: true, // Disabled - requires 'critters' package
+	},
+
+	/**
+	 * Webpack optimization for better code splitting and caching
+	 * Improves bundle size and load times
+	 */
+	webpack: (config, { isServer, dev }) => {
+		if (!isServer && !dev) {
+			// Optimize client-side bundle
+			config.optimization = {
+				...config.optimization,
+				moduleIds: 'deterministic',
+				runtimeChunk: 'single',
+				splitChunks: {
+					chunks: 'all',
+					cacheGroups: {
+						default: false,
+						vendors: false,
+						// Framework chunk (React, Next.js)
+						framework: {
+							name: 'framework',
+							chunks: 'all',
+							test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|next)[\\/]/,
+							priority: 40,
+							enforce: true,
+						},
+						// Large libraries chunk
+						lib: {
+							test(module) {
+								return (
+									module.size() > 160000 &&
+									/node_modules[/\\]/.test(module.identifier())
+								)
+							},
+							name(module) {
+								const hash = crypto
+									.createHash('sha1')
+									.update(module.identifier())
+									.digest('hex')
+									.substring(0, 8)
+								return `lib-${hash}`
+							},
+							priority: 30,
+							minChunks: 1,
+							reuseExistingChunk: true,
+						},
+						// Common chunks (used in 2+ places)
+						commons: {
+							name: 'commons',
+							minChunks: 2,
+							priority: 20,
+						},
+						// Shared chunks
+						shared: {
+							name(module, chunks) {
+								const hash = crypto
+									.createHash('sha1')
+									.update(
+										chunks.reduce((acc, chunk) => acc + chunk.name, '')
+									)
+									.digest('hex')
+									.substring(0, 8)
+								return `shared-${hash}`
+							},
+							priority: 10,
+							minChunks: 2,
+							reuseExistingChunk: true,
+						},
+					},
+				},
+			}
+		}
+		return config
 	},
 
 	/**

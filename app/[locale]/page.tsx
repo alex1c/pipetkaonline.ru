@@ -12,8 +12,7 @@
  * @module app/[locale]/page
  */
 
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -38,10 +37,15 @@ import Link from 'next/link'
  * - description: "Определи цвет, создай палитру и узнай всё о цветовых сочетаниях."
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	// Get translations from 'home' namespace for the current locale
 	const t = await getTranslations({ locale, namespace: 'home' })
 	const baseUrl = 'https://pipetkaonline.ru'
@@ -100,14 +104,18 @@ export async function generateMetadata({
 export default async function HomePage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	// Get translations for 'home' namespace
-	const t = await getTranslations({ locale: params.locale, namespace: 'home' })
-	const tTools = await getTranslations({ locale: params.locale, namespace: 'tools' })
+	const t = await getTranslations({ locale, namespace: 'home' })
+	const tTools = await getTranslations({ locale, namespace: 'tools' })
 
 	const baseUrl = 'https://pipetkaonline.ru'
-	const locale = params.locale
 
 	// Structured data for SEO - WebApplication
 	const webApplicationData = {
@@ -176,49 +184,49 @@ export default async function HomePage({
 			icon: '🎨',
 			title: tTools('tools.picker.title'),
 			description: tTools('tools.picker.desc'),
-			href: `/${params.locale}/tools/color-lab`,
+					href: `/${locale}/tools/color-lab`,
 		},
 		{
 			icon: '🌈',
 			title: tTools('tools.palette.title'),
 			description: tTools('tools.palette.desc'),
-			href: `/${params.locale}/tools/palette-generator`,
+					href: `/${locale}/tools/palette-generator`,
 		},
 		{
 			icon: '🎯',
 			title: tTools('tools.contrast.title'),
 			description: tTools('tools.contrast.desc'),
-			href: `/${params.locale}/tools/contrast-checker`,
+					href: `/${locale}/tools/contrast-checker`,
 		},
 		{
 			icon: '🔄',
 			title: tTools('tools.converter.title'),
 			description: tTools('tools.converter.desc'),
-			href: `/${params.locale}/tools/color-converter`,
+					href: `/${locale}/tools/color-converter`,
 		},
 		{
 			icon: '🎨',
 			title: tTools('tools.uiTokensGenerator.title'),
 			description: tTools('tools.uiTokensGenerator.desc'),
-			href: `/${params.locale}/tools/ui-tokens-generator`,
+					href: `/${locale}/tools/ui-tokens-generator`,
 		},
 		{
 			icon: '🔬',
 			title: tTools('tools.extractColorsV2.title'),
 			description: tTools('tools.extractColorsV2.desc'),
-			href: `/${params.locale}/tools/extract-colors-v2`,
+					href: `/${locale}/tools/extract-colors-v2`,
 		},
 		{
 			icon: '🎨',
 			title: tTools('tools.uiThemeGenerator.title'),
 			description: tTools('tools.uiThemeGenerator.desc'),
-			href: `/${params.locale}/tools/ui-theme-generator`,
+					href: `/${locale}/tools/ui-theme-generator`,
 		},
 		{
 			icon: '🔷',
 			title: tTools('tools.patternGenerator.title'),
 			description: tTools('tools.patternGenerator.desc'),
-			href: `/${params.locale}/tools/pattern-generator`,
+					href: `/${locale}/tools/pattern-generator`,
 		},
 	]
 
@@ -251,13 +259,13 @@ export default async function HomePage({
 					</p>
 					<div className='flex flex-wrap justify-center gap-4 pt-4'>
 						<Link
-							href={`/${params.locale}/tools`}
+							href={`/${locale}/tools`}
 							className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105'
 						>
 							{t('hero.cta')}
 						</Link>
 						<Link
-							href={`/${params.locale}/learn`}
+							href={`/${locale}/learn`}
 							className='px-6 py-3 bg-white text-slate-700 rounded-lg font-semibold border-2 border-slate-200 hover:border-blue-500 hover:text-blue-600 transition-all shadow-md hover:shadow-lg'
 						>
 							{t('hero.learn')}
@@ -271,19 +279,19 @@ export default async function HomePage({
 						title={t('cta.detect')}
 						description={t('cta.detectDesc')}
 						icon='🎨'
-						href={`/${params.locale}/tools/color-lab`}
+						href={`/${locale}/tools/color-lab`}
 					/>
 					<CTACard
 						title={t('cta.palette')}
 						description={t('cta.paletteDesc')}
 						icon='🌈'
-						href={`/${params.locale}/tools/palette-generator`}
+						href={`/${locale}/tools/palette-generator`}
 					/>
 					<CTACard
 						title={t('cta.learn')}
 						description={t('cta.learnDesc')}
 						icon='📚'
-						href={`/${params.locale}/learn`}
+						href={`/${locale}/learn`}
 					/>
 				</section>
 
@@ -310,7 +318,7 @@ export default async function HomePage({
 					</div>
 					<div className='text-center pt-4'>
 						<Link
-							href={`/${params.locale}/tools`}
+							href={`/${locale}/tools`}
 							className='inline-block px-6 py-3 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200 transition-colors'
 						>
 							{t('tools.viewAll')} →

@@ -123,9 +123,12 @@ export function useColorPicker() {
 
 			// Read pixel data at the specified coordinates
 			// getImageData(x, y, width, height) returns ImageData object
-			// data property is Uint8ClampedArray: [R, G, B, A, R, G, B, A, ...]
-			const imageData = ctx.getImageData(x, y, 1, 1)
-			const [r, g, b] = imageData.data // Extract RGB (ignore alpha channel)
+                        // data property is Uint8ClampedArray: [R, G, B, A, R, G, B, A, ...]
+                        const imageData = ctx.getImageData(x, y, 1, 1)
+                        // Extract RGB (ignore alpha channel) - use indexing instead of destructuring for TypeScript compatibility
+                        const r = imageData.data[0]
+                        const g = imageData.data[1]
+                        const b = imageData.data[2]
 
 			// Convert to all formats
 			const hex = rgbToHex(r, g, b)

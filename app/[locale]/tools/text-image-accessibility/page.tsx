@@ -7,7 +7,7 @@
  * @module app/[locale]/tools/text-image-accessibility/page
  */
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
@@ -35,12 +35,18 @@ const TextImageAccessibilityClient = dynamic(() => import('./TextImageAccessibil
  * @returns {Promise<Metadata>} Metadata object
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.textImageAccessibility' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.textImageAccessibility.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.textImageAccessibility' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.textImageAccessibility.seo' })
 
 	return {
 		title: t('title'),
@@ -60,7 +66,17 @@ export async function generateMetadata({
  * 
  * @returns {JSX.Element} Page component
  */
-export default function TextImageAccessibilityPage() {
+export default async function TextImageAccessibilityPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
 	return <TextImageAccessibilityClient />
 }
 

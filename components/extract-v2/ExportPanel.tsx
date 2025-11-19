@@ -195,7 +195,7 @@ export function ExportPanel({
 			{activeTab === 'png' && (
 				<div className='bg-blue-50 border border-blue-200 rounded-lg p-4'>
 					<p className='text-sm text-blue-800'>
-						Click the "PNG Export" tab to download the color palette as an image.
+						Click the &quot;PNG Export&quot; tab to download the color palette as an image.
 					</p>
 				</div>
 			)}

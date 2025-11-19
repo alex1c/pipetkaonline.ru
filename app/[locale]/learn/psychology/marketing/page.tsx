@@ -1,89 +1,40 @@
-'use client'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { MarketingPageClient } from './marketing-client'
 
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { useParams } from 'next/navigation'
-import { LearnSEOContent } from '@/components/learn-seo-content'
+/**
+ * Generate metadata for Marketing page
+ * This enables static rendering by calling setRequestLocale
+ */
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}): Promise<Metadata> {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'learn.psychology.marketing' })
+	return { title: t('title'), description: t('description') }
+}
 
 /**
  * Color in Marketing page
+ * Server component wrapper for client component
  */
-export default function MarketingPage() {
-	const params = useParams()
-	const locale = params.locale as string
-	const t = useTranslations('learn.psychology.marketing')
-
-	return (
-		<div className='space-y-8'>
-			<Link
-				href={`/${locale}/learn`}
-				className='inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors'
-			>
-				← {t('back')}
-			</Link>
-
-			<header className='text-center space-y-4'>
-				<div className='text-6xl mb-4'>📊</div>
-				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
-				<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-					{t('description')}
-				</p>
-			</header>
-
-			<div className='bg-white rounded-xl shadow-md p-8 space-y-8'>
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.intro.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.intro.content')}
-					</p>
-				</section>
-
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.cta.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.cta.content')}
-					</p>
-					<div className='bg-red-500 text-white p-6 rounded-lg mt-4 text-center font-semibold text-lg'>
-						{t('sections.cta.example')}
-					</div>
-				</section>
-
-				<section className='space-y-4'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.trust.title')}
-					</h2>
-					<p className='text-slate-700 leading-relaxed'>
-						{t('sections.trust.content')}
-					</p>
-				</section>
-
-				<section className='space-y-4 bg-slate-50 p-6 rounded-lg'>
-					<h2 className='text-2xl font-semibold text-slate-900'>
-						{t('sections.bestPractices.title')}
-					</h2>
-					<ul className='list-disc list-inside space-y-2 text-slate-700 ml-4'>
-						<li>{t('sections.bestPractices.items.0')}</li>
-						<li>{t('sections.bestPractices.items.1')}</li>
-						<li>{t('sections.bestPractices.items.2')}</li>
-						<li>{t('sections.bestPractices.items.3')}</li>
-					</ul>
-				</section>
-			</div>
-
-			{/* SEO Content */}
-			<LearnSEOContent
-				namespace='learn.psychology.marketing'
-				toolLinks={[
-					{ slug: 'brand-color-analyzer', anchorText: 'анализ брендовых цветов' },
-					{ slug: 'emotion-colors', anchorText: 'эмоции и цвет' },
-					{ slug: 'palette-generator', anchorText: 'генератор палитр' },
-				]}
-			/>
-		</div>
-	)
+export default async function MarketingPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	return <MarketingPageClient />
 }
-

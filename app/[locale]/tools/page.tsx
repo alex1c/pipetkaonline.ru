@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 
 /**
@@ -14,11 +13,17 @@ import type { Metadata } from 'next'
  * - Canonical URL and hreflang alternates
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	return {
@@ -29,7 +34,7 @@ export async function generateMetadata({
 			title: t('title'),
 			description: t('description'),
 			type: 'website',
-			url: `${baseUrl}/${locale}/tools`,
+			url: `${baseUrl}/${resolvedParams.locale}/tools`,
 			siteName: 'PipetkaOnline',
 			images: [
 				{
@@ -39,8 +44,8 @@ export async function generateMetadata({
 					alt: t('title'),
 				},
 			],
-			locale: locale,
-			alternateLocale: ['ru', 'en', 'de', 'es'].filter(l => l !== locale),
+			locale: resolvedParams.locale,
+			alternateLocale: ['ru', 'en', 'de', 'es'].filter(l => l !== resolvedParams.locale),
 		},
 		twitter: {
 			card: 'summary_large_image',
@@ -49,7 +54,7 @@ export async function generateMetadata({
 			images: [`${baseUrl}/og-tools.jpg`],
 		},
 		alternates: {
-			canonical: `${baseUrl}/${locale}/tools`,
+			canonical: `${baseUrl}/${resolvedParams.locale}/tools`,
 			languages: {
 				ru: `${baseUrl}/ru/tools`,
 				en: `${baseUrl}/en/tools`,
@@ -68,9 +73,15 @@ export async function generateMetadata({
 export default async function ToolsPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
@@ -79,7 +90,7 @@ export default async function ToolsPage({
 		'@type': 'CollectionPage',
 		name: t('title'),
 		description: t('description'),
-		url: `${baseUrl}/${params.locale}/tools`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools`,
 		mainEntity: {
 			'@type': 'ItemList',
 			itemListElement: [
@@ -124,119 +135,119 @@ export default async function ToolsPage({
 					icon='🎨'
 					title={t('tools.picker.title')}
 					description={t('tools.picker.desc')}
-					href={`/${params.locale}/tools/color-lab`}
+					href={`/${resolvedParams.locale}/tools/color-lab`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🌈'
 					title={t('tools.palette.title')}
 					description={t('tools.palette.desc')}
-					href={`/${params.locale}/tools/palette-generator`}
+					href={`/${resolvedParams.locale}/tools/palette-generator`}
 					t={t}
 				/>
 					<ToolCard
 						icon='🎯'
 						title={t('tools.contrast.title')}
 						description={t('tools.contrast.desc')}
-						href={`/${params.locale}/tools/contrast-checker`}
+						href={`/${resolvedParams.locale}/tools/contrast-checker`}
 						t={t}
 					/>
 				<ToolCard
 					icon='🔄'
 					title={t('tools.converter.title')}
 					description={t('tools.converter.desc')}
-					href={`/${params.locale}/tools/color-converter`}
+					href={`/${resolvedParams.locale}/tools/color-converter`}
 					t={t}
 				/>
 				<ToolCard
 					icon='💡'
 					title={t('tools.harmony.title')}
 					description={t('tools.harmony.desc')}
-					href={`/${params.locale}/tools/color-harmony`}
+					href={`/${resolvedParams.locale}/tools/color-harmony`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🎭'
 					title={t('tools.gradient.title')}
 					description={t('tools.gradient.desc')}
-					href={`/${params.locale}/tools/gradient-generator`}
+					href={`/${resolvedParams.locale}/tools/gradient-generator`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🎨'
 					title={t('tools.uiTokensGenerator.title')}
 					description={t('tools.uiTokensGenerator.desc')}
-					href={`/${params.locale}/tools/ui-tokens-generator`}
+					href={`/${resolvedParams.locale}/tools/ui-tokens-generator`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🔬'
 					title={t('tools.extractColorsV2.title')}
 					description={t('tools.extractColorsV2.desc')}
-					href={`/${params.locale}/tools/extract-colors-v2`}
+					href={`/${resolvedParams.locale}/tools/extract-colors-v2`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🏷️'
 					title={t('tools.colorNameFinder.title')}
 					description={t('tools.colorNameFinder.desc')}
-					href={`/${params.locale}/tools/color-name-finder`}
+					href={`/${resolvedParams.locale}/tools/color-name-finder`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🎯'
 					title={t('tools.brandColorAnalyzer.title')}
 					description={t('tools.brandColorAnalyzer.desc')}
-					href={`/${params.locale}/tools/brand-color-analyzer`}
+					href={`/${resolvedParams.locale}/tools/brand-color-analyzer`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🎨'
 					title={t('tools.uiThemeGenerator.title')}
 					description={t('tools.uiThemeGenerator.desc')}
-					href={`/${params.locale}/tools/ui-theme-generator`}
+					href={`/${resolvedParams.locale}/tools/ui-theme-generator`}
 					t={t}
 				/>
 				<ToolCard
 					icon='📝'
 					title={t('tools.textImageAccessibility.title')}
 					description={t('tools.textImageAccessibility.desc')}
-					href={`/${params.locale}/tools/text-image-accessibility`}
+					href={`/${resolvedParams.locale}/tools/text-image-accessibility`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🌈'
 					title={t('tools.gradientMapGenerator.title')}
 					description={t('tools.gradientMapGenerator.desc')}
-					href={`/${params.locale}/tools/gradient-map-generator`}
+					href={`/${resolvedParams.locale}/tools/gradient-map-generator`}
 					t={t}
 				/>
 				<ToolCard
 					icon='💭'
 					title={t('tools.emotionColors.title')}
 					description={t('tools.emotionColors.desc')}
-					href={`/${params.locale}/tools/emotion-colors`}
+					href={`/${resolvedParams.locale}/tools/emotion-colors`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🎨'
 					title={t('tools.solidBackground.title')}
 					description={t('tools.solidBackground.desc')}
-					href={`/${params.locale}/tools/solid-background`}
+					href={`/${resolvedParams.locale}/tools/solid-background`}
 					t={t}
 				/>
 				<ToolCard
 					icon='🔷'
 					title={t('tools.patternGenerator.title')}
 					description={t('tools.patternGenerator.desc')}
-					href={`/${params.locale}/tools/pattern-generator`}
+					href={`/${resolvedParams.locale}/tools/pattern-generator`}
 					t={t}
 				/>
 				<ToolCard
 					icon='👁️'
 					title={t('colorBlindnessSimulator.title')}
 					description={t('colorBlindnessSimulator.description')}
-					href={`/${params.locale}/tools/color-blindness-simulator`}
+					href={`/${resolvedParams.locale}/tools/color-blindness-simulator`}
 					t={t}
 				/>
 			</div>

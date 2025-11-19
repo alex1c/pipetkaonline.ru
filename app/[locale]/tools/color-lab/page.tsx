@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generateToolMetadata } from '@/lib/metadata-utils'
@@ -25,18 +25,24 @@ const ColorLabClient = dynamic(() => import('./ColorLabClient').then(mod => ({ d
  * canonical URLs, and hreflang alternates.
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.colorLab' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.colorLab.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.colorLab' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.colorLab.seo' })
 
 	return generateToolMetadata({
 		title: t('title'),
 		description: t('description'),
 		keywords: tSEO('keywords'),
-		locale,
+		locale: resolvedParams.locale,
 		path: '/tools/color-lab',
 		ogImage: 'og-color-lab.jpg',
 	})
@@ -50,16 +56,22 @@ export async function generateMetadata({
 export default async function ColorLabPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.colorLab' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.colorLab' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
 	const structuredData = generateSoftwareApplicationSchema({
 		name: t('title'),
 		description: t('description'),
-		url: `${baseUrl}/${params.locale}/tools/color-lab`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/color-lab`,
 		features: [
 			'Color picker',
 			'Image color extraction',

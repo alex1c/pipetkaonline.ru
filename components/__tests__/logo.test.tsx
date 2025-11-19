@@ -21,7 +21,7 @@ import { Logo } from '../logo'
  * Preserves all props including className and aria-label.
  */
 jest.mock('next/link', () => {
-	return ({
+	const MockedLink = ({
 		children,
 		href,
 		className,
@@ -40,6 +40,8 @@ jest.mock('next/link', () => {
 			</a>
 		)
 	}
+	MockedLink.displayName = 'MockedLink'
+	return MockedLink
 })
 
 describe('Logo Component', () => {

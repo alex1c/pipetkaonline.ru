@@ -99,10 +99,12 @@ export function generateToolMetadata({
 		},
 		alternates: {
 			canonical: `${baseUrl}/${locale}${path}`,
-			languages: Object.fromEntries(
-				locales.map(l => [l, `${baseUrl}/${l}${path}`])
-			),
-			'x-default': `${baseUrl}/ru${path}`,
+			languages: {
+				...Object.fromEntries(
+					locales.map(l => [l, `${baseUrl}/${l}${path}`])
+				),
+				'x-default': `${baseUrl}/ru${path}`,
+			},
 		},
 	}
 }
@@ -181,10 +183,12 @@ export function generateLearnMetadata({
 		},
 		alternates: {
 			canonical: `${baseUrl}/${locale}${path}`,
-			languages: Object.fromEntries(
-				locales.map(l => [l, `${baseUrl}/${l}${path}`])
-			),
-			'x-default': `${baseUrl}/ru${path}`,
+			languages: {
+				...Object.fromEntries(
+					locales.map(l => [l, `${baseUrl}/${l}${path}`])
+				),
+				'x-default': `${baseUrl}/ru${path}`,
+			},
 		},
 	}
 }

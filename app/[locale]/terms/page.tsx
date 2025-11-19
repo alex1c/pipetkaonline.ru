@@ -1,14 +1,18 @@
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 /**
  * Generate metadata for the terms of service page
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	const t = await getTranslations({ locale, namespace: 'terms' })
 
 	return {
@@ -21,8 +25,17 @@ export async function generateMetadata({
  * Terms of Service page
  * Required for AdSense and Yandex.Direct compliance
  */
-export default function TermsPage() {
-	const t = useTranslations('terms')
+export default async function TermsPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
+	const t = await getTranslations({ locale, namespace: 'terms' })
 
 	return (
 		<div className='bg-white rounded-xl shadow-md p-8 space-y-6'>

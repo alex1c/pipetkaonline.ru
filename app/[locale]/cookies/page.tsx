@@ -1,14 +1,18 @@
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 /**
  * Generate metadata for the cookies policy page
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
 	const t = await getTranslations({ locale, namespace: 'cookies' })
 
 	return {
@@ -21,8 +25,17 @@ export async function generateMetadata({
  * Cookies Policy page
  * Required for AdSense and Yandex.Direct compliance
  */
-export default function CookiesPage() {
-	const t = useTranslations('cookies')
+export default async function CookiesPage({
+	params,
+}: {
+	params: Promise<{ locale: string }> | { locale: string }
+}) {
+	const resolvedParams = await Promise.resolve(params)
+	const locale = resolvedParams.locale
+	// Enable static rendering
+	setRequestLocale(locale)
+	
+	const t = await getTranslations({ locale, namespace: 'cookies' })
 
 	return (
 		<div className='bg-white rounded-xl shadow-md p-8 space-y-6'>

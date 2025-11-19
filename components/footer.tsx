@@ -22,6 +22,7 @@
 
 'use client'
 
+import { memo } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
@@ -34,9 +35,11 @@ import { ShareBlock } from './share-block'
  * Uses translations from the 'footer' namespace for internationalization.
  * Automatically gets the current locale from URL parameters.
  * 
+ * Memoized to prevent unnecessary re-renders.
+ * 
  * @returns {JSX.Element} Footer component with legal links and site information
  */
-export function Footer() {
+export const Footer = memo(function Footer() {
 	const t = useTranslations('footer')
 	const params = useParams()
 	const locale = params.locale as string
@@ -133,7 +136,7 @@ export function Footer() {
 			</div>
 		</footer>
 	)
-}
+})
 
 /**
  * Footer Link Component

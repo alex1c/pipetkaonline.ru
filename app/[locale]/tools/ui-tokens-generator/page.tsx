@@ -7,7 +7,7 @@
  * @module app/[locale]/tools/ui-tokens-generator/page
  */
 
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { UITokensGeneratorClient } from './UITokensGeneratorClient'
 import { generateToolMetadata } from '@/lib/metadata-utils'
@@ -24,18 +24,24 @@ import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
  * @returns {Promise<Metadata>} Complete metadata object
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.uiTokensGenerator' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.uiTokensGenerator.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.uiTokensGenerator' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.uiTokensGenerator.seo' })
 
 	return generateToolMetadata({
 		title: t('title'),
 		description: t('description'),
 		keywords: tSEO('keywords'),
-		locale,
+		locale: resolvedParams.locale,
 		path: '/tools/ui-tokens-generator',
 		ogImage: 'og-ui-tokens.jpg',
 	})
@@ -54,16 +60,22 @@ export async function generateMetadata({
 export default async function UITokensGeneratorPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.uiTokensGenerator' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.uiTokensGenerator' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
 	const structuredData = generateSoftwareApplicationSchema({
 		name: t('title'),
 		description: t('description'),
-		url: `${baseUrl}/${params.locale}/tools/ui-tokens-generator`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/ui-tokens-generator`,
 		features: [
 			'UI token generation',
 			'Color scale creation',

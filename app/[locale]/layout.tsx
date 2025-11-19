@@ -21,7 +21,7 @@
  * @module app/[locale]/layout
  */
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
@@ -47,11 +47,25 @@ import '../globals.css'
  * 
  * The font variable is applied via className to enable Tailwind usage.
  */
+/**
+ * Inter Font Configuration (Optimized)
+ * 
+ * Only loads font weights that are actually used in the application.
+ * Reduces font file size and improves load times.
+ * 
+ * Weights used:
+ * - 400: Regular text
+ * - 500: Medium weight (buttons, emphasis)
+ * - 600: Semi-bold (headings)
+ * - 700: Bold (strong emphasis, titles)
+ */
 const inter = Inter({
 	subsets: ['latin', 'cyrillic'],
-	weight: ['300', '400', '500', '600', '700', '800', '900'],
+	weight: ['400', '500', '600', '700'], // Only used weights
 	variable: '--font-inter',
 	display: 'swap',
+	preload: true,
+	fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Arial', 'sans-serif'],
 })
 
 /**
@@ -76,14 +90,21 @@ export const metadata: Metadata = {
 		icon: '/favicon.svg',
 		apple: '/favicon.svg',
 	},
-	viewport: {
-		width: 'device-width',
-		initialScale: 1,
-	},
-	themeColor: '#3B82F6',
 	other: {
 		'format-detection': 'telephone=no',
 	},
+}
+
+/**
+ * Viewport Configuration
+ * 
+ * Separate export for viewport and theme settings as required by Next.js 14+.
+ * This ensures proper mobile rendering and theme color support.
+ */
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	themeColor: '#3B82F6',
 }
 
 /**
@@ -227,6 +248,10 @@ export default async function RootLayout({
 	return (
 		<html lang={locale} className={inter.variable}>
 			<head>
+				{/* Yandex verification meta tag */}
+				<meta name='yandex-verification' content='6c8a111cb8d29bdc' />
+				{/* Google verification meta tag */}
+				<meta name='google-site-verification' content='zWF2-MlNM3wIXPNbNgx1kPEGYar7yx0ZSpdNatoadEE' />
 				{/* Preconnect to external domains for faster resource loading */}
 				<link rel='preconnect' href='https://fonts.googleapis.com' />
 				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
@@ -251,6 +276,31 @@ export default async function RootLayout({
 					type='application/ld+json'
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
 				/>
+				{/* Yandex.Metrika counter - Lazy loaded for better performance */}
+				<Script
+					id='yandex-metrika'
+					strategy='lazyOnload'
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function(m,e,t,r,i,k,a){
+								m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+								m[i].l=1*new Date();
+								for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+								k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+							})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105405906', 'ym');
+							ym(105405906, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+						`,
+					}}
+				/>
+				<noscript>
+					<div>
+						<img
+							src='https://mc.yandex.ru/watch/105405906'
+							style={{ position: 'absolute', left: '-9999px' }}
+							alt=''
+						/>
+					</div>
+				</noscript>
 				{/* 
 					NextIntlClientProvider makes translations available to client components.
 					This is required for any component using useTranslations hook.

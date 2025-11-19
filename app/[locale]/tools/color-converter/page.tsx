@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { ColorConverterClient } from './ColorConverterClient'
 
@@ -13,12 +13,18 @@ import { ColorConverterClient } from './ColorConverterClient'
  * - Canonical URL and hreflang alternates
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }): Promise<Metadata> {
-	const t = await getTranslations({ locale, namespace: 'tools.colorConverter' })
-	const tSEO = await getTranslations({ locale, namespace: 'tools.colorConverter.seo' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.colorConverter' })
+	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.colorConverter.seo' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	return {
@@ -29,7 +35,7 @@ export async function generateMetadata({
 			title: t('title'),
 			description: t('description'),
 			type: 'website',
-			url: `${baseUrl}/${locale}/tools/color-converter`,
+			url: `${baseUrl}/${resolvedParams.locale}/tools/color-converter`,
 			siteName: 'PipetkaOnline',
 			images: [
 				{
@@ -39,8 +45,8 @@ export async function generateMetadata({
 					alt: t('title'),
 				},
 			],
-			locale: locale,
-			alternateLocale: ['ru', 'en', 'de', 'es'].filter(l => l !== locale),
+			locale: resolvedParams.locale,
+			alternateLocale: ['ru', 'en', 'de', 'es'].filter(l => l !== resolvedParams.locale),
 		},
 		twitter: {
 			card: 'summary_large_image',
@@ -49,7 +55,7 @@ export async function generateMetadata({
 			images: [`${baseUrl}/og-color-converter.jpg`],
 		},
 		alternates: {
-			canonical: `${baseUrl}/${locale}/tools/color-converter`,
+			canonical: `${baseUrl}/${resolvedParams.locale}/tools/color-converter`,
 			languages: {
 				ru: `${baseUrl}/ru/tools/color-converter`,
 				en: `${baseUrl}/en/tools/color-converter`,
@@ -68,9 +74,15 @@ export async function generateMetadata({
 export default async function ColorConverterPage({
 	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }> | { locale: string }
 }) {
-	const t = await getTranslations({ locale: params.locale, namespace: 'tools.colorConverter' })
+	// Resolve params if it's a Promise
+	const resolvedParams = await Promise.resolve(params)
+	
+	// Enable static rendering
+	setRequestLocale(resolvedParams.locale)
+	
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.colorConverter' })
 	const baseUrl = 'https://pipetkaonline.ru'
 
 	// Structured data for SEO
@@ -79,7 +91,7 @@ export default async function ColorConverterPage({
 		'@type': 'SoftwareApplication',
 		name: t('title'),
 		description: t('description'),
-		url: `${baseUrl}/${params.locale}/tools/color-converter`,
+		url: `${baseUrl}/${resolvedParams.locale}/tools/color-converter`,
 		applicationCategory: 'DesignApplication',
 		operatingSystem: 'Web',
 		offers: {
