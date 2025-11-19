@@ -41,6 +41,12 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts')
  */
 const nextConfig = {
 	/**
+	 * Enable standalone output for Docker deployment
+	 * Creates a minimal server.js file with all dependencies
+	 */
+	output: 'standalone',
+
+	/**
 	 * Enable compression for all responses
 	 * Reduces bandwidth usage and improves load times
 	 */
