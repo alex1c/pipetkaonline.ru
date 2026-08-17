@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { WCAGPageClient } from './wcag-client'
@@ -9,7 +10,7 @@ import { WCAGPageClient } from './wcag-client'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -20,6 +21,7 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'learn.accessibility.wcag' })
 
 	return {
+		...generatePageMetadata({ title: t('title'), description: t('description'), locale: resolvedParams.locale, path: '/learn/accessibility/wcag' }),
 		title: t('title'),
 		description: t('description'),
 	}
@@ -32,7 +34,7 @@ export async function generateMetadata({
 export default async function WCAGPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)

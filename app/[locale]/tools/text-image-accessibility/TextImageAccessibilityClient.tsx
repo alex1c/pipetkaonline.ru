@@ -48,16 +48,6 @@ export function TextImageAccessibilityClient() {
 
 	return (
 		<div className='space-y-12'>
-			{/* Header */}
-			<header className='text-center space-y-4'>
-				<h1 className='text-4xl md:text-5xl font-bold text-slate-900'>
-					{t('title')}
-				</h1>
-				<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-					{t('subtitle')}
-				</p>
-			</header>
-
 			{/* Image Upload */}
 			<section className='bg-white rounded-xl shadow-md p-8'>
 				<ImageUploader onImageUpload={handleImageUpload} imageUrl={imageUrl} />

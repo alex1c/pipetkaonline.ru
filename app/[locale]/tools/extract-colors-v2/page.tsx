@@ -9,23 +9,11 @@
 
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
+import { ExtractColorsV2Dynamic } from './ExtractColorsV2Dynamic'
 import { generateToolMetadata } from '@/lib/metadata-utils'
 import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
-
-// Dynamic import for heavy component with image processing and K-means clustering
-// ssr: false because it uses browser APIs (canvas, FileReader, Image)
-const ExtractColorsV2Client = dynamic(() => import('./ExtractColorsV2Client').then(mod => ({ default: mod.ExtractColorsV2Client })), {
-	loading: () => (
-		<div className='flex items-center justify-center min-h-[400px]'>
-			<div className='text-center'>
-				<div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4'></div>
-				<p className='text-slate-600'>Loading Color Extractor...</p>
-			</div>
-		</div>
-	),
-	ssr: false,
-})
+import { ToolServerIntro } from '@/components/tool-server-intro'
+import type { Locale } from '@/i18n'
 
 /**
  * Generate metadata for Extract Colors V2 page
@@ -36,7 +24,7 @@ const ExtractColorsV2Client = dynamic(() => import('./ExtractColorsV2Client').th
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -53,7 +41,6 @@ export async function generateMetadata({
 		keywords: tSEO('keywords'),
 		locale: resolvedParams.locale,
 		path: '/tools/extract-colors-v2',
-		ogImage: 'og-extract-colors.jpg',
 	})
 }
 
@@ -66,7 +53,7 @@ export async function generateMetadata({
 export default async function ExtractColorsV2Page({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -96,8 +83,10 @@ export default async function ExtractColorsV2Page({
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 			/>
-			<ExtractColorsV2Client />
+			<div className='space-y-12'>
+				<ToolServerIntro title={t('title')} description={t('description')} locale={resolvedParams.locale as Locale} />
+				<ExtractColorsV2Dynamic />
+			</div>
 		</>
 	)
 }
-

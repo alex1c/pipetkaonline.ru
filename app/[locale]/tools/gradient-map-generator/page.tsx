@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 /**
  * Gradient Map Generator Page
  * 
@@ -9,21 +10,9 @@
 
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
-
-// Dynamic import for heavy component with canvas and image processing
-// ssr: false because it uses browser APIs (canvas, FileReader)
-const GradientMapGeneratorClient = dynamic(() => import('./GradientMapGeneratorClient').then(mod => ({ default: mod.GradientMapGeneratorClient })), {
-	loading: () => (
-		<div className='flex items-center justify-center min-h-[400px]'>
-			<div className='text-center'>
-				<div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4'></div>
-				<p className='text-slate-600'>Loading Gradient Map Generator...</p>
-			</div>
-		</div>
-	),
-	ssr: false,
-})
+import { GradientMapGeneratorDynamic } from './GradientMapGeneratorDynamic'
+import { ToolServerIntro } from '@/components/tool-server-intro'
+import type { Locale } from '@/i18n'
 
 /**
  * Generate metadata for Gradient Map Generator page
@@ -37,7 +26,7 @@ const GradientMapGeneratorClient = dynamic(() => import('./GradientMapGeneratorC
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -49,6 +38,7 @@ export async function generateMetadata({
 	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.gradientMapGenerator.seo' })
 
 	return {
+		...generatePageMetadata({ title: t('title'), description: t('subtitle'), locale: resolvedParams.locale, path: '/tools/gradient-map-generator' }),
 		title: t('title'),
 		description: t('subtitle'),
 		keywords: tSEO('keywords'),
@@ -71,14 +61,14 @@ export async function generateMetadata({
 export default async function GradientMapGeneratorPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
 	
 	// Enable static rendering
 	setRequestLocale(resolvedParams.locale)
-	
-	return <GradientMapGeneratorClient />
+	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.gradientMapGenerator' })
+	return <div className='space-y-12'><ToolServerIntro title={t('title')} description={t('subtitle')} locale={resolvedParams.locale as Locale} /><GradientMapGeneratorDynamic /></div>
 }
 

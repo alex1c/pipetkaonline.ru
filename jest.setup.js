@@ -69,6 +69,7 @@ jest.mock('next-intl', () => ({
  * Provides mock implementations for server-side next-intl functions.
  */
 jest.mock('next-intl/server', () => ({
+	getRequestConfig: (config) => config,
 	getTranslations: async (config) => {
 		const { namespace } = config || {}
 		return (key) => {
@@ -77,6 +78,7 @@ jest.mock('next-intl/server', () => ({
 	},
 	getLocale: async () => 'ru',
 	getMessages: async () => ({}),
+	setRequestLocale: () => undefined,
 }))
 
 /**

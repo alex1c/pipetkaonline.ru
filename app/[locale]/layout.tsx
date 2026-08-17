@@ -146,11 +146,12 @@ export const viewport: Viewport = {
  */
 export default async function RootLayout({
 	children,
-	params: { locale },
+	params,
 }: {
 	children: React.ReactNode
-	params: { locale: string }
+	params: Promise<{ locale: string }>
 }) {
+	const { locale } = await params
 	/**
 	 * Validate locale parameter
 	 * 
@@ -347,5 +348,4 @@ export default async function RootLayout({
 export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }))
 }
-
 

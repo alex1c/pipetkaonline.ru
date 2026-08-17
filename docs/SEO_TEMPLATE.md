@@ -174,5 +174,3 @@ See `locales/{locale}/tools.json` → `colorLab` section for a complete example.
 - The `ServiceSEO` component automatically handles optional steps/items
 - Use semantic HTML (h2, h3, sections) for better SEO
 
-
-

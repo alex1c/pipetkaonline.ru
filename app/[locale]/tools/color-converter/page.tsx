@@ -15,7 +15,7 @@ import { ColorConverterClient } from './ColorConverterClient'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -39,7 +39,7 @@ export async function generateMetadata({
 			siteName: 'PipetkaOnline',
 			images: [
 				{
-					url: `${baseUrl}/og-color-converter.jpg`,
+					url: `${baseUrl}/og-image.svg`,
 					width: 1200,
 					height: 630,
 					alt: t('title'),
@@ -52,7 +52,7 @@ export async function generateMetadata({
 			card: 'summary_large_image',
 			title: t('title'),
 			description: t('description'),
-			images: [`${baseUrl}/og-color-converter.jpg`],
+			images: [`${baseUrl}/og-image.svg`],
 		},
 		alternates: {
 			canonical: `${baseUrl}/${resolvedParams.locale}/tools/color-converter`,
@@ -74,7 +74,7 @@ export async function generateMetadata({
 export default async function ColorConverterPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -124,4 +124,3 @@ export default async function ColorConverterPage({
 		</>
 	)
 }
-

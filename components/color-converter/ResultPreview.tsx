@@ -111,5 +111,3 @@ export function ResultPreview({ hex, rgb, hsl, textColor }: ResultPreviewProps) 
 	)
 }
 
-
-

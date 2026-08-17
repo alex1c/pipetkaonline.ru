@@ -222,6 +222,8 @@ describe('Color Utils', () => {
 			const originalRgb = { r: 255, g: 87, b: 51 }
 			const hex = rgbToHex(originalRgb.r, originalRgb.g, originalRgb.b)
 			const convertedRgb = hexToRgb(hex)
+			expect(convertedRgb).not.toBeNull()
+			if (!convertedRgb) throw new Error('Expected a valid RGB value')
 
 			expect(convertedRgb.r).toBe(originalRgb.r)
 			expect(convertedRgb.g).toBe(originalRgb.g)

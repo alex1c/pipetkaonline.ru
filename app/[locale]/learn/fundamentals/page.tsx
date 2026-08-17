@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
@@ -7,7 +8,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale
@@ -17,6 +18,7 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: 'learn.fundamentals' })
 
 	return {
+		...generatePageMetadata({ title: t('title'), description: t('description'), locale: locale, path: '/learn/fundamentals' }),
 		title: t('title'),
 		description: t('description'),
 	}
@@ -29,7 +31,7 @@ export async function generateMetadata({
 export default async function FundamentalsPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale

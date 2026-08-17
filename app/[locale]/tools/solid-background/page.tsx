@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 /**
  * Solid Background Generator Page
  * 
@@ -23,7 +24,7 @@ import { SolidBackgroundClient } from './SolidBackgroundClient'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -35,6 +36,7 @@ export async function generateMetadata({
 	const tSEO = await getTranslations({ locale: resolvedParams.locale, namespace: 'tools.solidBackground.seo' })
 
 	return {
+		...generatePageMetadata({ title: t('title'), description: t('description'), locale: resolvedParams.locale, path: '/tools/solid-background' }),
 		title: t('title'),
 		description: t('description'),
 		keywords: tSEO('keywords'),
@@ -55,7 +57,7 @@ export async function generateMetadata({
 export default async function SolidBackgroundPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)

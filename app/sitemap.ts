@@ -16,7 +16,8 @@
  */
 
 import { MetadataRoute } from 'next'
-import { locales } from '@/i18n'
+import { defaultLocale, locales } from '@/i18n'
+import { getAvailableLocales } from '@/lib/metadata-utils'
 
 /**
  * Generate Sitemap
@@ -121,17 +122,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	locales.forEach((locale) => {
 		allRoutes.forEach((route) => {
+			const availableLocales = getAvailableLocales(route.path)
+			if (!availableLocales.includes(locale)) return
 			const url = `${baseUrl}/${locale}${route.path}`
 
 			// Create hreflang alternates
 			const languages: Record<string, string> = {}
-			locales.forEach((altLocale) => {
+			availableLocales.forEach((altLocale) => {
 				languages[altLocale] = `${baseUrl}/${altLocale}${route.path}`
 			})
+			languages['x-default'] = `${baseUrl}/${defaultLocale}${route.path}`
 
 			entries.push({
 				url,
-				lastModified: new Date(),
 				changeFrequency: route.changeFrequency,
 				priority: route.priority,
 				alternates: {
@@ -143,5 +146,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	return entries
 }
-
-

@@ -554,7 +554,35 @@
 			"toggle": "Mostrar Mapa de Calor"
 		},
 		"seo": {
-			"keywords": "verificador de accesibilidad de texto en imagen, contraste de texto en fondo, verificación WCAG de texto, legibilidad de texto en imagen, análisis de contraste de texto, accesibilidad de texto en imagen, verificación de legibilidad de texto, contraste WCAG, análisis de texto en imagen, verificación de contraste de texto, accesibilidad de texto online, herramienta verificadora de contraste, verificación WCAG 2.1, contraste de texto y fondo, verificación de legibilidad de texto en imagen, análisis de accesibilidad de texto, herramienta verificadora de contraste de texto, verificación WCAG AA AAA, contraste de texto en imagen, análisis de legibilidad de texto, verificación de accesibilidad de texto en fondo, herramienta verificadora de legibilidad de texto, verificador de cumplimiento WCAG, contraste de texto e imagen, verificación de legibilidad de texto, análisis de contraste de texto en imagen, herramienta verificadora de accesibilidad de texto, verificación de contraste de texto online, prueba de contraste WCAG, verificación de legibilidad de texto en fondo de imagen"
+      "keywords": "verificador de accesibilidad de texto en imagen, contraste de texto en fondo, verificación WCAG de texto, legibilidad de texto en imagen, análisis de contraste de texto, accesibilidad de texto en imagen, verificación de legibilidad de texto, contraste WCAG, análisis de texto en imagen, verificación de contraste de texto, accesibilidad de texto online, herramienta verificadora de contraste, verificación WCAG 2.1, contraste de texto y fondo, verificación de legibilidad de texto en imagen, análisis de accesibilidad de texto, herramienta verificadora de contraste de texto, verificación WCAG AA AAA, contraste de texto en imagen, análisis de legibilidad de texto, verificación de accesibilidad de texto en fondo, herramienta verificadora de legibilidad de texto, verificador de cumplimiento WCAG, contraste de texto e imagen, verificación de legibilidad de texto, análisis de contraste de texto en imagen, herramienta verificadora de accesibilidad de texto, verificación de contraste de texto online, prueba de contraste WCAG, verificación de legibilidad de texto en fondo de imagen",
+      "guide": {
+        "title": "Guía completa del verificador de accesibilidad de texto en imágenes",
+        "intro": "Esta herramienta comprueba la legibilidad del texto sobre una imagen, analiza el contraste, evalúa los criterios WCAG y ofrece recomendaciones de accesibilidad.",
+        "step1": { "title": "Paso 1: Sube una imagen", "description": "Sube una imagen PNG, JPG o WebP arrastrándola o seleccionando un archivo. La vista previa permitirá superponer texto." },
+        "step2": { "title": "Paso 2: Configura el texto", "description": "Introduce el texto y ajusta color, tamaño, peso, posición, sombra y superposición de fondo." },
+        "step3": { "title": "Paso 3: Analiza el contraste", "description": "La herramienta analiza en tiempo real el contraste entre el texto y los colores locales de la imagen." },
+        "step4": { "title": "Paso 4: Comprueba WCAG", "description": "Se evalúan los umbrales WCAG: 4,5:1 para texto normal, 3:1 para texto grande y 7:1 para nivel AAA." },
+        "step5": { "title": "Paso 5: Usa el mapa de calor", "description": "Activa el mapa de calor para localizar zonas con contraste alto, medio o bajo y elegir una posición legible." },
+        "step6": { "title": "Paso 6: Aplica las recomendaciones", "description": "Revisa las sugerencias para cambiar el color, el fondo, el tamaño o la posición del texto." }
+      },
+      "howTo": {
+        "title": "Cómo usar el verificador de accesibilidad paso a paso",
+        "howTo1": { "title": "Cómo subir una imagen", "description": "Arrastra una imagen al área de carga o selecciónala. Se admiten PNG, JPG y WebP." },
+        "howTo2": { "title": "Cómo configurar el texto", "description": "Introduce el texto, elige un color o HEX y ajusta tamaño, peso y posición." },
+        "howTo3": { "title": "Cómo usar la superposición de fondo", "description": "Activa una superposición semitransparente, elige su color y ajusta la opacidad para mejorar la lectura." },
+        "howTo4": { "title": "Cómo interpretar los resultados", "description": "La relación va de 1:1 a 21:1. WCAG AA exige 4,5:1 para texto normal y 3:1 para texto grande; AAA exige 7:1." },
+        "howTo5": { "title": "Cómo usar el mapa de calor", "description": "Las zonas verdes indican contraste alto, las amarillas contraste medio y las rojas contraste bajo." },
+        "howTo6": { "title": "Cómo mejorar la accesibilidad", "description": "Aumenta el contraste, añade una superposición, amplía el texto o muévelo a una zona más legible." }
+      },
+      "faq": {
+        "title": "Preguntas frecuentes sobre accesibilidad de texto en imágenes",
+        "q1": { "question": "¿Qué es WCAG?", "answer": "WCAG son las pautas internacionales de accesibilidad web. AA exige 4,5:1 para texto normal y 3:1 para texto grande; AAA exige 7:1." },
+        "q2": { "question": "¿Cómo se calcula el contraste?", "answer": "Se usa la fórmula WCAG (L1 + 0,05) / (L2 + 0,05), basada en la luminancia relativa de los colores claro y oscuro." },
+        "q3": { "question": "¿Qué muestra el mapa de calor?", "answer": "Muestra la legibilidad en distintas zonas: verde para contraste alto, amarillo para medio y rojo para bajo." },
+        "q4": { "question": "¿Cómo puedo mejorar el contraste?", "answer": "Usa un color de texto más contrastado, añade una superposición, aumenta el tamaño o cambia la posición." },
+        "q5": { "question": "¿La superposición se incluye en el cálculo?", "answer": "Sí. Si está activa, el contraste se calcula con su color; si no, se usa el color local de la imagen." },
+        "q6": { "question": "¿Qué tamaño se considera texto grande?", "answer": "WCAG considera grande el texto de 18 pt (24 px), o de 14 pt (18,67 px) cuando está en negrita." }
+      }
 		}
 	},
 	"gradientMapGenerator": {
@@ -1745,6 +1773,5 @@
 		}
 	}
 }
-
 
 

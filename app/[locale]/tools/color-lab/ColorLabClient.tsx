@@ -64,14 +64,6 @@ export function ColorLabClient() {
 
 	return (
 		<div className='space-y-8'>
-			{/* Page header */}
-			<header className='text-center space-y-4'>
-				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
-				<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-					{t('description')}
-				</p>
-			</header>
-
 			{/* Error message */}
 			{error && (
 				<div className='bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg'>
@@ -149,4 +141,3 @@ export function ColorLabClient() {
 		</div>
 	)
 }
-

@@ -9,6 +9,49 @@
  */
 
 import type { Metadata } from 'next'
+import { defaultLocale, locales } from '@/i18n'
+
+export const SITE_URL = 'https://pipetkaonline.ru'
+export const DEFAULT_OG_IMAGE = '/og-image.svg'
+
+export function getAvailableLocales(path: string): readonly string[] {
+	const segments = path.split('/').filter(Boolean)
+	return segments[0] === 'learn' && segments.length >= 3 ? ['ru', 'en'] : locales
+}
+
+export function getLocalizedAlternates(locale: string, path: string) {
+	const normalizedPath = path === '/' ? '' : path
+	const availableLocales = getAvailableLocales(normalizedPath)
+	return {
+		canonical: `${SITE_URL}/${locale}${normalizedPath}`,
+		languages: {
+			...Object.fromEntries(availableLocales.map((supportedLocale) => [
+				supportedLocale,
+				`${SITE_URL}/${supportedLocale}${normalizedPath}`,
+			])),
+			'x-default': `${SITE_URL}/${defaultLocale}${normalizedPath}`,
+		},
+	}
+}
+
+export function generatePageMetadata({ title, description, locale, path, index = true }: {
+	title: string
+	description: string
+	locale: string
+	path: string
+	index?: boolean
+}): Metadata {
+	const url = `${SITE_URL}/${locale}${path === '/' ? '' : path}`
+	const shouldIndex = index && getAvailableLocales(path).includes(locale)
+	return {
+		title,
+		description,
+		robots: { index: shouldIndex, follow: shouldIndex },
+		alternates: getLocalizedAlternates(locale, path),
+		openGraph: { title, description, type: 'website', url, siteName: 'PipetkaOnline', images: [{ url: `${SITE_URL}${DEFAULT_OG_IMAGE}`, width: 1200, height: 630, alt: title }] },
+		twitter: { card: 'summary_large_image', title, description, images: [`${SITE_URL}${DEFAULT_OG_IMAGE}`] },
+	}
+}
 
 /**
  * Generate comprehensive metadata for tool pages
@@ -27,7 +70,6 @@ import type { Metadata } from 'next'
  * @param {string} params.keywords - SEO keywords (comma-separated)
  * @param {string} params.locale - Current locale
  * @param {string} params.path - Page path (without locale, e.g., '/tools/color-converter')
- * @param {string} [params.ogImage] - Open Graph image path (default: og-tools.jpg)
  * 
  * @returns {Metadata} Complete metadata object
  * 
@@ -46,18 +88,14 @@ export function generateToolMetadata({
 	keywords,
 	locale,
 	path,
-	ogImage,
 }: {
 	title: string
 	description: string
 	keywords: string
 	locale: string
 	path: string
-	ogImage?: string
 }): Metadata {
-	const baseUrl = 'https://pipetkaonline.ru'
-	const locales = ['ru', 'en', 'de', 'es']
-	const imagePath = ogImage || `og-${path.split('/').pop() || 'tools'}.jpg`
+	const imagePath = DEFAULT_OG_IMAGE
 
 	return {
 		title,
@@ -78,11 +116,11 @@ export function generateToolMetadata({
 			title,
 			description,
 			type: 'website',
-			url: `${baseUrl}/${locale}${path}`,
+			url: `${SITE_URL}/${locale}${path}`,
 			siteName: 'PipetkaOnline',
 			images: [
 				{
-					url: `${baseUrl}/${imagePath}`,
+					url: `${SITE_URL}${imagePath}`,
 					width: 1200,
 					height: 630,
 					alt: title,
@@ -95,17 +133,9 @@ export function generateToolMetadata({
 			card: 'summary_large_image',
 			title,
 			description,
-			images: [`${baseUrl}/${imagePath}`],
+			images: [`${SITE_URL}${imagePath}`],
 		},
-		alternates: {
-			canonical: `${baseUrl}/${locale}${path}`,
-			languages: {
-				...Object.fromEntries(
-					locales.map(l => [l, `${baseUrl}/${l}${path}`])
-				),
-				'x-default': `${baseUrl}/ru${path}`,
-			},
-		},
+		alternates: getLocalizedAlternates(locale, path),
 	}
 }
 
@@ -120,7 +150,6 @@ export function generateToolMetadata({
  * @param {string} params.keywords - SEO keywords
  * @param {string} params.locale - Current locale
  * @param {string} params.path - Page path
- * @param {string} [params.ogImage] - Open Graph image path
  * 
  * @returns {Metadata} Complete metadata object
  */
@@ -130,18 +159,14 @@ export function generateLearnMetadata({
 	keywords,
 	locale,
 	path,
-	ogImage,
 }: {
 	title: string
 	description: string
 	keywords: string
 	locale: string
 	path: string
-	ogImage?: string
 }): Metadata {
-	const baseUrl = 'https://pipetkaonline.ru'
-	const locales = ['ru', 'en', 'de', 'es']
-	const imagePath = ogImage || 'og-learn.jpg'
+	const imagePath = DEFAULT_OG_IMAGE
 
 	return {
 		title,
@@ -162,11 +187,11 @@ export function generateLearnMetadata({
 			title,
 			description,
 			type: 'article',
-			url: `${baseUrl}/${locale}${path}`,
+			url: `${SITE_URL}/${locale}${path}`,
 			siteName: 'PipetkaOnline',
 			images: [
 				{
-					url: `${baseUrl}/${imagePath}`,
+					url: `${SITE_URL}${imagePath}`,
 					width: 1200,
 					height: 630,
 					alt: title,
@@ -179,17 +204,9 @@ export function generateLearnMetadata({
 			card: 'summary_large_image',
 			title,
 			description,
-			images: [`${baseUrl}/${imagePath}`],
+			images: [`${SITE_URL}${imagePath}`],
 		},
-		alternates: {
-			canonical: `${baseUrl}/${locale}${path}`,
-			languages: {
-				...Object.fromEntries(
-					locales.map(l => [l, `${baseUrl}/${l}${path}`])
-				),
-				'x-default': `${baseUrl}/ru${path}`,
-			},
-		},
+		alternates: getLocalizedAlternates(locale, path),
 	}
 }
 

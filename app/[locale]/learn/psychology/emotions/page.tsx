@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { EmotionsPageClient } from './emotions-client'
@@ -9,7 +10,7 @@ import { EmotionsPageClient } from './emotions-client'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -18,7 +19,8 @@ export async function generateMetadata({
 	setRequestLocale(resolvedParams.locale)
 	
 	const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'learn.psychology.emotions' })
-	return { title: t('title'), description: t('description') }
+	return {
+		...generatePageMetadata({ title: t('title'), description: t('description'), locale: resolvedParams.locale, path: '/learn/psychology/emotions' }), title: t('title'), description: t('description') }
 }
 
 /**
@@ -28,7 +30,7 @@ export async function generateMetadata({
 export default async function EmotionsPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)

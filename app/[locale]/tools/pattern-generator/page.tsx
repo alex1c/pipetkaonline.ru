@@ -26,7 +26,7 @@ import { generateSoftwareApplicationSchema } from '@/lib/seo-utils'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -43,7 +43,6 @@ export async function generateMetadata({
 		keywords: tSEO('keywords'),
 		locale: resolvedParams.locale,
 		path: '/tools/pattern-generator',
-		ogImage: 'og-pattern-generator.jpg',
 	})
 }
 
@@ -60,7 +59,7 @@ export async function generateMetadata({
 export default async function PatternGeneratorPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	// Resolve params if it's a Promise
 	const resolvedParams = await Promise.resolve(params)
@@ -95,4 +94,3 @@ export default async function PatternGeneratorPage({
 		</>
 	)
 }
-

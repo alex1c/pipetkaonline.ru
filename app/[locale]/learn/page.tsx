@@ -15,7 +15,7 @@ import type { Metadata } from 'next'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale
@@ -37,7 +37,7 @@ export async function generateMetadata({
 			siteName: 'PipetkaOnline',
 			images: [
 				{
-					url: `${baseUrl}/og-learn.jpg`,
+					url: `${baseUrl}/og-image.svg`,
 					width: 1200,
 					height: 630,
 					alt: t('title'),
@@ -50,7 +50,7 @@ export async function generateMetadata({
 			card: 'summary_large_image',
 			title: t('title'),
 			description: t('description'),
-			images: [`${baseUrl}/og-learn.jpg`],
+			images: [`${baseUrl}/og-image.svg`],
 		},
 		alternates: {
 			canonical: `${baseUrl}/${locale}/learn`,
@@ -72,7 +72,7 @@ export async function generateMetadata({
 export default async function LearnPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale
@@ -248,6 +248,4 @@ function TopicCard({
 		</div>
 	)
 }
-
-
 

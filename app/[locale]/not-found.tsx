@@ -22,10 +22,11 @@ import type { Metadata } from 'next'
  * Generate metadata for 404 page
  */
 export async function generateMetadata({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
+	const { locale } = await params
 	const t = await getTranslations({ locale, namespace: 'notFound' })
 
 	return {
@@ -46,10 +47,11 @@ export async function generateMetadata({
  * @returns {Promise<JSX.Element>} 404 error page
  */
 export default async function NotFoundPage({
-	params: { locale },
+	params,
 }: {
-	params: { locale: string }
+	params: Promise<{ locale: string }>
 }) {
+	const { locale } = await params
 	// Enable static rendering
 	setRequestLocale(locale)
 	

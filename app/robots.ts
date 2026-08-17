@@ -40,5 +40,3 @@ export default function robots(): MetadataRoute.Robots {
 		sitemap: 'https://pipetkaonline.ru/sitemap.xml',
 	}
 }
-
-

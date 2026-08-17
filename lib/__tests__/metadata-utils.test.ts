@@ -52,7 +52,7 @@ describe('Metadata Utils', () => {
 			expect(metadata.openGraph).toBeDefined()
 			expect(metadata.openGraph?.title).toBe('Test Tool')
 			expect(metadata.openGraph?.description).toBe('Test Description')
-			expect(metadata.openGraph?.type).toBe('website')
+			expect(metadata.openGraph).toMatchObject({ type: 'website' })
 			expect(metadata.openGraph?.url).toBe('https://pipetkaonline.ru/en/tools/test')
 		})
 
@@ -71,7 +71,7 @@ describe('Metadata Utils', () => {
 			})
 
 			expect(metadata.twitter).toBeDefined()
-			expect(metadata.twitter?.card).toBe('summary_large_image')
+			expect(metadata.twitter).toMatchObject({ card: 'summary_large_image' })
 			expect(metadata.twitter?.title).toBe('Test Tool')
 		})
 
@@ -113,6 +113,7 @@ describe('Metadata Utils', () => {
 			expect(metadata.alternates?.languages?.en).toBe('https://pipetkaonline.ru/en/tools/test')
 			expect(metadata.alternates?.languages?.de).toBe('https://pipetkaonline.ru/de/tools/test')
 			expect(metadata.alternates?.languages?.es).toBe('https://pipetkaonline.ru/es/tools/test')
+			expect(metadata.alternates?.languages?.['x-default']).toBe('https://pipetkaonline.ru/ru/tools/test')
 		})
 	})
 
@@ -132,7 +133,7 @@ describe('Metadata Utils', () => {
 				path: '/learn/formats/hex',
 			})
 
-			expect(metadata.openGraph?.type).toBe('article')
+			expect(metadata.openGraph).toMatchObject({ type: 'article' })
 		})
 	})
 })

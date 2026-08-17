@@ -41,6 +41,7 @@ const createJestConfig = nextJest({
  * - Transform ignore: Excludes node_modules except specific packages
  */
 const customJestConfig = {
+	modulePathIgnorePatterns: ['<rootDir>/.next/'],
 	/**
 	 * Test environment
 	 * 
@@ -184,4 +185,3 @@ const customJestConfig = {
 // Export the Jest configuration
 // createJestConfig wraps our custom config with Next.js defaults
 module.exports = createJestConfig(customJestConfig)
-

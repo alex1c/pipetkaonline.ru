@@ -160,5 +160,3 @@ export function HarmonyResult({ colors, description }: HarmonyResultProps) {
 	)
 }
 
-
-

@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ContactForm } from '@/components/contact-form'
 
@@ -7,7 +8,7 @@ import { ContactForm } from '@/components/contact-form'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale
@@ -17,6 +18,7 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: 'contact' })
 
 	return {
+		...generatePageMetadata({ title: t('title'), description: t('description'), locale: locale, path: '/contact' }),
 		title: t('title'),
 		description: t('description'),
 	}
@@ -29,7 +31,7 @@ export async function generateMetadata({
 export default async function ContactPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale

@@ -26,5 +26,3 @@ export function GradientPreview({ css }: GradientPreviewProps) {
 	)
 }
 
-
-

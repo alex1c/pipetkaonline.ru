@@ -1,3 +1,4 @@
+import { generatePageMetadata } from '@/lib/metadata-utils'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 /**
@@ -6,7 +7,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale
@@ -16,6 +17,7 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: 'terms' })
 
 	return {
+		...generatePageMetadata({ title: t('title'), description: t('description'), locale: locale, path: '/terms' }),
 		title: t('title'),
 		description: t('description'),
 	}
@@ -28,7 +30,7 @@ export async function generateMetadata({
 export default async function TermsPage({
 	params,
 }: {
-	params: Promise<{ locale: string }> | { locale: string }
+	params: Promise<{ locale: string }>
 }) {
 	const resolvedParams = await Promise.resolve(params)
 	const locale = resolvedParams.locale

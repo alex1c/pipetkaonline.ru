@@ -89,5 +89,3 @@ export function HexInput({ value, onChange, error }: HexInputProps) {
 	)
 }
 
-
-

@@ -94,5 +94,3 @@ export function GradientStop({ stop, onUpdate, onRemove, canRemove }: GradientSt
 	)
 }
 
-
-

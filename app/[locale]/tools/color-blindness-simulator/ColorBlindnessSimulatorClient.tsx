@@ -33,13 +33,6 @@ export function ColorBlindnessSimulatorClient() {
 
 	return (
 		<div className='space-y-8'>
-			<header className='text-center space-y-4'>
-				<h1 className='text-4xl font-bold text-slate-900'>{t('title')}</h1>
-				<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-					{t('description')}
-				</p>
-			</header>
-
 			{/* Image Upload */}
 			<ImageUpload onImageLoad={loadImage} imageUrl={imageUrl} />
 
