@@ -15,18 +15,14 @@
  */
 
 import Link from 'next/link'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 
 /**
  * Generate metadata for 404 page
  */
-export async function generateMetadata({
-	params,
-}: {
-	params: Promise<{ locale: string }>
-}): Promise<Metadata> {
-	const { locale } = await params
+export async function generateMetadata(): Promise<Metadata> {
+	const locale = await getLocale()
 	const t = await getTranslations({ locale, namespace: 'notFound' })
 
 	return {
@@ -41,17 +37,10 @@ export async function generateMetadata({
  * Server component that renders a custom 404 error page.
  * Uses translations for internationalization.
  * 
- * @param {Object} props - Component props
- * @param {Object} props.params - Route parameters
- * @param {string} props.params.locale - Current locale code
  * @returns {Promise<JSX.Element>} 404 error page
  */
-export default async function NotFoundPage({
-	params,
-}: {
-	params: Promise<{ locale: string }>
-}) {
-	const { locale } = await params
+export default async function NotFoundPage() {
+	const locale = await getLocale()
 	// Enable static rendering
 	setRequestLocale(locale)
 	
