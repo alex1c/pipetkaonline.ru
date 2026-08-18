@@ -7,12 +7,11 @@ services:
     restart: unless-stopped
     ports:
       - "3002:3000"  # Map host port 3002 to container port 3000
+    env_file:
+      - ${PIPETKA_ENV_FILE:-/etc/pipetkaonline/pipetkaonline.env}
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
-    volumes:
-      # Mount .env file if needed (create .env.production on server)
-      - ./.env.production:/app/.env.production:ro
     networks:
       - pipetkaonline-network
     healthcheck:

@@ -69,8 +69,8 @@ describe('Phase 2 SEO baseline', () => {
 		const files = walk(path.join(root, 'app')).concat(walk(path.join(root, 'lib')))
 		const references = files.flatMap((file) => {
 			if (!/\.(ts|tsx)$/.test(file)) return []
-			return [...fs.readFileSync(file, 'utf8').matchAll(/(?:\/|\b)(og-[\w-]+\.(?:jpg|png|webp|svg))/g)].map((match) => match[1])
+			return Array.from(fs.readFileSync(file, 'utf8').matchAll(/(?:\/|\b)(og-[\w-]+\.(?:jpg|png|webp|svg))/g)).map((match) => match[1])
 		})
-		for (const asset of new Set(references)) expect(fs.existsSync(path.join(root, 'public', asset))).toBe(true)
+		for (const asset of Array.from(new Set(references))) expect(fs.existsSync(path.join(root, 'public', asset))).toBe(true)
 	})
 })

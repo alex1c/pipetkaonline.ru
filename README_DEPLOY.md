@@ -38,7 +38,7 @@ sudo systemctl restart apache2
 
 ```bash
 chmod +x deploy.sh
-./deploy.sh
+DEPLOY_SHA="$(git rev-parse HEAD)" ./deploy.sh
 ```
 
 ## Настройка GitHub Actions
@@ -49,6 +49,7 @@ chmod +x deploy.sh
    - `SSH_USER` - имя пользователя для SSH
    - `SSH_PRIVATE_KEY` - приватный SSH ключ
    - `SSH_PORT` - порт SSH (обычно 22)
+   - `SSH_FINGERPRINT` - SHA256 fingerprint ключа хоста сервера
 
 ## После этого
 

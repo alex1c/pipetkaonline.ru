@@ -6,14 +6,39 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deployment
+  cancel-in-progress: false
+
 jobs:
   deploy:
     name: Deploy to Ubuntu Server
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 20
+    env:
+      DEPLOY_SHA: ${{ github.sha }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Validate deployment configuration
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_FINGERPRINT: ${{ secrets.SSH_FINGERPRINT }}
+        run: |
+          set -Eeuo pipefail
+          for required_name in SSH_HOST SSH_USER SSH_PRIVATE_KEY SSH_FINGERPRINT; do
+            if [[ -z "${!required_name:-}" ]]; then
+              printf 'required GitHub Actions secret is missing: %s\n' "$required_name" >&2
+              exit 1
+            fi
+          done
 
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.3
@@ -22,11 +47,37 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
+          command_timeout: 15m
+          timeout: 30s
+          script_stop: true
+          envs: DEPLOY_SHA
           script: |
+            set -Eeuo pipefail
             cd /var/www/pipetkaonline.ru
-            git pull origin main
-            docker-compose down
-            docker-compose build --no-cache
-            docker-compose up -d
-            docker-compose logs --tail=50
 
+            allowed_status() {
+              case "$1" in
+                "?? .env.production"|"?? BingSiteAuth.xml") return 0 ;;
+                *) return 1 ;;
+              esac
+            }
+
+            status_output="$(GIT_OPTIONAL_LOCKS=0 git -c safe.directory="$PWD" status --porcelain --untracked-files=all)"
+            while IFS= read -r status_line; do
+              [[ -z "$status_line" ]] && continue
+              if ! allowed_status "$status_line"; then
+                printf 'unexpected server worktree entry: %s\n' "$status_line" >&2
+                exit 1
+              fi
+            done <<< "$status_output"
+
+            git -c safe.directory="$PWD" fetch --prune origin main
+            git -c safe.directory="$PWD" cat-file -e "${DEPLOY_SHA}^{commit}"
+            git -c safe.directory="$PWD" merge-base --is-ancestor "$DEPLOY_SHA" origin/main
+            current_sha="$(git -c safe.directory="$PWD" rev-parse HEAD)"
+            if [[ "$current_sha" != "$DEPLOY_SHA" ]]; then
+              git -c safe.directory="$PWD" merge --ff-only "$DEPLOY_SHA"
+            fi
+
+            ./deploy.sh

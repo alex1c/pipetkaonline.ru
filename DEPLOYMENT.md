@@ -64,16 +64,17 @@ sudo chown -R $USER:$USER /var/www/pipetkaonline.ru
 ### 4. Configure Environment Variables
 
 ```bash
-cd /var/www/pipetkaonline.ru
-
-# Create production environment file
-nano .env.production
+sudo install -d -m 750 -o root -g docker /etc/pipetkaonline
+sudo install -m 640 -o root -g docker /dev/null /etc/pipetkaonline/pipetkaonline.env
+sudo nano /etc/pipetkaonline/pipetkaonline.env
 
 # Add your environment variables:
 # TELEGRAM_BOT_TOKEN=your_bot_token
 # TELEGRAM_CHAT_ID=your_chat_id
 # NODE_ENV=production
 ```
+
+Keep this production environment file outside the repository. The deployment user must be a member of the `docker` group so Docker Compose can read it.
 
 ### 5. Configure Apache
 
@@ -112,7 +113,7 @@ cd /var/www/pipetkaonline.ru
 chmod +x deploy.sh
 
 # Run initial deployment
-./deploy.sh
+DEPLOY_SHA="$(git rev-parse HEAD)" ./deploy.sh
 ```
 
 ## GitHub Actions Setup
@@ -125,6 +126,7 @@ Go to your repository settings → Secrets and variables → Actions, and add:
 - `SSH_USER`: Your SSH username
 - `SSH_PRIVATE_KEY`: Your private SSH key (content of `~/.ssh/id_rsa`)
 - `SSH_PORT`: SSH port (usually 22)
+- `SSH_FINGERPRINT`: SHA256 host-key fingerprint (for example, `SHA256:...`)
 
 ### 2. Generate SSH Key (if needed)
 
@@ -143,11 +145,11 @@ cat ~/.ssh/id_rsa
 
 After setup, every push to the `main` branch will automatically:
 
-1. Pull latest changes from GitHub
-2. Stop existing containers
-3. Build new Docker image
-4. Start containers
-5. Show deployment logs
+1. Fetch and fast-forward to the exact commit that triggered the workflow
+2. Reject unexpected changes in the server worktree
+3. Build the new image while the current container keeps serving traffic
+4. Replace the container and wait for `/api/health`
+5. Restore the previous Docker image automatically if startup or health checks fail
 
 ## Manual Deployment
 
@@ -155,7 +157,9 @@ If you need to deploy manually:
 
 ```bash
 cd /var/www/pipetkaonline.ru
-./deploy.sh
+git fetch origin main
+git merge --ff-only origin/main
+DEPLOY_SHA="$(git rev-parse HEAD)" ./deploy.sh
 ```
 
 Or use Docker Compose directly:
