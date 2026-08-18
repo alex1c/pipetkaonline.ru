@@ -8,7 +8,7 @@
 
 'use client'
 
-import { useState, useCallback, useRef, useMemo } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import type { GradientStop } from '@/lib/gradient-map/interpolateColors'
 import type { BlendMode } from '@/lib/gradient-map/applyGradientMap'
 import { applyGradientMap } from '@/lib/gradient-map/applyGradientMap'
@@ -40,6 +40,12 @@ export function useGradientMapGenerator() {
 	const [useLAB, setUseLAB] = useState<boolean>(true)
 	const inputCanvasRef = useRef<HTMLCanvasElement>(null)
 	const outputCanvasRef = useRef<HTMLCanvasElement>(null)
+
+	useEffect(() => {
+		return () => {
+			if (imageUrl) URL.revokeObjectURL(imageUrl)
+		}
+	}, [imageUrl])
 
 	/**
 	 * Handle image file upload
@@ -82,11 +88,9 @@ export function useGradientMapGenerator() {
 	/**
 	 * Process image when settings change
 	 */
-	useMemo(() => {
-		if (imageData) {
-			processImage()
-		}
-	}, [imageData, gradientStops, intensity, blendMode, useLAB, processImage])
+	useEffect(() => {
+		processImage()
+	}, [processImage])
 
 	/**
 	 * Add gradient stop

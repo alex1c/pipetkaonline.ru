@@ -94,6 +94,7 @@ export function ImageUploader({ onImageUpload, imageUrl }: ImageUploaderProps) {
 
 				{imageUrl ? (
 					<div className='space-y-2'>
+						{/* eslint-disable-next-line @next/next/no-img-element -- caller supplies a local blob/data URL preview */}
 						<img
 							src={imageUrl}
 							alt='Preview'

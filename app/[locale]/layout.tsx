@@ -295,6 +295,7 @@ export default async function RootLayout({
 				/>
 				<noscript>
 					<div>
+						{/* eslint-disable-next-line @next/next/no-img-element -- noscript analytics pixel cannot use next/image */}
 						<img
 							src='https://mc.yandex.ru/watch/105405906'
 							style={{ position: 'absolute', left: '-9999px' }}
@@ -348,4 +349,3 @@ export default async function RootLayout({
 export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }))
 }
-

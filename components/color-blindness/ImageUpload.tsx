@@ -128,6 +128,7 @@ export function ImageUpload({ onImageLoad, imageUrl }: ImageUploadProps) {
 			) : (
 				<div className='space-y-4'>
 					<div className='relative rounded-lg overflow-hidden border-2 border-slate-200'>
+						{/* eslint-disable-next-line @next/next/no-img-element -- caller supplies a local blob/data URL preview */}
 						<img
 							src={imageUrl}
 							alt={t('upload.preview')}
@@ -139,4 +140,3 @@ export function ImageUpload({ onImageLoad, imageUrl }: ImageUploadProps) {
 		</div>
 	)
 }
-

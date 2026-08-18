@@ -124,6 +124,7 @@ export function ImageUploader({ onImageLoad, onError }: ImageUploaderProps) {
 			{/* Preview */}
 			{preview && (
 				<div className='relative rounded-lg overflow-hidden border border-slate-200'>
+					{/* eslint-disable-next-line @next/next/no-img-element -- FileReader data URL preview must remain local */}
 					<img
 						src={preview}
 						alt='Preview'
@@ -134,4 +135,3 @@ export function ImageUploader({ onImageLoad, onError }: ImageUploaderProps) {
 		</div>
 	)
 }
-

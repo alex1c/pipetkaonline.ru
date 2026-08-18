@@ -22,6 +22,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 /**
  * Logo component props interface
@@ -69,14 +70,14 @@ export function Logo({ locale, className = '' }: LogoProps) {
 				- w-auto: Maintains aspect ratio
 				- min-w-[240px]: Prevents logo from being too small
 			*/}
-			<img
+			<Image
 				src='/logo.svg'
 				alt='PipetkaOnline - Online Color Tools and Color Theory Education Platform Logo'
 				className='h-12 sm:h-14 w-auto min-w-[240px]'
-				width='240'
-				height='56'
+				width={240}
+				height={56}
+				priority
 			/>
 		</Link>
 	)
 }
-

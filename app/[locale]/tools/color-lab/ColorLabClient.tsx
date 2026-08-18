@@ -88,6 +88,7 @@ export function ColorLabClient() {
 					<p className='text-sm text-slate-600'>{t('picker.hint')}</p>
 
 					{/* Hidden image for loading */}
+					{/* eslint-disable-next-line @next/next/no-img-element -- data URL is loaded into a canvas via this image ref */}
 					<img ref={imageRef} src={imageUrl} alt='Source' className='hidden' />
 
 					{/* Canvas for color picking */}

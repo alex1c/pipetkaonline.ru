@@ -105,25 +105,6 @@ export function useExtractColorsV2() {
 	const [isProcessing, setIsProcessing] = useState(false)
 
 	/**
-	 * Handle image file selection
-	 */
-	const handleImageSelect = useCallback((file: File) => {
-		if (!file.type.startsWith('image/')) return
-
-		setImageFile(file)
-
-		// Create preview
-		const reader = new FileReader()
-		reader.onload = (e) => {
-			setImagePreview(e.target?.result as string)
-		}
-		reader.readAsDataURL(file)
-
-		// Extract pixels
-		extractPixels(file)
-	}, [])
-
-	/**
 	 * Extract pixels from image
 	 */
 	const extractPixels = useCallback(async (file: File) => {
@@ -168,6 +149,25 @@ export function useExtractColorsV2() {
 
 		img.src = url
 	}, [])
+
+	/**
+	 * Handle image file selection
+	 */
+	const handleImageSelect = useCallback((file: File) => {
+		if (!file.type.startsWith('image/')) return
+
+		setImageFile(file)
+
+		// Create preview
+		const reader = new FileReader()
+		reader.onload = (e) => {
+			setImagePreview(e.target?.result as string)
+		}
+		reader.readAsDataURL(file)
+
+		// Extract pixels
+		extractPixels(file)
+	}, [extractPixels])
 
 	/**
 	 * K-means clustering algorithm

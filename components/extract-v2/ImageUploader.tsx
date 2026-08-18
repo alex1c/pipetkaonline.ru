@@ -130,6 +130,7 @@ export function ImageUploader({
 
 				{preview ? (
 					<div className='space-y-4'>
+						{/* eslint-disable-next-line @next/next/no-img-element -- caller supplies a local blob/data URL preview */}
 						<img
 							src={preview}
 							alt='Preview'
